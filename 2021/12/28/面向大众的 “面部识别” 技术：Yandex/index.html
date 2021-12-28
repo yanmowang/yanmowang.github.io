@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="#面向大众的 “面部识别” 技术：Yandex是技术民主化，但也是安全自卫提醒！这不是玩笑。您应该记得 Yandex，它多次出现在我们的开源情报调查的演示中，是作为 反向图像搜索 的优质工具，在下面看到同类技术对比： 《搜图功能哪家强？图像验证方法的能力对比》👉 但您的确可以将其作为针对在网上标记了照片的任何人的一个很好的面部识别系统。 这大概是第一个具有大型数据库的、且普遍可访问的面部识别系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="眼魔王">
+<meta property="og:url" content="http://example.com/2021/12/28/%E9%9D%A2%E5%90%91%E5%A4%A7%E4%BC%97%E7%9A%84%20%E2%80%9C%E9%9D%A2%E9%83%A8%E8%AF%86%E5%88%AB%E2%80%9D%20%E6%8A%80%E6%9C%AF%EF%BC%9AYandex/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="#面向大众的 “面部识别” 技术：Yandex是技术民主化，但也是安全自卫提醒！这不是玩笑。您应该记得 Yandex，它多次出现在我们的开源情报调查的演示中，是作为 反向图像搜索 的优质工具，在下面看到同类技术对比： 《搜图功能哪家强？图像验证方法的能力对比》👉 但您的确可以将其作为针对在网上标记了照片的任何人的一个很好的面部识别系统。 这大概是第一个具有大型数据库的、且普遍可访问的面部识别系统">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-28T15:22:18.659Z">
+<meta property="article:modified_time" content="2021-12-28T15:22:18.809Z">
+<meta property="article:author" content="眼魔王">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/12/28/%E9%9D%A2%E5%90%91%E5%A4%A7%E4%BC%97%E7%9A%84%20%E2%80%9C%E9%9D%A2%E9%83%A8%E8%AF%86%E5%88%AB%E2%80%9D%20%E6%8A%80%E6%9C%AF%EF%BC%9AYandex/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/%E9%9D%A2%E5%90%91%E5%A4%A7%E4%BC%97%E7%9A%84%20%E2%80%9C%E9%9D%A2%E9%83%A8%E8%AF%86%E5%88%AB%E2%80%9D%20%E6%8A%80%E6%9C%AF%EF%BC%9AYandex/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-28 23:22:18" itemprop="dateCreated datePublished" datetime="2021-12-28T23:22:18+08:00">2021-12-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="面向大众的-“面部识别”-技术：Yandex"><a href="#面向大众的-“面部识别”-技术：Yandex" class="headerlink" title="#面向大众的 “面部识别” 技术：Yandex"></a>#面向大众的 “面部识别” 技术：Yandex</h1><p>是技术民主化，但也是安全自卫提醒！<br>这不是玩笑。您应该记得 Yandex，它多次出现在我们的开源情报调查的演示中，是作为 <em>反向图像搜索</em> 的优质工具，在下面看到同类技术对比：</p>
+<p>《搜图功能哪家强？图像验证方法的能力对比》<br>👉 但您的确可以将其作为针对在网上标记了照片的任何人的一个很好的面部识别系统。</p>
+<p>这大概是第一个具有大型数据库的、且普遍可访问的面部识别系统。当然，Yandex 并不是为此目的而设计的。</p>
+<p>技巧是，将照片的脸部剪裁下来上传到该平台，或多或少就可以找到相似的脸部。</p>
+<p>这篇文章的灵感来自 Bellingcat 最近在图片搜索中发表的文章，该文章特别强调了 Yandex 的面部识别功能。</p>
+<p>另外可参阅 ClearView 的文章，ClearView 是刮取 Facebook 等社交媒体平台的照片以进行面部识别的公司。还有一个视频，如下：</p>
+<p>nelsonslog 做了一个尝试。《Facial recognition for the public: Yandex》</p>
+<p>自拍照示范<br>他使用了自己的自拍照。在发布该测试之前，这张照片从未在网络上出现过，也就是说，在进行这些搜索时它不会出现在任何数据库中。</p>
+<p>这是一张脸部清晰的照片，可以使结果更好，但也适用于效果较差的照片。</p>
+<p>现在假装您不知道此人的名字。将图像放入 Yandex。这是您得到的结果：</p>
+<p>👉前两个图像就是目标人本人。单击其中任何一个，然后查看器网页，上面都带有 nelsonslog 的名字。您马上就能知道这是谁了。</p>
+<p>这好像并不完美；搜索结果中没有直接提供目标人的名字，您必须点击链接的页面才能找到它。而且，追踪者仍然必须仔细筛选那些很相近的面孔。</p>
+<p>但这个效果已经很好了。唯一的限制是 Yandex 的数据库。那的确是 “整个网络”，但是它们的索引依旧没有 Google 全面。</p>
+<p>用美国企业家 Andrew Yang 做下示范<br>认识自己很容易。那么陌生人呢？来试一下，同样的方法识别 CNBC 新闻中这张图片里的 “Yang” 是谁。</p>
+<p>理论上此人应该是2020总统候选人 Andrew Yang？但事实并非如此。</p>
+<p>剪裁照片中 Yang 的脸部，放在 Yandex 中就可以了。你会得到这样的结果：</p>
+<p>👉前五个图像看上去都非常像目标人。Yandex 结果页面上的第一个结果也直接指向了他的主页：Geoff Yang。CNBC 的实习记者可能会遇到麻烦咯。</p>
+<p>面部识别与图像搜索<br>这里的新事物是：Yandex 不仅可以用作开源情报调查中常规的反向图像搜索工具，还可以用来实施面部匹配。</p>
+<p>它找到的所有图像看起来都不像原始图像。不同的宽高比、不同的背景、不同的细节 …… 但是，脸部是匹配的。</p>
+<p>⚠️它甚至通过本案例测试者的自拍照找到了其本人年轻时没留胡子的版本！还找到了目标人手捧盒子遮住部分脸部的版本！简直太疯狂了。</p>
+<p>那么其他反向图像搜索平台在面部识别角度上的效果如何呢？就如我们👆关联文章中所做的效果比较。</p>
+<p>在面部识别用例上，继续测试了 Google、百度、Bing、和 TinEye。其中 TinEye 返回了0个结果。</p>
+<p>谷歌的结果：</p>
+<p>百度的结果：</p>
+<p>Bing 的结果：</p>
+<p>看看图像中那些同样有着短头发的白人，全部都不是目标人。</p>
+<p>这些算法推测还算是不错的，就是说，给了它们一个头像，然后它们发现了类似的头像：短发、男性、白人。但是，都不是目标人。</p>
+<p>👉只有 Yandex 找到了目标人的脸。 （可以说，TinEye 的0个结果是该查询的正确答案；因为这张图片并不在网上）</p>
+<p>为什么这很重要<br>面部识别算法在日常隐私方面正处于重大变革的风口浪尖。AI 现在已经足够好，可以进行基本准确的面部识别。现代软件可以拍摄一张只有半边脸的模糊照片，依旧可以成功将其与同一个人的其他脸部照片相匹配。</p>
+<p>《遮住一半脸没有用：“面部识别”升级版诞生》<br>这是一个相当可怕的未来，尤其是像新疆这样的专制政府已经建立的未来，但这可能是难以阻挡的。</p>
+<p>重要的是，目前普通百姓仍然无法使用陌生人的照片并找到他或她的名字。也就是说，技术不是民主的 —— 它只掌握在当权者手里。也是为什么我们开始思考让技术民主化的可能性，如下：（既然难以阻止其发展）</p>
+<p>《人脸识别可以自制，你知道吗？而且非常简单》<br>《如何使面部识别技术为公民所用？- 开源情报方法》<br>但是，即便您在技术方面毫无基础，Yandex 也有可能帮你做到这点。</p>
+<p>Yandex 已有很长的历史了，是世界上为数不多的可与谷歌竞争的公司之一。他们的索引严重偏向东欧数据，但是，实验显示，他们有足够的全球数据来找到美国人 nelsonslog 和台湾裔 Andrew Yang。</p>
+<p>如果您使用 Google 相册或 Facebook，则很有可能已经领教了他们的面部识别能力。匹配效果足够惊人，而且杂音不多。</p>
+<p>Facebook 似乎只会为您显示与您有某种 Facebook 关系的人的名字。Google相簿也类似地提供随机名字。他们可以做得更多；例如，Facebook 可以将脸部与任何 Facebook 用户匹配。</p>
+<p>但是，这两种服务都不能作为识别陌生人的通用面部识别服务。</p>
+<p>至少有一个可以做到同样事的公共服务：FindClone （它以前被称为 FindFace 和 SearchFace）。但是，仅限于来自俄罗斯 VKontakte 的照片。这的确是一个很大的数据集。但这并不像 Yandex 搜索引擎那样国际化。</p>
+<p>预计在几年之内，这种 “按照面孔查找名字” 的使用功能将和 “用电话号码查找名字” 一样的普遍。</p>
+<p>⚠️ 所以，再次强调！除非您是明星，靠脸吃饭的那种，否则尽可能不要以任何方式将您的脸部照片/视频放到网上！包括您认识的所有人发布的包括您的照片！这非常重要。</p>
+<p>如果您上传自己的脸部在 Yandex 搜到了您本人的任何信息，迅速删除它们所有。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/28/%E5%B0%8F%E4%BF%A1%E6%81%AF%E5%A4%A7%E6%95%85%E4%BA%8B%EF%BC%9A%E5%88%A9%E7%94%A8%E8%BF%99%E4%BA%9B%E5%B7%A5%E5%85%B7%E6%90%9C%E9%9B%86%E6%95%A3%E8%90%BD%E5%9C%A8%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8A%E7%9A%84%E9%9B%B6%E7%A2%8E%E4%BF%A1%E6%81%AF/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/28/%E6%82%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%BA%94%E6%88%90%E4%B8%BA%E7%A4%BE%E4%BC%9A%E5%8F%98%E9%9D%A9%E7%9A%84%E5%8A%A8%E5%8A%9B%EF%BC%9A%E5%85%AC%E6%B0%91%E8%B0%83%E6%9F%A5%E6%8C%87%E5%8D%97%EF%BC%887%EF%BC%89/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%A4%A7%E4%BC%97%E7%9A%84-%E2%80%9C%E9%9D%A2%E9%83%A8%E8%AF%86%E5%88%AB%E2%80%9D-%E6%8A%80%E6%9C%AF%EF%BC%9AYandex"><span class="nav-number">1.</span> <span class="nav-text">#面向大众的 “面部识别” 技术：Yandex</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">106</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
