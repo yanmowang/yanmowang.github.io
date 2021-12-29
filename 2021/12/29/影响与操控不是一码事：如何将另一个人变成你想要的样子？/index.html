@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="影响与操控不是一码事：如何将另一个人变成你想要的样子？别死在笑眯眯的恶棍手中先说说我们在安全协作方面发生的问题（虽然这不是本文主题，但是密切相关）。中国的社区间协作经常被评为能力差，技术社区难以与活动家和反对派社区直接对口，以至于直到后者遭遇攻击前者才会发觉。这是严重失利的。 安全协助的基本目标应该是防患于未然而不是亡羊补牢。渗透测试是最重要的一个步骤。但这个步骤中经常会搞得不欢而散，大部分时候主">
+<meta property="og:type" content="article">
+<meta property="og:title" content="眼魔王">
+<meta property="og:url" content="http://example.com/2021/12/29/%E5%BD%B1%E5%93%8D%E4%B8%8E%E6%93%8D%E6%8E%A7%E4%B8%8D%E6%98%AF%E4%B8%80%E7%A0%81%E4%BA%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%86%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%8F%98%E6%88%90%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E6%A0%B7%E5%AD%90%EF%BC%9F/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="影响与操控不是一码事：如何将另一个人变成你想要的样子？别死在笑眯眯的恶棍手中先说说我们在安全协作方面发生的问题（虽然这不是本文主题，但是密切相关）。中国的社区间协作经常被评为能力差，技术社区难以与活动家和反对派社区直接对口，以至于直到后者遭遇攻击前者才会发觉。这是严重失利的。 安全协助的基本目标应该是防患于未然而不是亡羊补牢。渗透测试是最重要的一个步骤。但这个步骤中经常会搞得不欢而散，大部分时候主">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-29T14:36:22.129Z">
+<meta property="article:modified_time" content="2021-12-29T14:36:22.259Z">
+<meta property="article:author" content="眼魔王">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/12/29/%E5%BD%B1%E5%93%8D%E4%B8%8E%E6%93%8D%E6%8E%A7%E4%B8%8D%E6%98%AF%E4%B8%80%E7%A0%81%E4%BA%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%86%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%8F%98%E6%88%90%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E6%A0%B7%E5%AD%90%EF%BC%9F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/29/%E5%BD%B1%E5%93%8D%E4%B8%8E%E6%93%8D%E6%8E%A7%E4%B8%8D%E6%98%AF%E4%B8%80%E7%A0%81%E4%BA%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%86%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%8F%98%E6%88%90%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E6%A0%B7%E5%AD%90%EF%BC%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-29 22:36:22" itemprop="dateCreated datePublished" datetime="2021-12-29T22:36:22+08:00">2021-12-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="影响与操控不是一码事：如何将另一个人变成你想要的样子？"><a href="#影响与操控不是一码事：如何将另一个人变成你想要的样子？" class="headerlink" title="影响与操控不是一码事：如何将另一个人变成你想要的样子？"></a>影响与操控不是一码事：如何将另一个人变成你想要的样子？</h1><p>别死在笑眯眯的恶棍手中<br>先说说我们在安全协作方面发生的问题（虽然这不是本文主题，但是密切相关）。中国的社区间协作经常被评为能力差，技术社区难以与活动家和反对派社区直接对口，以至于直到后者遭遇攻击前者才会发觉。这是严重失利的。</p>
+<p>安全协助的基本目标应该是防患于未然而不是亡羊补牢。渗透测试是最重要的一个步骤。但这个步骤中经常会搞得不欢而散，大部分时候主要源于协助者搞错了两个概念之间的区别。</p>
+<p>“影响”和“操控”这两个概念经常会被交替使用，尤其是讨论社交工程的时候，使用这两个概念最为频繁。</p>
+<p>对于所有目的和意图来说，它们是决策的催化剂；就如我们每个人所发现的，人们做事有很多缘由，但是优秀的社交工程师对此足够了解，就可以<em>引导</em>人们作出决策 —— 不论是善意的还是恶意的。</p>
+<p>事实上影响（influence）和操控（manipulation）不完全是一回事。影响指的是：让某人像你所希望的那样行动、反应、思考或者信任。操控和影响类似，但它主要用于不怀好意的情况，几乎总是符合操控者的最佳利益。</p>
+<p>它俩真的不是一码事。想想看，你也许听说过某人产生了“坏的影响”，但是你听说过“好的操控”这种表述吗？尽管，有些时候两者会导致某种看起来相同的决策、行为或者其他结果，但是，两者得到结果的方式以及目标的感觉是完全不同的。</p>
+<p>对方的感觉非常重要，这意味着你的目的能否真正实现。</p>
+<p>在这个层面上我认为，影响和操控可以分属于两个极端。影响显然是积极的；而操控则是消极的。二者之间的确有很多难以界定的情况，因为很多交互既有积极的方面也有消极的方面。无疑，影响制造了紧张情绪，或者说是行动的必要，否则人们就没有改变行动的动机。因此，只需要知道，影响和操控之间的界限并不是一个点，而是很大的一片灰色区域，并且通常因个人解读的不同而有所差异。</p>
+<p>这就是为什么把<em>指导</em>归为影响，把<em>威胁</em>归为操控。但必须了解两者之间的大面积灰色区域，这完全取决于社交工程师所做的选择。</p>
+<p>比如，请求帮助。看起来普通，但它可以是一种强有力的影响形式，也可以是一种高明的操控伎俩。</p>
+<p>这种区别非常重要，我们下面说说为什么它很重要。</p>
+<p>为什么这种区别很重要？<br>权利倡导者和活动家经常需要帮助易受侵害的社区和群体辅导安全知识，尤其是渗透测试服务，非常重要。但这项工作有可能带来不良后果，这取决于人们对影响和操控这两个概念之区别的理解。</p>
+<p>看下图，这是一封钓鱼邮件，来自渗透测试人员而不是真正的威胁者，当收件人试图跟进时就会收到更多的威胁和恐吓。其实它也是FBI报告过的一个真实的电子邮件诈骗事件[Federal Bureau of Investigation, “Online Extortion: E-Mail Scam Includes Hit-Man Threat,” FBI News Stories, January 15, 2007]</p>
+<p>毫无疑问，当人们发现自己采取的行动居然是社交工程人员施加影响的结果时，难免会感到尴尬或生气。但是如果人们认为自己由于恐惧、愤怒或者惭愧而被迫采取了某项行动，那么对于权利倡导者和活动家来说，情况可能变得更糟或者更难对付。</p>
+<p>这种环境并不利于学习。促进学习才是渗透测试的目标。可以想像，对于一位想要为组织作出贡献的成员来说，这是多么沉重的打击。</p>
+<p>这就是有必要强调影响和操控之间的区别的原因之一。强调这一区别不是在强调倡导者和活动家有多善良友好，而是他们的工作目标，即安全协助本身，只有准确掌握这其中的区别才能令社区间此类协作步入正轨。</p>
+<p>如何找出区别？<br>区分影响和操控是非常有意义的，我们首先承认了其中的灰色区域面积之大、复杂性和微妙性，因此以下部分将探讨一些问题。当你准备好进行社交工程渗透测试训练的时候，要先问自己这些问题。</p>
+<p>如何与目标建立融洽的关系？——</p>
+<p>很多资料里对“融洽的关系（rapport）”的定义特别复杂。当然它很容易理解和辨别，但是要想用文字描述它就有点难度了。它大致上是指和另一个人建立关系，其中包括互相喜欢以及相处感到舒适等要素。</p>
+<p>请注意到：这里面并没有善恶之分。⚠️融洽关系是社交工程攻击为了提高效率而必须快速培养的技能。融洽关系是施加影响的一个必要条件。当你建立了融洽关系后，人们就会答应你的请求，因为他们喜欢你，他们感知到了你们彼此间的关系，于是想要帮助你。这个时候你的机会才真的来了。</p>
+<p>但是对利用操控的人来说，建立融洽关系是不太可能的，当然也不是必要的。一个想要威胁别人的人很可能并不在乎与目标建立某种联系。</p>
+<p>实际上操控者与目标之间的联系越好越好。坦白说，对大多数人而言，对一个与他们有私交的人运用操控手段是很困难的。</p>
+<p>当目标发现自己被测试时感觉如何？——</p>
+<p>你点击了我的钓鱼邮件，你感觉怎么样？</p>
+<p>如上所述，如果感到尴尬甚至愤怒，仍然可以达到预期的教育效果。你已经把挑战置于目标面前，然而他们的表现令你失望，而这可能最终导致他们和他们的组织面临威胁。</p>
+<p>但是，如果你后续提供一系列为了下一次的成功所需的信息，那么就可以创造出一个基于学习的环境。</p>
+<p>作为协助者，你的目标应该是随着时间推移构建出一种组织文化，成员不会因为中招而感到尴尬，而是期待下一次培训的到来。你将见证你们的成功。</p>
+<p>相反，如果你提供一些方法激起恐惧、愤怒、惭愧或者无助的感受，使人们服从，那么随之而来的抗议洪流极有可能让你错失教育机会。</p>
+<p>⚠️人们只会记得你给他们带来的感受，而不是经验教训。</p>
+<p>不仅渗透测试，这点在很多社会工作方面都是有效的。在中国我们发现了很多权利倡导者和活动家在主张他们的观点和分发知识的过程中出现了上述问题，以至于反而推动了目标群体的虚无和消极抵抗。</p>
+<p>你的意图究竟是什么？——</p>
+<p>我指的是你的个人意图和个人需求。你真的关心你提供的协助和知识对目标社区和组织来说的学习和提示价值吗？还是仅仅想要一个赢家/智者的感觉，因为你把其他人都玩成傻逼了？</p>
+<p>这是一个需要自问的问题。我们大多数人都喜欢获胜的感觉，喜欢自己比其他人看起来更聪明机智，而有时候社交工程协议可以让人感觉像一场游戏。</p>
+<p>别误会，享受获胜的感觉和你服务的价值之间并非只能取其一。你可以在享受获胜感的同时很好地服务于目标群体/组织。</p>
+<p>但总会有那么一个时期，你没有获得任何进展，内心开始产生挫败感，觉得必须做点什么才能对得起对方组织的看重。这时你会不得不开始真正反思你的选择和动机，因为此时使用操控手段的诱惑力是非常大的。</p>
+<p>不过通常，只需要你将目标组织的利益而不是你的个人利益放在首要位置，就能作出明智的选择。</p>
+<p>操纵：来者不善<br>操纵更有效也更容易。恶意攻击者只想要获胜而不在乎受害者，也不关心什么教育效果。但渗透测试人员不会使用操控，不仅仅是法律问题，还有，操控在专业环境下更具破坏性而非实用性，使用操控也不是长久之计。</p>
+<p>因为在经历操控后人们不可能再次听从你的请求。这一结果可能是可以接受的或者求之不得的，这取决于你的工作和具体目标。但是在社区协作的世界里，这肯定不是个理想选择，因为你需要寻求的长期合作关系。</p>
+<p>欺骗：不总是坏事<br>下图是影响和操纵的图解及其间的灰色地带，位于浅色区域的是影响，深色区域的是操控。你能看到中间一个最醒目的位置就是：欺骗。</p>
+<p>绝大多数人对欺骗的看法都是负面的，毕竟，如果有人对你喊“你是个骗子”，他绝对不是在恭维你。</p>
+<p>虽然人们总是想要机械性地将其与道德伦理联系起来，但在安全协作方面这是有问题的。问题的性质并不取决于你是否把欺骗用于社交工程协议的一部分；但你肯定会在或多或少使用一些欺骗。</p>
+<p>这个问题的性质取决于意图和动机。</p>
+<p>如果你的孩子已经吃了三颗糖果两个曲奇，这时候你把小蛋糕藏起来并骗他说“没有任何点心了”，这是出于对孩子健康的关爱。当然你藏起来的蛋糕可以自己独吞，如果这么想就太自私了。请注意，在此你的行为和导致的结果是相同的，⚠️但是由于动机不同，你的孩子在发现真相后的感受是截然不同的。</p>
+<p>撒谎的名声并不好，但无疑我们都在这么做，或多或少；想想看如果你完全坦诚地说出你的见解 …… 你的人际关系会变成什么样？真相很伤人的。</p>
+<p>人类和其他物种似乎有着天生的欺骗倾向。有很多有趣的研究表明，婴儿在没有语言表达能力之前就有欺骗的能力，他们会假哭以赢得监护人的关心。</p>
+<p>虽然这不是什么复杂的把戏，但足见我们从小就开始寻求机会参与到社交活动中。欺骗是一种社交行为的适应性形式，没必要总是把它想的那么负面。</p>
+<p>惩罚与操控<br>上图中另一个显要的例子是惩罚。</p>
+<p>在行为心理学中惩罚被定义为会降低某个行动在此发生的概率的某种后果。这里要说的是成年人之间具有某种操控效力的惩罚。</p>
+<p>在社交工程学中，惩罚是成年人之间的互相作用，其目的是提供负面的结果来迫使目标采取你所期望的行为。</p>
+<p>表面的目标和实际的目标之间还是有区别的。⚠️惩罚的有趣之处在于它是一种针对某人的直接行为，但是其效果常常是控制并决定另一个人的行为。</p>
+<p>通过惩罚来改变某个成年人的行为是完全可能的，但这并不是高明的暗中操纵，它只是简单的、能产生某个后果的行为。</p>
+<p>通过惩罚实施的操控可以像催化剂一样激发人们的行动；或者通过引发其他强烈情绪来迫使人们采取行动，如下图所示。</p>
+<p>⚠️当惩罚在公共场合实施时，惩罚者就创造了一群目击者正在等待结果的感觉。根据每个人各自不同的情况，他们可能会表现出愤怒、恐惧或者同情等情绪。</p>
+<p>无疑会有人漠视或者回避惩罚。但是如果惩罚足够严重，还是会得到回应的。而这正是一个恶意攻击者所寻求和试图控制的东西。</p>
+<p>想想看，你走出写字楼，看到一个凶巴巴的保安在对一个哭泣的女人大喊大叫，保安走后那女人向你求助，说老板要解雇她，因为她忘带胸牌了，她需要去这栋大楼的行政处补办理胸牌，看她这么可怜，你愿意帮她吗？</p>
+<p>由于你看到了刚才惩罚的那一幕 —— 它刺激了你的正义之心和英雄救美的热情 —— 面对一个满脸泪水的姑娘，你忍心一言不发地走开吗？很多人是这样中计的，他们带着女人通过了安检。一个狡猾的社交工程师就这么大模大样地进入了目标内部。这就是操控。</p>
+<p>影响的原则<br>如上，已经对影响和操控的区别有了初步了解。现在是时候花点时间来深入理解影响了，来看看如何以及为何其中一些因素能够奏效。</p>
+<p>如下图所示，为影响的原则提供了一些概览。基于各种研究成果和从社交工程学实践中总结的经验，来运用这些原则。</p>
+<p>下面举一些 ⚠️你应该注意的方面：</p>
+<p>声明：由于人类的行为并不总是循规蹈矩的，上述这些原则中很多都是共同起作用，在例子中你可以看到它们之间的互相影响。</p>
+<p>有些例子适用于多方面的影响。</p>
+<p>由于这些例子来源于现实世界，它们中的许多可以阐释这些原则是如何被用来实施操控的 —— 想象影响和操控之间的大片灰色区域？</p>
+<p>“专业建议”的目的是为你提供对这些原则更深刻的理解和更灵活的运用，不论是为所在组织和社区提供安全服务、还是为了防御攻击，甚或，您拥有确定为正义的目标比如 OSINT 深度调查，那么这些知识对你而言就十分重要。如我们早前所解释的，传统 OSINT 技术正在失效，这源于隐私保护方案的普及成果，于是下一步的方案中需要您熟悉社交工程技术，是为辅助，详细解释见《开源情报的黄金时代就快结束了吗？下一步是什么？》</p>
+<p>下面分别说说。</p>
+<p>1、互惠</p>
+<p>互惠是一种普遍的信念，人们应该根据其所作所为得到相应的回报。善有善报、以眼还眼这类古老的词汇都在描述互惠的方式。</p>
+<p>这一概念谁如此的强大，以至于研究人士认为它是每一种影响的基础 —— 中国的“双赢”论并不是什么天使之善。[Allan R. Cohen and David L. Bradford, “The Influence Model: Using Reciprocity and Exchange to Get What You Need,” November 11, 2005]</p>
+<p>有一个关于这一原则的真实例子，也就是提供退款以获取个人真实信息的骗局。⚠️这里的关键是恶意攻击者使目标觉得自己<em>先</em>得到了某样东西，因为目标觉得收到了某种礼物，所以他就会认为<em>有必要提供点什么作为回报</em> —— 这里提供的就是他的真实个人信息，也就是攻击者最需要的东西。[在这里看到这个案例：Chris Morran, “That Guy on the Phone Offering a Tech Support Refund Is Probably a Scammer,” The Consumerist website, January 3, 2014]</p>
+<p>专业建议：尽管互惠原则是建立在“礼物“的基础上的，但是礼物不一定必需是实物 —— 它甚至可以是一个微笑、一种可清楚被感知的同情、倾听和怜悯，甚至只是看似随意对给别人开一下门。它只要对接受者来说足够宝贵，就可以产生足以对其施加影响的力量。（你给一个高傲的女神开门不会有什么作用，如果你给一个才刚被失恋打击得孤苦伶仃的人开门、甚至只是一个怜爱的眼神，对方就能对你投注信任）</p>
+<p>我们听说有些异议人士评价“国宝很和气”，或者“逢年过节带礼品上门”，甚至有些异议人士由此认为“国宝可以被反洗脑”……这是非常可怕的想法。他们的和气和礼物是社交工程的一部分，目的是刺激你的互惠心理，以提供他们想要的东西 —— 即 减轻防范说真话。</p>
+<p>⚠️请随时记得，你的对手曾经经过过长久的专业级培训，而正在阅读我们的文章的您才刚开始接触这种东西；在社交工程层面，您和您的对手绝对不在同一个重量级上。您现在需要做的第一步是尽可能防止吃亏，下一步才是反守为攻。</p>
+<p>2、义务</p>
+<p>互惠是建立在礼物基础上的；义务则是通过传统、礼仪、个人感受和社会角色来施加影响。比如在拥挤的路上前面的车子给你让路，你就会感觉出于礼貌自己有<em>挥手致谢的义务</em>。</p>
+<p>一个真实的、利用人们的义务感的例子就是可怕的祖父母骗局。骗子假装成陷入麻烦的孙子或孙女，在通常情况下打电话者会要求保密，并声称需要钱出狱。这是最简单级别的社交工程攻击，攻击者会事先对他们的目标进行一系列的研究，得知到一些比较私密的信息，比如家庭中使用的昵称等等。骗子利用这些可怜人的社会角色和感受，他们觉得自己<em>有义务</em>保护自己亲爱的晚辈……在这里看到案例介绍 [Melanie Hicken, “‘ Grandparent Scams’ Steal Thousands from Seniors,” CNN Money website, May 22, 2013]</p>
+<p>专业建议：你如何在不认识的人身上创造一种义务感？用一些与他们的身份相关的东西怎么样？他们为人父母吗？他们自以为喜欢助人为乐吗？在你辨识过这些之后，可以利用这些信息来制造一个需求帮你达成目的；或者，⚠️以一种符合目标对自我的认知的方式行事。</p>
+<p>3、妥协</p>
+<p>你曾经和重要的人吵架并陷入僵局吗？结果可能是一整天冷冰冰的眼神和生硬的对话。你可以通过什么方式确认自己已经胜利？（当你女朋友走到沙发前犹豫着说“陪我逛逛街吧”的时候，你应该知道你已经赢了）。⚠️妥协是一个人让步的时候。这通常表示主动权已经交到另一个手中了。</p>
+<p>这一点很重要。因为妥协会把目标置于困境当中。</p>
+<p>人性如此，⚠️有过一次让步之后就会有更多的让步，这被称为“登门槛法/或得寸进尺”。想想那些试图通过分发传单来卖东西的人，传单内容并不重要，他们知道只要你拿到了传单就至少能停留一下。</p>
+<p>上述祖父母骗局也可以当成一种妥协的例子。在一个案例中，一位祖母被骗走了两万美元，但不是一次性骗走的；受害者妥协一次交出钱后骗子就继续要更多的钱，而这位祖母就继续妥协下去……[Kathy Tomlinson, “Senior Loses $ 20, 000 to Scammer Posing as Grandson,” CBC News website, March 20, 2012]</p>
+<p>专业建议：⚠️专业的社交工程人员有时候会通过主动成为让步的那个人，来引导这一互相作用的过程。通过这种行动，社交工程人员暗示权利被“让步”给了目标，尽管妥协实际上可能很微小或者根本毫无意义，但是目标接收到的信号是妥协本身。这种做法最常见的比如汽车销售员。当然，肯定，如所有方法一样它可以为了更大更危险的目的。</p>
+<p>4、稀缺</p>
+<p>当资源有限或削减时，就会变得更有价值，这是众所周知的。路边的“最后一批甩卖”等牌牌只是对这个把戏最土的用法。</p>
+<p>专业建议：就像互惠一样，稀缺或缩减的资源不一定必须是实体的。你曾经试过约见某个重要人物吗？他只能在下午一点二十的时候留十分钟给你？其实对方有可能并没那么忙，⚠️他故意在会面前抬高自己的身价，传输紧迫感给你 —— 以影响你的行为。</p>
+<p>5、权威</p>
+<p>权威是指拥有决策的权利。这种权利可能来源于法律或者其他合法途径，也有可能基于个人魅力或其他信誉而建立。这是一种特别能唬人的东西。更多分析详见 IYP 曾经解释的《操纵式宣传：5个过滤器和识别线索》</p>
+<p>我们每个人的成长都伴随着权威和反权威的过程。成年后的人会倾向于自动回应具有权威的人或者权威的符号。如果有一个带着安全帽红袖章穿着安全背心的人站在马路上向你招手，你肯定会遵循他的指示，其实你根本不知道他是谁。</p>
+<p>举一个比较极端的例子来说明这一原则的使用。一家快餐店的老板某天接到了一位自称是执法机构的人打来的电话，对方称其员工涉嫌盗窃和贩毒。该老板遵照了对方的指示，将那名员工锁在屋子里，然后对他进行搜查，还用其他方式侮辱这名员工。其实打电话的那个人只是与那名员工有私仇。</p>
+<p>还有一个有趣的例子。一名女士，假扮华夫饼屋的经理，大模大样地走进去检查工作，还郑重其事地拿走了收银机里的钱。她只是简单地装作自己属于这里。整个过程中没有任何恐吓，没有任何武器。钱就被拿走了。[Mike Morris, “Police: Woman Posing as an Area Manager Steals Cash from SE Atlanta Waffle House,” AJC. com, February 26, 2014]</p>
+<p>专业建议：你并不需要佩戴徽章以彰显权威。⚠️你的言谈举止、穿着打扮、写作风格和身体语言，包括邮件里的一个签名，都能传达这样一个消息 —— 你知道你在说什么，你传达的指令应该被遵守。如果作为一名社交工程人员，你觉得自己的年龄、音调等特征亲自展现权威比较困难，那么就请有意识地注意自己正在展现什么，做你力所能及的一切，并注意渲染那些能让目标人相信你的理由。</p>
+<p>6、一致性和承诺</p>
+<p>一致性和承诺涉及这样一个概念，即 ⚠️当人们已经做出某种行为后，他的后续行为就会倾向于与先前行为保持一致。</p>
+<p>正如你所推测的，这一点与让步原则往往紧密相关。在一个人让步之后，一致性和承诺就会迫使此人继续让步。反过来想，你会如何看待一个想法总是变来变去的人？对吧，没人喜欢那种人。</p>
+<p>一个好玩的例子。一位女士被一家基督徒交友网站骗了。有趣的是，受害者和犯罪者都证明了一致性和承诺的需求。这位受害者也像其他受害者一样为求婚的对象花掉了所有钱，以表达自己的承诺；而犯罪者也表现得像一个忠贞的爱人那样，几乎每天都给她发邮件描绘美好的未来。[Rheana Murray, “Online Dating Nightmare: Widow Robbed of $ 500K by Scamming Internet Companion,” Daily News website, November 8, 2011]</p>
+<p>专业建议：⚠️在人们答应一个请求之后他们就很有可能继续答应下一个。经验丰富的社交工程人员能够在完全和谐的气氛下 — 丝毫没有古怪和冒犯的同时 — 逐渐提高要求。在著名社会心理学专家 Stanley Milgram 博士60年代的经典实验中，这一概念得到了令人惊讶的体现，在这里看到 [S. Milgram, “Behavioral Study of Obedience,” Journal of Abnormal and Social Psychology 67( 1963): 371–8.]</p>
+<p>⚠️这招特别损，并不是看起来那么简单，你我都有可能上当。如果您不信，可以去问问 Don Evans，他曾经遭遇过这种诈骗。骗子叫张猛，前香港阳光时务主编，以“追求独立媒体新闻自由”为幌子到处骗钱，骗到了 Evans 身上，并且还陆续成功骗了五次。Evans 上当的原因就是因为他对媒体独立事业的承诺和一致性，骗子利用他这一立场持续索取。顺便说，这个叫张猛的骗子还在继续欺骗，更多专门针对民主人士和反抗者 —— 而且，对于不同的目标人会采取不同的针对性攻击模式，大家小心。</p>
+<p>尽管 Milgram 这项研究的目的是为了确认人们服从权威的程度，但它同样也是一个很好的对“逐步加强”这一概念的说明。</p>
+<p>在 Milgram 的经典实验中，参与者被要求通过（假的）电击来“教”学习者记忆单词。每一次学习者犯错的时候，教师就要增加15伏电压，下图是参与者看到的面板 —— 电击是假的，但是参与者并不知道这点。</p>
+<p>Milgram 实验的“电击”面板<br>想象一下，你处在那个教师的位置上，首先你同意了参与这一重要的研究活动；其次你同意了这项研究的各种条件。然后你就会遵循指示去做。</p>
+<p>第一次你会发射15伏电击，尽管对于学习者来说并不太糟，但学习者继续犯错，使你不得不继续加电压。你逐渐感觉到心里不舒服。15伏和150伏有很大的差别，你该何时停止？如果你停下来了会影响实验吗？你愿意半途而废吗？……</p>
+<p>话说回来，Milgram 研究的是人们对权威的服从，但你也能从中看到明确的一致性和承诺在个体身上施加了多少压力。</p>
+<p>7、喜爱</p>
+<p>你曾经遇到过一见面就感觉特别投缘的人吗？除了与这个人迅速建立融洽关系的能力之外，你认为你喜欢这个人的原因是什么？⚠️必须想想这个问题，因为这是一个最常用的社交工程伎俩，我们分析过它，参见《警惕微妙的劝导术：一个能力排众议博取认同的“骗子”长啥样》。</p>
+<p>我们倾向于喜欢那些喜欢我们的人；我们也确实会喜欢那些很“像”我们自己的人，比如参见这篇文章中的分析《警惕微妙的劝导术：虚假帮派 — — 效力最强的宣传攻势》。广告商一直在使用这点：雇佣人们喜欢的人、并且想要去模仿的人，比如演员或明星。</p>
+<p>我们对社交工程的诸多介绍会专注于危险防御，于是忽略诸如狡猾广告商和渣男渣女的小故事，事实上您应该知道这些伎俩可以用在任何地方。</p>
+<p>举例子。恶意攻击者经常利用我们想要帮助喜欢的人的愿望。典型的“滞留旅客”钓鱼攻击生效的原因就是，骗子盗取了某人的邮箱，然后联系其朋友和父母假装受害人并声称需要钱。[Liz Phillips, “How I Got Caught Up in a ‘Stranded Traveller’ Phishing Scam,” The Guardian website, November 13, 2013] </p>
+<p>光要钱是危害性最低的，攻击者可以利用这点要任何东西。</p>
+<p>专业建议：因此，你应该如何让某人立刻喜欢你呢？专业的社交工程人员很擅长通过发展某种品质来建立融洽关系，如 积极的聆听、以及与语言相一致的非语言行动。另一个增加好感的简单方法就是，识别出你和目标之间确实存在的相似之处，也就是我们在上述提及的“虚假帮派”招术，⚠️这招特别毒，几乎很少有人能提防住。</p>
+<p>8、社会认同</p>
+<p>社会认同是我们的自然倾向，即 通过观察别人的行为来指导自己的行为。那些炒作所谓的热点的营销客就是在利用这种社会心理。</p>
+<p>由于我们的社会性，社会认同是一种极为强大的影响原则。人们经常想的就是，“其他人都在这么做，那么这么做就是对的”。连我的小侄子也会中这个招。小侄子对滑板车并不感兴趣，而卖滑板车的人告诉他：“你看公园里的其他孩子每人都有一辆，因为买下这辆滑板车是证明你妈妈爱你的最佳方式”。其实花园里几百个孩子里只有两个孩子在玩滑板车。</p>
+<p>⚠️如今这个时代，社会认同伎俩是被骗子使用最频繁的手段之一，当我们所有人都在社交媒体上的时候，这种人性漏洞就是一个强大的问题。还记得 Facebook 的“十年挑战”在如何利用这点骗取你的脸部数据吗？在这里看到分析《“十年”的阴谋》。类似状况在互联网上几乎比比皆是，911后就有骗子迅速利用人们的悲怆之情制造假的捐赠网站，发了一大笔。[Matt Liebowitz, “Tips to Avoid Japanese Earthquake Phishing Scams,” NBCNEWS. com, March 11, 2011]</p>
+<p>专业建议：社交工程人员通常都会制造这种社会认同的假象来鼓励某些行动。其他人完成的调查和请愿便使得你更愿意提供自己的个人信息。</p>
+<p>记得吗，IYP 一直在强调切勿参与网上流行的任何心理学测试小游戏，⚠️其中有一种游戏就是要求参与者必须“转发到朋友圈才能看到解释答案”，它利用的就是这种效应。不论在网络上还是现实中都是如此，只要有几个人站在街头“讨论”，过往的人就会停下来看一眼或听一会儿。不信你试试？</p>
+<p>——更多与影响有关的乐子——<br>影响利用最多的是人类的天性，但是也有其他因素在起作用。</p>
+<p>社会性和影响 ——</p>
+<p>在这个世界上，社会性和影响有什么关联呢？</p>
+<p>事实上两者在几乎所有方面都有关联。现代科学的发展使得不论是强壮还是瘦弱的人都能存活；而在现代科学出现之前，人们依赖他人的庇护和安慰来抵御外界的威胁。除了少数著名的例子之外，离群索居的人基本都……死了，和他的基因一起消失了。古代最严厉的惩罚就是流放。</p>
+<p>这就是为什么对一个人所处的社会环境敏感并非只是因为挑剔，还有寻求生存和繁衍的最佳时机的因素。</p>
+<p>这已经变成了我们的天性的一部分。我们天生就会对明显的或微妙的群体需求有所反应。因此，不要责备那些躲避同辈压力的孩子们，或者那些盲目从众的人，你要明白他们只是在跟随自己的生存本能。</p>
+<p>专业建议：现代社会中，⚠️社交工程人员会使用他们所掌握的关于社会性的一切知识，模拟出群体压力下的环境。即使是“独狼”也会在某种程度上感到社会压力，依环境和附近的人而定。</p>
+<p>社交工程人员经常会制造一种场景以造成某种紧张、担忧的情绪，或者促使人们采取行动 —— ⚠️警方和当局对活动家群体的渗透中经常使用这样的方法；还有许多其他伎俩，我们在将来会详细解释。</p>
+<p>最优秀的社交工程人员可以很自然地做到这点，你根本无法察觉到。</p>
+<p>所以，对于防御来说，您应该提醒自己在做出最大决策之前先停下来想想是什么在指导自己采取这样的决策。</p>
+<p>生理反应 ——</p>
+<p>我们在上一篇文章中讨论了杏仁核的趣事，详见《我是如何上当受骗的》。当大脑受到刺激时人体内也随即发生了一连串有趣的事。尽管把大脑反应和生理反应分开来说并不合适，但这样说更容易理解。</p>
+<p>如果人体受到威胁，那么杏仁核就会开始进行一系列活动来保护人体。无论这种威胁是一条鲨鱼还是一封邮件警告你有可能患有癌症，你的身体都会出现同样的反应。</p>
+<p>神经系统会自动向体内传输应激激素，这会导致你心跳加速、血压升高、瞳孔扩大、血液流向主要的肌肉群。这些生理反应是为身体做好准备，最重要的是为了最佳表现（包括认知上的表现）而处于最佳状态。</p>
+<p>专业建议：这一事实表明，⚠️如果社交工程人员能够影响和控制目标所受压力的大小，那么他们就可以进而影响目标决策的质量。</p>
+<p>心理反应 ——</p>
+<p>施加影响会产生什么样的心理反应呢？其中一个值得提的例子是我们的非语言行为对其他人产生的重大影响。</p>
+<p>有一种绝对会迅速激怒你的办法，那就是，采取与话语完全不相符的面部表情和肢体语言。比如，我在强调说隐私权的重要性，它事关基本人性和民主是否能持续下去的问题，然而，此刻我端着可乐、翘着二郎腿，一副爱谁谁的样子……作为听者的您会不会想给我一拳？</p>
+<p>很简单，你也完全可以反过来使用它，⚠️通过有意识地控制非语言信号来控制人们的反应。研究显示，“愤怒的脸”这一普遍表情已经演变为一种面部指标，可以显示出一个人的强壮和破坏力。[Andrea Estrada, “The Universal ‘Anger Face’ : Each Element Makes You Look Physically Stronger and More Formidable,” ScienceDaily website, August 28, 2014]</p>
+<p>这种恐吓的表情源于本能，就连从未见过这种表情的盲人孩子也能做到。研究人士相信我们进化出的表情是为了有效地进行讨价还价。不论何种文化中，愤怒脸都传达出一种强有力的感觉。</p>
+<p>⚠️社交工程人员即使不直接接触目标，也仍然有办法影响他们的反应。</p>
+<p>Langer 博士做过一项有趣的研究，他让参与者试着在复印机上划一条线，研究发现，如果参与者提供了某种理由，即便这个理由毫无意义，比如：“因为我想要复印，所以我可以划一条线吗？”，这种情况下参与者就会更容易成功地在复印机上划线。</p>
+<p>简单说，⚠️只要提出请求时提供了一个理由 —— 不论多扯蛋的理由 —— 都会能增加成功的概率。</p>
+<p>关于心理反应的最后一点是：有很多其他因素影响着人们对你的反应，但请记住，大多数时候社交工程人员都是在寻求帮助。</p>
+<p>帮助行为是一个非常庞大且复杂的话题，但是有些部分显而易见。大多数人在考虑是否要帮忙时，都能清除地权衡风险和麻烦。一般来说人们更可能帮助女性和孩子，也更可能在心情好的时候帮忙。最后，当周围有人时，人们可能不怎么愿意帮忙（除非有人先跳出来帮忙——社会认同原则，不是吗？）</p>
+<p>专业建议：⚠️人们所处的状况显然可以被用来施加影响。理解特定行为的效果可以使社交工程人员控制自己的行为，从而创造条件让目标说“好的”。</p>
+<p>—— 关于操控你需要知道的几件事 ——<br>操控绝对是危险的。下面概览一下最常见的手段（图片是总结）：</p>
+<p>增加易感性：恶意社交工程人员会使用一切手段增加人们对于建议和错误决策的易感性。之前你读到了对强烈情绪甚至生理反应的激发都是让逻辑思维短路的重要方法。<br>环境控制：恶意攻击者进入受害者的生活圈子后通常都会这么做。无论在网络上还是现实世界中，都可以找到很多这样的例子。<br>强制重新评价：攻击者会让目标对自己所知道的和学到的东西产生怀疑。这一手段通常和其他方法一起使用，例如威胁和恐吓。<br>权利剥夺：通常和权力滥用相伴，攻击者会让目标觉得除了服从之外没有其他选择。<br>惩罚：这是负面结果的直接运用，会让那些目睹而非经历负面结果的人感到害怕。<br>恐吓：惩罚是利用负面结果，恐吓则是利用惩罚来威胁。</p>
+<p>—— 总结 ——<br>社交工程的核心是有意识地引导另一个人做决定。根据你的意愿，这些行为可好可坏。本文希望您能了解：</p>
+<p>如何辨认影响和操控之间的区别；<br>理解影响的原则都有哪些、它们各自有什么用；<br>理解影响的效果来自人的社会天性、生理因素和心理因素共同决定的；<br>理解基本的控制手段，并且在有人向你实施操控时能够及时识别出来。<br>您现在应该已经具备了足够的防钓鱼攻击基础知识，能够理解攻击之所以有效的原因。后面的文章我们将介绍如何运用这些知识保护自己。下次见</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/29/%E7%A4%BC%E8%B2%8C%E7%9A%84%E5%81%8F%E6%89%A7/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/29/%E6%9B%B4%E7%B3%9F%E7%B3%95%E7%9A%84%E5%B1%80%E9%9D%A2/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BD%B1%E5%93%8D%E4%B8%8E%E6%93%8D%E6%8E%A7%E4%B8%8D%E6%98%AF%E4%B8%80%E7%A0%81%E4%BA%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%86%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%8F%98%E6%88%90%E4%BD%A0%E6%83%B3%E8%A6%81%E7%9A%84%E6%A0%B7%E5%AD%90%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">影响与操控不是一码事：如何将另一个人变成你想要的样子？</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">223</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
