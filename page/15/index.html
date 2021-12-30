@@ -162,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%881%EF%BC%89%EF%BC%9A%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E8%BA%AB%E4%BB%BD%E6%8C%96%E6%8E%98%E3%80%81%E6%8E%A8%E7%89%B9%E5%88%86%E6%9E%90%E7%83%AD%E7%82%B9%E4%BA%8B%E4%BB%B6%E3%80%81%E6%9A%97%E7%BD%91%E7%88%AC%E8%99%AB%E5%92%8C%E8%B0%83%E6%9F%A5%E6%8A%96%E9%9F%B3/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E7%A7%81%E4%BA%BA%E5%A8%81%E8%83%81%E6%A8%A1%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -176,966 +176,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%881%EF%BC%89%EF%BC%9A%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E8%BA%AB%E4%BB%BD%E6%8C%96%E6%8E%98%E3%80%81%E6%8E%A8%E7%89%B9%E5%88%86%E6%9E%90%E7%83%AD%E7%82%B9%E4%BA%8B%E4%BB%B6%E3%80%81%E6%9A%97%E7%BD%91%E7%88%AC%E8%99%AB%E5%92%8C%E8%B0%83%E6%9F%A5%E6%8A%96%E9%9F%B3/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-28 23:52:25" itemprop="dateCreated datePublished" datetime="2021-12-28T23:52:25+08:00">2021-12-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音"><a href="#新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音" class="headerlink" title="新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音"></a>新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音</h1><p>这是一个新的系列，将会不定期更新，汇总我们在全球开源情报社区获得的资源；希望能为中国的真相爱好者提供帮助。</p>
-<p>如果您关注过 Evans 的 tweets，您会发现他经常推荐一些新推出的技术工具。IYP 现在汇总他提供的内容，并增加其他新的内容，提供给没有使用 Twitter 的中国读者参考。</p>
-<p>更新不会定期，因为开发速度不同，其间会出现很多变故，比如 Facebook 封锁图谱搜索那样的突发事件也会随时出现；并且，我们会尽可能选取对中国调查者来说有意义的工具和信息。</p>
-<p>希望这些内容能连接中国技术社区、民间真相爱好者、公民记者和民主追求者，尤其希望中国的行动人士能从中获得灵感。</p>
-<p>⚠️非常建议参考我们在“OSINT”栏目中提供的演示，那是深度调查的思考方式，比工具更重要。</p>
-<p>⚠️请注意：其中的演示视频为 YouTube，如果您正中国，需要使用代理才能观看 —— 这点在IYP全网通用。</p>
-<p>1、面部识别搜索引擎</p>
-<p>当大多数人都热衷于上传自己的脸在互联网上后，就会诞生一个庞大的数据库，接下来的事必然是对这一数据金矿进行开采了。</p>
-<p>开采行为必定同时包括恶意的和善意的两种，其中善意的使用就是公民主导的真相事业：开源情报。</p>
-<p>如果您的调查目标比较喜欢晒，您的调查过程会更加顺利……这对任何开源情报工具来说都一样。</p>
-<p>这里是两个面部识别搜索引擎：</p>
-<p>第一个：<a target="_blank" rel="noopener" href="https://pimeyes.com/en/">https://pimeyes.com/en/</a></p>
-<p>上传一张照片你能找到此人在网上任何地方出现的信息；不过需要注册高级用户才能解锁一些功能让搜索更准确。</p>
-<p>如果你要搜的脸在社交媒体上，用第二个：<a target="_blank" rel="noopener" href="https://github.com/Greenwolf/social_mapper">https://github.com/Greenwolf/social_mapper</a></p>
-<p>支持 LinkedIn、Facebook、推特、Instagram、俄罗斯的 VK，中国的微博、豆瓣。</p>
-<p>这不是全部。由于面部生物识别数据量已经非常庞大，相关搜索市场的竞争越来越激烈，参与者包括科技寡头。</p>
-<p>于是有很多工具正在被陆续推出。比如：</p>
-<p>PimEyes：功能类似于 Google 的反向图像搜索。它使用面部识别技术来分析来自一百多万个网站的图像，以找到一个很好的匹配。</p>
-<p>BetaFace：不是免费服务，它提供较为先进的面部识别技术，有可能具有更大潜力。</p>
-<p>它可以完全分析一张脸，以提供更详细的结果，包括性别、年龄、胡须颜色、头发形状和下巴大小等特征。</p>
-<p>该工具具有大量的功能可以比较面孔。所有结果都以表格形式显示，用于面部识别匹配。</p>
-<p>此外谷歌、IBM、微软都有开发自己的面部识别搜索引擎工具，但是都没有上面两个更好。</p>
-<p>并且，SocialLinks 是另一个面部识别搜索引擎，比前面推荐的那俩还厉害；</p>
-<p>任何地方拿到一张照片，几分钟内就可以找到此人在社交网络上的身份，并且以图示的方式展示此人的人际关系网络：囊括所有社交关系。</p>
-<p>任何在互联网上上传过照片的人都可以被挖出来。</p>
-<p>操作非常简单无需基础，这里有操作演示（请注意它不免费而且不便宜）：</p>
-<p>⚠️就算您对真相挖掘毫无兴趣，这些工具也值得您了解 —— 关于您上传互联网的任何内容的风险性问题。</p>
-<p>对于脸部，在这里看到详细介绍：《你曾经在社交网络上发布过自己的照片？你危险了！》</p>
-<p>2、Twitter 数据分析：针对大型群体事件和其他热点话题</p>
-<p>以下是一些好用的推特分析工具，尤其是对大型群体事件的调查来说。</p>
-<p>followerwonk.com<br>socialbearing.com<br>foller.me<br>tinfoleak.com<br>twitonomy.com</p>
-<p>把过滤器调准一点，效果会很好。</p>
-<p>社交媒体情报是必然存在的，但它非常有必要用在正义的事业上。</p>
-<p>更多：</p>
-<p>《什么是社交媒体情报？你的推特如何成为抓捕你的理由？》<br>《社交媒体情报和反情报基本工具手册：自我人肉（2）》<br>3、暗网爬虫</p>
-<p>这里是一个暗网的隐藏服务爬虫 POOPAK：<a target="_blank" rel="noopener" href="https://github.com/teal33t/poopak">https://github.com/teal33t/poopak</a></p>
-<p>它构建为在 Docker 容器中运行，并具有一些非常好的功能：</p>
-<p>提取URL，<br>电子邮件地址，<br>EXIF数据，<br>BTC / ETH地址，<br>制作屏幕截图，<br>运行安全测试等内容<br>甚至提供易于使用的 GUI。对于调查来说应该很有用。</p>
-<p>4、检查推特账户僵尸粉含量的工具</p>
-<p>如果您怀疑某些明显为宣传性的账户为什么“如此多关注者”，可以使用以下这些工具分析其是否掺假：</p>
-<p>botornot.co ;<br>Fakers.statuspeople.com ;<br>还有一个可以可视化结果的工具：<a target="_blank" rel="noopener" href="https://sparktoro.com/tools/fake-followers-audit">https://sparktoro.com/tools/fake-followers-audit</a><br>社交媒体机器人非常多，例如，特朗普的推特账户有61％是机器人，在这里看到分析报告。</p>
-<p>5、隐藏的朋友</p>
-<p>如果您是活动家，这方面的技术需要您警惕，因为它会导致“连锅端”维稳。</p>
-<p>尤其是组织动员者，也许您认为自己隐藏得很好，但实际上并不够，请注意下面的操作演示，如何挖掘一个人“隐藏”的人际关系网络。</p>
-<p>蛛丝马迹都是非常重要的。</p>
-<p>⚠️这就是为什么我们警告任何敏感人际关系不要在社交媒体上体现，尤其是活动家团队，你们之间不应该在互联网上存在任何联系。</p>
-<p>（工具本身不是恶意的，是开源调查自动化）</p>
-<p>该演示视频以扎克伯格为例（它可以挖出任何人）：</p>
-<p>请注意：即便没有上面这个自动化工具，在互联网上也不难挖到你希望隐藏的东西。</p>
-<p>回顾 IYP 的开源调查演示案例，仅仅通过公开社交媒体信息，挖出政治旋转门《深层政治：Facebook金字塔的人形肌理 》。</p>
-<p>🔐自我保护方法详见：</p>
-<p>《角色扮演：行动者刚需》<br>《分裂人格的魅力》<br>以及《某些行动者，你需要一个袜子木偶》。<br>6、在暗网找到好东西</p>
-<p>这里有一个列表，是在 TOR 网络上存在的一系列真实网站的目录。</p>
-<p>该列表有多个类别，从全球透明度革命的档案到新闻媒体，从公民社会组织到技术安全等等，全有。</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/alecmuffett/real-world-onion-sites">https://github.com/alecmuffett/real-world-onion-sites</a></p>
-<p>下图只是一个例子。</p>
-<p>7、网页抓取工具</p>
-<p>SingleFile 是一个小工具，具有适用于 Chrome、Firefox 和 Opera 的插件，可将完整的网页保存到单个文件中，同时保持布局。</p>
-<p>图像可能是以 Base64 GIF 或 PNG 格式存储的。开源。</p>
-<p>请记住不要用于官方证据收集！</p>
-<p>用于收集开源情报或保存网页以供其他非官方使用，它绝对是赢家：<a target="_blank" rel="noopener" href="https://github.com/gildas-lormeau/SingleFile">https://github.com/gildas-lormeau/SingleFile</a></p>
-<p>8、安全检查 — selfcare</p>
-<p>你安全吗？</p>
-<p>“We Leak Info”是了解数据泄露的新途径。</p>
-<p>他们有超过7.500个数据泄露索引，超过100亿条记录。</p>
-<p>⚠️您可以查询数据集，以获取有关电子邮件地址、用户名、哈希、电话号码、IP等信息。</p>
-<p>它会列出所有数据泄露，显示是否是可下载的数据集，或者显示数据来自哪个原始网站：weleakinfo.com</p>
-<p>9、挖抖音</p>
-<p>中国抖音的使用量之高和其跨国输出趋势，已经令该平台变成了一个新的开源情报数据来源。</p>
-<p>简单说，挖掘真相的新渠道。</p>
-<p>开发人员正在努力针对该数据金矿设计调查工具。</p>
-<p>这里是一个简单的搜索工具 — — 用户名、主题标签、全名/关键字：<a target="_blank" rel="noopener" href="https://www.osintcombine.com/tiktok-quick-search">https://www.osintcombine.com/tiktok-quick-search</a></p>
-<p>想必很快会有更多挖掘工具诞生，比如，快速人脸识别搜索匹配。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%882%EF%BC%89%EF%BC%9A%E5%88%AE%E5%88%80%E3%80%81%E6%89%93%E7%A0%B4%E6%8E%A8%E7%89%B9%E9%99%90%E5%88%B6%E3%80%81%E6%83%85%E6%8A%A5%E8%B5%84%E6%BA%90%E6%9C%BA%E5%99%A8%E4%BA%BA%E3%80%81%E5%92%8C%E8%A2%9C%E5%AD%90%E6%9C%A8%E5%81%B6%E7%AE%A1%E5%AE%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="眼魔王">
-      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="眼魔王">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%882%EF%BC%89%EF%BC%9A%E5%88%AE%E5%88%80%E3%80%81%E6%89%93%E7%A0%B4%E6%8E%A8%E7%89%B9%E9%99%90%E5%88%B6%E3%80%81%E6%83%85%E6%8A%A5%E8%B5%84%E6%BA%90%E6%9C%BA%E5%99%A8%E4%BA%BA%E3%80%81%E5%92%8C%E8%A2%9C%E5%AD%90%E6%9C%A8%E5%81%B6%E7%AE%A1%E5%AE%B6/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-28 23:51:51" itemprop="dateCreated datePublished" datetime="2021-12-28T23:51:51+08:00">2021-12-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家"><a href="#新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家" class="headerlink" title="新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家"></a>新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家</h1><p>Hi，这是我们长期更新的系列内容的第二部分。如果您还没有看到第一部分、或者不了解本系列的来源和目标，可以在这里找到《新生情报工具（1）》。</p>
-<p>本系列都是没有废话的，只介绍新玩意；你可以通过尝试亲自了解它们的神力。</p>
-<p>1、与 Facebook 的猫鼠游戏进行中</p>
-<p>继 Facebook 关闭图谱搜索后该公司拥有的 Instagram 也在加大限制开源调查的能力 — — 它关闭了查看点赞者的功能：</p>
-<p>在关闭之前和之后的对比：</p>
-<p>查看点赞者这一功能比较重要，尤其是当您需要了解调查对象之间隐藏的关系时，点赞是泄漏关系的最直接途径之一（转发反而不是）。在这里看到包含相关思路的演示：</p>
-<p>《享誉盛名的”五角大楼官员”事实上是一个假人，如何揭露”他”？（第一部分）》<br>《合谋的欺骗：虚假的五角大楼官员是如何被发明出来的？（第二部分）》<br>要知道 Facebook 并非在为用户隐私服务，如果怀疑这点请阅读这个PDF。</p>
-<p>幸运的是，下面这个 Instagram 刮刀依然可用：<a target="_blank" rel="noopener" href="https://github.com/realsirjoe/instagram-scraper">https://github.com/realsirjoe/instagram-scraper</a></p>
-<p>2、暗网资源列表</p>
-<p>OSINT Techniques 共享了一个非常基本的链接汇编，列出了暗网上最受欢迎的在线市场、论坛和网站及其在线状态。</p>
-<p>也许对调查来说会很有用。在这里看到：<a target="_blank" rel="noopener" href="https://dark.fail/">https://dark.fail/</a></p>
-<p>3、一些最近更新到 GitHub 的开源工具</p>
-<p>sn0int（半自动 OSINT 框架和包管理器）<br>通过半自动处理公共信息并以统一格式映射结果进行后续调查。</p>
-<p>可以从证书透明度日志和被动DNS收集子域；使用 asn 和 geoip 信息丰富IP地址；从 pgp 密钥服务器和 whois 收集电子邮件；发现违规登录信息；通过互联网查找某人的个人资料；使用被动arp等独特技术枚举本地网络；收集有关 phonenumbers 的信息；从 instagram 个人资料中收集数据和图像……等等。</p>
-<p>您可以通过编写自己的模块轻松扩展 sn0int，也能与其他用户共享。</p>
-<p>theHarvester（使用二十多个公共数据源收集电子邮件、名字、子域、IP和 URL）<br>很简单无需多说。</p>
-<p>SpiderFoot（最完整的OSINT收集和侦察工具）<br>其目标是自动化收集有关给定目标的情报过程，包括IP地址、域名、主机、子网、ASN、电子邮件地址或人名等等。也可以在进攻中使用，即 作为黑盒渗透测试的一部分。</p>
-<p>Twint（先进的 Twitter 抓取工具）<br>不使用 Twitter 的API，允许您在避开大多数 API 限制的同时刮取目标用户的关注者、跟随者、推文等等。</p>
-<p>优势：可以获取几乎所有的推文（Twitter API 限制只能持续3200个推文）; 可以进行快速初始设置; 可以匿名使用，无需Twitter注册; 没有速率限制。</p>
-<p>以下是可视化示例（桌面应用程序正在开发中）</p>
-<p>Amass（DNS枚举和网络映射）<br>使用的信息收集技术：</p>
-<p>DNS：基本枚举，暴力强制（根据请求），反向DNS扫描，子域名更改/排列，区域传输（根据要求）<br>刮取： Ask，Baidu，Bing，CommonCrawl，DNSDumpster，DNSTable，Dogpile，Exalead，Google，HackerOne，IPv4Info，Netcraft，PTRArchive，Riddler，SiteDossier，ViewDNS，Yahoo<br>证书：Active pulls，Censys，CertSpotter，Crtsh，Entrust，GoogleCT<br>API： AlienVault，BinaryEdge，BufferOver，CIRCL，DNSDB，HackerTarget，Mnemonic，NetworksDB，PassiveTotal，RADb，Robtex，SecurityTrails，ShadowServer，Shodan，Spyse（CertDB 和 FindSubdomains），Sublist3rAPI，TeamCymru，ThreatCrowd，Twitter，Umbrella，URLScan，VirusTotal<br>网络档案： ArchiveIt，ArchiveToday，Arquivo，LoCArchive，OpenUKArchive，UKGovArchive，Wayback<br>4、一个有趣的 OSINT Telegram 机器人</p>
-<p>这是个有意思的机器人，你想要什么就告诉它，它会自动弹出资源。</p>
-<p>不清楚它的工作方式，但是测试一下还是不错的。</p>
-<p>它有两种语言，英语和俄语，两种同时发送；您进入后它会询问你喜欢哪种语言，然后它问你知道什么，也就是您手头的仅有信息属于哪类。</p>
-<p>下面有一大堆选项，就如下图所示，您在其中选择就可以，之后它就会根据您的已知弹出资源。</p>
-<p>某些使用您使用不同的语种会被显示不同的资源反馈。</p>
-<p>链接在这里：t.me /howtofind_bot 您可以试试看。尤其对于开源情报初学者来说它会非常有帮助。</p>
-<p>5、yEd图表编辑器</p>
-<p>偶然发现的这个小玩意。试运行的过程中很顺利。</p>
-<p>您可以导入 XML 或 Excel 数据，创建图表，自动排列，自定义并以不同格式导出。</p>
-<p>这对制作思维导图、流程图甚至漂亮的关系图表来说，会非常有用。</p>
-<p>在这里看到演示：</p>
-<p>链接在这里：https：//<a target="_blank" rel="noopener" href="http://www.yworks.com/products/yed">www.yworks.com/products/yed</a></p>
-<p>6、Franz 5</p>
-<p>开源情报社区几乎对 Franz 家喻户晓，这的确是一个很棒的工具。</p>
-<p>您运行多个 Telegram、WhatsApp 或 Discord 帐户吗？尤其是调查人员，非常需要这样做，想要保护隐私安全的普通人也应该做到，见《分身的技巧》。</p>
-<p>有了 Franz 您无需在单独的VM、容器或其他东西中运行它们，因为这是一个统治它们所有的工具。</p>
-<p>好吧，你可能要小心一点，例如 Facebook，当多个帐户从同一个IP连接时可能会被发现是可疑的。但如果如上所述，您在需要多个袜子木偶的情况下也应该知道安全操作的基本方法。<br>链接在这里: <a target="_blank" rel="noopener" href="https://meetfranz.com/">https://meetfranz.com/</a></p>
-<p>7、Orbit</p>
-<p>Somdev Sangwan 在 GitHub 上发布了这个新工具，它可以查询加密货币交易、并刮取一个地址和所有连接地址的历史记录。</p>
-<p>这是一个小而简单的脚本，包含一些基本参数，如查询深度和每个帐户的交易量等。</p>
-<p>收集数据后，它可以在 Quark 中显示结果，甚至可以将其导出为 JSON 或 Graphml 文件。</p>
-<p>Link: <a target="_blank" rel="noopener" href="https://github.com/s0md3v/Orbit">https://github.com/s0md3v/Orbit</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%883%EF%BC%89%EF%BC%9A%E6%8C%96%E6%8E%98%E6%8E%A8%E7%89%B9%E3%80%81%E6%90%9C%E6%9F%A5%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81%E3%80%81%E5%88%AE%E5%88%80%E5%92%8C%E5%AE%9A%E5%90%91%E8%BF%BD%E8%B8%AA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="眼魔王">
-      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="眼魔王">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%883%EF%BC%89%EF%BC%9A%E6%8C%96%E6%8E%98%E6%8E%A8%E7%89%B9%E3%80%81%E6%90%9C%E6%9F%A5%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81%E3%80%81%E5%88%AE%E5%88%80%E5%92%8C%E5%AE%9A%E5%90%91%E8%BF%BD%E8%B8%AA/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-28 23:51:19" itemprop="dateCreated datePublished" datetime="2021-12-28T23:51:19+08:00">2021-12-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪"><a href="#新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪" class="headerlink" title="新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪"></a>新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪</h1><p>如果你忘记了此前的内容，或者忘记了本栏目的来源，可以在这里回顾：</p>
-<p>《新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音》<br>《新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家》<br>来看看今天有什么好玩的东西。</p>
-<p>撬开 Facebook 黑盒</p>
-<p>看起来 Facebook 很不愿意让监视资本主义赖以生存的数据被民间调查人员使用；他们不仅关闭了自己的调查窗口，还将用户分享的调查工具链接自动列为“非法”。</p>
-<p>如果你想取得任何成功，你必须要找到能撬开对方的方式。</p>
-<p>对于 Facebook 而言，已经有很多技术人士找到了门路，而 Entropy 则是其中一个新选手。</p>
-<p>Entropy 是一种工具，可以抓取 Facebook 聊天状态数据，以查看用户上次登录时间并绘制时态图表。</p>
-<p>这就能让你知道你的调查对象什么时候工作、什么时候睡觉或醒来。这对于任何社交工程战术来说都是很有用的信息。</p>
-<p>Facebook 一直记录着这些数据，拿去卖钱；但他们不告诉你。如果调查人员想要知道，就需要一点技术思考。</p>
-<p>在这里：<a target="_blank" rel="noopener" href="https://github.com/andrew-vii/Entro.py">https://github.com/andrew-vii/Entro.py</a></p>
-<p>一套（14）个在 Twitter 挖数据的工具：</p>
-<p>1、高级搜索 Twitter（自定义选项）：<a target="_blank" rel="noopener" href="https://twitter.com/search-advanced">https://twitter.com/search-advanced</a></p>
-<p>你能看到很多选项，可以自定义关键字、时间、语种。</p>
-<p>就算您不关心调查，也可以试试看，使用 Tor+您的袜子木偶账户，搜索您自己的真实账户，看其中哪些内容需要删除。</p>
-<p>因为，监视你的人（包括trolls）可能一直在采取这种方法瞄准参与固定话题讨论的所有人。</p>
-<p>这就是《自我人肉》的思路 —— 将 OSINT 用于防御。</p>
-<p>当然，如果您是进攻者 — 也就是调查人员 — 它会让你变得更帅。</p>
-<p>2、Twitter 的位置搜索（GPS）：<a target="_blank" rel="noopener" href="https://twitter.com/search?q=geocode:38.952451,-90.195011,1km&amp;src=typd">https://twitter.com/search?q=geocode%3A38.952451%2C-90.195011%2C1km&amp;src=typd</a></p>
-<p>链接里是实例。您可以填写您想要的任何坐标 —— 比如大型突发事件，您想要知道那些声称自己是目击者的推特用户究竟是不是在事发地点；或者你想要追踪事发地点附近活动的账户，以了解事件进展……等等。</p>
-<p>我们介绍过这个方法，具体使用详见《从推特中挖掘真相不需要太复杂的工具：一个常用工具的全面指南》。</p>
-<p>很容易操作，上面这篇文章中还包括很多其他使用方法，一看就能懂。</p>
-<p>3、Twitter 时间搜索（输入日期和关键字）比如：Hong Kong since:2012–01–01 until:2012–01–02</p>
-<p>就是这样：<a target="_blank" rel="noopener" href="https://twitter.com/search?q=Hong%20Kong%20since:2012-01-01%20until:2012-01-02&amp;src=typed_query">https://twitter.com/search?q=Hong%20Kong%20since%3A2012-01-01%20until%3A2012-01-02&amp;src=typed_query</a></p>
-<p>4、所有推文（整个档案）：<a target="_blank" rel="noopener" href="http://www.allmytweets.net/connect/">http://www.allmytweets.net/connect/</a></p>
-<p>功能就是它的名字。</p>
-<p>顺便再提一下关于如何简单删除所有过时推文的小方法，见《清洁工具：自动删除您的旧推文，但您要保留的推文除外》。</p>
-<p>5、MentionMapp（离得最近的朋友）：<a target="_blank" rel="noopener" href="https://mentionmapp.com/">https://mentionmapp.com/</a></p>
-<p>这是一个在线可用的可视化工具，挖掘你的调查对象的人际关系网络；还可以清楚地看到谁参与了某些固定的对话。</p>
-<p>你能想象得到，⚠️如果活动家没有很好地做到匿名，该工具落在当局手里可以很容易地对一群行动者“连锅端”。</p>
-<p>这绝不是能做到这点的唯一工具；推特也不是能实现此类追踪的唯一平台 —— 您可以在我们曾经提供的工具箱中找到一大堆。</p>
-<p>这就是为什么我们要强调，活动家的在线组织动员必须做好匿名，也就是角色分配，否则您的行动计划将被扼杀于摇篮。具体做法详见：</p>
-<p>《如何分身》<br>《使用社交媒体时你必须注意什么？ — — 🔐 更安全的抵抗》<br>6、FollerMe（Twitter分析）<a target="_blank" rel="noopener" href="https://foller.me/">https://foller.me/</a></p>
-<p>不仅分析个人资料和最新推文，还分析推文的内容，并以“标签云”的形式告诉您主题的使用情况。</p>
-<p>而且，还会显示公共 Twitter 页面上未显示的内容，例如加入的日期、时区和关注者比率。</p>
-<p>7、TwtrLand（Twitter 个人资料）：<a target="_blank" rel="noopener" href="https://klear.com/">https://klear.com/</a></p>
-<p>这是个营销软件，但是你知道，它可以用来定向追踪（营销客不是一直在这么干吗）</p>
-<p>在“免费工具”的栏目中您也许能找到您需要的东西。</p>
-<p>8、GeoChirp（Twitter 映射数据）<a target="_blank" rel="noopener" href="http://www.geochirp.com/">http://www.geochirp.com/</a></p>
-<p>地理社交足迹，就是它的名字所显示的。</p>
-<p>9、MIT Map（映射推文）</p>
-<p>可以在几毫秒内查询和可视化数十亿条记录。还有一个演示视频：</p>
-<p>10、HootSuite（实时数据流）<a target="_blank" rel="noopener" href="https://hootsuite.com/feed/TEST+Search?pfilter=">https://hootsuite.com/feed/TEST+Search?pfilter=</a></p>
-<p>11、Twitterfall（实时搜索）：<a target="_blank" rel="noopener" href="https://twitterfall.com/">https://twitterfall.com/</a></p>
-<p>12、Twitonomy（Twitter分析）：<a target="_blank" rel="noopener" href="http://www.twitonomy.com/">http://www.twitonomy.com/</a></p>
-<p>对任何人的推文、转发、回复、提及、主题标签进行详细和可视化分析 ……<br>浏览、搜索、过滤并深入了解您关注的人和关注您的人；<br>只需单击一下，即可将备份 /导出推文、转发、提及和报告到 Excel 和 PDF；<br>监控您与其他 Twitter 用户的互动：提及，转发，收藏…<br>获取并导出任何关键字、标签、URL或 @users 的搜索分析；<br>深入了解并下载任何用户转发和收藏的推文；<br>监控您感兴趣的用户、列表和关键字搜索中的推文；<br>通过“ 关注者报告”为您的粉丝提供可操作的见解；<br>浏览，排序和添加/删除人员到您的列表；<br>获取您没有关注的关注者的列表；<br>跟踪推文中链接的点击次数；<br>跟踪您的追随者增长情况<br>以及更多…<br>13、Status People（识别假账户）：<a target="_blank" rel="noopener" href="https://fakers.statuspeople.com/">https://fakers.statuspeople.com/</a></p>
-<p>14、 Keyhole（实时跟踪）：<a target="_blank" rel="noopener" href="https://www.google.com/earth/">https://www.google.com/earth/</a></p>
-<p>刮刀：Linky</p>
-<p>这是一个 LinkedIn 刮刀。即使它仍处于开发阶段，看起来已经很容易使用。</p>
-<p>可以搜索公司的员工，并可以使用关键字来进行过滤。</p>
-<p>而且无需考虑要将其保存的格式，因为输出选项会将其导出为 CSV、JSON 和 HTML。</p>
-<p>在这里：<a target="_blank" rel="noopener" href="https://github.com/mez0cc/linky">https://github.com/mez0cc/linky</a></p>
-<p>加密货币搜索工具</p>
-<p>我们演示过如何在区块链上追踪比特币交易，如果您忘记了可以在这里回顾《如何在区块链上追踪比特币交易？》。</p>
-<p>区块链是开源调查的金矿。如果您在调查中遇到与加密货币有关的情报线索，那么这里有一些专门针对加密货币的搜索引擎，也许适合您：<a target="_blank" rel="noopener" href="https://www.aware-online.com/osint-tools/cryptocurrency-search-tool/">https://www.aware-online.com/osint-tools/cryptocurrency-search-tool/</a></p>
-<p>Aware Online 提供了很多调查工具，但其余工具我们曾经都介绍过，也就是说有非常多的替代品，而且都很好用；唯独加密货币还没有。于是上述链接本身可以是一个独立的工具。</p>
-<p>Monitoring Imagery</p>
-<p>卫星图像总是落后的，对于验证消息和追踪信息来说这种情况很头大。</p>
-<p>这里是一个小工具，可以自动检测您正在查看的区域的更新卫星图像。这对调查来说是很大的帮助。</p>
-<p>不过这个工具可能不适合初学者。它是在 Rust 中构建的，需要比常规 Python 脚本更多的工作。</p>
-<p>于是它可能更适合技术人员。如果您尝试运行了，请告诉我们您的体验。</p>
-<p>在这里： <a target="_blank" rel="noopener" href="https://github.com/audeberc/OSIMINT-alert">https://github.com/audeberc/OSIMINT-alert</a></p>
-<p>定向追踪工具：Spiderfoot</p>
-<p>SpiderFoot 是一个开源的足迹追踪工具，用于 Windows 和 Linux。它是 Python 编写的，提供了易于使用的GUI。</p>
-<p>可以获取有关目标的各种信息。非常简单易用，安装后可立即启动扫描。</p>
-<p>教程：</p>
-<p>SpiderFoot 的主要目标是尽可能自动化调查过程，帮您节省时间，将注意力集中在调查工作本身上。</p>
-<p>有大量的数据源 ; 到目前为止已超过50个<br>在 Linux 和 Windows 上运行。并且完全开源<br>可视化。内置基于 JavaScript 的可视化或导出到 GEXF / CSV 以用于其他工具，例如 Gephi。<br>高度可配置<br>模块化。每个主要功能都是一个用 Python 编写的模块<br>SQLite 后端。所有扫描结果都存储在本地 SQLite 数据库中<br>可同时扫描多个目标。<br>演示视频：</p>
-<p>好啦，今天的内容就是这样。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%884%EF%BC%89%EF%BC%9A%E6%88%98%E6%9C%AF%E5%9F%B9%E8%AE%AD%E3%80%81%E7%8B%A9%E7%8C%8E%E6%8E%A8%E7%89%B9%E3%80%81%E7%91%9E%E5%A3%AB%E5%86%9B%E5%88%80%20%E2%80%93%20%E9%92%88%E5%AF%B9%E7%89%B9%E5%AE%9A%E7%9B%AE%E6%A0%87%E4%BA%BA%E7%9A%84%E4%BE%A6%E6%9F%A5%E5%88%A9%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="眼魔王">
-      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="眼魔王">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%884%EF%BC%89%EF%BC%9A%E6%88%98%E6%9C%AF%E5%9F%B9%E8%AE%AD%E3%80%81%E7%8B%A9%E7%8C%8E%E6%8E%A8%E7%89%B9%E3%80%81%E7%91%9E%E5%A3%AB%E5%86%9B%E5%88%80%20%E2%80%93%20%E9%92%88%E5%AF%B9%E7%89%B9%E5%AE%9A%E7%9B%AE%E6%A0%87%E4%BA%BA%E7%9A%84%E4%BE%A6%E6%9F%A5%E5%88%A9%E5%99%A8/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-28 23:50:51" itemprop="dateCreated datePublished" datetime="2021-12-28T23:50:51+08:00">2021-12-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="新生情报工具（4）：战术培训、狩猎推特、瑞士军刀-–-针对特定目标人的侦查利器"><a href="#新生情报工具（4）：战术培训、狩猎推特、瑞士军刀-–-针对特定目标人的侦查利器" class="headerlink" title="新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 – 针对特定目标人的侦查利器"></a>新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 – 针对特定目标人的侦查利器</h1><p>继续我们的不定期更新系列</p>
-<p>如果您忘记了此前的内容，或者忘记了本栏目的来源，可以在这里回顾：</p>
-<p>《新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音》<br>《新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家》<br>《新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪》<br>来看看今天有什么好玩的东西。</p>
-<p>战术培训：TryHackMe</p>
-<p>这个名字就意味着它是做什么的。没错，模拟攻击 —— 您可以通过这里的演习打磨攻防技能。</p>
-<p>尤其是，现在该网站有了一个开源情报调查的模拟训练营。</p>
-<p>这里面的问题并不是很难，很适合初学者；很高兴看到有一些基于OSINT的挑战正式出现了。</p>
-<p>如果您感兴趣，可以来这里：<a target="_blank" rel="noopener" href="https://tryhackme.com/room/ohsint">https://tryhackme.com/room/ohsint</a></p>
-<p>简易教程：Twitter 搜索运算符</p>
-<p>我们介绍过谷歌运算符及使用技巧，见《攻防皆可用：GoogleDorking 高级运算符完整列表》。</p>
-<p>但你知道吗，Twitter 也有数十个特殊搜索运算符，可以在自定义时间范围内搜索、可以过滤来源、媒体类型等等。</p>
-<p>于是依旧对调查者推荐使用 TweetDeck，它可以非常方便全方位地监视信息流。在这里看到我们曾经的介绍《从推特中挖掘真相不需要太复杂的工具：一个常用工具的全面指南》。</p>
-<p>下面总结一下这些运算符：</p>
-<p>1、搜推文</p>
-<p>love AND hate：包含“爱”和“恨”</p>
-<p>love OR hate：“爱”或“狠”中的至少一个</p>
-<p>-love：不包括“爱”</p>
-<p>#tgif：一个标签</p>
-<p>“love hate”：完整的短语“爱恨”</p>
-<p>url:google.com ：这个对于子域和域名非常有效，但对于长URL而言效果不太好，这取决于url。 Youtube ID 效果很好。</p>
-<p>lang:en 搜索指定语种的推文</p>
-<p>2、搜用户</p>
-<p>from:user 由特定的用户 @username 发送，例如 “#space from：NASA”</p>
-<p>to:user 回复特定的用户 @username</p>
-<p>“+@user” 提及特定的用户 @username，例如 “+ @ NASA”</p>
-<p>list:user/list-name 来自此列表的成员，例如 list:NASA/space-tweets</p>
-<p>filter:verified 来自验证用户</p>
-<p>3、地理搜索</p>
-<p>near:city 在这个地方进行地理标记的内容</p>
-<p>near:me 来自靠近你标记的地方</p>
-<p>within:radius 在“near”运算符的特定半径内，可以使用 km 或 mi。例如 “fire near:san-francisco within:10km”</p>
-<p>geocode:lat,long,radius 例如要获得在一个特定经纬度附近10公里内的推文，这样：geocode:37.7764685,-122.4172004,10km</p>
-<p>place:96683cc9126741d1 按 Place Object ID 搜索推文</p>
-<p>4、按时间搜索</p>
-<p>since:yyyy-mm-dd 在指定日期或之后</p>
-<p>until:yyyy-mm-dd 在指定日期或之前。与“since”运算符结合使用以框定一个时间范围</p>
-<p>max_id:tweet_id 基于精确时间搜索的 Snowflake ID</p>
-<p>min_id:tweet_id 不与 max_id 一起使用</p>
-<p>5、交互</p>
-<p>min_retweets:5 最低数量的转推</p>
-<p>min_faves:10 最低数量的点赞</p>
-<p>min_replies:100 自定义的回复数量</p>
-<p>-min_retweets:500 转发量不超过“500”</p>
-<p>-min_faves:1000 点赞量不超过“1000”</p>
-<p>-min_replies:1000 回复数量不超过“1000”</p>
-<p>6、媒体</p>
-<p>filter:media 所有类型的媒体</p>
-<p>filter:images 所有图片</p>
-<p>filter:video 所有视频类型，包括原生 Twitter 视频和外部资源，如 Youtube</p>
-<p>filter:periscope 来自 Periscope 的</p>
-<p>filter:native_video 所有 Twitter 拥有的视频类型 (native video, vine, periscope)</p>
-<p>filter:vine Vines (RIP)</p>
-<p>filter:consumer_video 仅限 Twitter 原生视频</p>
-<p>filter:pro_video 仅限 pro video</p>
-<p>7、更多过滤器</p>
-<p>filter:follows 仅限您关注的帐户</p>
-<p>filter:links 仅包含特定的 URL</p>
-<p>filter:mentions 包含 @mentions</p>
-<p>filter:news 包含新闻故事的链接。与列表其他运算符结合使用可进一步缩小设置范围</p>
-<p>filter:safe 排除不安全的内容</p>
-<p>filter:hashtags 只包含特定标签的推文</p>
-<p>8、其他</p>
-<p>source:client_name 从指定的客户端发送的内容，例如 source：tweetdeck； twitter_ads 不能单独运行，但可以和其他运算符一起使用</p>
-<p>card_domain:pscp.tv 在 Twitter卡中匹配网址；相当于 url:</p>
-<p>card_name:audio 带有播放器卡的推文（链接到音频源，Spotify， Soundcloud 等）</p>
-<p>card_name:animated_gif 带有动图的推文</p>
-<p>card_name:app</p>
-<p>card_name:summary_large_image</p>
-<p>card_name:summary</p>
-<p>9、示例</p>
-<p>查询来自@Nasa的推文包含除图像之外的所有类型的媒体：</p>
-<p>from:NASA filter:media -filter:images<br>查询提到“小狗”或“小猫”的推文，提到“甜蜜”或“可爱”，不包括转推，至少有10个点赞：</p>
-<p>(puppy OR kitten) AND (sweet OR cute) -filter:nativeretweets min_faves:10</p>
-<p>要查找任何引用推文，请搜索推文永久链接或带 url的推文ID，例如：</p>
-<p><a target="_blank" rel="noopener" href="https://twitter.com/NASA/status/1138631847783608321">https://twitter.com/NASA/status/1138631847783608321</a> 或者 url:1138631847783608321</p>
-<p>那么，现在您可以知道下面这个搜索是什么意思了：</p>
-<p>space (big OR large) list:nasa/astronauts (source:twitter_for_iphone OR source:twitter_web_client) filter:images since:2011–01–01 -#asteroid</p>
-<p>Paste Site 搜索</p>
-<p>Paste Site 是一种专门文本分享的网站。用户可以将一段文本性质的内容（如代码）上传到网站，然后通过链接分享给其他用户。</p>
-<p>其中知名的网站有早期的 PasteBin.com 和现在的 github.com。由于此类内容多为好友间分享，所以内容隐含的价值也相对较高。</p>
-<p>在渗透测试、社交工程和开源情报的信息收集阶段，从 Paste Site 中搜集敏感信息是一种重要手段。</p>
-<p>Inteltechniques 一直是用于这项工作的最佳选项；但是，现在他们已经把工具转到付费墙后面了。于是人们一直在努力寻找下一个免费的替代品。</p>
-<p>现在确定了： NetBootCamp。就是这样：</p>
-<p>Link: <a target="_blank" rel="noopener" href="https://netbootcamp.org/pastesearch.html">https://netbootcamp.org/pastesearch.html</a></p>
-<p>自动挖文件数据的工具</p>
-<p>该工具允许您从支持的文件中提取文本、元数据、选择器和图像。下表显示了不同文件扩展名的支持功能：</p>
-<p>非常简单易用，只需上传或将文件拖入即可。这里是演示：</p>
-<p>瑞士军刀 Maltego：针对特定人员的侦查利器</p>
-<p>Maltego 是一种交互式数据挖掘工具，用于查找位于 Internet 上的各种来源的信息之间的关系；自动化和可视化。</p>
-<p>这里介绍基本方法。</p>
-<p>步骤＃1：启动 Kali 并启动 Maltego</p>
-<p>和惯常一样： Applications →Information Gathering →maltegoce，下面这样：</p>
-<p>Maltego 是一个 Java 应用程序并且内存紧张，因此请尽可能多地提供内存。</p>
-<p>步骤＃2登录您的 Maltego 帐户</p>
-<p>如果还没有注册账户就先注册。</p>
-<p>步骤＃3 Start a Machine</p>
-<p>登录后，您将看到如下所示的“Start a Machine”屏幕。</p>
-<p>现在你的目标是针对一个特定人的侦查；于是向下滚动，直到出现“人 — 电子邮件地址”，然后单击左侧的单选按钮。</p>
-<p>步骤＃4选择目标</p>
-<p>也就是你想要调查的人。这里的示例是被解雇的 Boris Epshteyn。</p>
-<p>然后会看到如下屏幕。您可以指定要搜索的域名（例如 whitehouse.gov，gmail.com 或其他）之间添加空格以搜索所有。</p>
-<p>现在，点击 Run！</p>
-<p>步骤＃5 选择适当的电子邮件地址</p>
-<p>现在，Maltego 将访问网络搜索与“Boris Epshteyn”名称相关的任何电子邮件地址。</p>
-<p>如下所示，它收集了许多与该名称相关联的电子邮件地址。并非所有这些都与你的目标直接相关，但所有这些都将与名称相关联。</p>
-<p>接下来选择想要使用哪些地址。本案例中继续选择使用所有这些。</p>
-<p>当点击电子邮件列表底部的 Next 时，Maltego 开始生成所有电子邮件地址的关系图。可以在下面看到：</p>
-<p>另外，可以转到标有“Entity Palette”的最左侧窗口。在那里可以找到 Maltego 搜索到的与目标人员相关的其他实体。</p>
-<p>在此案例中继续点击“电话号码”，看看是否可以为这个神秘的 Epshteyn 先生找到一个匹配的电话号码。</p>
-<p>步骤＃6 创建目标的关系图谱</p>
-<p>这是最后一步，点击左上角的全屏符号，可以显示 Maltego 收集的有关目标人的所有信息。</p>
-<p>记下为目标人显示的所有电子邮件地址和电话号码以及它们之间的链接。</p>
-<p>你可以看到左侧面板上有多个选项，可以以不同格式显示信息。</p>
-<p>建议每一种都试用一下，以便找到最合适的（最清晰）的显示方式。</p>
-<p>结论</p>
-<p>我们曾经介绍过 Maltego 在社交工程栏目中，它是进行开源数据挖掘的绝佳工具。</p>
-<p>通过使用该工具，您可以将侦查工作自动化，以节省大把的时间，并避免了调查人员在错误的关系链中被绑住。</p>
-<p>好啦，今天的内容就是这样。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%885%EF%BC%89%EF%BC%9A%E7%BF%BB%E8%AF%91%E9%97%B4%E8%B0%8D%E3%80%81%E5%A4%B4%E5%83%8F%E4%B8%AD%E7%9A%84%E7%A7%98%E5%AF%86%E3%80%81%E8%BF%9E%E9%94%85%E7%AB%AF%E5%88%A9%E5%99%A8%E3%80%81%E5%92%8C%E8%BF%BD%E8%B8%AA%E8%B5%84%E9%87%91%E5%BE%80%E6%9D%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="眼魔王">
-      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="眼魔王">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%885%EF%BC%89%EF%BC%9A%E7%BF%BB%E8%AF%91%E9%97%B4%E8%B0%8D%E3%80%81%E5%A4%B4%E5%83%8F%E4%B8%AD%E7%9A%84%E7%A7%98%E5%AF%86%E3%80%81%E8%BF%9E%E9%94%85%E7%AB%AF%E5%88%A9%E5%99%A8%E3%80%81%E5%92%8C%E8%BF%BD%E8%B8%AA%E8%B5%84%E9%87%91%E5%BE%80%E6%9D%A5/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-28 23:49:58" itemprop="dateCreated datePublished" datetime="2021-12-28T23:49:58+08:00">2021-12-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来"><a href="#新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来" class="headerlink" title="新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来"></a>新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来</h1><p>继续我们的不定期更新系列</p>
-<p>如果您忘记了此前的内容，或者忘记了本栏目的来源，可以在这里回顾：</p>
-<p>《新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音》<br>《新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家》<br>《新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪》<br>《新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 — 针对特定目标人的侦查利器》<br>来看看今天有什么好玩的东西。</p>
-<p>使用社会工程准确定位智能手机</p>
-<p>Seeker 背后的概念很简单，就像托管网页仿冒页面获取凭据那样，请求目标人的位置。</p>
-<p>Seeker 使用 Serveo 生成链接，将它转发给目标；网站要求获得位置许可，如果目标允许，追踪者就可以获得：</p>
-<p>经度<br>纬度<br>准确度<br>海拔（并非总是可用）<br>方向（仅在用户移动时可用）<br>速度（仅在用户移动时可用）<br>除了位置信息，追踪者还能获得没有任何权限的设备信息：</p>
-<p>操作系统<br>平台<br>CPU核心数<br>RAM容量 — 近似结果<br>屏幕分辨率<br>GPU信息<br>浏览器名称和版本<br>公共IP地址<br>IP地址侦察<br>此工具是仅用于教育目的：显示恶意网站可以收集的有关您和您的设备的数据，以及您不应该点击随机链接并允许关键权限（如位置等）的原因。</p>
-<p>像 Serveo 和 Ngrok 这样的服务在一些国家是被禁止的，所以如果在你的国家被禁止，你可能无法获得URL，如果没有，那么看这里：<a target="_blank" rel="noopener" href="https://github.com/thewhiteh4t/seeker">https://github.com/thewhiteh4t/seeker</a></p>
-<p>还有一个视频演示：</p>
-<p>头像中隐藏着什么？</p>
-<p>社交网络头像中可能隐藏着重要的调查线索，在这里看到一个利用头像中隐藏的线索挖掘网络水军的演示《网络水军如何试图影响选举？ 一个调查案例，观察对选民的在线心理战》。</p>
-<p>头像照片往往尺寸很小，难以看清其中的细节线索。我们也介绍过如何改变这点，见《别让社交媒体的自然模糊阻挡真相》。</p>
-<p>一些初学者依旧感觉这样的方法有难度。幸运的是现在有了一个免费服务可以帮您轻松做到这点。</p>
-<p>InstaDP 是一项免费服务，可让您以高分辨率的品质查看任何人的 Instagram 个人资料图片。你可以搜索任何帐户。</p>
-<p>浏览 Instagram 时，个人资料图片很小，没有选项可以将其放大。该网站则允许您以原始大小放大个人资料图片。</p>
-<p>它们还有iOS或Android版的应用程序 Qeek for Instagram。</p>
-<p>网站的搜索栏可以让您搜索任何用户，即使您不知道确切的用户名。</p>
-<p>在这里：<a target="_blank" rel="noopener" href="https://www.instadp.com/">https://www.instadp.com/</a></p>
-<p>连锅端和避免连锅端的警告</p>
-<p>社交媒体情报是个庞大的金矿；几乎所有目的的人都一直在从中挖掘着属于自己的宝物。从调查记者到政府间谍，从商业营销到社交工程，从私人侦探到威胁情报……</p>
-<p>于是，相关技术工具可以说非常丰富，您可以在这里看到大部分关键工具《社交媒体情报和反情报基本工具手册》。</p>
-<p>不幸的是，目前为止大多数人依旧感觉某些细节“不起眼/很平常”，于是公开“无所谓”。</p>
-<p>请随时记得情报分析的思考方式：没有什么信息是不相关的。也许它们单独摆在那里时看起来很普通，但只要你把它们关联起来，就有可能牵出背后庞大的秘密。</p>
-<p>所以，作为防御者，你必须小心，要非常小心。</p>
-<p>⚠️尤其是对于那些民间独立组织尚且没能充分使用开源情报技术的社会 —— 因为这意味着开源情报没能做为反击能力获得对权势操作的透明度，而是仅仅作为打压工具被政府用来抓捕异议人士了。</p>
-<p>如今的行动者往往通过社交网络进行动员，这也许非常便捷；但是，这也会令您陷入被提前维稳的风险。</p>
-<p>如果您不想要自己的计划被挫败，那就要从动员的最初做好各方面的防御。</p>
-<p>我们介绍的情报挖掘工具都可以反用于防御 —— 让更多人看到技术能做到什么，追踪和抓捕以什么为线索，人们就能更为深刻地体会到该如何避免进入圈套。</p>
-<p>随时提醒自己，我在监视者眼中是什么样的？</p>
-<p>互粉很常见，但对于监视者来说：互粉意味着谁与谁存在强连接关系。</p>
-<p>⚠️这就是为什么我们要强调：如果是重要的联系人，切勿在任何社交媒体上互粉。</p>
-<p>否则您和您的团队有被连锅端的可能。</p>
-<p>反过来，互粉也是追查政府宣传战网络的可靠参数之一。因为有组织的水军往往紧密相关、互相促进，很少有水军网络注重隐藏关系特征。</p>
-<p>要挖掘这些关系，有两个工具可以帮您做到：第一个是 <a target="_blank" rel="noopener" href="http://twiangulate.com/search/">http://twiangulate.com/search/</a></p>
-<p>它的网站很清楚无需过多解释。</p>
-<p>另一个工具是： <a target="_blank" rel="noopener" href="https://tweepdiff.com/">https://tweepdiff.com</a></p>
-<p>Tweepdiff 可以用来比较（超过2个）Twitter 帐户，以找到其共同的追随者/关注对象 — — 显然，“连锅端”的利器。</p>
-<p>⚠️再次重申，所有这些工具都在提醒安全意识；即便您不是战士，从来没有打算投入战斗，您一样可以通过尝试使用这些工具以获得安全防御的最佳判断。</p>
-<p>当然我们希望您具有战斗精神，因为民间组织需要更多技术精英的支持。</p>
-<p>元搜索引擎和关键字研究工具</p>
-<p>我们介绍过什么是元搜索引擎，以及一些常规工具，见《如果你擅长搜索，你能找到一切》。</p>
-<p>元搜索引擎又称集合型搜索引擎，将多个单一搜索引擎集成在一起，提供统一的检索界面，将用户的检索提问同时提交给多个独立的搜索引擎，同时检索多个数据库；并根据多个独立搜索引擎的检索结果进行二次加工，如对检索结果去重复、排序等。</p>
-<p>您可以简单的理解为全网搜。</p>
-<p>这里有一个相对强大的工具，而且非常简单易用，上面那个图是示例：<a target="_blank" rel="noopener" href="https://soovle.com/">https://soovle.com/</a></p>
-<p>它可以自定义搜索查询，可拖动以保存、或者下载。在左上角看到选项。</p>
-<p>如果您正在深挖信息，建议使用关键字及其各种可能的变体（包括不同语种）逐一查询。因为人们经常会使用变体以避免被搜索。</p>
-<p>比如本文使用“开源情报”，而不是“OS<strong>T”，这样就不会被搜索引擎捕捉到；但是如果搜索者使用中文关键字或者变体”OS</strong>T”，这篇文章就会被捕获。</p>
-<p>追踪资金往来</p>
-<p>Venmo 是 PayPal 旗下的一个移动支付服务，让用户可以使用手机或网页转账给他人。</p>
-<p>截至2018年6月，Venmo 已经拥有约2300万用户，仅2018年第二季度的交易总额就超过140亿美元。</p>
-<p>⚠️不幸的是，Venmo 非常不安全，因为它将所有交易公开给任何人可以通过未经身份验证的API实时查看。</p>
-<p>而且默认情况下，用户个人资料也是公开的，这意味着任何人都可以在未登录应用的情况下查看用户的最近五笔交易。</p>
-<p>可以轻松找到个人的电话号码，并可用于在开源情报调查中发现 Venmo 帐户信息。</p>
-<p>于是就诞生了一个挖掘资金往来的工具。</p>
-<p>Venemy（开源工具可在github上获得）可以抓取所有线索信息并生成情报报告。可以转换为图形分析的格式，以便与 Neo4j 等平台一起使用，实现深度挖掘。</p>
-<p>你能想到它的用处非常广泛。⚠️资金往来是最敏感的揭示性情报。</p>
-<p>可以在这里看到 Venemy 的介绍视频：</p>
-<p>搜索 Telegram 的工具</p>
-<p>Evans 推荐了一个可搜索 Telegram 频道/群组/机器人的搜索引擎：Telegago。</p>
-<p>现在它更新了，变得更好用：</p>
-<p>结果更加丰富<br>可看到消息类别<br>优化的 Google dorks<br>Telegram 爱好者来试试看吧：<a target="_blank" rel="noopener" href="https://cse.google.com/cse?q=+&amp;cx=006368593537057042503:efxu7xprihg#gsc.tab=0&amp;gsc.q=%20&amp;gsc.page=1">https://cse.google.com/cse?q=+&amp;cx=006368593537057042503:efxu7xprihg#gsc.tab=0&amp;gsc.q=%20&amp;gsc.page=1</a></p>
-<p>间谍翻译（它是个警告⚠️）</p>
-<p>互联网打开了全世界沟通的大门，人们发现了跨文化交流的便捷和快速。但与此同时，语言问题也被突出出来了。</p>
-<p>掌握多门外语的人毕竟是少数，于是技术公司紧急开发了简单易用的在线翻译工具，比如众所周知的谷歌、Bing、Yandex 这是仅举几例。</p>
-<p>谷歌翻译允许您选择两种语言：掌握的语言和目标语言。</p>
-<p>但是翻译工具实在是太多了，也可能非常不安全。比如 ‘cevirsozluk’。它的工作方式略有不同。</p>
-<p>首先，您只能看到一个输入框。在您键入时，翻译会显示在框下方。</p>
-<p>⚠️您应该注意到页面底部显示的是其他用户搜索过的最新翻译。</p>
-<p>所以呢？谁在乎是否有人想知道如何用法语说“蛋糕”？⚠️如果用户不知道自己的秘密和敏感的翻译内容被索引了，那么情况就会变得更加严重。</p>
-<p>更危险的是，使用“Google dorks”，可以找到此翻译网站的所有索引结果。</p>
-<p>顺便回顾《攻防皆可用：GoogleDorking 高级运算符完整列表》<br>截至2009年8月23日，这里显示了大约有 2170000 个结果。而几个月前这个数字还不到200万，所以你能知道它正在迅速增加。</p>
-<p>所以，现在这里的可能性无穷无尽。</p>
-<p>你会发现人们翻译单个单词、基本短语，但也会发现 —— ⚠️许多有趣的数据来自人们翻译他们的电子邮件！</p>
-<p>你可以在上面的高级搜索中添加其他关键字。比如尝试像“信用卡”、“@ gmail.com”这样的关键词、以及 “确认”等等；你就会找到非常敏感的东西。</p>
-<p>上面的图片显示有人正在翻译他们收到的包含信用卡详细信息的电子邮件。</p>
-<p>⚠️其中包含有完整的卡号、安全码（CVV）、到期日期、卡类型，甚至是其帐户的ID！⚠️</p>
-<p>这表明当人们没有意识到这些翻译被编入索引时会有多严重。</p>
-<p>而另一种电子邮件翻译包括登录警报。这是非常常见的，现在站点会在有人从新的设备或位置登录时发送警告电子邮件给您。</p>
-<p>这很危险吗？是的！</p>
-<p>因为其中包括来自 Bittrex 这类网站的警告邮件，这是一个比特币交易平台。</p>
-<p>由于用户点击了自动翻译，该邮件中包含的登陆IP抵制就泄漏了。</p>
-<p>⚠️切勿随意使用在线翻译！这非常重要。即便无法公开索引，翻译工具的提供者也能看到您输入的内容 —— 想象一下，如果敏感人士使用隐写术或者任何加密通信传递内容，而其中使用的信息并非母语；这种情况下如果接收者使用了翻译功能 …… 任何安全技术都保护不了你。</p>
-<p>这里要展示的最后一个危险例子并不是来自电子邮的件，而是来自网站。</p>
-<p>有人在网站注册了一个账户，网站自动显示已经发送了确认代码到用户的手机；而在这种情况下用户使用了翻译功能 —— 完整的电话号码就暴露了。</p>
-<p>在这里看到电话号码有多危险《如果只知道一个电话号码，你能挖出多少有效信息？》。</p>
-<p>请注意以上只是最简单的几个例子而已，在此索引中您能挖到很多神奇的东西，什么银行支付交易ID、PayPal交易等等，五花八门。</p>
-<p>永远都会有新服务出现，人们往往很少会花时间先学习一下如何正确使用它们、以及它们可能揭示的关于你的数据都包括什么。</p>
-<p>这种习惯本身非常危险！</p>
-<p>⚠️提醒所有人：小心上传任何内容，不论使用任何数字工具都应该非常谨慎。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%886%EF%BC%89%EF%BC%9A%E5%B9%BF%E6%B3%9B%E6%90%9C%E9%9B%86%E3%80%81%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D%E3%80%81%E6%88%91%E7%9F%A5%E9%81%93%E4%BD%A0%E7%9A%84%E7%8C%AB%E4%BD%8F%E5%9C%A8%E5%93%AA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="眼魔王">
-      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="眼魔王">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%886%EF%BC%89%EF%BC%9A%E5%B9%BF%E6%B3%9B%E6%90%9C%E9%9B%86%E3%80%81%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D%E3%80%81%E6%88%91%E7%9F%A5%E9%81%93%E4%BD%A0%E7%9A%84%E7%8C%AB%E4%BD%8F%E5%9C%A8%E5%93%AA/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-28 23:49:14" itemprop="dateCreated datePublished" datetime="2021-12-28T23:49:14+08:00">2021-12-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪"><a href="#新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪" class="headerlink" title="新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪"></a>新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪</h1><p>继续我们的不定期更新系列</p>
-<p>这里是“新生情报工具”第6部分内容。</p>
-<p>如果您忘记了此前的内容，或者忘记了本栏目的来源，可以在这里回顾：</p>
-<p>《新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音》<br>《新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家》<br>《新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪》<br>《新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 — 针对特定目标人的侦查利器》<br>《新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来》<br>来看看今天有什么好玩的东西。</p>
-<p>Th3inspector</p>
-<p>这是个相对比较知名的信息收集工具，现在有了更新版，速度更快了。</p>
-<p>如果您还不了解这个工具，下面是一些简单的介绍；关于它能干什么，以及视频操作演示。</p>
-<p>用法 ——</p>
-<p>电话号码信息：-n （-number）<br>查找IP地址和电子邮件服务器：-mx（-mailserver）<br>域名Whois查询：-w （-whois）<br>查找网站/ IP地址位置：-l （-location）<br>域名年龄检查器：-a （-age）<br>用户代理信息：-ua（useragent）<br>信用卡 Bin Checker：-b（bin）<br>子域扫描程序：-s（-subdomain）<br>电子邮件地址检查：-e（-email）<br>内容管理系统检查：-cms（-cms）<br>显示帮助消息并退出：-h（-help）<br>示例 ——</p>
-<p>列出所有基本选项和开关：<br>perl Th3inspector.pl -h<br>获取网站信息：<br>perl Th3inspector.pl -i example.com<br>获取电话号码信息：<br>perl Th3inspector.pl -n xxxxxxx<br>查找IP地址和电子邮件服务器：<br>perl Th3inspector.pl -mx example.com<br>查找网站或IP地址位置：<br>perl Th3inspector.pl -l example.com<br>安装 —— （ Linux）</p>
-<p>git clone <a target="_blank" rel="noopener" href="https://github.com/Moham3dRiahi/Th3inspector.git">https://github.com/Moham3dRiahi/Th3inspector.git</a><br>cd Th3inspector<br>chmod +x install.sh &amp;&amp; ./install.sh<br>（ Windows）</p>
-<p>Download Perl<br>Download Th3inspector<br>cpan install JSON<br>Extract Th3inspector into Desktop<br>Open CMD and type the following commands:<br>cd Desktop/Th3inspector-master/<br>perl Th3inspector.pl<br>以下是视频演示：</p>
-<p>快速地理定位的另一种方法：OSM overpass API</p>
-<p>地理定位是检验信息真伪、追踪目标线索、以及了解更多背景信息的关键步骤。我们曾经介绍过多种地理定位的方法，以下是部分回顾；</p>
-<p>《侦探挑战游戏：快速地理定位的两种方法》<br>《全球搜罗：用于信息验证的基本地理定位工具 》<br>《使用电影做侦探挑战演示：开源调查游戏》<br>《如何挖掘机器人水军的幕后推手？》<br>《“谷歌地图”是比詹姆斯邦德更棒的间谍》<br>《侦探挑战：间接证据和排除法》<br>《侦探挑战小游戏》<br>等等<br>本文将介绍另一种方法。</p>
-<p>下面这两张照片是在哪里拍摄的？—— 要具体位置。</p>
-<p>这两张照片都是来自荷兰电视台的剧照；它们都没有携带某种可以说明位置的细节，例如街道标志、地标、门牌号码等。</p>
-<p>但是，通过简单的技术和 openstreetview 的使用，具体位置仍然是可验证的。下面来看看这件事怎么做。</p>
-<p>寻找位置1：</p>
-<p>视频中的介绍信息显示，照片2拍摄于照片1附近的村庄。</p>
-<p>因此找到照片1的位置就可以了。为了找到位置，必须识别该照片中能起到定位作用的唯一元素。</p>
-<p>照片1有几个独特的元素，即：</p>
-<p>桥梁<br>5个风车（用于发电）<br>运河<br>公路，有4个车道<br>虽然荷兰是一个非常小的国家，但仅仅这四个元素仍然会包含大量的可能地点。</p>
-<p>为了最小化搜索区域，这里将使用 Openstreetmap（OSM）的 overpass API。OSM地图在这里：<a target="_blank" rel="noopener" href="https://overpass-turbo.eu/">https://overpass-turbo.eu/</a></p>
-<p>这是一个数据开源的地图，用户可以获取地图的所有地理数据，包括街道路网、建筑轮廓、建筑类型、建筑高度等等。OSM 地图在全球范围内已经有非常详尽的资料，相比下中国目前的数据较少，但是主要城市道路等信息已经基本完善。</p>
-<p>这里将使用已识别的独特元素（运河、桥梁、风车和高速公路）查询OSM数据集，从现在开始，它们被称为<em>特征</em>。</p>
-<p>风车</p>
-<p>风车沿着高速公路分布并靠近运河。这些工厂用于通过风力发电。所以现在你知道要从数据库搜索什么了：荷兰的所有风力发电工厂。</p>
-<p><a target="_blank" rel="noopener" href="https://wiki.openstreetmap.org/wiki/Map_Features">https://wiki.openstreetmap.org/wiki/Map_Features</a> 这是一个包含所有可用特征的列表。您可以通过搜索这个列表找到目标特征（桥梁、运河、高速公路、工厂）。</p>
-<p>风力发电是一个典型特征；所以现在前往‘power’部分：<a target="_blank" rel="noopener" href="https://wiki.openstreetmap.org/wiki/Map_Features#Power">https://wiki.openstreetmap.org/wiki/Map_Features#Power</a></p>
-<p>通过滚动和查看照片，您可以了解正在寻找的特征类型：找风车….</p>
-<p>单击链接时。您将在页面上找到 ‘how to tag a power plant’. 的描述。单击“generator：source”查看所有类型的来源。<a target="_blank" rel="noopener" href="https://wiki.openstreetmap.org/wiki/Key:generator:source">https://wiki.openstreetmap.org/wiki/Key:generator:source</a></p>
-<p>通过查找源类型（风），可以确定 Overpass API的查询代码。点击“wind”链接：(<a target="_blank" rel="noopener" href="https://wiki.openstreetmap.org/wiki/Tag:generator:source%3Dwind">https://wiki.openstreetmap.org/wiki/Tag:generator:source%3Dwind</a>).</p>
-<p>现在为风车找到一个独特的值……generator:source=wind 这个值对于每个风车来说都是独一无二的。</p>
-<p>Overpass API</p>
-<p>回到 overpass API，点击：wizard → generator:source=wind → build query</p>
-<p>在左侧部分中，将 timeout 更改为120左右，然后单击“运行”。</p>
-<p>因此，数据库中的所有可用标记都将显示在地图上。请记住，搜索查询是在屏幕上显示的地图上完成的（即所谓的 bbox）。</p>
-<p>到目前为止，可以手动搜索所有选定的特征，并比较 google streetview 和照片中的特征。继续搜索运河和高速公路（公路）附近的特征。</p>
-<p>然而这样依然会带给你很大的数据量。所以需要再精细一下：让立交桥在高速公路100米范围内返回风车。</p>
-<p>JavaScript Coding:</p>
-<p>[out:json][timeout:800];</p>
-<p>// Get all mills in current bounding box (Netherlands)<br>( way<a href="!--swig%EF%BF%BC0--">“generator:source”=”wind”</a>;<br>node<a href="!--swig%EF%BF%BC1--">“generator:source”=”wind”</a>;<br>relation<a href="!--swig%EF%BF%BC2--">“generator:source”=”wind”</a>;<br>)-&gt;.mills; // store in variable ‘mills’</p>
-<p>// Get all highways in current bounding box and store them in the variable streets<br>way(around.mills:100)[highway=motorway]-&gt;.motorways;</p>
-<p>// get mills in 100m distance for all identified relevant motorways<br>( node.mills(around.motorways:100);<br>way.mills(around.motorways:100);<br>rel.mills(around.motorways:100);<br>)-&gt;.matchingmills;</p>
-<p>// return results, mills and motorways<br>(.matchingmills; .motorways;);<br>out geom;</p>
-<p>这就清楚很多了。</p>
-<p>接下来要过滤掉距离运河500米以外的所有工厂。</p>
-<p>New code</p>
-<p>[out:json][timeout:800];</p>
-<p>// Get all mills in current bounding box (Netherlands)<br>( way<a href="!--swig%EF%BF%BC3--">“generator:source”=”wind”</a>;<br>node<a href="!--swig%EF%BF%BC4--">“generator:source”=”wind”</a>;<br>relation<a href="!--swig%EF%BF%BC5--">“generator:source”=”wind”</a>;<br>)-&gt;.mills; // store in variable ‘mills’</p>
-<p>// Get all highways in current bounding box and store them in the variable motorways<br>way(around.mills:250)[highway=motorway]-&gt;.motorways;</p>
-<p>// get all canals near windmills (500m) in current bbox<br>way(around.mills:500)[waterway=canal]-&gt;.canals;</p>
-<p>// get mills in 100m distance for all identified relevant motorways<br>( node.mills(around.motorways:250) ;<br>way.mills(around.motorways:250);<br>rel.mills(around.motorways:250);<br>)-&gt;.matchingmills;</p>
-<p>// get mills in 500 distance for all identified relevant canals<br>// get mills in 500 distance of canals and motorways<br>( node.matchingmills(around.canals:500);<br>way.matchingmills(around.canals:500);<br>rel.matchingmills(around.canals:500);<br>)-&gt;.matchingmills;</p>
-<p>// return results, mills and motorways<br>(.matchingmills;);<br>out geom;<br>好了。下面这张图就显示了靠近高速公路（250米）和运河（500米）附近的所有工厂。</p>
-<p>第一个位置就是答案：</p>
-<p>第2张照片</p>
-<p>下一张照片是一条街。是的，在这条街上还有一个非常独特的标识符，也就是特征。</p>
-<p>这是一座电力建筑。这些建筑物已经列在上述地图的特征列表中了。</p>
-<p>显然他们被称为“变电站”。可以使用查询向导找到这些建筑物：’power = substation’</p>
-<p>从这里开始，您可以使用 google streetview 搜索正确的位置。有13个可能的位置。</p>
-<p>结论</p>
-<p>这种方法能够帮你在短时间内缩小许多可能性。但是有一些警告：</p>
-<p>这里是在假设OSM数据库是准确、完整、正确和最新的<br>过程中必须准确定位特征<br>OSM 数据库并非在世界上任何地方都能准确或完整。它在荷兰的表现非常出色，但是在马里，就只有部分城市和几条街道。</p>
-<p>此外，数据需要足够新，换句话说，数据集必须与照片相匹配。</p>
-<p>特征列表是个很强大的功能；但您必须选择正确的特征，否则结论错误就不是工具本身的问题了。</p>
-<p>在这里看到视频演示：</p>
-<p>“我知道你的猫住在哪”</p>
-<p>⚠️请注意：这里的“猫”可以换成任何东西！—— 包括你的孩子。</p>
-<p>你是晒娃爱好者、还是晒猫爱好者，或者晒任何东西的爱好者？</p>
-<p>这个网站的存在既是警报器，也是对隐私权倡导者的敲打。</p>
-<p>因为它之所以能存在，正是因为隐私权倡导者多年来关于自我保护的警告失败了 —— 依旧有太多人乐于在互联网上暴露自己最致命的部分。</p>
-<p>“如果你在社交媒体网站上启用了基于位置的服务 —— 你只是在邀请罪犯到你家” —— 塔斯卡卢萨警长办公室 Lt. Andy Norris</p>
-<p>欢迎来到今天的互联网 — 您可以购买任何东西，每个网站都在跟踪您的一举一动，任何地方您都可以找到猫的视频和图像。</p>
-<p>目前，在公共图像托管网站上有1500万个标有“猫”字样的图像，每天还有数千个图像从地球上的任意位置上传上来。</p>
-<p>iknowwhereyourcatlives.com 是一个数据可视化实验，它通过嵌入在元数据中的纬度和经度坐标，在世界地图上定位一百万只猫的公开图像样本。</p>
-<p>该项目探讨了互联网的两种用途：一种是促进对驯化猫科动物的社交和幽默欣赏的共享；而另一种是，监视资本主义的现实。</p>
-<p>构建：</p>
-<p>HTML5, CSS3, Twitter Bootstrap 3, Javascript / jQuery, history.js, Google Map API, MarkerClustererPlus, MarkerWithLabel, PHP 5, MySQL, Apache, Python, SciPy K-means clustering</p>
-<p>对于开源情报调查来说：如果你的追踪目标是个喜欢晒的人，你就有福了。</p>
-<p>视频：</p>
-<p>新的图谱搜索工具</p>
-<p>Facebook 关闭其图谱搜索后，全球的开源情报社区开发者都在尽各种努力补救这一损失。</p>
-<p>最近一些越南开发人员已经创建了一个新的 Facebook 搜索工具，实际上看起来效果很好，并以 JSON 格式返回查询。</p>
-<p>旧的图谱搜索中采取的运算符，在这里基本都可以使用。</p>
-<p>您需要构建的URL如下：</p>
-<p>graphsearch.thao.pw/api/graphSearch?q={ID}/{operator}&amp;amount=10<br>其中{ID}是您要查询的用户的 Facebook ID，{operator}是您要执行的特定搜索；’amount = x’ 指定了需要返回的结果数量。</p>
-<p>例如，如果想找出在壳牌公司工作的前100名员工（id = 200969413280005），只需要请求’employees’，这样：</p>
-<p><a target="_blank" rel="noopener" href="https://graphsearch.thao.pw/api/graphSearch?q=200969413280005/employees&amp;amount=100">https://graphsearch.thao.pw/api/graphSearch?q=200969413280005/employees&amp;amount=100</a></p>
-<p>就是这么简单！</p>
-<p>查询工具：<a target="_blank" rel="noopener" href="https://graphsearch.thao.pw/">https://graphsearch.thao.pw</a></p>
-<p>GUI版本：<a target="_blank" rel="noopener" href="https://fbinsight.thao.pw/">https://fbinsight.thao.pw/</a></p>
-<p>富有创造力的开发者社区总是如此令人激动。如果您也对开源情报工具开发感兴趣，欢迎与我们联系。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%887%EF%BC%89%EF%BC%9A%E5%85%A8%E7%90%83%E6%90%9C%E4%BA%BA%E3%80%81%E5%85%8D%E8%B4%B9%E6%89%8B%E6%9C%BA%E7%9F%AD%E4%BF%A1%E3%80%81%E6%94%BE%E5%A4%A7%E7%85%A7%E7%89%87%E4%B8%8D%E6%8D%9F%E8%B4%A8%E9%87%8F%E3%80%81%E5%BF%AB%E9%80%9F%E6%9F%A5%E6%89%BE%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="眼魔王">
-      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="眼魔王">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/28/%E6%96%B0%E7%94%9F%E6%83%85%E6%8A%A5%E5%B7%A5%E5%85%B7%EF%BC%887%EF%BC%89%EF%BC%9A%E5%85%A8%E7%90%83%E6%90%9C%E4%BA%BA%E3%80%81%E5%85%8D%E8%B4%B9%E6%89%8B%E6%9C%BA%E7%9F%AD%E4%BF%A1%E3%80%81%E6%94%BE%E5%A4%A7%E7%85%A7%E7%89%87%E4%B8%8D%E6%8D%9F%E8%B4%A8%E9%87%8F%E3%80%81%E5%BF%AB%E9%80%9F%E6%9F%A5%E6%89%BE%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-28 23:48:44" itemprop="dateCreated datePublished" datetime="2021-12-28T23:48:44+08:00">2021-12-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="新生情报工具（7）：全球搜人、免费手机短信、放大照片不损质量、快速查找相关视频"><a href="#新生情报工具（7）：全球搜人、免费手机短信、放大照片不损质量、快速查找相关视频" class="headerlink" title="新生情报工具（7）：全球搜人、免费手机短信、放大照片不损质量、快速查找相关视频"></a>新生情报工具（7）：全球搜人、免费手机短信、放大照片不损质量、快速查找相关视频</h1><p>这里是“新生情报工具”第7部分内容。</p>
-<p>如果您忘记了此前的内容，或者忘记了本栏目的来源，可以在这里回顾：</p>
-<p>《新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音》<br>《新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家》<br>《新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪》<br>《新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 — 针对特定目标人的侦查利器》<br>《新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来》<br>《新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪》<br>来看看今天有什么好玩的东西。</p>
-<p>如何在线放大照片</p>
-<p>网上有些照片原本就很小，尤其是老照片或者监视摄像头的照片，有可能分辨率非常差。</p>
-<p>但就如社交媒体照片一样，其中可能隐藏着很重要的情报线索。（在这里回顾《如何恢复社交媒体照片到原始分辨率》）</p>
-<p>你必须首先看清那些细节。</p>
-<p>现在有一个很好在在线工具可以帮你解决这个问题。</p>
-<p>这个免费的在线工具使您可以按照自己的需求放大图像，而不会损失图像的质量，不会失真。</p>
-<p>链接：https：//<a target="_blank" rel="noopener" href="http://www.imageenlarger.com/">www.imageenlarger.com/</a></p>
-<p>快速查找相关视频</p>
-<p>这是一个有趣的在线工具，可以帮你快速找到与你提供的视频相关的其他视频来源；并且，输出为关系图表，就像上面那样（用MJ的视频做例子）。</p>
-<p>你只需要输入你想查找相关性的视频链接。</p>
-<p>点击关系图中任何一个节点，视频将在左侧的小屏幕上播放。</p>
-<p>这个工具看起来很好玩，对调查来说也十分有用，包括信息验证 —— 当您的调查目标或情报线索包括被上传到YouTube的视频的时候。</p>
-<p>链接：https：//yasiv.com/youtube</p>
-<p>搜索推特 lists 的小工具</p>
-<p>自定义小工具，搜索推特 list。无需过多解释。</p>
-<p>当然，您能搜到的是公开list，不包括创建者设置为私密的list。</p>
-<p>就如上面图那样，输入你想要的关键字就行了。</p>
-<p>链接：<a target="_blank" rel="noopener" href="https://cse.google.com/cse?cx=016621447308871563343:u4r_fupvs-e">https://cse.google.com/cse?cx=016621447308871563343:u4r_fupvs-e</a></p>
-<p>介绍几个免费的手机短信平台</p>
-<p>在网站上完成注册过程中经常需要输入您的手机号码才能接收SMS验证或确认。</p>
-<p>如果您不想透露自己的手机号码，则可以使用这些在线号码之一完成验证。</p>
-<p>这对于调查人员来说非常有用 —— 你必须做好隐身，才能安全地完成调查。（回顾《Opsec 操作安全：在反侦察的过程中您应该注意哪些陷阱？》）</p>
-<p>您会在这些网页上收到确认短信，只需单击选择的号码即可阅读短信。</p>
-<p>也可以将SMS消息发送到电子邮件地址。为了从手机向电子邮件发送SMS消息，需要一个特殊格式：@ space email_adres space message text.</p>
-<p>例如，发送短信到电子邮件地址 <a href="mailto:&#x65;&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x40;&#97;&#100;&#100;&#x72;&#101;&#115;&#115;&#46;&#99;&#x6f;&#109;">&#x65;&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x40;&#97;&#100;&#100;&#x72;&#101;&#115;&#115;&#46;&#99;&#x6f;&#109;</a>，就是这样：@ <a href="mailto:&#x65;&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x40;&#97;&#x64;&#100;&#114;&#x65;&#115;&#115;&#x2e;&#99;&#x6f;&#x6d;">&#x65;&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x40;&#97;&#x64;&#100;&#114;&#x65;&#115;&#115;&#x2e;&#99;&#x6f;&#x6d;</a> text of message</p>
-<p>下面是一些可以推荐的平台：</p>
-<p><a target="_blank" rel="noopener" href="http://sms.sellaite.com/">http://sms.sellaite.com/</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.receivesmsonline.net/">https://www.receivesmsonline.net/</a></p>
-<p><a target="_blank" rel="noopener" href="https://receive-sms.com/">https://receive-sms.com/</a></p>
-<p><a target="_blank" rel="noopener" href="http://receive-sms-online.com/">http://receive-sms-online.com/</a></p>
-<p>全球最大的搜人引擎</p>
-<p>开源情报调查领域中的任何新手都会将人员搜索引擎 Pipl.com 添加到其工具箱中。Pipl 组织声称拥有全球最大的人员搜索引擎。</p>
-<p>该搜索引擎允许您例如通过姓名、电子邮件地址、电话号码或用户名搜索有关人员的详细信息。</p>
-<p>例如，您可以找到有关社交媒体帐户、联系信息和雇主关系等信息。</p>
-<p>在2019年6月11日，Pipl 在Twitter上发布了以下消息：“免费并不总是更好。找出为什么要淘汰 Pipl Search 的免费版本的原因。”</p>
-<p>Pipl在其网站上的一篇文章中指出，“免费搜索”消失的原因除其他外，最主要的是，免费搜索选项的结果始终少于付费的“ Pipl Search Pro”版本。</p>
-<p>现在免费版本没了。幸运的是，您仍然可以创建一个试用帐户，您仍可以使用该帐户运行免费的搜索查询。为此，请按照下列步骤操作。</p>
-<p>步骤1：转到 <a target="_blank" rel="noopener" href="https://pipl.com/api">https://pipl.com/api</a></p>
-<p>步骤2：点击“免费开始”；</p>
-<p>步骤3：填写个人资料信息。强烈建议您不要填写任何能关联个人身份的信息。避免任何追踪。</p>
-<p>步骤4：点击“参加我们的调查”；</p>
-<p>步骤5：填写所有信息，然后逐步进行操作。</p>
-<p>步骤6：验证您创建的电子邮件地址</p>
-<p>步骤7：通过Pipl.com登录。现在您可以开始搜索了。</p>
-<p>使用API​​搜索</p>
-<p>第1步：登录帐户后，您会看到一条消息，指出您的帐户需要进行验证。否则，该帐户将在4天后过期。</p>
-<p>您还将看到您已收到以下演示API “ BUSINESS-Premium-Demo”，“ SOCIAL-Demo” 和 “ CONTACT-Premium-demo”。使用这些API密钥，您可以免费创建30个搜索查询。</p>
-<p>第2步：点击主菜单顶部的“ API”；</p>
-<p>第3步：向下滚动，然后点击“Try our Live demo”；</p>
-<p>第4步：您准备好了！使用 Pipl 的搜索选项搜索有关人员的信息。例如，按名称、电话号码或两者的组合进行搜索。确保始终验证结果。因为有些结果可能已过时、不准确和/或不完整。</p>
-<p>免责声明：请始终做好自我保护。如果不能确定这点，那么请勿触犯法律。我们对工具的使用结果不承担任何责任。</p>
-<p>查找网络钓鱼套件的来源</p>
-<p>StalkPhish 是一种工具，用于搜索免费的开源情报数据库以查找特定的网络钓鱼套件URL。</p>
-<p>此外，StalkPhish 旨在尝试查找网络钓鱼套件的来源。</p>
-<p>一些诈骗者在部署网络钓鱼套件时无法或不会将其删除。您可以尝试找到以下来源，以提取一些有用的信息，例如：用于发送被盗数据的电子邮件地址，有关欺诈者或网络钓鱼工具开发人员的更多信息。</p>
-<p>从那里您可以扩展对威胁和威胁组织的了解，并获得许多有用的信息以进行进一步的调查。</p>
-<p>urlscan.io search API<br>urlquery.net search web crawler<br>Phishtank free OSINT feed (with or without API key)<br>Openphish free OSINT feed<br>PhishStats search API<br>链接：<a target="_blank" rel="noopener" href="https://github.com/t4d/StalkPhish">https://github.com/t4d/StalkPhish</a></p>
-<p>如何使用用户名查找隐藏的在线账户？</p>
-<p>在线平台和社交媒体通常要求其用户设置用户名。一旦注册，用户名在平台上通常是唯一的：该帐户直接与该用户名关联，并且不能注册具有相同用户名的其他帐户。</p>
-<p>用户在其他平台上也使用相同的用户名是很普遍的（在给自己起名字方面，人们经常缺乏创意）。</p>
-<p>这就很有趣了，因为这意味着追踪者可以通过用户名在互联网上跟踪目标人。</p>
-<p>在本教程中，我们将更详细说明如何通过查看同一用户名，以查找其他（隐藏的）帐户。</p>
-<p>在调查中提供用户名后，您便可以检查该用户名是否与在线平台和社交媒体上的帐户相关联。下面的图像中，您将找到三种不同的颜色。</p>
-<p>绿色表示您的目标用户名未与帐户关联，蓝色表示用户名已与帐户关联，黄色表示发生错误。</p>
-<p>操作步骤如下：</p>
-<p>第1步：访问网站 <a target="_blank" rel="noopener" href="https://namechk.com/%E3%80%82">https://namechk.com/。</a></p>
-<p>第2步：在搜索栏中填写您的目标用户名。</p>
-<p>第3步：点击“ Enter”按钮时，您会注意到在线平台的颜色将会改变。这些颜色指示您的目标用户名是否与在线帐户相关联。</p>
-<p>当然，还有许多其他资源和技术可以用来研究用户名。</p>
-<p>例如，使用Google运算符 “ inurl：gebruikersnaam”；您还可以查找用户名是否用于特定网站（site：domainname.nl）。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/20%E4%B8%AA%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E5%9C%A8%E7%BA%BF%E4%BE%A6%E6%9F%A5%E5%B7%A5%E5%85%B7%E5%92%8C%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86%E5%B7%A5%E5%85%B7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="眼魔王">
-      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="眼魔王">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/28/20%E4%B8%AA%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E5%9C%A8%E7%BA%BF%E4%BE%A6%E6%9F%A5%E5%B7%A5%E5%85%B7%E5%92%8C%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2021/12/30/%E7%A7%81%E4%BA%BA%E5%A8%81%E8%83%81%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">私人威胁模型</a>
         </h2>
 
         <div class="post-meta">
@@ -1146,7 +187,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-12-28 23:48:05 / 修改时间：23:48:06" itemprop="dateCreated datePublished" datetime="2021-12-28T23:48:05+08:00">2021-12-28</time>
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：20:15:39" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
             </span>
 
           
@@ -1160,134 +210,366 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="20个最好用的在线侦查工具和数据收集工具"><a href="#20个最好用的在线侦查工具和数据收集工具" class="headerlink" title="20个最好用的在线侦查工具和数据收集工具"></a>20个最好用的在线侦查工具和数据收集工具</h1><p>如何同时在一百多个社交媒体中查找用户名；如何检测您的账户是否曾经遭到入侵；如何获取世界上任何人的更多有价值信息；如何追踪您需要匹配的任何目标的足迹；如何对远程目标进行快速彻底侦察……</p>
-<p>当您开始进行调查时，您将面临的第一个阶段就是针对目标的数据侦察和收集。完成有关目标的信息汇总后，您将获得所有必需的信息，如 IP 地址，域名，服务器，技术等等，以便您最终进行安全研究、渗透测试、开源调查和社交工程攻击测试。</p>
-<p>获取这些有价值信息的最佳工具是什么？您是否希望跟踪人员和公司的数据、域名、IP、服务器和运行的软件？</p>
-<p>本文将向您展示一些最佳的 Recon 和 Intel 信息收集工具。</p>
-<p>在开始之前的重要提示：请记住，如未经事先授权，切勿在外部网络/系统上使用这些工具。这里介绍了这些工具，目的是在信息收集的第一阶段帮助 IT 安全研究人员和私人/公共信息安全调查员，这是网络安全调查中最重要的部分之一。</p>
-<ol>
-<li>OSINT Framework</li>
-</ol>
-<p>虽然 OSINT Framework 不是在您的服务器上运行的工具，但它是通过查询网络上公开提供的免费搜索引擎、资源和工具来获取有价值信息的一种非常有用的方法。它专注于为 OSINT 数据源提供最佳链接。</p>
-<p>虽然这个 Web 应用程序最初是专注于 IT 安全性而创建的，但随着时间的推移，它现在也可以从其他行业获得其他类型的信息。它用于查询信息的大多数网站都是免费的，但有些网站可能需要支付较低的费用。</p>
+          <h1 id="私人威胁模型"><a href="#私人威胁模型" class="headerlink" title="私人威胁模型"></a>私人威胁模型</h1><p>OSINT是这样一种东西，人们不一定通过这些内容的学习成为深度调查大师，只要您能通过深度挖掘演示了解到互联网的追踪攻击能力，并且意识到如何保护自己的隐私，就已经非常好了。简单说说这件事<br>你的对手现在可能正在调查你。你真的知道在网上可以找到哪些关于你的个人信息吗？你知道什么东西可能对你、你的公司、你的资产甚至你所爱的人构成潜在的威胁吗？</p>
+<p>也许你去年读过有关如何通过简单的健身应用程序找到秘密军事基地和间谍的分析（如果没读过在这里看到《如何使用简单的应用程序找到隐藏的军事基地、士兵和秘密特工们的姓名和住址？》）；或者，您是否了解有关在线数据库（如 haveibeenpwned 或 Dehashed）的信息，它们可以告诉您或您公司的密码是否因数据泄露而受到损害？</p>
+<p>我可以随便指出几十个（或者更多）在线资源可能会泄露您的机密数据，但我不想这样做，我想从不同的角度来看待这个问题。</p>
+<p>我喜欢称这种自我评估方法为 OSINT 警报。因为最终，所有关于你（或其他人）暴露在互联网上的信息，反过来都会以各种方式使你变得脆弱。</p>
+<p>请考虑以下事项：</p>
+<p>作为个人/私人，其他人会能发现关于你的什么东西？<br>作为商务人士，其他人会能发现关于你的什么东西？<br>例如，您的朋友和家人是否意识到您可能因为工作或政治立场而成为了间谍的“理想”目标？<br>案例1、</p>
+<p>你离开家去度假了，犯罪分子会从你的社交媒体上找到这一信息，那么你的家就很快会“迎来”窃贼，甚至是间谍 — 他们擅长安装微型窃听设备。</p>
+<p>还可以让这一示例更复杂些。假设你是一位名人，你发帖说你将前往一个特定的国家或地区，如果那个地区对你的身份来说是敏感的（例如活动家vs新疆），你很可能会遇到麻烦。</p>
+<p>如果你家有很好的报警系统，那么在此上述威胁是可避免的。</p>
+<p>但是，如果您前往的国家是激进团体的家园，这些团体已经看到您的社交媒体发布，现在全天候跟踪您的在线活动。而您发布了另一条消息，指出将前往该国家/地区的某个酒吧。</p>
+<p>如果你是名人，绑架和勒索赎金将很有可能发生；或者更糟糕的是，暗杀。</p>
+<p>虽然这些威胁可能看起来很遥远甚至令人难以置信，但在 OSINT 中，我们经常可以看到人们会在什么时间和地点发布他们所处的位置。在世界上许多地区，将某人的在线角色映射到实体家庭地址并不难，如果我们能够做到这一点，那些意图不好的人也可以做到这一点。</p>
+<p>案例2、</p>
+<p>假设你正在离婚。您是一个在社交媒体上发布很多关于自己活动的人。你和你的前配偶有两个年龄较小的孩子，可能是6–10岁。ex住在离你家2个街区的地方。当你的两个孩子在后院玩耍的时候，你发帖说要洗个澡。</p>
+<p>ex 看到了你的帖子：她就可以抓取该信息在法庭上证明您不会很好地照看孩子，于是她很可能因此获得孩子的抚养权。</p>
+<p>发布到社交媒体和其他在线网站的信息可供任何人使用，当然包括恶意行为者、也包括法庭。</p>
+<p>案例3、</p>
+<p>你在x公司担任一名相当高级别的领导人。你的一名员工满50岁。你决定让另一名员工为该员工拍照，您站在办公桌前为他/她庆生，交给他一份礼券，并将照片发布到社交媒体上。</p>
+<p>您没有注意到桌面上的计算机是打开的，屏幕显示的内容可以帮助潜在的网络钓鱼者入侵您的操作系统和应用程序，允许他们向您发送更有针对性的攻击。</p>
+<p>甚至有些办公室的计算机上还贴有便笺，上面有WiFi网络名称（SSID）和密码。攻击者可以通过社交工程或对您办公室位置的物理访问来利用这些信息。</p>
+<p>此外另外一些计算机已打开了 Microsoft Outlook（您的工作电子邮件程序），一旦放大该屏幕，我们就会看到一封“保密”的电子邮件。监视者可以阅读整个电子邮件。</p>
+<p>并且，公司政策是您需要始终佩戴公司徽章。由于您在社交网络晒出的照片中佩戴了徽章，恶意行为者可以将其复制并重新制作成真正的徽章，以尝试使用社交工程伎俩进入您的公司。</p>
+<p>— — 结论 — —</p>
+<p>以上只是最简单的示例，我们演示过，攻击还可以做得更多更复杂。您可能需要重新考虑您的在线活动。考虑以下问题：</p>
+<p>您真的有必要在网上发布您的运动习惯吗，以供所有人查看？<br>请考虑设定标准，比如在公司的某些区域内拍照是被禁止的；<br>您真的需要公开自己的手机号码吗？<br>炫富会带来很多危险您是否有此意识？<br>请问问自己，通过留下密码提示信息和其他可能用于破解密码的关键信息，你是否让攻击者和坏人更容易入侵你？这几乎相当于把钥匙挂在前门上让任何人进入你的房子或办公室一样。如果你有时间查看人们的社交媒体TL，会很容易得到一个恶意行为者所需要的一切信息的答案，这是非常危险的 — — 你说的太多了！</p>
+<p>请不要小看自己的价值，你的价值自己说了不算，攻击者认为的才算数。这类攻击每天都在发生，也许您自己是无辜的、你没那么多钱、没有那么显赫的社会地位、也很顺应所谓的主流意识形态，但是，你认识的人中有与上述诸多条件相反的人吗？如果有，你可以会被攻击者当成一个旁道跳板 — — 通过攻击你，来获取对你那个有钱有地位、或者政治异议的熟人发起攻击。</p>
+<p>请参考以下提示：</p>
+<p>不时评估自己，想一想可能构成威胁的在线指标都是什么；<br>发帖前先想想，如果坏人得到它会能挖出什么东西；<br>改变一些公司或社区或团队的政策以保持更安全、以及激发成员更多的安全意识；<br>选择退出或删除有关您自己的在线信息;<br>最重要的是考虑一下，如果您的数据受到损害，可能会产生什么影响。<br>总之，安全的一切都在细节上，思考方式非常重要，它能帮您在意识层面上加一把锁。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%AB%99%E4%B8%8A%E8%BF%9B%E8%A1%8C%E6%96%B0%E9%97%BB%E6%94%B6%E9%9B%86%E5%92%8C%E7%9B%91%E8%A7%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%8C%87%E5%8D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/30/%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%AB%99%E4%B8%8A%E8%BF%9B%E8%A1%8C%E6%96%B0%E9%97%BB%E6%94%B6%E9%9B%86%E5%92%8C%E7%9B%91%E8%A7%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%8C%87%E5%8D%97/" class="post-title-link" itemprop="url">社交网站上进行新闻收集和监视的基本指南</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：19:11:03" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="社交网站上进行新闻收集和监视的基本指南"><a href="#社交网站上进行新闻收集和监视的基本指南" class="headerlink" title="#社交网站上进行新闻收集和监视的基本指南"></a>#社交网站上进行新闻收集和监视的基本指南</h1><p>精准且全面地收集信息是调查研究和监视热点的关键。社交媒体这个信息金矿应该被充分利用。本文将总结针对社交媒体的信息收集的基本技巧和方法<br>社交媒体很好，使您可以查找信息源、监视对话、了解行为、跟踪事件、以及发现影响社区的问题。</p>
+<p>但是，您必须首先知道想要的东西在哪里能找到，何时以及如何在线观看。</p>
+<p>本文将重点介绍新闻采集（主动搜索）和监视跟踪（被动搜索）中最好的 <em>免费</em> 工具和技术；还将研究跨平台的最佳实践和应用程序，以便您可以有效地展示最有用的内容以进行报告和研究。</p>
+<p>验证找到的信息和来源是否真实也非常关键，您可以参见我们的 列表-3 “让它民主” 版块中介绍的验证技巧。</p>
+<p>如今每个人都可以收听实时发生的数百万次对话，这就是搜索关键字最重要的地方 — — 用于讨论主题或事件的术语、短语或标签，可以帮助您确定哪些内容可能是报道的好来源。</p>
+<p>对于硬新闻，相关的来源和关键字可能更明显。调查者需要了解社区领袖、领域专家、政治家、慈善机构、学者、影响力人物、活动家团体、目击者、名人，商业领袖和紧急服务等。</p>
+<p>关键词构成了在线新闻采集的核心，是否能准确抓住关键词，将意味着您是否可以获得想要的内容。</p>
+<p>当谈到小众话题时，可能更难获得关键词。但确定一些更具体的关键词可以帮助您确定更多的来源，创造一个新来源和新关键词的反馈循环，跨平台捕捉，可以让您在短时间内迅速上手。</p>
+<p>来源的类型和相关的关键词在每个主题中都是不一样的，但基本的办法不变。</p>
+<p>👌不要错过：关键字查询工具</p>
+<p>keywordtool.io<br>keyword.io<br>semscoop.com<br>keywordtool.net<br>app.kparser.com<br>mykeyworder.com<br>serpstat.com<br>keywordsheeter.com<br>— — 搜索 — —<br>说到搜索，人们会首先想到谷歌。它的确是全球范围内使用最广泛的搜索引擎：占市场份额90%，但它仍不是全部，作为调查人员您应该知道，您说需求的信息最有可能从哪里获得。</p>
+<p>不要错过《如果你擅长搜索，你能找到一切：<em>没有谷歌</em>的强大搜索世界》<br>1、汇总消息<br>新技术经常令人兴奋，但是，有一些非常古老的技术由于高度实用，生命力非常顽强；当这些古老的技术与现代技术相结合时，它们是任何开源情报调查武器库中的有用部分。</p>
+<p>👌首先必须强调布尔运算符。因为它是最简单的且最强大的工具之一 —— 使用逻辑。在下面看到我们曾经对布尔搜索的演示和介绍：</p>
+<p>《一个搜索统治一切：调查用心而非技术》<br>布尔搜索非常简单，就是以下5种：</p>
+<p>AND：返回包含所有指定关键词的结果<br>OR：返回带有任何指定关键词的结果<br>NOT：返回没有指定关键词的结果<br>“ ” : 返回具有引号内包含的确切短语的结果<br> ( )：将括号内的术语分组以使用多个运算符阐明搜索字符串<br>记住并熟练使用上述5种操作方法是您在网络上寻求信息的基础。</p>
+<p>比如您搜索 disinformation OR misinformation OR “fake news”，这将返回上述3个词中任何一个相关内容的列表；用 AND 替代它们（必须总是大写）搜索引擎只会返回包含所有这些搜索词的结果。</p>
+<p>在查询过程中您可以组合任意数量的布尔运算符。</p>
+<p>如果您正在查找气候变化否认者背后的资金来源的报告，可以这样 “climate change deniers” OR “climate change denial” OR “climate denial”) AND (lobbying OR “dark money” OR funding。</p>
+<p>如果在谷歌上搜索您还可以多用一些额外的选项，以进一步缩减结果范围。其中最强大的却总是被忽略的工具就是日期搜索。</p>
+<p>在下拉菜单中选择自定义范围，您可以按照时间过滤返回的内容：只包括一天、某周、某个月的页面，或者任何您想要的时间窗口。</p>
+<p>利用谷歌高级搜索的力量，将显著细化您的搜索结果，更容易找到精准的信息。</p>
+<p>比如您正在寻找不受监管的比特币交易所的信息，您可以选择确定一系列专门报道加密货币的网站，将这些网站的域名和搜索一起使用。例如 您知道 coindesk.com 报道数字货币，下面这样就可以得到一个报道数字货币的类似网站清单：</p>
+<p>related:coindesk.com<br>高级谷歌搜索的真正力量来自多个搜索运算符的组合。比如 site:</p>
+<p>site:coindesk.com “unregulated exchange” OR bitcoin<br>还是比特币的例子，如果您想从 related:coindesk.com 找到的多个网站上查找内容，那么就这样：</p>
+<p>“unregulated exchange” AND bitcoin site:coindesk.com OR site:bitcointalk.org<br>👌这些仅仅是最简单的样本，尽管如此它们已经足够能说明白关键词和逻辑的创造力如何帮助您寻求到最需要的内容。您可以更快速地精简您的在线研究和信息追踪。</p>
+<p>不要错过，这里是基本运算符汇总《攻防皆可用：GoogleDorking 高级运算符完整列表》<br>但请一直记得，谷歌不是能找到一切的地方，对于您的调查内容来说，您需要及时想到最佳的搜索引擎。比如对于中国的国内信息，百度也许更丰富；对于东欧和俄罗斯的信息，Yandex 是最佳选择。如果您的调查内容比较敏感，您应该选取那些不会追踪您的私密搜索引擎。</p>
+<p>2、跟踪信息流<br>建立监测系统是个好主意。是研究或调查操作的重要组成部分，帮助您随时了解网络和社交媒体上出现的新内容和相关内容。</p>
+<p>Google有多种选择 —— GoogleAlerts 会在网络上发现的新内容（每天一次或每周一次）滚动发送通知。您可以使用布尔运算符和高级搜索功能的结合来构建和完善您的 Alerts。</p>
+<p>例如，如果您想跟踪与英国退欧或鲍里斯·约翰逊有关的新内容，但仅跟踪特定英国新闻机构发布的信息，则可以设置成以下这样：</p>
+<p>GoogleTrends 也能做到这点，比较少有人知道，该服务隐藏在其订阅功能中。尽管它不如 GoogleAlerts 更及时，它仅允许您每周或每月一次接收关键字搜索的更新，但该服务仍会为您可能正在调查或报告的主题提供趋势反馈。</p>
+<p>—— Twitter ——<br>Twitter 是供记者探索的最简单的社交媒体平台之一，它使用多种工具来扫描持续不断的信息流。</p>
+<p>它的易用性也是新闻记者过分依赖该平台的原因，因此请确保它是您监视重大新闻或相关对话的众多社交网络之一。</p>
+<p>👌 不要错过我们对 Twitter 情报挖掘技巧和工具的介绍：</p>
+<p>《深挖推特工具超长列表、寻找独立新闻源、物联网Dorks、泄漏数据、挖 Telegram、机器学习数据集、大牌流媒体资源 …… 新生情报工具（18）》<br>《深挖推特：如何从推文中提取准确的元数据？》<br>《如何使用 Maltego 监测推特上的政府信息战》<br>《深挖推特：提供技巧、工具和平台》<br>《如何从推特挖掘情报（1）：一个流行工具的具体介绍》<br>《观察追踪者的思考方式：挖掘推特情报的基础教程（2）》<br>《绕开推特算法噪音、使用基本运算符挖掘推特数据的方法》<br>《从推特中挖掘真相不需要太复杂的工具：一个常用工具的全面指南》<br>更多内容参见：列表-5 “开源情报”<br>1、信息汇总<br>Twitter 是众所周知的以多种语言发布新闻的首选平台。尽管普通用户的数量少于 Facebook 和 Instagram，但其简单的界面、角色限制以及按时间顺序组织时间线的选项使它非常适合实时的突发信息。</p>
+<p>关键词一定要尽可能准确。作为调查人员，他们往往会最先想到自己准备在报告标题中使用的词语，但那可能不容易帮您找到详尽内容。请记住，在社交媒体上人们通常使用口语、宣泄式的、咒骂的，而非书面语言。</p>
+<p>这里有一个指南，是在突发新闻情况下选择关键字的最佳方法，但是要记住的最重要的事情之一是，第一人称。受事件影响的人更可能自我介绍。旁观的评论者则不是。</p>
+<p>👌牢记这一点，对参加抗议活动或其他政治事件的人的有效搜索大概是这样：</p>
+<p>(I OR me OR my OR we OR our OR us OR “just saw” OR just seen) AND (coup OR demonstration OR protests OR enough)<br>不要忘了推特的高级搜索选项，它为您提供了一个简单的界面，可以进行非常具体的查询，例如在特定时间段内仅搜索来自特定帐户的推文，或者包含特定类型的内容，例如视频或链接。</p>
+<p>👉 我们介绍过 TweetDeck 是最简单最有效的导航方式之一，您可以并排显示无限数量的列，其中包含来自 Twitter 列表的推文、搜索字符串、特点地理位置和特定帐户或活动，并实时更新。</p>
+<p>您可以按任何方式组织这些列，并且可以使用许多高级搜索选项作为过滤器包含在每个列中，以更好地缩小搜索结果的范围。</p>
+<p>例如，如果您要跟踪加利福尼亚州的大麻法规，则可以创建一个单独的列来搜索 #californiacannabis 标签，而另一列可能包含更高级的搜索，比如：</p>
+<p>(marijuana OR cannabis) AND (california OR cali OR ca) AND (government OR legislature OR law OR laws)<br>单击搜索列右上角的过滤器图标将打开一组新的下拉菜单，以更好地优化搜索结果。</p>
+<p>👌 Tweetbeaver是另一个动态研究工具，有效地为您提供了广泛的 Twitter 功能，例如在两个帐户之间查找共同的朋友或共同话题的能力，以及下载用户的关注者列表的能力等。</p>
+<p>您可以创建新的 Twitter 列表，也可以订阅其他人创建的公共列表。</p>
+<p>因此，如果您涉及南美的气候变化，则可以决定创建一份涵盖该地区主题的非政府组织、活动家和新闻工作者的列表，以确保您掌握相关的最新信息。</p>
+<p>您可以将它们设为公开或私有。如果是公开的，其他人（例如您的合作者）也可以关注您的列表。</p>
+<p>👉 不要错过 Twitter List 搜索引擎（当然这个搜不到那种被设置为私密的 lists）：</p>
+<p>jump.sh<br>bit.ly/2rutgq2<br>⚠️ 请记得，如果您的lists是设置为公开的，那么被添加进入的人将收到通知。因此，如果您希望在监视过程中保持匿名或不希望您的消息源知道您正在关注他们，建议将列表设为私有。</p>
+<p>不幸的是，Twitter 没有 Twitter 列表目录，但是查找相关列表的最简单方法之一就是使用Google的高级搜索运算符。</p>
+<p>输入您的关键字，然后 site:twitter.com/*/lists</p>
+<p>结果将显示标题中具有所选关键字的所有公开列表，然后您可以订阅这些列表。</p>
+<p>查找 Twitter 列表的另一个有用技巧是识别一个好的来源，然后查看它们放置在哪些列表上。只需将 “ / memberships” 添加到特定用户的URL即可。</p>
+<p>例如，如果您想要一个有关纽约紧急服务的 Twitter 列表，可以从纽约消防局开始：</p>
+<p>twitter.com/FDNY/memberships<br>👌 另一个工具是 Scoutzen。您可以搜索列表，并按订户号和成员（列表中有多少个帐户）显示最受欢迎的结果，这可以很好地了解列表的有用性，然后扫描结果以查找要订阅的列表。</p>
+<p>2、跟踪信息流<br>在 TweetDeck 建立搜索和列表之后，就可以跟踪目标的活动了。</p>
+<p>例如，如果您要跟踪大选，则可以在 TweetDeck 中设置一系列不同的列，不仅跟踪官员和权威人士，而且还跟踪整个频谱中的激进主义者和选民，从而使您在一个屏幕上就能对一个国家的政治前景有一个全面的了解。</p>
+<p>TweetDeck 提供了多种方法来简化您的提要，包括一系列过滤器。您可以将 Feed 设置为仅包含具有一定数量的转发或点赞的内容。您还可以按地理位置或语言过滤信息流。或者，您也许可能想查看包含图像或视频的推文。</p>
+<p>您还可以设置通知，以便新出现的每条相关新推文都会发出声音或弹出桌面，这取决于您如何配置提示。</p>
+<p>—— Facebook and Instagram ——<br>在2019年6月，Facebook 杀死了图谱搜索，并有效地杀死了所有涌现出来的利用它的开源情报工具，从而否认了所有将其用于调查工作的人的输出。</p>
+<p>而且，Facebook 继续改变 Graph Search 的工作方式，阻碍了许多工具和了解新系统的工作方式的途径。在下面看到具体介绍。</p>
+<p>《Facebook 正在令真相挖掘事业陷入困境》<br>这是一个最近出现的重大案例。👌由此您应该意识到，尽管某些工具仍然存在，但它们的位置可能比较脆弱，并且完全取决于构建它们的社区的辛勤工作。</p>
+<p>不要错过 《搜人、照片、视频、位置 …… 大全：新的FB”图谱搜索”替代方案 — — 尤其强调防御》<br>这就是为什么我们采取了 “新生情报工具” 系列，目前已有18集，目标是将当前最有效的工具和技巧提供给您，一切都是动态的，调查人员应该随机应变。在下面回顾过往内容：</p>
+<p>《新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音》<br>《新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家》<br>《新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪》<br>《新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 — 针对特定目标人的侦查利器》<br>《新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来》<br>《新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪》<br>《新生情报工具（7）：全球搜人、免费手机短信、放大照片不损质量、快速查找相关视频》<br>《去模糊化、挖人际关系、自动社交工程攻击、监视信息战：新生情报工具（8）》<br>《实时钓鱼、快速提取、游行调查、跨站追踪、便携式瑞士军刀：新生情报工具（9）》<br>《根据位置搜索telegram群组、在互联网上跟踪人、可视化影响力关系网络、及其他：新生情报工具（10）》<br>《实时新闻地图、Twitter 情报分析、电话号码追踪、电子邮件侦查及其他：新生情报工具（11）》<br>《种子、暗网、区块链、抖音、telegram、数据集…… ：新生情报工具（12）》<br>《社交媒体情报、追踪电邮电话号码、挖抖音、搜网络摄像头……：新生情报工具（13）》<br>《挖抖音、泄漏密码、漏洞、人脸识别工具、假身份生成器、事实核查 ……：新生情报工具（14）》<br>《挖 Telegram 群组、搜脸、搜人、蜂窝塔、网络摄像头、物联网、黑客新闻 ……：新生情报工具（15）》<br>《搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16）》<br>《反向面部识别、实时开源情报、推特可疑账户、网络摄像头地图、挖坟 ……新生情报工具（17）》<br>《深挖推特工具超长列表、寻找独立新闻源、物联网Dorks、泄漏数据、挖 Telegram、机器学习数据集、大牌流媒体资源 …… 新生情报工具（18）》<br>目前 Facebook 依旧有很多过滤器，您可以按日期和标记位置以及媒体类型（例如帖子、照片、视频、直播等）来缩小搜索过滤范围。</p>
+<p>您还可以使用高级 Google 搜索来增强搜索 Facebook 的结果。</p>
+<p>假设您正在调查反移民团体，并想找到反对移民的 Facebook 页面和组织，可以设置以下搜索：</p>
+<p>site:facebook.com/pages “stop immigration”<br>如果您想显示 Facebook 群组而不是页面，那么就这样：</p>
+<p>site:facebook.com/groups “stop immigration”<br>Instagram 的搜索功能可能很杂乱，不按特定顺序返回帐户和主题标签，因此最好根据现有任务使用高级 Google 搜索、和 Picpanzee.com 之类的第三方应用程序或两者的某种组合。</p>
+<p>👌 Picpanzee 提供了一种更简洁更清晰的方式在 Instagram 上搜索目标人，并在单独的列中提供了相关主题标签的内容。</p>
+<p>例如，搜索颇具影响力的阿根廷记者和评论员 Jorge Lanata，将返回以下内容：</p>
+<p>👌 如果您要搜索特定种类的人或帐户，则可以使用诸如 searchmybio 之类的工具，该工具可让您在帐户简介中搜索关键字。对于关键字，建议您使用 Google 高级搜索。例如，如果您正在寻找英国退欧党账户，那么就这样：</p>
+<p>inurl:instagram.com/p/ “brexit party<br>跟踪信息流<br>👌 跟踪 Facebook 和 Instagram 帐户列表的最佳工具是 CrowdTangle，它是 Facebook 拥有的一个平台，对记者免费。</p>
+<p>您将被要求通过 Facebook 进行访问，但是您可以在它支持的三个平台（Facebook，Instagram 和 Reddit）中设置仪表板，并在 Facebook 中构建相关页面和群组的列表，Instagram 的公共帐户以及 Reddit 的子书签。</p>
+<p>您可以从CSV文件手动导入列表，如果知道 URL，可以添加单个页面，或者在 CrowdTangle 中搜索已经在其数据库中登录的页面。</p>
+<p>无论您是在跟踪选举还是在挖掘关于热点问题的虚假信息，CrowdTangle 的 “保存搜索” 功能都可以方便您在 Facebook 和 Instagram 上查找页面、群组和帐户，其中出现了您的特定关键字、关键短语和主题标签。</p>
+<p>所有相关结果都将显示在摘要中，唯一的警告是它将仅返回数据库中已有页面的结果。</p>
+<p>CrowdTangle 中的列表会产生大量的信息，因此 CrowdTangle 根据时间、互动总数以及帖子的执行情况（相比该页面的平均水平），为用户提供了许多导航的选项。</p>
+<p>对于 Facebook，您可以使用 Facebook 用户与帖子互动时可以采取的不同反应类型，进一步优化结果。</p>
+<p>如果您要监视虚假信息，那些信息通常很容易让人动容，那么就从列表中查看 ‘angry’ or ‘love’ 反应最多的帖子，可能会产生不同的且更有用的结果。</p>
+<p>建立列表并保存搜索后，CrowdTangle 会提供多种通知选项，包括摘要和热点通报。</p>
+<p>如果您要报道即将发生的事件，例如超级碗，并且需要更接近实际情况，可以使用 CrowdTangle 的热点通报来获取有关帖子的实时通知。当其中一个帐户的帖子达到一定的热门传播的门槛时，该通报将触发并通过电子邮件或 Slack 送达。</p>
+<p>—— Reddit ——<br>Reddit 是世界上最大的社交新闻聚合器和讨论板之一。它本身被称为 “互联网的首页”，是在线讨论和具有潜在新闻价值的资料的汇整地。</p>
+<p>1、信息汇总<br>Reddit 由与特定主题相关的不同子 Reddit 组成，例如 r/HongKong, r/sports, or r/Worldnews.</p>
+<p>要查找与您的调查目标相关的内容，您可以使用顶部导航栏中的搜索功能来浏览 Reddit 的所有帖子，以查找关键术语。例如，搜索香港，将为您提供热门社区或子目录以及包括香港关键字的热门帖子：</p>
+<p>👌与 Google 和 Twitter 相似，Reddit 也具有一系列搜索运算符，可用于指定和缩小搜索结果，包括布尔运算符。</p>
+<p>因此，假如您想查找包含BBC内容的帖子，则可以搜索 site:bbc.com。您还可以通过导航到 <a target="_blank" rel="noopener" href="https://www.reddit.com/subreddits/search">https://www.reddit.com/subreddits/search</a> 查找特定的 subreddits。</p>
+<p>您还可以在结果上设置过滤器，例如按受欢迎程度对内容进行排序，也可以设置查看特定时间范围内的内容。</p>
+<p>2、跟踪信息流<br>👌 CrowdTangle 适用于 Reddit 以及 Facebook 和 Instagram，您可以建立 subreddits 列表以相同的方式观看。因此，假如您正在寻找有关政治的最新文章，那么可以设置各种与政治有联系的 subreddits 清单，/r/antifascistsofreddit, /r/progressive, and /r/conservative.</p>
+<p>自定义列表后，您可以设置通知，以获取例如最近24小时内热门帖子的摘要，发送到您的电子邮件中。</p>
+<p>👌如果您无权访问 CrowdTangle，也可以通过将目标 subreddits 链接到RSS阅读器来跟踪它们。如果您涉及欧洲政治，则可能要注意 subreddit r / europe，在这种情况下，您可以在URL末尾添加.rss，如下所示：</p>
+<p><a target="_blank" rel="noopener" href="https://www.reddit.com/r/europe/.rss">https://www.reddit.com/r/europe/.rss</a><br>并将其添加到您的 RSS feed 阅读器，例如 Feedly。</p>
+<p>最后，TrackTrackdd.com 之类的工具可让您监视整个 Reddit 中的某些关键字，尽管它仅对前两个免费。</p>
+<p>—— 网站 ——<br>尽管当今的大多数在线辩论和主要讨论都是通过社交媒体进行的，但这些活动通常是对博客或网站上的文章或其他材料的回应。</p>
+<p>无论您是在处理突发新闻还是在等待政府机构发布的新数据集来补充您的调查，掌握最新信息与对任何追踪调查来说都很重要。</p>
+<p>您可以通过持续扫描列表和搜索结果或疯狂刷新浏览器来监视这些网站，但是，建议使用RSS阅读器和通知系统，以使您更容易保持最新状态。</p>
+<p>跟踪信息流<br>RSS 是一种在一个汇总的 Feed 中监视多个网站的便捷方法。有很多RSS阅读器，其中 Feedly 可以推荐。设置帐户后，您可以添加新内容，以类似于 Twitter 或 CrowdTangle 列表的方式创建感兴趣的网站或博客列表。</p>
+<p>添加后，将显示新帖子。使用该界面每天监控一次或两次输出真的很容易，以查看自上次检查以来已发布的新文章。</p>
+<p>有时，您可能只是想查看网页更新，而不是寻找新的完整文章或帖子，👌这就是 Klaxon 可选的地方。</p>
+<p>由 Marshall Project 开发并免费提供给公众，Klaxon 会扫描公开网页的特定部分，如果有更改将通过电子邮件或 Slack 通知您。</p>
+<p>您可以将 Klaxon 配置为每10分钟、每隔几小时、或每隔几天扫描站点。这完全取决于您的需求。</p>
+<p>如果您要监视特定的网页或页面的某些部分，例如技术公司的隐私政策，则可以将 Klaxon 的超强功能与 Wayback Machine 的“更改”功能结合使用，从而并排比较相同网址的不同版本，以查明文档中发生更改的确切位置。</p>
+<p>—— YouTube ——<br>每分钟都有数百小时的视频上传到该平台，YouTube 代表了世界上最大的信息库之一。</p>
+<p>许多第三方 YouTube 服务需要付费，但是的确有一些完全免费的搜索和跟踪平台信息流的方法。</p>
+<p>1、信息汇总<br>YouTube 的搜索过滤器是您查找所需视频时最好的朋友。</p>
+<p>按下搜索栏下方的 “过滤器” 按钮将提供更多选项，使您可以按上传日期、结果类型、视频时长或特定功能来微调结果，然后以不同的方式对结果进行排序。</p>
+<p>2、跟踪信息流<br>整理好相关 YouTube 频道的目录后，您可以将其添加到 Feedly 中，以实时获取从这些频道发布的新视频以及您也关注的任何博客或网站的最新 Feed。</p>
+<p>有时特定的 YouTube 频道不会出现在 Feedly 搜索功能中。一种解决方法是订阅您 YouTube 帐户中感兴趣的频道，导航到订阅管理器，然后导出它们。</p>
+<p>然后，您可以通过访问 <a target="_blank" rel="noopener" href="https://feedly.com/i/cortex">https://feedly.com/i/cortex</a> 将 OPML 文件（由订阅管理器生成）直接导入到 Feedly 中。</p>
+<p>上传到 Feedly 之后，您可以将其分类以适合您正在跟踪和报告的特定主题。</p>
+<p>然后，您可以打开 Feedly，从最新到最旧的列表对内容进行组织，以清楚地查看最新内容，也可以将 Feedly 与其他基于 Web 的服务进行同步，例如 If This Then That（IFTTT） ，以便在新内容输入您的Feed时立即将通知发送到您的手机。</p>
+<p>然后，您可以打开 Feedly，从最新到最旧的列表对内容进行组织，以清楚地查看最新内容，也可以将 Feedly 与其他基于 Web 的服务进行同步，例如 If This Then That（IFTTT） ，以便在新内容输入您的Feed时立即将通知发送到您的手机。</p>
+<p>—— 其他平台 ——<br>大型社交媒体公司（Facebook / 包括 Instagram 、Twitter、Reddit、YouTube 等都是全球内容和沟通的主要推动力。但重要的是不要忘记还有其他平台，例如 Snapchat，TikTok，4chan，Gab等等，其中一些平台已成为极端主义者或边缘群体的首选消息传递中心。</p>
+<p>这里是其中一些应用程序和平台的简要概述。封闭的消息传递应用程序（如WhatsApp，WeChat 和 Discord）可以在将来单独讨论。</p>
+<p>1、Snapchat</p>
+<p>Snapchat 允许用户彼此发送短文本消息或视频剪辑，并将某些剪辑公开发布为 “stories”。 Snapchat 现在拥有超过2亿用户，它正在公开发布一些 stories 供搜索。</p>
+<p>Snapchat 在2017年推出了 Snap Map24，在热图中显示了公开发布的材料的位置，但未显示发布该材料的用户。</p>
+<p>具有新闻价值的镜头偶尔会发布到地图上，尽管几乎不可能与上传者联系起来，它倾向于将新闻和社交互动分开。</p>
+<p>2、TikTok</p>
+<p>TikTok 是一款社交视频应用程序，中国网络巨头腾讯所有，深受青少年欢迎。</p>
+<p>它成为了2018年全球下载量第四大的应用，超过了 Instagram 和 Snapchat，用户可以在其中录制自己表演自己喜欢的歌曲的视频。</p>
+<p>从那时起，TikTok 已经发展成为许多不同meme和主题的中心。到2018年末，它被描述为具有 “纳粹主义问题” 和 “仇恨” 的雷区，特别是在印度。</p>
+<p>由于其用户量足够大，对 TikTok 的开源情报调查如今是一个热门，您可以在下面看到一些演示技巧：</p>
+<p>《你能从TikTok（抖音）中挖掘到哪些情报线索？》<br>《挖抖音、泄漏密码、漏洞、人脸识别工具、假身份生成器、事实核查 ……：新生情报工具（14）》<br>《种子、暗网、区块链、抖音、telegram、数据集…… ：新生情报工具（12）》<br>《挖掘抖音中的线索：开源情报调查思路》<br>3、4chan/8chan</p>
+<p>多年来，诸如 4chan 和 8chan 之类的留言板因成为极端主义、暴力和阴谋论的温床而声名狼藉。恶作剧通常起源于这些留言板，然后才在其他社交媒体平台上被放大。</p>
+<p>它们是监视新闻报道的好地方，但请注意，您可能会遇到令人不安的内容。 （在2019年8月上旬，8chan 从可公开访问的网络上删除了）</p>
+<p>4、Gab</p>
+<p>Gab 是一个社交媒体网站，其功能与 Twitter 非常接近，随着被禁止使用 Twitter 的用户不断迁移到该平台，该平台在美国已经与极右翼组织密切相关。</p>
+<p> 于是如果您想要调查极右翼类似的组织，这里是个有效的地方。</p>
+<p>5、Bitchute</p>
+<p>Bitchute 是一个在很多方面类似于 YouTube 的视频托管网站。但是与 YouTube 不同，Bitchute 的创建是为了避免其他平台上制定的内容监管规则。</p>
+<p>它首先强调 “言论自由”。 YouTube 上已被禁止或取消的许多频道基本都会迁移到 Bitchute。</p>
+<p>6、Brighteon</p>
+<p>Brighteon（以前称为 Real.Video）是另一个视频托管网站，以没有审查和拥护言论自由而感到自豪。</p>
+<p>7、MeWe</p>
+<p>MeWe 是一个类似于 Facebook 的社交网站，但其建立对用户隐私的坚定承诺。尽管比 Facebook 小得多，但它的受欢迎程度一直在上升，尤其是考虑到近年来在 Facebook 上目睹的隐私漏洞问题如此之多。</p>
+<p>8、VK</p>
+<p>VKontakte，通常称为“VK”或 “ Russian Facebook”，是一个受欢迎的俄罗斯社交网络平台，拥有超过5亿个人帐户。</p>
+<p>顾名思义，该平台在外观和功能上都与 Facebook 极为相似：群组、公共页面、新闻提要和直接消息传递等功能都可以在深蓝色主题网站上找到。</p>
+<p>这里的绝大多数用户都是俄罗斯人，但VK的最新发展使其在很多东欧国家中占主导地位，而在中国和西欧部分地区则少有人使用。</p>
+<p>最后<br>就是这样！本文是关于社交媒体信息跟踪和调查的基本技巧汇总，它着眼于帮助您快速找到想要的信息。如前文所述，对信息的验证和分析，将是另一个单独的议题，我们曾经有过很多介绍 见列表-3 “让它民主”，以及列表-5 “开源情报”。</p>
+<p>👌准确充分地提取信息是第一步；社交媒体是信息金矿，您需要有自己熟练的方式在这里找到最想要的内容。希望这篇文章的总结能帮到您。⚪️</p>
+<p>共享此文章：</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E7%AA%81%E5%8F%91%E4%BA%8B%E4%BB%B6%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%9C%E8%A5%BF%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%883%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/30/%E7%AA%81%E5%8F%91%E4%BA%8B%E4%BB%B6%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%9C%E8%A5%BF%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%883%EF%BC%89/" class="post-title-link" itemprop="url">突发事件中需要注意的东西：从追踪到验证的思考方式（3）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：19:01:32" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="突发事件中需要注意的东西：从追踪到验证的思考方式（3）"><a href="#突发事件中需要注意的东西：从追踪到验证的思考方式（3）" class="headerlink" title="#突发事件中需要注意的东西：从追踪到验证的思考方式（3）"></a>#突发事件中需要注意的东西：从追踪到验证的思考方式（3）</h1><p>您需要一套扎实的基本功，才能对突发应对自如<br>欢迎回来！</p>
+<p>如果您错过了前面的内容，可以在这里回顾：</p>
+<p>《没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）》<br>《发现不正常的活动：从追踪到验证的思考方式（2）》<br>当突发事件时，调查者可能需要几个小时甚至几天的时间才能完全弄清情况。随着早期的证据和细节开始在社交网络和其他在线平台上流传，不良行为者可能随之会出现，以挑拨离间或制造不信任，或利用充满担忧的新闻消费者的注意力赚取快钱。那些善意的信息消费者和其他消息来源也可能无意中传播虚假的或误导性的信息。</p>
+<p>在事件发生的最初几分钟和几个小时里，情绪的高涨和事件的流动，使得调查者必须具备有效监测、核实和必要时揭穿不实消息的能力。一条虚假的推文、图片、社交媒体账号或文章只需几分钟就能制造出来，而真实的信息总是却难以跟上。</p>
+<p>在突发事件期间进行监测和揭穿的关键是在事件发生之前打下坚实的基础。这意味着要扎扎实实地掌握基本的信息核实技能，了解如何有效监测社交网络和平台上的信息流，并知道如果您或您的同事成为不良行为者的目标，该如何应对。调查者必须把网络安全放在首要位置。</p>
+<p>不要错过《巧用互联网，以找到您最想要的信息：搜索思维作为基本功》<br>重要内容《给活动家的反人肉指南》<br>当事件爆发时，第一步是确定主要受影响的社区。在2018年佛罗里达州帕克兰高中枪击案期间，记者在 Snapchat 地图上搜索被困在教室内的学生的视频；相比之下，在2017年飓风厄玛期间，关注 Facebook 是关键，因为那些受影响的人更多试图在 Facebook 上寻找信息。了解每个社交网络如何运作，以及它如何与特定事件相交，是至关重要的。</p>
+<p>📌 本文将重点介绍公民调查可以用来监测和揭穿突发消息的工具。并非每一种工具都适合每一种情况，了解谁受到了影响可以帮助您知道哪些地方最需要关注。</p>
+<p>要注意的三点<br>在公民行动努力打击虚假信息的同时，不良行为者也在不断进化他们的战术，以避免被发现。不过，一些一致的内容和行为模式还是会反复出现。</p>
+<p>1、被篡改的或断章取义的图像/视频。最臭名昭著的鲨鱼在被淹没的高速公路上游泳的图像多年来一直在流传，并继续欺骗人们。这些照片和视频之前已经被揭穿，但并没有阻止假消息继续流传，这就是事实核查者所说的僵尸骗局，它是一个重要的观察对象。图像在数字平台上的传播速度要比文字要快得多，所以关注它们往往会有收获。</p>
+<p>看一个案例《断章取义的视频和歪曲的描述如何挑起对安替法(Antifa)左翼活动家的仇恨》。</p>
+<p>在2019年在沃尔玛（Walmart）发生的埃尔帕索（El Paso）枪击事件中，极右翼账户试图歪曲与嫌疑人完全无关的旧YouTube视频。<br>2、虚假的受害者或肇事者。在 YouTube 总部枪击案期间，社交网络上到处都是关于嫌疑人的虚假说法。在2018年美国中期选举期间，美国总统散布了关于非法移民投票的虚假谣言。在大多数重大的突发事件中，传播虚假消息的人都会大量出现。</p>
+<p>在2018年帕克兰（Parkland）枪击事件中，一个伪造的比尔·奥莱利（Bill O’Reilly）帐户试图散布虚假的嫌疑人名字。<br>3、骚扰和拉拢。虽然不是严格意义上的造谣，但不良行为者通常会试图骚扰参与突发性事件讨论的人，以此来压制他们的观点。这也是一个信号，预示着他们可能会在接下来尝试不同的战术。协调性不真实行为是指一群人一起合作，通过上调或下调内容热度或向用户泛滥特定观点的评论等方式，营造出参与或反应热烈的假象。这些账户可能是真实的人类，也可能是机器人，也可能是人类和机器人混合的状态。</p>
+<p>在这里看到具体解释《网络水军如何不断操纵您在社交媒体上看到的内容》；在这里看到辨别方法《如何分辨：机器人、僵尸网络和 trolls》。</p>
+<p>在2019年民主党辩论之后，一群匿名账户传播了有关卡马拉·哈里斯（Kamala Harris）种族问题的同一条信息。<br>归档和出版的最佳做法<br>在寻找骗局之前，先为您的文档设置一个文件夹，并为您发现的内容启动一个电子表格。立即对您发现的每个骗局和相关内容进行截图，并对页面进行存档。(Archive.org 网络浏览器扩展是一个免费、快速、有效的内容存档工具)。确保在电子表格中记录内容的原始和存档URL。这使您能够在尘埃落定后再来查看您所发现的内容并寻找其中可能潜藏的信息战模式。</p>
+<p>关于电子表格的注意事项《如何获取、挖掘、分析各种来源的调查数据完整指南：解码秘密（3）- 理解数据和可视化》；关于如何利用存档页面的完整指南《如何快速找到你想要的东西：追踪数字证据的小技巧》。</p>
+<p>📌 为了避免帮助传播与虚假或错误信息相关的页面，请确保在任何文章或社交媒体帖子中链接到存档的URL，而不是原始的URL。给您的图片打上水印也是一种最好的做法，比如 “虚假” 或 “误导” 等明确的标签，以确保它们以适当的语境被传播和索引。如果您真的写了一篇文章，请把标题和文案的重点放在真实的内容上，而不是主要说虚假的内容。研究表明，重复假话只会使人们更容易记住不正确的信息。</p>
+<p>您的作用是尽可能减少虚假信息的重复，引导人们获得准确的信息。</p>
+<p>I did<br>确定关键词和地点<br>随着事件的展开，提出一个地点和相关关键词的清单。</p>
+<p>对于位置，要考虑到城市、区县和国家，以及任何相关的地方术语，如城市或受影响社区的昵称；比如中文网络可能会把重庆市称为 “西红柿”，它已经不是一种蔬菜，如果在重庆出现突发事件时，您没有搜索 “西红柿”，可能就会错过重要的信息。</p>
+<p>在跟踪选举的过程中，您还应该使用相关选区的名称。这些信息用于监控地理标记的帖子，并搜索对该地点的提及。此外，一定要确定并开始监控任何相关地方当局的社交账户，如警察和消防部门、政客和当地新闻机构。</p>
+<p>接下来，确定关键词。这可以包括受害者、嫌疑人、枪手、射击、洪水、火灾等词语，确认任何相关人员的姓名，以及更广泛的措辞 — — 除了关键术语之外，想想人们在这种情况下会使用的语言。如果您发现了一个可信的账号发帖说了您正在监测的事件，请注意他们的用户名，并阅读他们的完整 feed。通过他们关注的人或追随者列表查看也是一种有用的方法，可以找到该地区其他可能受到影响的人。</p>
+<p>请注意，在紧张的情况下，人们可能会拼错地点或名字。例如，在2019年加州金凯德火灾期间，由于自动更正问题，一些人在推特上写了 #kinkaidfire（应该是 Kincade Fire）。您需要在搜索中加入常见的拼写错误，并尝试通过在设备上输入关键词观察弹出的建议来识别可能的自动更正错误。</p>
+<p>这也是一个很好的时机，可以联系您在相关地点认识的任何消息来源，或者是可能成为骚扰或虚假信息目标的社区的一部分，并询问他们在网上看到了什么。您可以告诉您的受众，您正在寻找与该事件相关的虚假信息和其他问题内容。与您的调查团队协调，帮助传播您的监测，让队友作为第三方观察下是否看到任何值得注意的内容。</p>
+<p>关于与消息来源交互的指南《在人与人之间 …… 如何从信息源的头脑中挖掘想要的情报 — 完整指南》。</p>
+<p>关键图像工具<br>1、图片搜索<br>反向图像搜索是一个不可缺少的工具。在 Chrome 网页浏览器中右击图片并选择 “Search Google for Image”，就可以很容易地在谷歌上搜索图片。但是，使用不同的工具搜索图像总是非常重要的！如果您安装了 InVID 浏览器扩展，您可以右键点击一张图片，并在不同的工具中进行搜索。</p>
+<p>关于 InVID 的用法，详见《如何使用 InVid-WeVerify：数字信息验证的 “瑞士军刀”》。</p>
 <ol start="2">
-<li>CheckUserNames</li>
+<li>搜索TweetDeck<br>搜索Twitter的最佳方法是使用 TweetDeck，它允许您为搜索和列表创建独特的列。</li>
 </ol>
-<p>CheckUserNames 是一个在线工具，可以帮助您在 170 多个社交网络中查找用户名。如果您正在运行调查以确定在不同社交网络上使用相同用户名的目标，则此功能尤其有用。</p>
-<p>它还可以用于检查品牌公司名，而不仅仅是个人。</p>
-<ol start="3">
-<li>HaveIbeenPwned</li>
-</ol>
-<p>HaveIbeenPwned 可以帮助您检查您的帐户过去是否遭到入侵。该网站由 Troy Hunt 开发，Troy Hunt 是该市场最受尊敬的 IT 安全专业人士之一，多年来一直提供准确的报告。</p>
-<p>如果您怀疑自己的帐户遭到入侵，或者想要验证外部帐户的第三方妥协，这是一个完美的工具。它可以追踪来自 Gmail，Hotmail，雅虎帐户，以及 LastFM，Kickstarter，WordPress.com，Linkedin 和许多其他热门网站来源的网络攻击。</p>
-<ol start="4">
-<li>BeenVerified</li>
-</ol>
-<p>BeenVerified 是另一种类似的工具，当您需要在公共互联网记录上搜索目标人时使用它。当您进行 IT 安全调查并且目标是未知人员时，获取世界上任何人的更多有价值信息可能非常有用。</p>
-<p>完成后，将显示结果页面，其中包含与该姓名匹配的所有人员，以及他们的详细信息，地理位置，电话号码等。一旦找到，您就可以构建自己的报告。</p>
-<p>关于 BeenVerified 的惊人之处在于它还包括有关犯罪记录和官方政府信息的数据。</p>
-<p>BeenVerified 的背景报告可能包括来自多个数据库的记录，破产记录、职业历史、社交媒体配置文件、甚至在线照片的信息！</p>
-<ol start="5">
-<li>Censys</li>
-</ol>
-<p>Censys 是一个很棒的搜索引擎，用于获取有关连接到互联网的任何设备的最新和最准确的信息，它可以是服务器或域名。</p>
-<p>您将能够找到有关在任何服务器上运行的 80 和 443 端口的完整地理位置和详细技术信息，以及目标网站的 HTTP / S 正文内容和 GET 响应，Chrome TLS 握手，完整的 SSL 证书链信息以及 WHOIS 信息。</p>
-<ol start="6">
-<li>BuiltWith</li>
-</ol>
-<p>BuiltWith 是一种很酷的方式，可以检测互联网上任何网站使用的技术。</p>
-<p>它包括有关使用的完整详细信息，如 WordPress，Joomla，Drupal 等，以及全面深入的 Javascript 和 CSS 库，如 jquery，bootstrap / foundation，external fonts，Web 服务器类型（Nginx，Apache，IIS 等），SSL 提供商以及使用的网络托管服务。</p>
-<p>BuiltWith 还可以让您找到目前最流行的技术，或者哪些技术正在趋势化。</p>
-<p>毫无疑问，它是一个非常好的工具，可以收集有关任何网站的所有可能的技术细节。</p>
-<ol start="7">
-<li>Google Dorks</li>
-</ol>
-<p>在调查目标人或公司时，许多 IT 安全新手都忘记了使用传统搜索引擎进行侦察和收集的重要性。在这种情况下，Google Dorks 可以成为您最好的朋友。他们自2002年以来一直在那里，可以帮助你进行在线侦察。</p>
-<p>Google Dorks 只是向 Google 查询某些可能对您的安全调查有用的信息的方法。</p>
-<p>搜索引擎会索引有关互联网上几乎所有内容的大量信息，包括个人、公司及其数据。</p>
-<p>Filetype：您可以使用此 dork 查找任何文件类型。<br>Ext：可以帮助您查找具有特定扩展名的文件（例如.txt，.log等）。<br>Intext：有助于搜索任何页面内的特定文本。<br>Intitle：它将搜索页面标题内的任何特定单词。<br>Inurl：将在任何网站的 URL 内寻找提到的单词。<br>更多：《高级运算符辅助开源调查：巧用搜索引擎挖掘情报》</p>
-<p>日志文件原则上不应该被搜索引擎索引，但是，依旧可以，并且您可以从这些 Google Dorks 获取更多有价值的信息，如下所示：</p>
-<p>现在让我们关注最受尊敬的 InfoSec 专业人员使用的其他更实用的工具：</p>
-<ol start="8">
-<li>Maltego</li>
-</ol>
-<p>我们介绍过它，而且不止一次，不管是在社交工程攻击技术演示上，还是 OSINT，很多时候都需要它。这家伙是个神奇的工具，可以追踪您需要匹配的任何目标的足迹。这个软件由 Paterva 开发，它是 Kali Linux 发行版的一部分。</p>
-<p>Maltego 这个软件包含的最好的东西之一是他们称之为 ‘transforms’ 的。在某些情况下，转换是免费提供的，而在其他情况下，您只能找到商业版本。它们将帮助您运行与外部应用程序不同类型的测试和数据集成。</p>
-<p>要使用 Maltego，您需要在其网站上开设一个免费帐户，之后，您可以启动新计算机或从现有计算机上运行目标转换。一旦您选择了转换，Maltego 应用程序将开始运行 Maltego 服务器的所有转换。</p>
-<p>最后，Maltego 将向您显示指定目标的结果，如 IP，域名，AS 号码等等。</p>
-<ol start="9">
-<li>Recon-Ng</li>
-</ol>
-<p>Recon-ng 已经内置在 Kali Linux 发行版中，是另一个用于对远程目标进行快速彻底侦察的强大工具。</p>
-<p>这个网络侦察框架是用 Python 编写的，包括许多模块，便利功能和交互式帮助，以指导您如何正确使用它。</p>
-<p>简单的基于命令的界面允许您运行常见操作，如与数据库交互，运行 Web 请求，管理 API 密钥或标准化输出内容。</p>
-<p>获取有关任何目标的信息非常简单，可以在安装后几秒钟内完成。它包括有趣的模块，如google_site_web 和 bing_domain_web，可用于查找有关目标域名的有价值信息。</p>
-<ol start="10">
-<li>theHarvester</li>
-</ol>
-<p>theHarvester 是获取有关任何公司/网站的任何子域名、虚拟主机、开放端口、和电子邮件地址的有价值信息的另一个替代方案。</p>
-<p>当您处于针对您自己的本地网络或第三方授权网络的渗透测试的第一步时，它尤其有用。与以前的工具相同，Harvester 包含在 Kali Linux 发行版中。</p>
-<p>theHarvester 使用许多资源来获取 PGP 密钥服务器之类的数据，Bing，百度，雅虎和谷歌搜索引擎等数据，以及 Linkedin，Twitter 和 Google Plus 等社交网络数据。</p>
-<p>它还可以用于启动主动渗透测试，如基于字典攻击，DNS 反向查找和使用字典暴力枚举的 DNS TLD 扩展的 DNS 破解。</p>
-<ol start="11">
-<li>Shodan</li>
-</ol>
-<p>这个我们也介绍过。Shodan 是一个网络安全监控和搜索引擎，专注于深网和物联网。它是由 John Matherly 于 2009 年创建的，用于跟踪任何网络中可公开访问的计算机。</p>
-<p>它通常被称为“黑客搜索引擎”，因为它可以让您找到并探索连接到网络的不同类型的设备，如服务器，路由器，网络摄像头等。</p>
-<p>Shodan 非常像 Google，但它不会向您展示精美的图像和丰富的内容/信息网站，而是向您展示与 SSH，FTP，SNMP，Telnet，RTSP，IMAP 等 IT 安全研究人员的兴趣更相关的内容，结果将按国家/地区，操作系统，网络和端口排序。</p>
-<p>Shodan 用户不仅能够访问服务器、网络摄像头和路由器，它可以用于扫描几乎任何连接到互联网的东西，包括但不限于交通信号灯系统，家庭供暖系统，水上乐园控制面板，水厂，核电站等等。</p>
-<ol start="12">
-<li>Jigsaw</li>
-</ol>
-<p>Jigsaw 用于收集有关任何公司员工的信息。该工具完全适用于像谷歌，LinkedIn，微软那种公司。</p>
-<p>唯一的缺点是这些查询是针对位于 jigsaw.com 的 Jigsaw 数据库启动的，因此，我们完全依赖于它们允许我们在数据库中探索的信息。您将能够找到有关大公司的信息，但如果您正在探索一个不那么著名的创业公司，可能它就没那么好用了。</p>
-<ol start="13">
-<li>SpiderFoot</li>
-</ol>
-<p>如果你想要自动化 OSINT 并且在侦察、威胁情报和周界监控方面有快速的结果，SpiderFoot 是最好的侦察工具之一。</p>
-<p>它是由 Steve Micallef 撰写的，他在构建这个应用程序并为 Splunk 编写 SecurityTrails Addon 方面做得非常出色。</p>
-<p>此侦察工具可以帮助您启动超过100个公共数据源的查询，以收集有关通用名，域名，电子邮件地址和 IP 地址的情报。</p>
-<p>使用 Sipiderfoot 非常简单，只需指定目标，选择要运行的模块，Spiderfoot 将为您从模块中收集所有 intel 数据。</p>
-<ol start="14">
-<li>Creepy</li>
-</ol>
-<p>Creepy 是一个为信息安全专业人士提供的地理位置 OSINT 工具。它通过查询 Twitter，Flickr，Facebook 等社交网络平台，提供从任何个人获取完整地理定位数据的能力。</p>
-<p>如果有人将图像上传到任何激活了地理位置功能的社交网络，那么您将能够看到此人所处的完整活动状态。</p>
-<p>您可以根据确切的位置，甚至按日期进行过滤。之后，您可以以 CSV 或 KML 格式导出结果。</p>
-<ol start="15">
-<li>Nmap</li>
-</ol>
-<p>Nmap 是最受欢迎和最广泛使用的安全审计工具之一，其名称的意思是“网络映射器”。是一个免费的开源实用程序，用于跨本地和远程主机进行安全审核和网络探索。</p>
-<p>一些主要功能包括：</p>
-<p>主机检测：Nmap 能够识别任何网络中具有某些端口打开的主机，或者能够发送对 ICMP 和 TCP 数据包的响应的主机。<br>IP 和 DNS 信息检测：包括设备类型，Mac 地址甚至反向 DNS 名称。<br>端口检测：Nmap 可以检测目标网络上打开的任何端口，并让您知道其上可能正在运行的服务。<br>操作系统检测：获取所有连接主机的完整操作系统版本检测和硬件规格。<br>版本检测：Nmap 还可以获取应用程序名称和版本号。<br>16. WebShag</p>
-<p>WebShag 是一个很棒的服务器审计工具，用于扫描 HTTP 和 HTTPS 协议。与其他工具相同，它是 Kali Linux 的一部分，可以帮助您进行 IT 安全研究和渗透测试。</p>
-<p>您将能够启动简单的扫描，或使用高级方法（如通过代理或 HTTP 身份验证）。</p>
-<p>用 Python 编写，它可以是审计系统时最好的盟友之一。</p>
-<p>主要功能包括：</p>
-<p>端口扫描<br>网址扫描<br>文件模糊查找<br>网站抓取<br>为了避免被远程服务器安全系统阻止，它通过每个 HTTP 代理服务器启动随机请求来使用智能 IDS 规避系统，因此您可以继续审核服务器而不会被禁止。</p>
-<ol start="17">
-<li>OpenVAS</li>
-</ol>
-<p>OpenVAS（开放式漏洞评估系统）是一个安全框架，包括针对信息安全专业人员的特定服务和工具。</p>
-<p>这是一个开源漏洞扫描程序和安全管理器，是在著名的 Nessus 从开源转换为私有之后构建的。然后，Nessus 漏洞扫描程序的原始开发人员决定分割原始项目并创建 OpenVAS。</p>
-<p>虽然它比旧的 Nessus 设置起来有点麻烦，但在使用它来分析远程主机的安全性时却非常有效。</p>
-<p>OpenVAS 中包含的主要工具是 OpenVAS Scanner，这是一种高效的代理，可以在目标计算机上执行所有网络漏洞测试。</p>
-<p>另一方面，另一个主要组件称为 OpenVAS Manager，它基本上是漏洞管理解决方案，允许您将扫描数据存储到 SQLite 数据库中，因此您可以以一种简单易用的方式搜索、过滤和排序扫描结果。</p>
-<ol start="18">
-<li>Fierce</li>
-</ol>
-<p>Fierce 是一种用 PERL 编写的 IP 和 DNS 侦察工具，很著名，帮助 IT 专业人员找到与域名相关的目标 IP。</p>
-<p>它最初是由 RSnake 和旧<a target="_blank" rel="noopener" href="http://ha.ckers.org/%E7%9A%84%E5%85%B6%E4%BB%96%E6%88%90%E5%91%98%E4%B8%80%E8%B5%B7%E7%BC%96%E5%86%99%E7%9A%84%E3%80%82%E5%AE%83%E4%B8%BB%E8%A6%81%E7%94%A8%E4%BA%8E%E6%9C%AC%E5%9C%B0%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%9C%E3%80%82">http://ha.ckers.org/的其他成员一起编写的。它主要用于本地和远程企业网络。</a></p>
-<p>一旦定义了目标网络，它将针对所选域启动多次扫描，然后它将尝试查找配置错误的网络和易受攻击的点，这些点可能泄露私人的和有价值的数据。</p>
-<p>结果将在几分钟内准备就绪。</p>
-<ol start="19">
-<li>Unicornscan</li>
-</ol>
-<p>Unicornscan 是用于安全研究的顶级收集工具之一。它还有一个内置的关联引擎，旨在同时实现高效、灵活和可扩展的能力。</p>
-<p>主要功能包括：</p>
-<p>完整的 TCP / IP 设备/网络扫描。<br>异步无状态 TCP 扫描（包括所有 TCP 标志变体）。<br>异步 TCP 标志检测。<br>UDP 协议扫描。<br>A / P OS识别。<br>应用和组件检测。<br>支持 SQL 关系输出。<br>20. Foca</p>
-<p>FOCA (Fingerprinting Organizations with Collected Archives) 是 ElevenPaths 编写的工具，可用于扫描、分析、提取和分类来自远程 Web 服务器及其隐藏的信息。</p>
-<p>Foca 能够分析和收集来自 MS Office 套件，OpenOffice，PDF 以及 Adobe InDesign 和 SVG 和 GIF 文件的有价值数据。此安全工具还可以与 Google，Bing 和 DuckDuckGo 搜索引擎一起积极地从这些文件中收集其他数据。获得完整文件列表后，它会开始提取信息，以尝试从文件中识别更有价值的数据。</p>
+<p>寻找和复制相关列表是及时了解情况的关键。您可以使用简单的谷歌运算符来搜索Twitter列表。在搜索引擎中输入 site:twitter.com/*/lists， 然后在引号中添加一个关键词，例如 “香港”，最终的搜索字符串是：</p>
+<p>site:twitter.com/*/lists “香港”<br>这将会出现其他 Twitter 用户创建的、标题中包含 “香港”的任何列表。</p>
+<p>关于谷歌运算符的基本指南《攻防皆可用：GoogleDorking 高级运算符完整列表》。</p>
+<p>一旦您找到了一个与您的需求相关的列表，您需要复制它，这样就可以把它添加到自己的 TweetDeck 中。使用这个应用：<a target="_blank" rel="noopener" href="http://projects.noahliebman.net/listcopy/connect.php%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%9A%8F%E6%84%8F%E5%A4%8D%E5%88%B6%E3%80%82%E5%A4%8D%E5%88%B6%E4%B8%80%E4%B8%AA%E5%88%97%E8%A1%A8%E6%AF%94%E5%85%B3%E6%B3%A8%E5%AE%83%E6%9B%B4%E7%90%86%E6%83%B3%EF%BC%8C%E5%9B%A0%E4%B8%BA%E6%82%A8%E5%8F%AF%E4%BB%A5%E9%9A%8F%E6%84%8F%E6%B7%BB%E5%8A%A0%E6%88%96%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7%E3%80%82">http://projects.noahliebman.net/listcopy/connect.php，可以随意复制。复制一个列表比关注它更理想，因为您可以随意添加或删除用户。</a></p>
+<p>关于 tweetdeck 的详细使用方式，见《从推特中挖掘真相不需要太复杂的工具：一个常用工具的全面指南》。</p>
+<p>搜索过滤的列，使您能够快速监控关键词以及图片和视频。要寻找多个关键词，将它们用引号包起来，并在它们之间加上布尔运算符 “OR”，例如 “Kincade” OR “Kinkade”。如果某些词产生了不相关的结果，您也可以将其排除。如今大多数人不再按地点标记自己的推文，所以您可以将该字段留空，以增加覆盖面。</p>
+<p>关于布尔搜索的详细说明，见《一个搜索统治一切：调查用心而非技术》。</p>
+<p>如果您想缩小结果范围，将 “From” 字段设置为事件发生前一两天，这样可以确保您不会因为时区问题而错过推文。如果您仍然得到太多的结果，可以尝试按参与度进行过滤，只显示其他人点赞或转发足够多的帖子。您也可以尝试将关键词分成不同的列。例如，把地点放在一列，其他关键词放在另一列。</p>
+<p>最后，如果您看到的推文量非常大，最好用您的最佳关键词创建一个新的列，并将 “推文内容” 过滤器下的 “显示” 选项设置为只显示照片和视频。这将为您提供一个可以帮助您发现病毒式传播或新兴视觉效果的feed。</p>
+<p>3、CrowdTangle<br>CrowdTangle 是一个网络应用和浏览器扩展。</p>
+<p>它是一个强大的工具，允许您设置仪表盘，以监控整个 Facebook、Instagram 和 Reddit。您还可以通过关键字进行搜索，并设置许多过滤器，包括发布时间、语种和参与度。</p>
+<p>CrowdTangle 对于监控 Facebook 和检查一个URL可能在社交媒体上发布的位置特别有用。一旦您有访问权限，就去 app.crowtangle.com 开始，然后点击 “创建新的仪表板”。即使您没有访问权限，该浏览器扩展也是免费的，任何人都可以使用。</p>
+<p>CrowdTangle：搜索 Facebook 的帖子 ——<br>点击左侧边栏的 “已保存的搜索”，然后点击 “新搜索”。您有两个选项：搜索页面和搜索群组。建议同时进行。输入尽可能多的关键字，只要您觉得有可能出现的关键词，用逗号分开。然后可以设置您如何看到帖子，例如，通过最近发生、最受欢迎、的和超常表现，这是一个衡量帖子参与度的页面。根据情况在这三种方式中切换，以确保您看到热门内容和新内容（热门内容和新内容中可能有大量假消息，越是虚假的内容被关注度就越高）。</p>
+<p>您还能够按照特定的时间段和类型对帖子进行分类。CrowdTangle 最近增加了按帖子发布的位置搜索帖子的功能。通过点击 “英语”，然后选择 “国家”，您可以只选择来自声明其位置在美国境内的页面的帖子，您在此可以用大多数语种进行搜索。要特别注意基于图片和视频的帖子，它们往往传播得更快，更有吸引力。</p>
+<p>一旦您设置了一个有相关结果的搜索，一定要保存它，这样您就可以不断地回来重看，由此发现其中隐藏的模式。</p>
+<p>CrowdTangle：列表 ——<br>就像 TweetDeck 一样，CrowdTangle 也可以让您建立感兴趣的页面和公共群组的列表。通过点击左侧边栏的 “列表”，然后点击 “创建列表”，您就可以监控与您选择的关键词相匹配的页面或群组，或者与您拥有的URL相匹配的页面。CrowdTangle 还有一些预建的列表，您可以通过点击 “探索” 标签查看。与Twitter一样，建立谈论您所调查事件的页面和群组列表是监测信息环境的好方法。</p>
+<p>CrowdTangle：链接搜索 ——<br>CrowdTangle 的另一个相关功能是链接搜索。前往 <a target="_blank" rel="noopener" href="https://apps.crowdtangle.com/search/%EF%BC%8C%E7%84%B6%E5%90%8E%E7%B2%98%E8%B4%B4%E6%82%A8%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E5%86%85%E5%AE%B9%E7%9A%84URL%E6%88%96%E5%85%B3%E9%94%AE%E8%AF%8D%E3%80%82CrowdTangle">https://apps.crowdtangle.com/search/，然后粘贴您感兴趣的内容的URL或关键词。CrowdTangle</a> 会在 Facebook、Instagram、Reddit 和 Twitter上向您展示该链接的顶级公开分享者。(请注意，Twitter的结果仅限于前七天。)</p>
+<p>这将帮助您了解内容的传播情况，是否有任何团体或个人需要您进一步调查，以及内容是否已经传播到足够远的地方，需要揭穿。</p>
+<p>关于何时揭穿虚假内容，并没有简单的规则，但有一些好的问题要问：它是否已经在最初的分享者网络之外传播了？它是否被权威人士分享了？它是否产生了重要的参与？免费的浏览器扩展提供的数据与链接搜索工具相同，任何人都可以免费使用，无需完整的 CrowdTangle 账户。</p>
+<p>4、Instagram.com<br>Instagram 是一个监测标签和地理标记帖子的有用地方。查找用户可能标记照片的相关地点，并记住位置标签也可以包括街区和地标。</p>
+<p>一旦您发现某人似乎参与了一个突发事件，点击进入他们的账户，并确保您观察他们的 “故事” 部分  — — 他们的故事远比普通的 Instagram 帖子更受欢迎。还可以通过评论寻找其他潜在的证人，并注意任何新的标签，可能已经在他们的帖子旁边使用。</p>
+<p>如果您想将某人的 Instagram 故事存档为您的文件，可以使用 storysaver.net 这样的网站来下载它。</p>
+<p>关于 Instagram 的调查工具和方法《在最难搜索的地方：解剖 Instagram 用户》、以及《如何无需帐户即可匿名查看Instagram帖子》。</p>
+<p>5、SnapMap<br>Snapchat 上的虚假信息并不常见，但其公共地图功能对于帮助验证或揭穿骗局非常有用。要开始，请访问 map.snapchat.com 并输入感兴趣的位置。这将向您展示内容发布地点的热图 — — 地点越亮，来自那里的Snaps就越多。要保存一个有用的Snap，点击右上方的三个点，然后选择 “分享”。您就可以复制Snap的URL，以便以后查看。(一定要把它也截图下来。)</p>
+<p>最后<br>📌 在突发事件爆出之前，您必须练习使用上述每一种工具，避免在当下乱阵脚。</p>
+<p>虚假信息是为了玩弄人们的情绪，利用新闻报道的空隙。当您在网络上搜索时，要牢记这一点。您也会经常遇到可以帮助同事的准确信息。把您知道的所有真实的东西都写下来，这样就能更快地识别出虚假的东西。</p>
+<p>尘埃落定后，回顾一下您保存的图片和帖子是很有帮助的。虽然在当下您想通过公益的方式来强调个别的虚假，但在事后您应该总结任何可以看到的主题或模式。人们是否因为种族或性别而成为目标？源于小型匿名账户的骗局是否成为主流？…… 一个总结性的调查报告可以帮助您的读者更充分掌握虚假信息传播的目的和方法；它还可以作为您的的研究工具，告诉您下次突发事件时可能需要关注哪些有用的内容。⚪️</p>
+<p>—— 未完待续 ——</p>
 
       
     </div>
@@ -1307,7 +589,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%83%85%E6%8A%A5%E5%9C%B0%E5%9B%BE%E3%80%81%E2%80%9C%E9%BB%91%E5%AE%A2%E6%90%9C%E7%B4%A2%E2%80%9D,%E5%8F%8A%E5%85%B6%E4%BB%96%20#OSINT/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E7%BB%99%E7%9C%9F%E7%9B%B8%E7%88%B1%E5%A5%BD%E8%80%85%E7%9A%84%E9%9A%8F%E8%BA%AB%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%9A%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%E5%8C%85%E7%AE%80%E7%89%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1321,7 +603,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/12/28/%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%83%85%E6%8A%A5%E5%9C%B0%E5%9B%BE%E3%80%81%E2%80%9C%E9%BB%91%E5%AE%A2%E6%90%9C%E7%B4%A2%E2%80%9D,%E5%8F%8A%E5%85%B6%E4%BB%96%20#OSINT/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2021/12/30/%E7%BB%99%E7%9C%9F%E7%9B%B8%E7%88%B1%E5%A5%BD%E8%80%85%E7%9A%84%E9%9A%8F%E8%BA%AB%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%9A%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%E5%8C%85%E7%AE%80%E7%89%88/" class="post-title-link" itemprop="url">给真相爱好者的随身小工具：调查工具包简版</a>
         </h2>
 
         <div class="post-meta">
@@ -1332,7 +614,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-12-28 23:47:35 / 修改时间：23:47:36" itemprop="dateCreated datePublished" datetime="2021-12-28T23:47:35+08:00">2021-12-28</time>
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：20:15:20" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
             </span>
 
           
@@ -1346,50 +637,62 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="开源调查工具：情报地图、“黑客搜索”-及其他-OSINT"><a href="#开源调查工具：情报地图、“黑客搜索”-及其他-OSINT" class="headerlink" title="开源调查工具：情报地图、“黑客搜索”,及其他 #OSINT"></a>开源调查工具：情报地图、“黑客搜索”,及其他 #OSINT</h1><p>我们以前在诸多开源调查演示中已经陆续介绍过一些工具，本文专门介绍几种工具，及其有趣的用法。具体如何使用，要看您需要找的证据线索是什么，基于您最完美的逻辑，相信它们都有其最佳用途。在真相如此易于挖掘的当下时代，假消息和阴谋论理论上是没有存在空间的。但最重要的还是，需要更多人行动起来。</p>
-<p>开源情报（OSINT）是指来自公共来源的数据集合，用于情报环境，这类信息往往被链接爬行搜索引擎（如谷歌）所忽略，也就是说，大多数时候您无法通过常规搜索获得。此外，按照美国国防部的规定，OSINT 是“从公开获得的信息中产生的，并且可以及时收集，利用和传播给适当的受众，以满足特定的情报需求。”</p>
-<p>情报和信息不是同一种东西，我们在前面的文章中简单介绍过。</p>
-<p>— — Talos — —</p>
-<p>Talos 情报地图是一个世界地图，它可以实时报告全世界电子邮件流量数据。地图是互动的，如果你点击一个指示，就可以深入信息点，例如，通过点击北京方向的蓝色指示来获得下一个图像。</p>
-<p>您可以看到网上有很多关于谁产生的电子邮件流量的信息，在这种情况下它是合法流量，但查看垃圾邮件流或恶意软件类型的电子邮件会更有趣，对吧。</p>
-<p>首页左上角你会看到一个搜索框，可以搜索实时威胁数据。</p>
-<p>在底部的图像中您会看到在美国生成的垃圾邮件呈爆炸状态。</p>
-<p>这不止是一个地图哦，根据页面顶部的栏目设置，有兴趣的人可以更多地了解所使用的产品和漏洞信息。</p>
-<p>— — 卡巴斯基网络威胁实时地图 — —</p>
-<p>卡巴斯基网络威胁实时地图显示与公司实时发布的网络攻击方面有关的信息。这是一个三维呈现的地图，显示网络空间和主要威胁。</p>
-<p>地图是互动的，所以您可以选择任何一个国家（比如选中国），你能获得一些重要信息，包括与最易受攻击排名中的位置相关联。</p>
-<p>地图可以被操控，放大，缩小并提供许多其他信息，尤其是关于攻击类型的信息，很重要。</p>
-<p>画面很壮观的。</p>
-<p>— — 入侵检测 — —</p>
-<p>Vectra Cognito 平台将人工智能（AI）、深度机器学习和流量监控结合到一个工具中，该工具能够检测其他程序遗漏的威胁，即使它们已经在受保护的网络中根深蒂固。</p>
-<p>Cognito 被归类为流量监控工具虽然不是太适合。Cognito 更像是一个称职的入侵检测系统（IDS）。它展示了面对高级入侵时未来 IDS 系统的运行方式。甚至还有一个威胁搜寻组件，使任何简单的分类变得更加详细。</p>
-<p>目前，Cognito 的 brains 仅作为硬件提供。每个设备可以处理多达 500 个传感器的数据，许多组织可能只需要一个。报告由设备编译并发送到仪表板界面，使其在这方面像更传统的安全信息和事件管理（SIEM）控制台。如果需要，Cognito 还可以将其数据发送到许多其他 SIEM 或安全设备。</p>
-<p>— — Shodan — —</p>
-<p>Shodan 是一种搜索引擎，被誉为“黑客搜索引擎”，对于研究人员来说，这是一个惊人的金矿，可让用户使用各种过滤器查找连接到互联网的特定类型的设备（网络摄像头，路由器，服务器等）。嗯，就是你知道的那样，可以有<em>很高效</em>的用途。有些还将其描述为服务横幅的搜索引擎，这是服务器发送回客户端的元数据。这可以是有关服务器软件的信息、服务支持哪些选项、欢迎消息或客户端在与服务器交互之前可以找到的其他信息。</p>
-<p>Shodan 主要收集在 Web 服务器上的数据（ HTTP / HTTPS — 端口 80,8080,443,8443）以及FTP（端口 21），SSH（端口 22），Telnet（端口 23），SNMP（端口 161），SIP（端口 5060），和实时流协议（ RTSP，端口 554）。后者可用于访问网络摄像头及其视频流。</p>
-<p>它是由计算机程序员 John Matherly 于 2009 年推出的，他在 2003 年设想了搜索与互联网相关的设备的想法。</p>
-<p>Shodan 用户能够找到包括交通信号灯，安全摄像机，家庭供暖系统以及水上乐园，加油站，水厂，电网，核电站和粒子回旋加速器的控制系统 ; 多数有小保安。许多设备使用“admin”作为其用户名，“1234”作为其密码，连接到它们的唯一软件是 Web 浏览器（如果不是这样的用户名和密码，需要稍微花点时间）</p>
-<p>该网站专注于 SCADA（监控和数据采集）系统。 Shodan 目前将10个结果返回给没有帐户的用户，而有账户的用户则能收到 50 个。如果用户想要删除限制，则需要提供理由并支付费用。 Shodan 的主要用户是网络安全专业人员、研究人员和执法机构。虽然社交工程师、OSINT 研究人员、网络犯罪分子也可以使用该网站，但一些网络犯罪分子通常可以访问能完成相同任务而无需经过身份检测的僵尸网络。</p>
-<p>SHODAN Diggity — 为SHODAN搜索引擎提供免费，易于使用的扫描界面<br>SHODAN 查询的批量搜索和处理可以使用 SHODAN Diggity 执行（SearchDiggity 的一部分，Bishop Fox 的免费搜索引擎攻击工具套件）。免费工具通过 SHODAN API 为流行的黑客搜索引擎提供了一个易于使用的扫描界面。</p>
-<p>SHODAN Diggity 配备了一个名为 SHODAN Hacking Database（SHDB）的预制字典文件中的 167 个搜索查询的便捷列表。这本词典有助于针对各种技术，包括网络摄像头、打印机、VoIP 设备、路由器、烤面包机、交换机，甚至 SCADA / 工业控制系统（ICS）等等。嗯，细思极恐。不过对于调查来说非常方便。</p>
-<p>SHODAN 黑客警报 — 在阅读器中监控RSS源</p>
-<p>SHODAN 黑客警报 — 创建 RSS 源<br>网上有很多使用指南，很容易找到。</p>
-<p>— — theHarvester — —</p>
-<p>这也是个小邪恶的工具，不仅能用于开源调查，也能很方便社交工程攻击的信息收集工作（对于后者，我们会令起篇幅单独介绍）。</p>
-<p>TheHarvester 能够收集电子邮件账号、用户名、主机名和子域名等信息。它通过 Google、Bing、PGP、LinkedIn、Baidu、Yandex、People123、Jigsaw、Shodan 等公开资源整理收集这些信息。这些信息将在后期的渗透测试阶段发挥巨大的作用。</p>
-<p>这款工具可以帮助渗透测试工作者在渗透测试的早期阶段对目标进行互联网资料采集，同时也可以帮助人们了解自己的个人信息在网络上是否存在。</p>
-<p>使用方法和下载很容易找到。</p>
-<p>— — Recon-Ng — —</p>
-<p>Recon-Ng 是对目标进行侦察的另一个有用工具，也是内置于 Kali Linux 中的。Recon-ng 具有内置的各种模块，其用法有点类似于 Metasploit。以下是 Kali Linux 上 Recon-ng 的欢迎屏幕。</p>
-<p>Recon-ng 具有各种内置模块。下面显示了一小部分内容：</p>
-<p>可以创建工作区来执行其中的所有操作。只要工作区被创建，用户将被重定向到该工作区。一旦进入工作区，就可以使用添加域 <domainname> 来指定域。将域添加到重新调用后，重新调用模块可用于提取有关此域的信息。</p>
-<p>有一些优秀的模块，比如 bing_domain_Web 和 google_site_web 可以找到与初始目标域相关的其他域。这些域的输出将成为这些搜索引擎的所有索引域。</p>
-<p>另一个方便的模块是 bing_linkedin_cache，它可以用来获取与域相关的电子邮件地址，这些地址可以进一步用于执行社交工程。所以，通过其他模块，我们可以获得有关目标的其他信息。</p>
-<p>— — Maltego — —</p>
-<p>Maltego 由 Paterva 开发，是 Kali Linux 内置工具（附带社区版）。Maltego 可以借助几个内置转换（以及提供编写自定义转换的功能）帮助执行对目标的重要侦察。使用 Maltego，首先用户应该在 Paterva 网站上注册。</p>
-<p>注册后，用户可以创建新机器，或者运行机器来实现目标上的变换。配置完成后，需要启动已配置的机器。Maltego 内部有各种脚印，可以抵挡目标。Maltego 会开始使用 Maltego 服务器运行所有转换。</p>
-<p>预期的结果可能是域到 IP 的转换已经发生，netblock 将被识别，AS 号码也被识别，还有位置和其他短语。这些都是 Maltego 中的所有图标，并提供了有关所有这些图标的详细信息。研究人员可以继续这个过程来挖掘更多关于目标的信息。</p>
-<p>绝对奇妙的工具，通过互联网跟踪单个实体的脚印！</p>
+          <h1 id="给真相爱好者的随身小工具：调查工具包简版"><a href="#给真相爱好者的随身小工具：调查工具包简版" class="headerlink" title="给真相爱好者的随身小工具：调查工具包简版"></a>给真相爱好者的随身小工具：调查工具包简版</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>不要淹死在铺天盖地的文档和信息中；调查者应该有巧妙的方法让自己尽可能保持精准和清醒<br>很多调查者都有这样的感受，信息太多无从下手，工具太多很难逐一尝试究竟哪个最有效。</p>
+<p>我们也介绍过很多调查工具，见“OSINT”栏目，或者4个综合版如下：</p>
+<p>《💎 超级情报收集工具库：开源验证和调查工具及使用方法》<br>《如果擅长搜索，你能找到一切》<br>《人肉工具 – 1》<br>《社交媒体情报和反情报基本工具手册：自我 — 人肉工具2》<br>以上工具稍微专业，适合有至少一年以上开源调查经验的玩家。如果您是新手，正在考虑从哪里开始，本文推荐的一些小东西应该可以适合您。</p>
+<p>这些工具是欧洲记者常用的；如果比喻一下的话，它们就像是开瓶器、镊子、指甲钳等挂在钥匙扣上的小玩意。基本能满足日常需求，如果您准备深度追踪一个目标人/事件的时候，可能依旧需要更专业的工具。</p>
+<p>⚠️请注意，和所有调查工具一样，以下这些工具也有危险性，如果落入恶意者手中会产生很糟糕的结果；</p>
+<p>💡于是，即便您不是调查人员，也可以使用在这些工具对自己进行“调查”，并在恶意者出手之前删除您的关键信息和踪迹。</p>
+<p>那么开始。</p>
+<p>Hunter.io</p>
+<p>查找调查对象的联系方式是调查工作的重头戏。</p>
+<p>Hunter.io 能帮你挖出某些带特定域名的邮箱地址，比如说政府部门的邮箱。</p>
+<p>即使有时不能给出准确地址，Hunter 也会利用他们的算法提供最接近的猜测结果（例如，“{last name}{first name}@company.com”）。</p>
+<p>接着，你可以用 Email Verifier 来测试所得的邮箱是否是真实存在的邮箱。</p>
+<p>还可以在 Chrome 上安装 Hunter 的插件，这样就能在领英个人页面添加一个“查找他们的邮箱地址”（Find their email）功能。</p>
+<p>IntelTechniques</p>
+<p>IntelTechniques 能让你同时搜索数十个社交媒体和网页平台，“人肉”某个信源、追踪目标人物、甚至是起底某人在网络世界的一举一动。</p>
+<p>比如，在 Facebook 搜索方面，它能帮你查到某个用户点过赞的所有照片，或是所有标记了他们的视频。</p>
+<p>目前该工具的提供者已经关闭了工具箱，因为他们受到了攻击，您可以在这里看到说明：<a target="_blank" rel="noopener" href="https://inteltechniques.com/private/viewtopic.php?id=4%EF%BC%9B%E6%88%96%E8%80%85%E5%9C%A8%E8%BF%99%E9%87%8C%E5%90%AC%E5%8F%96%E9%9F%B3%E9%A2%91%EF%BC%9Ahttps://soundcloud.com/user-98066669/126-what-happened%E3%80%82%E5%B8%8C%E6%9C%9B%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E8%80%85%E5%B0%BD%E5%BF%AB%E6%8E%A5%E5%8A%9B%E3%80%82">https://inteltechniques.com/private/viewtopic.php?id=4；或者在这里听取音频：https://soundcloud.com/user-98066669/126-what-happened。希望其他开发者尽快接力。</a></p>
+<p>类似工具还有其他，您可以在上面的多个工具包中找到。</p>
+<p>InVID</p>
+<p>InVID 浏览器插件是由一群欧洲记者和产品设计师共同设计的视频核查工具。</p>
+<p>它能够挖出视频的缩略图、某一帧画面、元数据和其他信息，来帮你判断视频的来源。</p>
+<p>不过局限性是，目前它只能用于核查 YouTube 和 Facebook 视频。</p>
+<p>YouTube DataViewer</p>
+<p>人权组织常需要核查读者生成内容（UGC），确认内容是否合法。</p>
+<p>由国际特赦组织开发的 YouTube DataViewer，就是帮你搜索 YouTube 视频出处的工具。</p>
+<p>如果视频本身没有什么特别值得注意的地方，你可以利用反向图片搜索（Reverse Image Search）来查询视频生成的缩略图。</p>
+<p>更多见：《虚假信息鉴别工具箱：如何验证图片和视频的真伪？》</p>
+<p>Sqoop</p>
+<p>普通记者和调查记者的区别之一在哪？</p>
+<p>答案是：挖掘文件的程度。</p>
+<p>想要查询法庭记录、商业档案以及各种国家层面的公开文件，不妨试下 Sqoop — — 抱歉目前只对记者免费。</p>
+<p>如果您不是记者，可以获得7天的免费试用。</p>
+<p>Klaxon</p>
+<p>这个工具上手有些费劲，但绝对值得你花功夫去尝试。</p>
+<p>它是目前市面上用来追踪网页变化的最佳工具，由专注犯罪正义报道的美国非盈利项目 The Marshall Project 开发，适用于任意语言的网站。</p>
+<p>Botometer</p>
+<p>网络水军盛行的时代，要避免在判断上出错，还需懂得辨认社交媒体用户的真实性。</p>
+<p>由美国大学研究者开发的 Botometer 能帮你检测某个 Twitter 账户的背后是真人还是机器操作。</p>
+<p>虽然不能保证100%的准确率，但它已是市面上最好的“机器人检测仪”，还能用来分辨真粉还是僵尸粉。</p>
+<p>Burner</p>
+<p>调查记者还要特别重视个人隐私和安全问题。</p>
+<p>不论信息加密工作做得多好，你总会在网络上 — — 通常在元数据中 — — 留下个人痕迹。</p>
+<p>Burner 的作用是给你创建一个带加拿大或美国区号的“电话号码”（从而隐去了你的真实痕迹）。</p>
+<p>不过局限是暂时不能打国际电话。</p>
+<p>Oligrapher</p>
+<p>如其名所示，Oligrapher 是一个可视化工具，专门用来设计呈现寡头政治家之间的关联的可视化图表。</p>
+<p>它让读者使用 Little Sis（意思是“小姐姐”，取“老大哥”的反义）数据库的数据作图，后者是一个草根监督网络，包含数百万条有关世界上的政治强人和组织实体之间的社会关联信息。</p>
+<p>如果在 Little Sis 数据库上搜不到你想找的人或公司，你还可以主动给数据库添加信息。</p>
+<p>Raw Graphs</p>
+<p>Raw Graphs 是一个开源数据可视化框架，目的是帮助用户处理并可视化复杂的数据。</p>
+<p>用户只需复制、粘贴数据表格到该网页应用上，应用便会自动提供可视化方案，帮助分析并以可视化的形式标出所上传的数据集特点，最后生成一个可视化样品。</p>
+<p>不满意的话，还可以重新进行分析，尝试其他可视化形式。</p>
+<p>Data Visualization Catalogue</p>
+<p>寻找合适的数据图表和可视化方案还可以求助“数据可视化目录”。</p>
+<p>这个由数据可视化爱好者、平面设计师 Severino Ribecca 建立的网站是一个持续进行的项目，现已收录了50多种可视化图表的制作工具、应用案例等信息，供用户检索参考。</p>
+<p>该网站去年还新增了中文版。</p>
 
       
     </div>
@@ -1409,7 +712,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/%E8%99%9A%E5%81%87%E4%BF%A1%E6%81%AF%E9%89%B4%E5%88%AB%E5%B7%A5%E5%85%B7%E7%AE%B1%EF%BC%9A%E5%A6%82%E4%BD%95%E9%AA%8C%E8%AF%81%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E7%9C%9F%E4%BC%AA%EF%BC%9F/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E8%99%9A%E5%81%87%E4%BF%A1%E6%81%AF%E9%89%B4%E5%88%AB%E5%B7%A5%E5%85%B7%E7%AE%B1%EF%BC%9A%E5%A6%82%E4%BD%95%E9%AA%8C%E8%AF%81%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E7%9C%9F%E4%BC%AA%EF%BC%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1423,7 +726,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/12/28/%E8%99%9A%E5%81%87%E4%BF%A1%E6%81%AF%E9%89%B4%E5%88%AB%E5%B7%A5%E5%85%B7%E7%AE%B1%EF%BC%9A%E5%A6%82%E4%BD%95%E9%AA%8C%E8%AF%81%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E7%9C%9F%E4%BC%AA%EF%BC%9F/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2021/12/30/%E8%99%9A%E5%81%87%E4%BF%A1%E6%81%AF%E9%89%B4%E5%88%AB%E5%B7%A5%E5%85%B7%E7%AE%B1%EF%BC%9A%E5%A6%82%E4%BD%95%E9%AA%8C%E8%AF%81%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E7%9C%9F%E4%BC%AA%EF%BC%9F/" class="post-title-link" itemprop="url">虚假信息鉴别工具箱：如何验证图片和视频的真伪？</a>
         </h2>
 
         <div class="post-meta">
@@ -1432,8 +735,18 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-12-28 23:46:49" itemprop="dateCreated datePublished" datetime="2021-12-28T23:46:49+08:00">2021-12-28</time>
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：19:20:57" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
             </span>
 
           
@@ -1505,10 +818,752 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F%E7%9A%84%E6%96%B9%E5%BC%8F%E5%8F%AF%E4%BB%A5%E6%94%B9%E5%8F%98%E4%B8%80%E5%88%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/30/%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F%E7%9A%84%E6%96%B9%E5%BC%8F%E5%8F%AF%E4%BB%A5%E6%94%B9%E5%8F%98%E4%B8%80%E5%88%87/" class="post-title-link" itemprop="url">裁剪图像的方式可以改变一切</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：21:57:56" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="裁剪图像的方式可以改变一切"><a href="#裁剪图像的方式可以改变一切" class="headerlink" title="裁剪图像的方式可以改变一切"></a>裁剪图像的方式可以改变一切</h1><p>传播虚假信息可以很容易。但验证虚假需要一些技巧。</p>
+<p>在网上传播欺骗性的照片或虚假信息，实际上可以非常简单，并不需要什么高超才能。通常情况下，仅仅裁剪一张照片或视频就可以在社交媒体上造成混乱。在这篇文章中，France24Observers 研究了三个以欺骗性方式裁剪或重构的照片和视频的真实例子，这是值得您警惕的欺骗手段，了解它们以帮助您避免落入这个陷阱。</p>
+<p>实际上，大多数人都会去裁剪照片以使画面上的情况看起来更像是自己想要的样子，这相当普遍。您也很可能这样做过。比如您可能会把自己的手臂从照片中剪掉，因为您不想让人们看到赘肉；您也可能会把前男友从照片中剪掉，因为您不想让人记得他曾和您的家人一起吃过饭；您甚至可能把其他游客从您拍摄的一些漂亮的瀑布照片中剪掉，只是为了让您看起来像在野外散步。</p>
+<p>然而，人们也会出于更邪恶的原因而裁剪照片。他们的想法是一样的  — — 他们通过剪掉关键的视觉信息来改变人们对某一情况的认知方式。他们裁剪照片并不是为了隐藏前男友或一点赘肉，而是为了欺骗他人，诱导人们以欺骗者想要的方式解释图像。</p>
+<p>法国家庭福利办公室的照片<br>这张照片显示，一群身穿罩袍的妇女站在一个写有 “Allocations familiales” 的蓝色标志前，这是法国分配家庭津贴或福利的组织。标题说：“照片拍摄于巴黎郊区 Rosny-sous-bois 的 CAF[caisse d’allocations familiales的缩写]”。</p>
+<p>这张特殊的剪裁图片多年来一直在法国的社交媒体上不断重现。这张照片在2015年初被广泛分享，并在2018年8月再次开始流传。</p>
+<p>帖子写道：“Rosny-sous-Bois 的家庭福利办公室 [Caisse d’allocations familiales]…对于那些不了解其地理位置的人：Rosny-sous-Bois 在法国（93 seine Saint Denis ）离巴黎不远。继续工作吧，他们需要你！” 这是一条反移民的虚假信息，暗示法国人在努力工作以养活移民。<br>看到这张照片的大多数观众会得出的结论是：戴头巾面纱的妇女正在排队领取政府福利。</p>
+<p>“继续工作，他们需要你！” 发布照片的人说，这显然是在向读者暗示，这些穆斯林妇女正在依赖政府的福利，而不是寻找工作。</p>
+<p>但是，这并不是真实的情况。</p>
+<p>当您看到这样一张有争议的图片时，您的第一反应应该是做一个反向图像搜索（如果您不知道如何操作，请查看这里的指南）。如果使用谷歌浏览器，在图片上点击右键，您会得到在谷歌上搜索这张照片的选项。然后，谷歌会向您展示这张照片在网上发布的所有情况。</p>
+<p>更多方法见：《验证图像和视频信息时您需要思考什么：从追踪到验证的思考方式（5）》</p>
+<p>《5个简单方法快速检测造假照片》</p>
+<p>《虚假信息鉴别工具箱：如何验证图片和视频的真伪？》</p>
+<p>《信息验证：如何自动反向图片搜索 YouTube 和 Vimeo 的视频？》</p>
+<p>然而，通常情况下，仅仅运行反向图像搜索是不够的。这是因为，虚假信息或被篡改的照片被分享的次数比原件还要多。</p>
+<p>找到原始照片的最好方法之一是搜索类似的图片。</p>
+<p>单击“类似图像”（如上面的搜索所示 — 在此屏幕截图中为法语。）</p>
+<p>这是“类似图像”的结果。<br>当您在谷歌图片上进行反向图像搜索时，出现的照片都标有 “CAF in Rosny sous bois”。为了进一步挖掘这张照片的历史，您必须进行 “类似图片” 的搜索。</p>
+<p>这使您能够找到与您正在寻找的图像非常相似的照片，甚至是可能被剪裁得不同的相同照片。在这种情况下，运行这个搜索有助于我们找到一个更大的原照片版本，其中不包括家庭福利办公室的标志。</p>
+<p>再仔细看一下这张照片，您可以看到在妇女们等待的建筑物前面写着 “警察局”（英文）。这张新照片还包括另一个标志  — — 伦敦的公共汽车站牌。</p>
+<p>最后，图片最左边的白色车辆是在道路的左侧行驶的，这是英国的特点。所有这些线索都有助于我们确定原始照片是在伦敦而不是法国拍摄的。</p>
+<p>原始照片包括左侧的伦敦巴士标志。此外，这座建筑贴有“警察局”的标签（看图片的右上角）。<br>当一张法国冠军足球队的照片被欺骗性地重拍时<br>同样的技术可以用来分析另一张照片 — — 这次是法国国家足球队在赢得2018年世界杯后，于7月16日站在总统府爱丽舍宫前的照片。</p>
+<p>从7月17日开始，也就是球队在赢得国际比赛后兴高采烈地返回巴黎的第二天，一张照片开始在 Facebook 上流传，似乎显示球队所有的黑人球员在总统府拍照时被安排在第二排。据那些分享图片的人说，这显然是一种歧视的表现。</p>
+<p>法语帖子写道：“看看你们法国。到了爱丽舍宫时黑人就被扔到后面了，即便在球场上他们总是冲在前面的”。<br>再一次，先运行反向图像搜索，然后搜索类似的图像，就会找到其他在同一时间拍摄的照片，但没有被裁剪得那么紧密。这些较大的照片显示，在前排（最左边）实际上有三名黑人球员。这三名球员，托马斯·勒马尔，史蒂夫·曼丹达和恩戈洛·坎特，在下面的照片中用红色圈出。</p>
+<p>当被篡改的是视频时，寻找来源的难度更大<br>人们经常裁剪照片，以传递某种特定的信息。尤其是，这样做的人越多，找到原始图像的难度就越大。</p>
+<p>当进行反向图片搜索时，搜索引擎会扫描网络，以找到与您感兴趣的照片具有相同像素、相同大小或相同颜色的图片。如果您要找的照片的修改版已经被发布了无数次，那么找到原版有时会非常困难。</p>
+<p>当视频被裁剪或重新构建成不同的方式，然后发布到网上时，这种情况就尤其明显。例如，许多人在 Facebook 上分享4月中旬首次发布的一个视频，他们声称该视频显示了 “法国警察如何在法国暗杀非洲黑人”。</p>
+<p>在这种情况下，反向图像搜索就不起作用了。它无法识别原始视频，因为相关视频是从手机上播放的原始视频的翻拍。如果您在谷歌等搜索引擎上进行反向图像搜索，这种情况不会有任何结果。</p>
+<p>在 Google 上进行反向图像搜索不会出现此视频的任何结果。<br>在这种情况下为了找到原始视频，您将不得不发挥创意。首先，暂停视频，对关键时刻进行截屏。然后，您需要裁剪图像，使画面上只有视频本身，去掉正在播放视频的手机。</p>
+<p>在这里，我们对警察踢受害者的那一刻进行了截屏。通过谷歌搜索这张图片时，终于找到了原始视频，它是在澳大利亚拍摄的，而不是法国。</p>
+<p>帖子写道：“来看看法国警察如何在法国暗杀非洲黑人。请广泛分享！”<br>总而言之，对于一个原始周长被改变的视频，最好的做法是拍摄屏幕截图，并像照片一样进行反向图像搜索。⚫️</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E8%A7%82%E5%AF%9F%E8%BF%BD%E8%B8%AA%E8%80%85%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%9A%E6%8C%96%E6%8E%98%E6%8E%A8%E7%89%B9%E6%83%85%E6%8A%A5%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%EF%BC%882%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/30/%E8%A7%82%E5%AF%9F%E8%BF%BD%E8%B8%AA%E8%80%85%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%9A%E6%8C%96%E6%8E%98%E6%8E%A8%E7%89%B9%E6%83%85%E6%8A%A5%E7%9A%84%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%EF%BC%882%EF%BC%89/" class="post-title-link" itemprop="url">观察追踪者的思考方式：挖掘推特情报的基础教程（2）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：19:16:47" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="观察追踪者的思考方式：挖掘推特情报的基础教程（2）"><a href="#观察追踪者的思考方式：挖掘推特情报的基础教程（2）" class="headerlink" title="观察追踪者的思考方式：挖掘推特情报的基础教程（2）"></a>观察追踪者的思考方式：挖掘推特情报的基础教程（2）</h1><p>我们在完美隐身中强调过：您需要尽可能了解追踪者的思路，这样才能先下手为强，实现最有效的防御</p>
+<p>本话题的第一部分在这里：《如何从推特挖掘情报（1）：一个流行工具的具体介绍》。</p>
+<p>开源情报研究人员、社交工程师、调查记者、黑客，都喜欢对社交媒体进行侦察。因为社交媒体情报有可能非常高效。</p>
+<p>当然，社交媒体情报也非常具有侵犯性，并一直在被当权者用来抓捕公民，见《什么是社交媒体情报？你的推特如何成为抓捕你的理由？》<br>所以要强调公民的自我保护，保护方法见《社交媒体情报和反情报基本工具手册：自我人肉（2）》<br>社交媒体情报是完全无可避免的。也正因此，要鼓励公民掌握挖掘信息的能力 —— 让它民主化，并应用在正义的事业上。</p>
+<p>像 Twitter 这样的网站提供了庞大的可搜索数据库，可以由数百万用户实时更新，这是一个天然的情报金矿；但是手动筛选可能非常耗时。</p>
+<p>值得庆幸的是，像 Twint 这样的工具可以爬到很多年的 Twitter 历史数据，只需要单个终端命令就可以挖掘几乎任何信息。</p>
+<p>尽管曾经一直以来 Twitter 由于难以搜索和解析而被开源情报社区贬低，但仍有许多方法可以解决对于搜索和理解大量 Twitter 数据而产生的瓶颈。</p>
+<p>视频：</p>
+<p>把推特作为开源情报数据库<br>制定好的计划的关键是好的研究员。如果你不能了解情况，就很难甚至不可能设计出一个资源高效的计划。</p>
+<p>优秀的研究人员可以采取一些基本步骤，将形成计划所需的各个部分整合在一起。</p>
+<p>首先，研究人员提出数据可以回答或证明的问题，然后，由此确定搜索答案的最佳信息来源。</p>
+<p>接下来，分析数据以寻找隐藏的线索或模式，并在必要时引入更多数据以全面了解目标。</p>
+<p>最后，借助对情况事实的了解，可以将数据转换为可操作的情报，以支持决策和行动计划。</p>
+<p>情报指导的是行动，信息只支持理解《情报不是简单的信息》<br>这就是模式 —— 定义问题、制定收集计划、收集数据、以及分析结果的过程，这也是不断完善线索以使其易于理解的过程。</p>
+<p>Twitter 通过提供大量要搜索的结构化数据对调查任务提供补充，这些数据可以以令人难以置信的准确性切分。</p>
+<p>您将在 Twitter 上找到的数据有哪些<br>对于使用开源情报能力来决定行动计划的红队来说，Twitter 等社交媒体网站可以提供其他任何地方都无法获得的信息。</p>
+<p>您可以期望在 Twitter 上找到以下类型的信息（当然不止推特，所有社交媒体平台都有大量不注重隐私的人在不断发布敏感信息）：</p>
+<p>各种包括徽章、电子设备、门禁系统等关键信息的照片；<br>被发布的电话号码和个人详细信息；<br>办公室空间和私人住宅内部的照片和视频；<br>通过主题标签连接的具有不同观点的同一事件中来自其他人的照片和视频（帮您补充不同视角的观察）；<br>关于当前可能正在调查的任何主题的主要来源陈述；<br>调查目标的闲暇时间花在哪里（概况定位）；<br>显示了其他员工身份信息的公司或办公室的照片；<br>旅行和即将发生的个人事件的记录；<br>…… 等等<br>想象一下，你可以观看一个视频，该视频向您显示了您无法物理进入的建筑物内部，您无法触摸的系统的硬件配置，或任何潜在的社交工程目的的个人兴趣。这是有多丰厚的大礼呢。</p>
+<p>这些细节通过揭示安全系统内的薄弱环节，极大地改变了红队的参与过程。</p>
+<p>不要错过《如何自动执行情报搜集？蜘蛛脚入门指南》<br>使用 Twint 分割数据<br>尽管 Twitter 中包含的数据很有价值，但查找和处理它们也很耗时。</p>
+<p>一条推文的发布时间，通常在一条推文是否有用、以及位置、主题和许多其他变量中，起着至关重要的作用。</p>
+<p>为了帮助研究人员快速了解这些选项，Twint 配备了搜索过滤器，您可以通过有用的方式组合它们以显示精确的信息。</p>
+<p>是否想知道自去年以来用户在某个目标城市附近标记的每条推文？或者，也许是所有被点赞提及了的特定主题的推文？…… 借助正确的搜索标记组合，您甚至可以搜索与目标帐户交互的所有人的信息。</p>
+<p>尽管许多搜索工具都需要使用您的 Twitter 帐户通过 Twitter 的API发出请求，但 Twint 不需要。如此一来您就可以绕过API的限制，通过代理查询、以及以其他匿名方式，使自己与要研究的目标之间保持安全的距离。</p>
+<p>Twint 能够快速生成文本和 CSV 文件以存档感兴趣的推文，因此它成为了一种很好的可服务于法医取证或调查性工作的 Twitter 工具。</p>
+<p>对于高级用户来说 Twint 是一个Python库，可以编写脚本来执行更多自定义的或复杂的操作。</p>
+<p>使用 Twint 编写和扩展 Twitter 搜索脚本的功能使其成为从社交媒体提取数据的简单而且强大的方法。</p>
+<p>步骤1：安装 Twint</p>
+<p>要开始使用 Twint，我们将下载开发人员版本。</p>
+<p>我从 GitHub 页面尝试了几种不同的安装方法，但发现只有一种方法可以在我使用的 Linux 系统上工作。您将需要 pip 包管理器，该程序应随 Python3 一起安装。</p>
+<p>打开一个终端窗口，然后键入以下内容以下载并安装开发者版本。</p>
+<p>pip3 install –upgrade -e git+<a target="_blank" rel="noopener" href="https://github.com/twintproject/twint.git@origin/master#egg=twint">https://github.com/twintproject/twint.git@origin/master#egg=twint</a><br>这样就可以安装所有需要的东西了。如果您在安装pip时遇到问题，也可以尝试使用Git。要使用 Git 进行安装，请打开一个终端窗口，然后键入以下命令。</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/twintproject/twint.git">https://github.com/twintproject/twint.git</a><br>cd twint<br>pip3 install -r requirements.txt<br>步骤2：查看 Twint 的选项</p>
+<p>安装完成后，可以在终端窗口中运行 twint -h 来启动 Twint，并查看可用搜索过滤器的列表。</p>
+<p>sudo twint -h<br>usage: python3 twint [options]</p>
+<p>TWINT - An Advanced Twitter Scraping Tool.</p>
+<p>optional arguments:<br>  -h, –help            show this help message and exit<br>  -u USERNAME, –username USERNAME<br>                        User’s Tweets you want to scrape.<br>  -s SEARCH, –search SEARCH<br>                        Search for Tweets containing this word or phrase.<br>  -g GEO, –geo GEO     Search for geocoded Tweets.<br>  –near NEAR           Near a specified city.<br>  –location            Show user’s location (Experimental).<br>  -l LANG, –lang LANG  Search for Tweets in a specific language.<br>  -o OUTPUT, –output OUTPUT<br>                        Save output to a file.<br>  -es ELASTICSEARCH, –elasticsearch ELASTICSEARCH<br>                        Index to Elasticsearch.<br>  -t TIMEDELTA, –timedelta TIMEDELTA<br>                        Time interval for every request.<br>  –year YEAR           Filter Tweets before specified year.<br>  –since SINCE         Filter Tweets sent since date (Example: 2017-12-27).<br>  –until UNTIL         Filter Tweets sent until date (Example: 2017-12-27).<br>  –email               Filter Tweets that might have email addresses<br>  –phone               Filter Tweets that might have phone numbers<br>  –verified            Display Tweets only from verified users (Use with -s).<br>  –csv                 Write as .csv file.<br>  –json                Write as .json file<br>  –hashtags            Output hashtags in seperate column.<br>  –userid USERID       Twitter user id.<br>  –limit LIMIT         Number of Tweets to pull (Increments of 20).<br>  –count               Display number of Tweets scraped at the end of<br>                        session.<br>  –stats               Show number of replies, retweets, and likes.<br>  -db DATABASE, –database DATABASE<br>                        Store Tweets in a sqlite3 database.<br>  –to TO               Search Tweets to a user.<br>  –all ALL             Search all Tweets associated with a user.<br>  –followers           Scrape a person’s followers.<br>  –following           Scrape a person’s follows<br>  –favorites           Scrape Tweets a user has liked.<br>  –proxy-type PROXY_TYPE<br>                        Socks5, HTTP, etc.<br>  –proxy-host PROXY_HOST<br>                        Proxy hostname or IP.<br>  –proxy-port PROXY_PORT<br>                        The port of the proxy server.<br>  –essid [ESSID]       Elasticsearch Session ID, use this to differentiate<br>                        scraping sessions.<br>  –userlist USERLIST   Userlist from list or file.<br>  –retweets            Include user’s Retweets (Warning: limited).<br>  –format FORMAT       Custom output format (See wiki for details).<br>  –user-full           Collect all user information (Use with followers or<br>                        following only).<br>  –profile-full        Slow, but effective method of collecting a user’s<br>                        Tweets and RT.<br>  –store-pandas STORE_PANDAS<br>                        Save Tweets in a DataFrame (Pandas) file.<br>  –pandas-type [PANDAS_TYPE]<br>                        Specify HDF5 or Pickle (HDF5 as default)<br>  –search_name SEARCH_NAME<br>                        Name for identify the search like -3dprinter stuff-<br>                        only for mysql<br>  -it [INDEX_TWEETS], –index-tweets [INDEX_TWEETS]<br>                        Custom Elasticsearch Index name for Tweets.<br>  -if [INDEX_FOLLOW], –index-follow [INDEX_FOLLOW]<br>                        Custom Elasticsearch Index name for Follows.<br>  -iu [INDEX_USERS], –index-users [INDEX_USERS]<br>                        Custom Elasticsearch Index name for Users.<br>  –debug               Store information in debug logs<br>  –resume RESUME       Resume from Tweet ID.<br>  –videos              Display only Tweets with videos.<br>  –images              Display only Tweets with images.<br>  –media               Display Tweets with only images or videos.<br>  –replies             Display replies to a subject.<br>  -pc PANDAS_CLEAN, –pandas-clean PANDAS_CLEAN<br>                        Automatically clean Pandas dataframe at every scrape.<br>  –get-replies         All replies to the tweet.<br>步骤3：抓取目标用户的最新推文</p>
+<p>现在您已经看到了分割数据的方式，可以开始进行调查了。假设我们要跟踪目标或开始调查一个 Twitter 用户。</p>
+<p>本指南将假扮为新聘的国税局IRS代理人，负责第一次审计。已收到某人被控逃税的文件，这次调查任务是确定如何最好地接近目标人。</p>
+<p>第一次审核的文件上的名字为 John McAfee。快速搜索之后，可以看到他是使用 “ officialmcafee” ID 的 Twitter 用户。</p>
+<p>首先，可以使用 -u 指向目标用户名，并使用 –since 指向当前日期，以获取有关最新推文的信息。</p>
+<p>sudo twint -u officialmcafee –since 2019-2-17<br>1096956729768767488 2019-02-16 18:17:19 PST <officialmcafee> Oh yeah!!<br>1096947035360636928 2019-02-16 17:38:48 PST <officialmcafee> Yes. Every last one. Every last one.<br>1096946784113516544 2019-02-16 17:37:48 PST <officialmcafee> I was so stoned in that photo. I remember tweeting that out . Can’t recall why.<br>步骤4：找到历史证据</p>
+<p>John McAfee 在推文中说他正逃离美国，这是最近的消息，他担心国税局计划起诉他。早些时候他还发推文说，很长一段时间没有提交纳税申报表了。</p>
+<p>使用 -s 查找证据，以找到今年内发布的有关税收申报的所有推文。</p>
+<p>sudo twint -u officialmcafee -s “tax return” –since 2019-1-01<br>1080953136985133062 2019-01-03 14:24:45 PST <officialmcafee><br>I have not filed a tax return for 8 years. Why? 1: taxation is illegal. 2: I paid tens of millions already and received Jack Shit in services. 3. I’m done making money. I live off of cash from McAfee Inc. My net income is negative. But i am a prime target for the IRS. Here I am.<br>很好，我们的目标人承认八年不提交纳税申报表。假设您正在调查此案，将需要收集一些进一步的证据。</p>
+<p>目标人是否还有其他关于逃税的声明？将它们收集在一个文本文件中，以供以后查看。</p>
+<p>为此，我们将使用 -o 输出到文本文件，并使用更常规的方式搜索有关 “taxes” 的推文。</p>
+<p>sudo twint -u officialmcafee -s “taxes” –since 2009-01-01 -o mcafeetax<br>1097243822143213568 2019-02-17 13:18:07 PST <officialmcafee> Yes. Income taxes are illegal.<br>1096836632672653312 2019-02-16 10:20:06 PST <officialmcafee> I had cataract surgery 6 months ago and bright light still hurts my eyes. I will not take them off for you my friend. And taxes are unconstitutional. I will not pay. Why the fuck do you? Where are your fucking balls?<br>1092592264164134913 2019-02-04 17:14:29 PST <officialmcafee> Good God woman!! We’re running from the fucking tax man. Why don’t we just rename our private sessions. I’ve always favored “Bring that God-like scepter here babe”.<br>1091156545398804481 2019-01-31 18:09:27 PST <officialmcafee> It’s all I could afford. The IRS taxed the remaining pixels.<br>1090719204687429634 2019-01-30 13:11:37 PST <officialmcafee> Lmfao  Deal.  But my $15 mil is locked up in a swiss account due to a Swiss tax assessment. If you give me the 2 mil to unlock it, I will send you the 15. Really. You can trust me.<br>1088992872890802178 2019-01-25 18:51:48 PST <officialmcafee> The IRS survived withoit income tax for over a hundred years. Furst showed up during the civil War<br>1088462380051369985 2019-01-24 07:43:48 PST <officialmcafee> tltorally wrong. . Get real. It isn’t a crime not to file taxes.  Grand Juries aren’t convened for failure to pay taxes. And if you believe taxes are good, you have purchased our government’s propaganda. You are way worse off than me. We had no taxes before the Cuvil War.<br>1082710638365835264 2019-01-08 10:48:26 PST <officialmcafee> Good God!!!! Educate yourself! Thr U.S. had no income tax at all, with the exception of the Civil War, until 1913. We fucking did fine. This is what Im talking about. People are buying Government propaganda and eating it up. We font need income taxes.<br>1082709806031368192 2019-01-08 10:45:08 PST <officialmcafee> I have paid tens of millions in taxes in the past. Dont dare talk to me abour “orher tax payers”.<br>1081582572461834240 2019-01-05 08:05:54 PST <officialmcafee> Income taxes are unconstitutional. That’s my beef. You may not mind being controlled by a corrupt givernment but i do<br>1081309939841286144 2019-01-04 14:02:34 PST <officialmcafee> We declared our independence from Britain and fought a bloody war to escape burdensome taxes, yet here we are, less than 250 years later, being burdened by income taxes that are more crushing than anythung rhe British dreamed of.  Free yourselves people!   <a target="_blank" rel="noopener" href="https://www.ccn.com/crypto-shill-john-mcafee-i-havent-filed-a-tax-return-in-8-years/">https://www.ccn.com/crypto-shill-john-mcafee-i-havent-filed-a-tax-return-in-8-years/</a> …<br>1081122728005066752 2019-01-04 01:38:39 PST <officialmcafee> Fox News reported that i don’t pay taxes. The IRS is angry (and corrupt). They will strike using law, twisted by ‘their’ facts, as a club. My offense is small and won’t do. inferences of conspiracy or foreign collusion, or something, will come. I promise.   <a target="_blank" rel="noopener" href="https://www.foxnews.com/us/john-mcafee-trashes-irs-in-series-of-tweets">https://www.foxnews.com/us/john-mcafee-trashes-irs-in-series-of-tweets</a> …<br>1081019828658495488 2019-01-03 18:49:46 PST <officialmcafee> We had no income tax in the U.S. prior to the Civil War. There are uncountable alternativrs. Look it up and educate yourself.<br>1081017561695903744 2019-01-03 18:40:45 PST <officialmcafee> No sir. We had no income taxes prior to the Civil War and yet we were a world powet. There are thousands of ways to fund a givernment besides income taxes. Pay for service is one way: pay for road use by mileage, pay to access National parks, etc.,<br>1080988662077247488 2019-01-03 16:45:55 PST <officialmcafee> My Crypto goals drive the IRS mad. Privacy coins will obsolete income taxes. Can’t tax money you cant see, and I promote this as a good thing. The SEC is legally failing in their power grab so It’s up to the IRS now to silence me. I’ve called them out. They will come. You’ll see.<br>1080953136985133062 2019-01-03 14:24:45 PST <officialmcafee> I have not filed a tax return for 8 years. Why? 1: taxation is illegal. 2: I paid tens of millions already and received Jack Shit in services. 3. I’m done making money. I live off of cash from McAfee Inc. My net income is negative. But i am a prime target for the IRS. Here I am.<br>1080854344331939840 2019-01-03 07:52:11 PST <officialmcafee> I’m done trashing the SEC. Let’s move on  to the IRS - the agency that takes from you an average of three months of your labor each year. First - taxation is theft. It is unconstitutional. Prior to the civil war there was no income tax, yet we managed. Stay tuned for the truth.<br>1071899943680512001 2018-12-09 14:50:36 PST <officialmcafee> And that does’n happen to me constantly??? But ask– who do the Feds work for? Me, as much as anybody since I’ve paid the Feds, through taxes, hundreds of millions of dollars for services I have never received. Every Fed burstung through the door will get a “Past Due” notice<br>1033463922735624193 2018-08-25 14:19:34 PST <officialmcafee> I have made enough in my lifetime to have paid over a quarter of a billion dollars in taxes. I do not have to account for my money anymore. Some of the dollars I spend, are from the millions I made in 1987, never mind the hundreds of millions over the subsequent 10 years.<br>997495042347622400 2018-05-18 08:12:05 PST <officialmcafee> The SEC created a fake ICO called the Howeycoin, where the “Buy” button takes you to a page which discourages the purchase of cryptocurrencies. This is where your tax dollars are going - into deception, subterfuge and a desperate attempt to save the SEC.   <a target="_blank" rel="noopener" href="https://www.howeycoins.com/index.html#team">https://www.howeycoins.com/index.html#team</a><br>951689398135001089 2018-01-11 21:36:48 PST <officialmcafee> Tax writeoffs.<br>947326031890911233 2017-12-30 20:38:21 PST <officialmcafee> When I follow someone, God gives them a new Bentley Azure. Tax free.<br>947325176701706241 2017-12-30 20:34:57 PST <officialmcafee> When I follow someone God himself comes down and gives them a Bentley Azure. Tax free. It used to be Ford Focus. Don’t know why the upgrade.<br>947007111011151872 2017-12-29 23:31:04 PST <officialmcafee> As I said earlier ….. When I follow someone God himself comes down and gives them a new Bentley Azure  ….. Tax free.<br>947005611253919744 2017-12-29 23:25:06 PST <officialmcafee> I did. But I don’t believe your name is Tom. You realize, of course, that when I follow people, God himself comes down and blesses them - giving each of them a Bentley Azure - tax free.<br>939924816664121345 2017-12-10 10:28:33 PST <officialmcafee> Good  God! Do I have to spell it out? Well … No taxes, no regulatory problems, no traceable income, no tax accountant costs, etc,etc,etc<br>644436140183973888 2015-09-17 02:02:03 PST <officialmcafee> My policies now posted  <a target="_blank" rel="noopener" href="https://mcafee16.com/issues/">https://mcafee16.com/issues/</a>  #ForeignPolicy #drugs #immigrants #tax #educate #economy #cyber +more pic.twitter.com/ugCnhKEBsL<br>哇哦，看起来他真的很讨厌税收。现在有了一个名为 “mcafeetax” 的文件，其中包含刚刚刮到的所有有关税收的推文。</p>
+<p>如果是执法机构，可能会好奇是否可以与目标交谈一下，万一对方是全副武装的呢？也许 Twitter 可以回答这个问题！</p>
+<p>步骤5：导出证据和元数据</p>
+<p>来看看是否可以找到过去一年中有关枪支（武装）的任何推文。实际上，尝试查找目标在帖子中某处提到“枪支”的图像也可以。</p>
+<p>为此，添加 -media，以表示只希望查看包含照片或视频等媒体的帖子。</p>
+<p>接下来，将找到的证据保存到名为 “mcafeeguns” 的CSV文件中。</p>
+<p>sudo twint -u officialmcafee -s “gun” –since 2018-01-01 –media -o mcafeeguns –csv<br>1071009885645627392 2018-12-07 03:53:49 PST <officialmcafee> U jumped the gun when I divulged the Skycoin video that someone shot during the week of revelry at my place. Seems there is a remix now. Great improvements plus without the shot of Hayden with his dick hanging out.   (link:  <a target="_blank" rel="noopener" href="https://youtu.be/R5q7_UWKcDg">https://youtu.be/R5q7_UWKcDg</a> ) <a target="_blank" rel="noopener" href="http://youtu.be/R5q7_UWKcDg">http://youtu.be/R5q7_UWKcDg</a><br>1022223220861272067 2018-07-25 13:53:02 PST <officialmcafee> ANTI-GUN FOLK: READ NO FURTHER. Now – guns don’t kill people. Bullets kill people. And if you want to kill people with a handgun, no bullet beats the FN-57. High velocity, flat trajectory, tumbles on impact, making massive exit wounds. I urge all all if my security to use it.  pic.twitter.com/P5hu2Hfur6<br>1007413614205120512 2018-06-14 17:04:57 PST <officialmcafee> This look like a water gun?  pic.twitter.com/VKoh01GuCg<br>1000389938200895489 2018-05-26 07:55:22 PST <officialmcafee> About my guns  pic.twitter.com/MIwq5K6amN<br>999482149190492160 2018-05-23 19:48:08 PST <officialmcafee> Bull shit. When am I not holding guns or surrounded by guards  pic.twitter.com/fawZh7gBRv<br>999480884003786752 2018-05-23 19:43:06 PST <officialmcafee> When am I not in a photo with guns and guards?  pic.twitter.com/iNC343Yq5I<br>971322857363005440 2018-03-07 01:53:10 PST <officialmcafee> You ask – Why do I have guns?  Dateline: Amy confesses to trying to kill me:  <a target="_blank" rel="noopener" href="http://www.nbcnews.com/video/dateline/50515302">http://www.nbcnews.com/video/dateline/50515302</a> …  Newsweek: Wife confesses to cooperating with Cartel:  <a target="_blank" rel="noopener" href="http://www.newsweek.com/topic/john-mcafee">http://www.newsweek.com/topic/john-mcafee</a> …  USA Today: War with Cartel:  <a target="_blank" rel="noopener" href="https://www.google.com/amp/s/amp.usatoday.com/amp/21712017">https://www.google.com/amp/s/amp.usatoday.com/amp/21712017</a> …  Google: Tons of stories.  Any questions? pic.twitter.com/ODSm4wHz1K<br>965249086562734080 2018-02-18 07:38:10 PST <officialmcafee> People asked why I have guns in the corner of my previous post. Anyone want to explain why we have the right to bear arms in America?  pic.twitter.com/NtT2Fg9qnq<br>在生成的 CSV 文件中，还可以访问有关每个帖子的许多元数据。</p>
+<p>可以看到找到的每个图像都被提取了。单击一个，可以立即看到，是的，目标确实装备良好 ……</p>
+<p>枪支的图像有很多，但在调查过程中其中一个可能特别需要注意。</p>
+<p>在本年内发布的另一张带有“枪支”标签的照片中，在一只FN57式手枪前面，目标人摆出了一个5.7×28mm的子弹。</p>
+<p>这种特殊的手枪是一种不寻常的模型，具有很高的速度可以击穿防弹衣。</p>
+<p>通常这种枪很难找到，因为它们被禁止进口。</p>
+<p>仔细看这张照片，那枚子弹的顶端是黑色的，这表明它是穿甲弹。</p>
+<p>Image by officialmcafee/Twitter<br>SS190子弹具有穿透力，这意味着任何试图接近目标人的执法人员都不应依靠软体防弹衣来确保安全。</p>
+<p>只通过 Twint 的一次搜索，不仅确定了嫌疑犯的武装状况，而且还确定他可以使用的特殊类型的弹药。</p>
+<p>步骤6：收集实时数据</p>
+<p>Twint 的优点是提取信息。通过结合地理位置和主题标志，可以指定只希望看到有关此区域中某些主题的帖子。</p>
+<p>假设你听到警察在街上突袭，想要更多信息。可以搜索在洛杉矶附近标记的帖子，例如，搜索诸如“被捕”或“ LAPD”之类的关键字，来定位正在发生的事件相关的图像。</p>
+<p>sudo twint –verified -s “arrested” –near ‘Los Angeles’ –since 2019-02-17 –images<br>1097368136293208064 2019-02-17 21:32:06 PST <KTLAMorningNews> Suspected DUI Driver Arrested in Deadly Hit-and-Run Crash in South-Central L.A. Caught on Video  <a target="_blank" rel="noopener" href="http://bit.ly/2SJbRGO">http://bit.ly/2SJbRGO</a>  pic.twitter.com/T2EYC0OtRB<br>1097353829375463425 2019-02-17 20:35:15 PST <KTLA> Yucaipa Father Arrested in Death of 6-Month-Old Baby Girl  <a target="_blank" rel="noopener" href="http://bit.ly/2SF1Ydx">http://bit.ly/2SF1Ydx</a>  pic.twitter.com/O8Sd0k9wLt<br>如果要搜索视频证据，则可以修改命令以搜索视频类型的内容。在这里，搜索提及“LAPD”会产生一个视频，显示最近一次致命的警察追捕行动的结束。</p>
+<p>sudo twint –verified -s “LAPD” –near ‘Los Angeles’ –since 2019-02-17 –videos<br>1097300577447378944 2019-02-17 17:03:39 PST <KevinTakumi> Fatal #crash #Chatsworth LAFD/LAPD on scene 2 car crash DeSoto/Plummer 2 transported to hospital 2 dead on scene, investigation ongoing long term @FOXLA pic.twitter.com/srlUTlgtdF<br>1097264275586871296 2019-02-17 14:39:24 PST <LAPDHQ> Our city might not be perfect, but it has life — it has culture. It’s our privilege to be able to serve and protect the City of Angels. pic.twitter.com/yqXWyIIq8w<br>现在开始应用将实时数据提取到我们的搜索中的功能。目标人的支持者是谁？</p>
+<p>使用 -to 创建一个发推提及该帐户的所有人的CSV文件，以便您也许会找到能够提供帮助的人、或通过发照片或打招呼显示与目标有交互的人，并对其审核。</p>
+<p>sudo twint –to officialmcafee –since 2019-01-01 -s help -o mcafeecontacts –csv<br>1097503235684864000 2019-02-18 06:28:56 PST <FlyCryptoGuy> Which side defends the bees?  Bees die, man dies.  Why don’t you support #Buzzcoin bro?  Help mankind.  Save the damn bees.  It’s easy to throw insults, start throwing solutions.  Thank you sir.<br>1097356068164898816 2019-02-17 20:44:09 PST <SkepticalMinded> Well said, the labels that hold people  back as a true progressive society, are the same labels that help those same people feel belonged and validated.  So in other words fuck what people think and be yourself.<br>1097280716466020353 2019-02-17 15:44:43 PST <BitcoinGhost1> I’m in Germany, put me in mind and I’ll be ready to help.<br>打开CSV文件可以看到其中充满了对目标的最新答复，其中许多都提供了支持。</p>
+<p>太好了，到目前为止，调查表明目标是一个拥有许多支持者的全副武装的、不悔改的逃税者，这对任何执法机构来说都是 “充分的情报”。</p>
+<p>步骤7：通过其他搜索进一步挖掘</p>
+<p>假设您现在想了解有关目标在宣布逃税之前如何隐藏其资金的任何线索。</p>
+<p>因为目标人此前已经发表了许多关于税收的陈述，所以作为追踪者，可以使用 -year 查找在此之前所作出的陈述。</p>
+<p>我们对关键字 “taxes”或“tax”感兴趣，因此可以使用以下命令来构造 Twint 搜索，以搜索2018年之前发布的关于税款的任何帖子。</p>
+<p>sudo twint -u officialmcafee -s taxes –year 2018<br>947326031890911233 2017-12-30 20:38:21 PST <officialmcafee> When I follow someone, God gives them a new Bentley Azure. Tax free.<br>947325176701706241 2017-12-30 20:34:57 PST <officialmcafee> When I follow someone God himself comes down and gives them a Bentley Azure. Tax free. It used to be Ford Focus. Don’t know why the upgrade.<br>947007111011151872 2017-12-29 23:31:04 PST <officialmcafee> As I said earlier ….. When I follow someone God himself comes down and gives them a new Bentley Azure  ….. Tax free.<br>947005611253919744 2017-12-29 23:25:06 PST <officialmcafee> I did. But I don’t believe your name is Tom. You realize, of course, that when I follow people, God himself comes down and blesses them - giving each of them a Bentley Azure - tax free.<br>939924816664121345 2017-12-10 10:28:33 PST <officialmcafee> Good  God! Do I have to spell it out? Well … No taxes, no regulatory problems, no traceable income, no tax accountant costs, etc,etc,etc<br>644436140183973888 2015-09-17 02:02:03 PST <officialmcafee> My policies now posted  <a target="_blank" rel="noopener" href="https://mcafee16.com/issues/">https://mcafee16.com/issues/</a>  #ForeignPolicy #drugs #immigrants #tax #educate #economy #cyber +more pic.twitter.com/ugCnhKEBsL<br>目标似乎发表了关于将钱隐藏在加密货币中的声明。</p>
+<p>知道犯罪嫌疑人正在逃亡中，追踪者可以对任何公开发布推文给目标并提供支持的人，进行重点搜索。</p>
+<p>为此，使用 -to 搜索任何与目标交互的用户，并使用 -phone 搜索可能包含联系信息的任何推文。</p>
+<p>您还可以通过搜索他们上周（也就是最近）发布的行踪照片或视频，以尝试找到他所在的位置。</p>
+<p>使用 -location 仅刮取带有位置标签的推文，可以从中拉出任何包含媒体的推文，这些推文可能会让您看到近期目标所在位置的线索。</p>
+<p>sudo twint -u officialmcafee –location –since 2019-2-10 –media<br>1096942869091356674 2019-02-16 17:22:14 PST <officialmcafee>  pic.twitter.com/vbtdCI6ULP | Location House McAfee<br>1096932395012554754 2019-02-16 16:40:37 PST <officialmcafee> Back at the third floor of the “compound”. We are just mellowing out after a day of speeding between islands in my first test of our tender (Moored alongside) pic.twitter.com/sd0ix15MPB | Location House McAfee<br>1096929852056395776 2019-02-16 16:30:31 PST <officialmcafee> Here is the third floor of our “Compound” right now. The “dingy” is moored alongside. pic.twitter.com/UCnRn3AoJX | Location House McAfee<br>1096915137087320064 2019-02-16 15:32:03 PST <officialmcafee> A boring video. But Rick took it. He’s proud of it. He asked me to tweet it. I just did. He is outside of social media however, so I can dis him in this (for him) alternate universe, while I truly love him in that universe which, for me at this moment time, is alternate. pic.twitter.com/yXPdGF3oW1 | Location House McAfee<br>1096635092393517056 2019-02-15 20:59:15 PST <officialmcafee> Rick caught me with my harmonica attempting to regain favor with IT guy. He was way out of my league. pic.twitter.com/5HZxPKwyf8 | Location House McAfee<br>1096614989857738752 2019-02-15 19:39:22 PST <officialmcafee> Holy FUCK!!! My Bahamian IT guy – whom I judged to be the dweebyest person on earth – shows up in the band I hired for Choppy’s bar for the weekend. People – never judge. The IT guy is the sax player. pic.twitter.com/e0KW6fWIbY | Location House McAfee<br>第一个结果是一个视频，该视频显示了目标人驾驶一艘船经过一系列岛屿的画面。</p>
+<p>在前一天的另一条推文中，目标人员在巴哈马一个城市乔治敦的一家酒吧的自拍。</p>
+<p>所以，根据过去几天内在 Twitter 上发布的照片和视频显示，目标是在巴哈马乔治敦海岸附近的一艘船上。</p>
+<p>Twitter 使开源情报追踪变得更容易<br>在本案例的场景中，作为一名初级国税局特工，您的第一次审计发现，目标是出没在加勒比海岛屿附近全副武装的逃税者。于是就可以利用1994年9月22日巴哈马与美国之间生效的引渡条约。</p>
+<p>这就是条子的思考方式。</p>
+<p>这里想说的是，无论调查的类型如何，来自社交媒体的数据都可以通过提供看似无穷无尽的信息流来丰富您对事件的理解。</p>
+<p>从研究用户之间的交互作用、到通过话题标签连接的内容系列找到对同一情况的替代观点，社交媒体上共享的信息应成为任何开源情报调查人员工具包的一部分。</p>
+<p>⚠️再一次强调：如果您想要的是免追踪、和避免成为条子的目标，您应该能通过这些演示观察到追踪者普遍的思考方式，从而有效地防御 —— 什么东西不应该在推特说，什么样的人际关系不应该在任何公开平台呈现，等等。</p>
+<p>《你不应该在社交媒体上说的话》<br>检查一下自己的漏洞《社交媒体情报和反情报基本工具手册：自我人肉（2）》<br>以上是给普通人的，而不是 John McAfee；事实上他已经很聪明了，他公开发布的内容没有导致他被捕 —— 比如在远离此地之后很久才开始发布照片等等，这些小技巧都好用。</p>
+<p>以 McAfee 做例子仅仅为演示追踪的基本过程，而非任何立场。</p>
+<p>最后，请注意，您还记得 McAfee 是怎么被抓到的吗？是的，被一个愚蠢的记者出卖了，您可以在这里回顾《无处可藏的数字足迹 — 亦正亦邪元数据 (上篇)》。</p>
+<p>所以，⚠️您不仅需要对社交媒体情报的细致防御，还需要注意出现在您身边的所有人 —— 他们都应该具备与您保持一致的高水平的安全意识，否则，他们中任何人都可能出卖你。</p>
+<p>好了就是这样。本文的目标依旧是演示追踪技术，为民间调查人员提供参考。希望对您有用。⚪️</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E8%AE%A4%E7%9F%A5%E5%B9%BB%E8%A7%89%E5%92%8C%E5%90%84%E7%A7%8D%E8%B0%AC%E8%AE%BA%EF%BC%9A%E4%BD%A0%E6%98%AF%E5%A6%82%E4%BD%95%E8%A2%AB%E7%BB%95%E8%BF%9B%E5%8E%BB%E7%9A%84%EF%BC%9F-%20%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E5%B8%8C%E6%9C%9B%E4%BD%A0%E6%83%B3%E7%9A%84%E4%BA%8B%EF%BC%882%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/30/%E8%AE%A4%E7%9F%A5%E5%B9%BB%E8%A7%89%E5%92%8C%E5%90%84%E7%A7%8D%E8%B0%AC%E8%AE%BA%EF%BC%9A%E4%BD%A0%E6%98%AF%E5%A6%82%E4%BD%95%E8%A2%AB%E7%BB%95%E8%BF%9B%E5%8E%BB%E7%9A%84%EF%BC%9F-%20%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E5%B8%8C%E6%9C%9B%E4%BD%A0%E6%83%B3%E7%9A%84%E4%BA%8B%EF%BC%882%EF%BC%89/" class="post-title-link" itemprop="url">认知幻觉和各种谬论：你是如何被绕进去的？- 让你只想到我希望你想的事（2）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：18:38:25" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E5%B8%8C%E6%9C%9B%E4%BD%A0%E6%83%B3%E7%9A%84%E4%B8%9C%E8%A5%BF/" itemprop="url" rel="index"><span itemprop="name">让你只想到我希望你想的东西</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="认知幻觉和各种谬论：你是如何被绕进去的？-让你只想到我希望你想的事（2）"><a href="#认知幻觉和各种谬论：你是如何被绕进去的？-让你只想到我希望你想的事（2）" class="headerlink" title="认知幻觉和各种谬论：你是如何被绕进去的？- 让你只想到我希望你想的事（2）"></a>认知幻觉和各种谬论：你是如何被绕进去的？- 让你只想到我希望你想的事（2）</h1><p><em>您认为自己正在自由选择，但您可能不知道，不论您选什么，都是仅仅对我有利的</em></p>
+<p>欢迎回来！</p>
+<p>如果您错过了第一集，可以在这里回顾：《发现你生活中的操纵者：在叙事矩阵的边缘（1）》。</p>
+<p>下面有4个问题，先不要着急回答，花点时间思考 ……</p>
+<p>1、想象这样的场景：一种病毒已经变异为致命的病毒。预计第二年冬天会有600人受到这一病毒的威胁，但仍然有希望，人们可以提前种痘。</p>
+<p>如果选择A方案，就有机会拯救200条性命，如果选择B方案，就有1/3的机会拯救600条性命，2/3的机会一个也救不了。那么应该选择哪一种呢？</p>
+<p>2、王大锤和李小拴在抛硬币，头四次的结果如下：</p>
+<p>王大锤：正面、背面、背面、正面</p>
+<p>李小栓：背面、背面、背面、背面</p>
+<p>那么，他俩中谁最有可能在下一次抛的时候能得到正面？</p>
+<p>3、102、85、38、99、116。忘掉你刚才读到的这些数字，请回答下面这个问题：大约有多少个国家加入了联合国？</p>
+<p>4、我抛了5次骰子，以下是三种可能的结果，当然，其中只有一种是正确的。那么，哪个才最有可能是真实的结果？</p>
+<p>a) 4、4、4、4、4</p>
+<p>b) 2、1、4、3、2</p>
+<p>c) 2、4、2、4、2</p>
+<p>正如您所知道的，人们总是会选择一个意识的解读，从接收到的信息中得出一个意识的推论，而不会选择随机运用哪一个解读。</p>
+<p>进化教会了我们做出最有益的解读，但尽管如此，人们也经常会做出非常糟糕的解读和推论。这被称为 “认知幻觉”。</p>
+<p>这些认知幻觉让人们得出并且总是以同样的方式得出谬论。</p>
+<p>有时候人们会重复错误的推论，比如坚持把似是而非的东西混淆成可信的东西。似是而非的结果与人们曾经的经验和观察有关，也与记忆中事情是如何发展的有关。</p>
+<p>而概率则与数字有关。比如上面这些问题，其中两个问题直接与概率有关：抛硬币和掷骰子。那么我们可以从抛硬币的问题说起。您的答案是什么？</p>
+<p>最常见的答案是，李小栓最有可能抛到正面，因为 “他在前面已经抛出了很多次背面”。</p>
+<p>这个错误极为常见。这种推论谬误往往导致原本很聪明的人在赌场上掏空了口袋 —— 因为他们觉得轮盘转停到黑色已经那么多次了，下一次就 “肯定是红色”。</p>
+<p>或者你相信 “已经倒霉了那么多次，下一次就一定能否极泰来”。</p>
+<p>👉 但是，硬币每一次抛到正面或背面的概率总是50%，不论前一次抛到的是哪一面。</p>
+<p>的确，事情的发展在长期而言是好坏参半的，但是，如果一直在不确定的情况下，你会得到同样多的正面和背面，轮盘的球也同样会多次落在红色和黑色区域，你的人生也会经历同样多的好运和背运、阳光和阴雨。</p>
+<p>但这一情况只有在你抛了足够多次的硬币、或转了足够多次的轮盘、经过了足够多的年月后，才会出现。如果您只看了一段过程，比如只抛5次硬币，每次抛出同一面的可能性和5次中抛到各种顺序的正面背面的可能性是一样大的：</p>
+<p>正正正正正<br>背正正正正<br>正正正正背<br>正正正背背<br>正正正背正<br>正正背背正<br>正正背正正<br>正背背正背<br>正背正正正<br>背背正正正<br>正正背正背<br>正背背正背<br>正背正背正<br>背背正背正<br>背正背正正<br>背正正背背<br>正背正正背<br>背背正正背<br>背正正正背<br>正背背背背<br>正正背背背<br>背正背背背<br>正背背背正<br>背背正背背<br>背背背正正<br>背背背正背<br>正背正背背<br>背背背背正<br>背正背背正<br>背背背背背<br>如果你抛5次，就会得到以上任何一种结果，它们出现的概率基本上是一样的。实际上无数次地抛下去，以上各种结果就必然会在某一次出现。</p>
+<p>全部抛到正面和背面的可能性和抛到其他各种正面背面顺序的可能性是一样的。</p>
+<p>对于王大锤和李小栓来说，第五次抛到正面和概率都是50%。那么为什么如此多的人没有这样想呢？为什么人们觉得连抛了4次背面下一次就“肯定”抛到正面？</p>
+<p>这是因为人们将自己的经验和对概率的认识混合在一起了。</p>
+<p>抛5次硬币会得出很多种不同的正面和背面的组合方式，但只有一种是 “背背背背正”。由于大部分可能的组合都包含这种或那种顺序的正面和背面，所以人们的经验中更常看到的状况是两面都有，而很少看到连抛4次都是同一面的情况。</p>
+<p>这就对了。只要你不考虑每一面出现多少次，以及它们组合的顺序是什么的话。</p>
+<p>如果你考虑这点，就会意识到，每当你连抛4次硬币，不论得到哪一种正面和背面的组合，它都和最后一次抛硬币得到的组合一样独一无二或常见。</p>
+<p>不论前四次抛的顺序是什么，哪怕得到的结果完全是背面或正面，下一次抛出正面的概率总是50%。</p>
+<p>⚠️ 请注意，正是这种思维方式会导致人们对人生的误判，而不仅仅是在赌桌上 —— 在每一次您回顾过去并开始判断接下来会发生什么时，都非常容易陷入这种陷阱。</p>
+<p>但这仅仅是一点皮毛，人类的奇怪思维非常丰富，完全超乎你的想象。</p>
+<p>比如，我们来打个赌。我要给你一百块，或者我们来抛硬币，如果你赢了，我给你200块，如果你输了，你就什么也得不到。你选哪个？</p>
+<p>或者，我要给你300块，接着，你必须还给我100块，否则我们抛硬币；如果你赢了，你就一分钱都不需要还给我，如果你输了，你就要还给我200块。你会选哪样？</p>
+<p>对于上述第一个问题，大部分都会选方案一；对于上述第二个问题，多少人会选方案二。但实际上，选哪个方案完全不重要。</p>
+<p>如果我知道采取某个行动之后得到100块的概率，那么选择这一行动的期望值就是：100块。如果我只有50%的概率得到200块，那么这一选择的期望值也是100块。</p>
+<p>现在您明白了？这一选择需要您用200块乘以50%。</p>
+<p>👉 这就意味着，在逻辑上、数学上、和科学术语上，第一个问题向您提出的两种选择都具有相同的期望值。以此看来，不论您选哪一种方案，都没什么区别。第二个问题也是同样的道理。</p>
+<p>但是，在人们的心理层面却不是这么计算的 —— 人们对得到什么东西的概率和失去什么东西的概率，有着截然不同的态度。</p>
+<p>如果一个人可能失去所拥有的事物，比如你必须给我100块，那么这个人就宁可冒着更大的风险来避免这点。但是，对于赢得某个不曾拥有的事物，一个人就会变得比较保守，不愿意冒险了。</p>
+<p>这就是为什么在计算收益的问题中，大多数人都会选择确定能得到100块的原因；但是，在冒着失去已有事物的问题时，人们则更容易赌一把，选择抛硬币。</p>
+<p>如果您再回过头去思考文章开头的问题一，关于病毒的问题，您会明白，它是一样的道理：两个选择都具有相同的期望值，即：挽回200条性命 — 600的1/3。你选哪一种方案都是一样的。</p>
+<p>但是，现在我们重新表述一下这两个选择：</p>
+<p>如果我们选择方案A，400人会死掉；如果我们选择方案B，有1/3的机会拯救600条人命，2/3的机会一个都救不了。那么应该选择哪一种呢？</p>
+<p>在方案B中，仍然有1/3的机会让每个人都获救，但是在方案A中，突然有400人必须面对死亡。这是不是就会让方案B听起来更诱人呢？</p>
+<p>当然，从600个人中救出200人，和600个人中要死掉400人，这两者在数学角度上没有任何差别。但是它在心理层面上却有巨大差异 —— 第一种表述能让人觉得 “可以赢点什么”，第二种表述会引导你觉得 “会失去什么”。</p>
+<p>再一次，人们对赢得和失去的概率有着截然不同的态度。</p>
+<p>👌 那么，显然，这里才是正题 —— 现在我可以利用这点来操纵你。</p>
+<p>👉为此我要做的仅仅是以某种可以导致你误判的方式，来呈现选择方案。</p>
+<p>你如何感知某个事件，取决于这个事件是如何被表述的，这一点非常重要。在真实生活中，同一事件的不同表述，其结果会大不一样。</p>
+<p>曾经有很多医生被邀请去参加测试，这个测试是以真实医学数据为基础的对某种外科手术的讨论。当医生们被告知：病人在手术后5年内的死亡率是7%时，他们就会犹豫要不要做这个手术；但是，当他们被告知，病人在手术后5年内的存活率是93%时，他们对手术更有信心了。</p>
+<p>Edward de Bono 写过很多书来描述创造性思考的艺术，他将其称为 “水平思考”，试试突破既有思考框架的思考，它通过改变你对一项任务和一个问题的态度，来得到新的、出人意料的解决方案。</p>
+<p>👌也就是说，改变问题和任务呈现给你的方式。</p>
+<p>对此最好的办法就是，将问题置于正确的语境中，试着努力去观察它。</p>
+<p>老办法是很管用的 —— 把问题和强加的背景分开，不要执着于递给你选择方案，要超越它们，想想看是否还有其他的可用方案。</p>
+<p>⚠️ 当你下结论时，也会奇怪地受到以前信息的影响，哪怕那些信息与你手头上的事情完全无关。需要警惕这点。</p>
+<p>回到本文开头的问题，在回答联合国有多少个国家时，我猜你给出的数字会在 110～130 之间（除非您早就知道答案）。当然不会超过140。</p>
+<p>但是，正确答案是192。你的猜测受到了问题前面那几个数字的影响，尽管它们和本问题一点关系都没有！</p>
+<p>意大利认知科学家帕马雷尼对他的学生做了一个类似的实验，他让学生们猜一猜有多少个非洲国家加入了联合国。但在此之前，他旋转了一些标记数字的“好运轮”，这个好运轮和本问题毫无关系。实验的结果非常清楚：当轮子停留在较低的数字上时，学生们回答的数字也偏低，当轮子停在较高数字上时，学生们猜测的国家数量也较多。</p>
+<p>👉 这也是为什么我们对另一个人的第一印象非常重要的原因之一。第一印象就好比那个 “好运轮”，任何其他与其相关的事物都会受到第一印象的影响，即使后来发生的一切都与第一印象完全无关。</p>
+<p>⚠️别忘了，我现在扮演操纵者，我当然会知道您经常把可能性和自己的经验混为一谈，我会知道您在感知得失的时候会给它们赋予不同的权值。我还清楚，您很可能无法在我提供的选择范围 <em>之外</em> 考虑其他的方案。</p>
+<p>当您只能在我提供给您的信息的范围内思考问题时，我就赢了。</p>
+<p>👉 有很多出色的工具可以用来控制你的思想。当我开始操纵你的时候，我最常用的方法就是刺激你用感性抑制理性，我还非常高兴看到你被封锁在我画出的思维框架之内。</p>
+<p>但是我能够避免错误的思考，就像你能做到的那样。而关于人是如何思考的相关知识，就完全可以成为你放在口袋里的一把刺破思维框架的好刀。</p>
+<p>谁知道呢，也许你能设法为自己切割出一扇门，并最终走出去。</p>
+<p>一个小例子 ……<br>这里有一个例子能很好地说明人们如何容易受到已有信息的影响 —— 即使你对那些信息持批判态度。这一点被军事宣传所利用的案例。</p>
+<p>1991年的海湾战争中，每次美军空袭后，布什政府都会宣布有多少伊拉克平民受害。他们提供的数字总是非常之低的，通常都是2个、3个，最多不会超过10个人死亡。他们自称这是 “像外科手术一样精准” 的战争。</p>
+<p>一些人开始对这些数字表示怀疑，即使在美国国内也是如此。但是，其中批评得最厉害的人给出的数据也没能远远超过布什政府的数据，他们猜测有几百人死亡。</p>
+<p>而实际上，伊拉克平民在空袭中死亡的人数高达数万人。绝大多数人的思维都被布什操纵了。</p>
+<p>另一个小例子 ……<br>将人们困在媒体描述的框架内的案例。</p>
+<p>2018年早些时候，BBC俄罗斯新闻报道，俄罗斯调查委员从中国的美亚柏科采购取证魔方去检测和破解加密消息应用 Telegram、Skype 和 Viber 等的存档。根据政府采购文件，调查委员会在采购取证魔方上花了500万卢布。我们上传了这个工具的介绍，在这里。</p>
+<p>这种东西可以侵入具有 Apple 和 Android 操作系统的所有设备，并自动从中提取 “设备所有者标识”，包括名字、电子邮件地址、电话号码等等。它还可以从社交网络（尤其是 Facebook 和 Twitter）中提取数据。 总体而言，这种东西能够从100家制造公司的3000种移动设备中提取信息。</p>
+<p>以色列的取证技术 Cellebrite 需要一天以上的时间来破解 iPhone 7或8，提取出的数据还需要认真的分析才能形成终极证据产品。而中国这种东西可以在9分钟内处理同一款iPhone。</p>
+<p>世界上还有其他多家主要的移动设备取证技术销售商，包括：以色列的Cellebrite，加拿大的 Magnet Forensics 和美国的 Grayshift。俄罗斯当局正在购买除了美国的 Grayshift 以外的所有解决方案，尽管该公司声称能够破解任何智能手机。BBC是这样写的。</p>
+<p>于是一群 “评论家” 开始分析地缘政治，俄罗斯和其他国家尤其是中国的关系、以及俄罗斯异议的数字使用习惯 …… 这就是被报道所设置的框架套住了。</p>
+<p>没有任何人能确定这种技术只卖给俄罗斯了；它的存在意味着全世界所有使用 Telegram、Skype 和 Viber 等应用和 Apple、Android 操作系统的用户都应该警惕。简单说，您应该开始分析技术本身，并致力于从中获得防御方面的思考方式。</p>
+<p>在下面看到我们曾经对取证技术的介绍：</p>
+<p>《数字取证正在泛滥：政府可以从你的手机中提取哪些数据？》<br>《让政府机构从您使用的应用程序中提取大量数据的秘密技术：云取证》<br>《警察查手机的东西长什么样？ — — 从技术角度看移动设备取证》<br>好啦，技术不是本文的主题 …… 本系列内容是希望说明，操纵者是如何针对你的思维弱点的。只有深度了解这点，您才能有希望保持清醒。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E8%AE%A9%E4%BD%A0%E6%84%9F%E5%88%B0%E6%84%A7%E7%96%9A%E6%88%96%E6%97%A0%E6%84%A7%EF%BC%8C%E4%BD%A0%E5%B0%B1%E4%BC%9A%E4%B8%BB%E5%8A%A8%E6%BB%A1%E8%B6%B3%E6%88%91%E6%9B%B4%E5%A4%9A%EF%BC%9A%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E8%AE%A9%E4%BD%A0%E6%83%B3%E7%9A%84%E4%BA%8B%EF%BC%885%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/30/%E8%AE%A9%E4%BD%A0%E6%84%9F%E5%88%B0%E6%84%A7%E7%96%9A%E6%88%96%E6%97%A0%E6%84%A7%EF%BC%8C%E4%BD%A0%E5%B0%B1%E4%BC%9A%E4%B8%BB%E5%8A%A8%E6%BB%A1%E8%B6%B3%E6%88%91%E6%9B%B4%E5%A4%9A%EF%BC%9A%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E8%AE%A9%E4%BD%A0%E6%83%B3%E7%9A%84%E4%BA%8B%EF%BC%885%EF%BC%89/" class="post-title-link" itemprop="url">让你感到愧疚或无愧，你就会主动满足我更多:让你只想到我让你想的事（5）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：18:40:43" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E5%B8%8C%E6%9C%9B%E4%BD%A0%E6%83%B3%E7%9A%84%E4%B8%9C%E8%A5%BF/" itemprop="url" rel="index"><span itemprop="name">让你只想到我希望你想的东西</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="让你感到愧疚或无愧，你就会主动满足我更多：让你只想到我让你想的事（5）"><a href="#让你感到愧疚或无愧，你就会主动满足我更多：让你只想到我让你想的事（5）" class="headerlink" title="#让你感到愧疚或无愧，你就会主动满足我更多：让你只想到我让你想的事（5）"></a>#让你感到愧疚或无愧，你就会主动满足我更多：让你只想到我让你想的事（5）</h1><p><em>不要去想大象<br>欢迎回来！</em></p>
+<p>如果您错过了前面的内容，可以在下面回顾；</p>
+<p>《发现你生活中的操纵者：在叙事矩阵的边缘（1）》<br>《认知幻觉和各种谬论：你是如何被绕进去的？- 让你只想到我希望你想的事（2）》<br>《什么样的人最容易被操纵：心理控制的状态是什么样的（3）》<br>《您真的知道自己在做什么吗？：让你只想到我让你想的事（4）》<br>上一集中我们谈到您的情感如何被操纵从而导致您作出违背自身利益的决定。排在第一位的最容易被操纵的情感是恐惧。那么第二位是什么？</p>
+<p>是罪恶感。这是警察采用的审讯心理学中最常见的诱骗方式，就是诱供。</p>
+<p>罪恶感<br>您被邀请参加一项关于反应速度的研究。您要做的就是听别人读出来的字母，以最快速度把它们打入电脑。</p>
+<p>在您开始之前，助手会告诉您：“不要碰ALT键，那会导致软件受损，会失去所有数据”。</p>
+<p>测试开始了，一分钟后您突然害怕得僵住了，因为软件已经瘫痪，完全不运行了。研究助手严肃地指出：你按了ALT键！尽管事先已经警告你不要这样做。是你的不听话破坏了所有事。</p>
+<p>您知道自己并没有按那个键，并告诉他您没有这样做。这位助手按了几下键盘，确定所有数据都丢失了，然后再次问你：“你是不是按了ALT键？” 于是您被要求写一份坦白书，声明：“由于我按了ALT键导致软件崩溃，所有数据丢失”。</p>
+<p>您要在坦白书上签名以承认自己的错误，你被告知负责人会在稍后与你电话联系。即使您心里明白自己根本没有做过……</p>
+<p>听起来很熟吗？曾经被警察传唤的无辜者也许会更有共鸣。</p>
+<p>这的确是个实验。该实验以大学生为研究对象，旨在观察是否有可能通过诉诸他人的罪恶感来操纵人们承认自己没有做过的事 —— 该实验软件被故意设计为一分钟后自动崩溃。</p>
+<p>结果是，实验者拿到了签名的坦白书。您没看错，有62%的人都在坦白书上签了名！</p>
+<p>不仅如此，还有28%的人后来告诉其他同学他们按错可ALT键导致毁掉了实验 …… 换句话说，他们真的相信自己 “有罪”；其中一些人甚至还详细说出了自己犯错的经过。</p>
+<p>尽管他们一开始知道自己是无辜的。</p>
+<p>这个实验成功的一个重要因素在于，参与者的头脑被植入了一种假证据，这个假证据就是大声朗读字母的人声称看到学生按了ALT键。</p>
+<p>这就是审讯过程中的诱供所采取的伎俩 —— 警察向嫌疑人声称其拥有完全不存在的 “证据”，全世界的警察都会这手。</p>
+<p>乍看起来就像是激励嫌疑人反思自己有没有犯罪，但是，这种手段远非如此无辜。正如您在上面的实验中看到的，罪恶感，即使是错误地引发出来的罪恶感，也能促使你屈从并承认罪行。</p>
+<p>👌 我们大部分人或多或少都会对一些事物感到愧疚，因此，罪恶感就成为了一种非常有用的可供心理操纵的情感。</p>
+<p>很多时候人们可能并不知道自己为什么 “有罪”，因为罪恶感产生的真正原因在意识之外。这就意味着，通过有技巧的操纵，罪恶感可以变成任何你想要的东西。</p>
+<p>这方面一个最典型的例子就是性禁忌。</p>
+<p>大多数人在很小的时候、甚至在知道性是什么之前，就已经被教导形成了一种罪恶感。这种教导来自你周围的人，尤其是你的父母，</p>
+<p>很明显，他们将别人在他们身上教导形成的罪恶感以同样的方式传递给你。对一个3岁的孩子来说，不同的身体部位并没有太大区别，摸自己或摸别人的身体不过是为了好玩而已，直到爸爸妈妈红着脸告诉你不许这么做。</p>
+<p>再长大一点后孩子们开始懂得一些身体部位具有特定象征意义，他们还了解到身体的某些部位是有问题的、是羞耻的或不好的。这种罪恶感如此深刻地印在你的心里，以至于可以成为你想影响一个成年人的有效工具。</p>
+<p>它可以被用来映射性无能、罪恶的肉欲、贪婪、甚至对非常规性行为的憎恶？由于这种罪恶感扎根很深，你不一定能辨认出它。您所能注意到的只是某种情况使您感觉不舒服，一种你绝对不想要的感觉。而这正是操纵者想要让你处于的状态。</p>
+<p>现代人有太多的压力。需要处理大量的工作、要建立家庭、要买房子生孩子，还要时刻担心办公室政治、朋友关系、社会攀升  ……</p>
+<p>大部分人都觉得空虚和孤独，不只有你这样。当要说出自己的人生有什么意义时，大多数人都会感觉无力。越来越多的人使用肤浅的手段来压制这些焦虑和困惑 —— 快餐食品、口香糖、清洁剂、买买买 ……</p>
+<p>《nobody cares 的背后究竟是什么》<br>《极权社会的心理阴影：物质主义的由来、恶意愚蠢和攻击性冷漠（4）》<br>这显然不会令人满意。人生应该提供的不止这些。正如行销心理学家 Irving Kirsch 曾经说过的那样，人们其实明白他们所买的东西根本无法填补他们最深刻的欲望和梦想。</p>
+<p>事实就是如此。我们周围的东西在某种程度上填补了我们感到的自身的不足，即使心里明白，我们所买的只不过是真正想要的东西的空洞象征。我们依然追赶那些空洞的梦想，因为如果没有这些梦想，人生将变得无比灰暗。</p>
+<p>为什么罪恶感能如此有效地操纵你？ Kirsch 提出了3种可能的原因：</p>
+<p>同情。我们同情那些被我们伤害的人；<br>复原。想把那些被自己损害的东西还原的感觉；<br>一般罪恶感。想要修复因为受到侵犯而失去光辉的自我形象的愿望。<br>如果一个原因足够促使人们采取行动，那么作为操纵别人罪恶感的人，就根本无需知道你对谁愧疚、为什么愧疚。</p>
+<p>唯一重要的就是，让你觉得有愧，把你的行动轻轻推向操纵者想要的方向。</p>
+<p>只要我让你觉得负疚，你就会同意我的请求，因为我的请求会使你觉得自己在 “做一些修正”，而我要你做的事是为了满足我的利益，并不一定与你为什么觉得愧疚有关。</p>
+<p>您觉得自己臃肿的小腹在游泳馆里让女朋友丢脸了吗？您觉得自己的工资水平没能给孩子买到隔壁老王家那种豪华游戏机吗？您觉得自己的车不够档次担心参加朋友派对时被嘲笑吗？…… 如果我知道您的想法，我就可以操纵你做我希望你做的事。</p>
+<p>请不要误会给予原谅就能减轻负罪感，其实正相反。如果我想按住你的精神按钮，那么我最好在过多地显示出原谅你之前打住。这可能听起来有点奇怪，难道我们不是在做错事时希望得到原谅吗？好吧，是，也不是。</p>
+<p>在心理学家 Kay Bradford 的一项实验中，学生们被引导相信他们损坏了一台设备。正如您所预测的那样，相信自己损坏了设备的学生更愿意在一个不同的场合下帮助研究人员，但是，其中一部分学生被告知：损坏没关系，“别担心”；基本上他们得到了原谅。</p>
+<p>您也许会觉得原谅能将人们从罪恶感中解脱出来，而给予原谅的一方就能成为朋友？很遗憾，结果恰恰相反。</p>
+<p>所给予的原谅就像一次双重打击：首先学生们因为损坏了机器而愧疚，接着，在没有得到任何补救机会之前就被原谅了。于是，他们想要展示自己 “是好人” 的唯一办法就是，同意研究人员的请求，而提供更多帮助。</p>
+<p>但由于他们被原谅了，这个请求就不是他们先前犯错的结果 —— 他们做了更多的事，完全没必要做的事。他们被操纵了。</p>
+<p>没错，罪恶感引起了需要解决问题的认知失调。</p>
+<p>⚠️ 这种手段也在针对群体使用。如果我想让一群人A去虐待另一群人B，那么我只需要让群体A认为群体B是 “错误的”、“恶意的”、“有罪的”，简单说：群体B遭受任何折磨都是活该。</p>
+<p>您一定想到了，没错，穆斯林恐惧症、反犹主义、种族暴力、包括对政治竞争对手的攻击，都是采取的这一手段。最近的案例包括并不限于有关难民的假新闻导致的真实的英国脱欧公投结果，WhatsApp 假消息导致的血腥种族杀戮 ……</p>
+<p>科幻电视剧《黑镜》终有一集题为 《Men Against Fire》，其中那些士兵被技术操纵着将其他和他们一样的人类看成怪物，称其为 “蟑螂”，这只是为了让这些士兵在杀戮另一群人时不会手软。该片在映射社会对难民的仇恨。</p>
+<p>当您遇到有人声称某些群体 “和我们不一样、天生愚蠢肮脏” 时，请小心，他们是操纵者。</p>
+<p>《黑镜》剧照<br>为什么自我说服的效果最好<br>“你应该这样想” —— 很久以前专制国家的政治宣传所采取的就是这样的模式，即 强行灌输。比如中国。当年这种方法可能看起来有用，因为媒介是单向的；而互联网时代已经变得不同，当每个人都是 “媒体” 时，自上而下的灌输已经不起作用。</p>
+<p>但是，当权者已经迅速改变了他们的方法。不论理论还是事实都证明，这将更有效。</p>
+<p>👌 没错，当我试图向你提供一个新观点时，最好的办法当然就是，<em>影响</em>你自己去确信为什么某个事物是好的。</p>
+<p>如果您自己的意识是真的喜欢小笼包/或者民主党，而不是由我来向你唠叨这些，那自然是再好不过了。您每重复一次行动，都会再次确信它对你来说有多正确。</p>
+<p>因为如果你觉得你在重复自己并不赞同的行为，那么每一次重复都会加深一层伤害。您时常被要求做出某种承诺并重复某种行为吗？也许比你想象中更为常见。白纸黑字写下来会是一个做出承诺的强烈方式，当一切付诸文字时，事情将变得更为真实。</p>
+<p>如果我试图让你相信我的产品是非常讨人喜欢的 —— 假设我的产品是小笼包 —— 还有什么方式比让你写下来你为什么如此喜欢它更好呢？一遍又一遍？</p>
+<p>曾经有一场比赛，叫让你 “想出一句广告语”。也就是让你来写出一句好的、强有力的、吸引眼球的广告语。它采用的就是这种操纵方法。因为，不论您写下什么，你都被期待写下这个产品有多么好。</p>
+<p>为了诱使你参加比赛，一个好的办法就是，请你来填充完成了一半的句子。你对完成不完整模式的心理需求促使了你的参与。即使你通常不参加这种比赛，但你却可能发现自己默默地在心里构想各种完成句子的方法。</p>
+<p>正是人们对完成模式的天然渴望把他们拉下了水 —— 你迫不及待地主动去构想这些你原本没什么兴趣的小笼包 “为什么如此的好”。</p>
+<p>从纯粹的心理学角度来说，我越是能让您多次思考我的小笼包，那么你把它作为选择的可能性就越高 —— 你甚至会主动让自己去确信你喜欢它。</p>
+<p>👌 这就是为什么社交网络上有 “越骂越火” 的奇怪现象存在，也是为什么不论媒体对总统候选人持什么态度，只要他们 “关注” 那个人越多，那个人的当选的可能性就越大。</p>
+<p>总体来说，是你的行为而不是言语，宣示了那你的真实感受和想法。</p>
+<p>观察一个政客的经典建议就是：不要看他的嘴，要看他的手。就是说，不要过多去想他在说什么，而是要注意他的行为。这不仅是对于政客来说的，而是对于任何人来说都应该如此。</p>
+<p>我们经常运用这种后向思维，把行为作为我们自己是什么样的人的证据。而且不仅仅是对外在的行为，我们还会做一些内省，体察自己的内心世界，然后对自己形成新的观点。</p>
+<p>但这个过程并不总是有意识的，也就是操纵者可以趁虚而入的地方。</p>
+<p>就如我们会通过自己身体反应来得出自己生病了的结论那样，我们也会以同样的方式开始相信自己恋爱了。</p>
+<p>就比如，你肯定听说过一个建议：在急速行驶的过山车上或摇晃不定的吊桥上求爱，更容易成功。</p>
+<p>因为处在那样环境中的人会有很高的脉搏、较快的心跳，而且有点喘不过气来。但那并不是因为爱情，而是因为摇晃和高度所带来的刺激感。的确曾经有实验表明，人们似乎难以确认究竟是什么引起的生理兴奋 —— 即便意识到自己的症状是摇晃的吊桥和急驶的过山车的原因，他们也更倾向于将其归因为身边的求爱者。</p>
+<p>👌 自我说服，也可以通过集体讨论来产生 —— 让某个人扮演反对方，这是改变观点的一个强有力的技巧，因为它促使参与者进行辩论以捍卫他们自己通常不赞同的观点；这就是信息战水军的操作：他们同时扮演正反两个极端的拥护者，将社会撕裂。</p>
+<p>再或者让人们想象他们参与某个行动的过程 —— 就像审讯室里警察做的那样，诱供。</p>
+<p>推荐这份报告《看清信息战：2019全球有组织社交媒体操纵清单》它讲清了几乎所有信息战手段和操作模式<br>这是进行说服和产生影响力的最强大武器之一。</p>
+<p>一系列研究表明，仅仅是请你思考如何更好地把一个具有说服力的信息传达给其他人，就可以引起你的观点变化，而且这个变化可以持续长达20个星期。</p>
+<p>让你自我说服的方法包含了很多可以成功影响他人的元素。它的力量来源于给你一个奇妙的社会暗示，这个暗示基本上是要求你尽可能地去想某个事物的积极面，准备好反驳一切可能用来反对你的观点。而最后得出的结论则来自于你认为信得过的、可靠的、尊敬的、讨人喜欢的来源：你自己。</p>
+<p>这个过程不可思议地非常容易启动。而且一直在各方面广泛使用。</p>
+<p>比如一个汽车经销商，他会问你：“你能帮我一个忙吗？这台车非常好，我老板要求我找出客户们为什么如此喜欢它的原因，你觉得我应该怎样回复老板？” 在这里，你等于就是在被要求向你自己推销这台车。广告世界中这种做法铺天盖地。</p>
+<p>因此，如果你花了一点时间来思考怎样才能让别人相信这个小笼包很美味，那就不要惊讶为什么您在接下来的几周内吃了好几次小笼包。</p>
+<p>一个真正精明的汽车经销商还会给他的心理进攻策略添加一个额外的细节：在介绍完这台车如何卖的很好后告诉你，这台车的库存已经没货了，恐怕要等3个月才能拿到，你看到的这辆是最后一辆。即：可得性法则。</p>
+<p>可得性法则并不是关于 “可得” 的，而是关于 “不可得”。出于某种原因人们总是会对得不到的东西更加渴望。这种手段如今已经被商家玩儿烂了，你几乎一眼就能识别它，对吗？但是，⚠️ 当它在政治上、在维稳上使用时，却并没有那么多人能快速识别它。</p>
+<p>在维稳上如何使用？很简单，案例就在您身边，铺天盖地。</p>
+<p>“被删除的东西是当局最害怕的东西”，也许每个人都会这样认为，好了，⚠️ 这就是对操纵者来说的绝佳入口 —— 只需要通过有目的地屏蔽内容，就可以将您的注意力绑定在那些操纵者想要的位置上，从而让你忽视真正有意义的东西。</p>
+<p>我们常说的 “恶意愚蠢” 就是这样做的，是做法之一。当所有人都知道吐槽和调侃也会被封杀和传唤时，您就不必指望人们能理解为什么这些做法对反抗实际无意义，更不用说静下心来了解直接行动的有效性了。</p>
+<p>当直接行动模式难以吸引公众注意时，它就难以形成真正的直接行动。当局的做法是一箭双雕的。</p>
+<p>《极权社会的心理阴影：物质主义的由来、恶意愚蠢和攻击性冷漠（4）》<br>“不要去想大象”。众所周知这是个笑话，但现在的问题在于，“大象” 是无意义的，而你真正需要的是老虎。如何才能让你不去想老虎？很简单，让你保持在对大象的关注上。这就是 “恶意愚蠢” 的做法。</p>
+<p>希望您还没有中计。⚪️</p>
+<p>—— 未完待续 —— </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB%EF%BC%9A%E5%9C%A8%E7%9C%9F%E7%9B%B8%E4%BA%8B%E4%B8%9A%E4%B8%AD%E6%9E%84%E6%83%B3%E6%9C%AA%E6%9D%A5%E5%9B%BE%E6%99%AF%EF%BC%88%E4%B8%8A%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/30/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB%EF%BC%9A%E5%9C%A8%E7%9C%9F%E7%9B%B8%E4%BA%8B%E4%B8%9A%E4%B8%AD%E6%9E%84%E6%83%B3%E6%9C%AA%E6%9D%A5%E5%9B%BE%E6%99%AF%EF%BC%88%E4%B8%8A%EF%BC%89/" class="post-title-link" itemprop="url">让它民主：在真相事业中构想未来图景（上）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：20:21:59" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="让它民主：在真相事业中构想未来图景（上）"><a href="#让它民主：在真相事业中构想未来图景（上）" class="headerlink" title="让它民主：在真相事业中构想未来图景（上）"></a>让它民主：在真相事业中构想未来图景（上）</h1><p>如题所示，对真相的寻求和捍卫应该是一项事业，而不是企业；它应该服务于公民，而不是”消费者”。如果它本身不是民主的，那么它肯定无法服务于民主。就如集中化的互联网不是民主的，我们就必需打破它。<br>过去的新闻</p>
+<p>在一个出版自由的地方，人人可以阅读，一切都是安全的 —— Thomas Jefferson</p>
+<p>现在的新闻</p>
+<p>以市场为导向的新传播和信息体系，显然是把受众当成了消费者，而不是公民。在这一过程中，公民的身份被彻底边缘化或取代了 —— Peter Golding</p>
+<p>未来的新闻</p>
+<p>…… 十几岁孩子中，超过一半曾自己制作媒体内容，而在十几岁的网民中，大约三分之一的人分享过自己制作的内容。在许多情况下，这些十几岁的孩子 正在积极地参与我们所称的<em>参与式文化</em>。参与式文化是门槛较低的艺术表达和公民参与…… —— Henry Jenkins</p>
+<p>好吧，现在看起来 Thomas Jefferson 就像是个乌托邦主义者，他很可能无法想象如今的传媒业局面。他也许更愿意在互联网上搜索信息、参与信息制作，而不愿意被动接受媒体宣传。正如资深记者 Walter Pincus 所言：</p>
+<p>今天，主流媒体想要保持中立、展现涉事各方的观点，仿佛自己是一场“比赛”的裁判。在这样的“比赛”中，只有选手 —— 政客和政客的政治对手 —— 可以参加。媒体已经愈发成为了仅仅是其他人思想与观点的载体和传送者，不顾其重要性、相关度，有时甚至不顾其准确性。</p>
+<p>事实上，作为一位有洞察力的观察者，Thomas Jefferson 可能会注意到，至少有两种重要的公共信息模式在发挥作用。</p>
+<p>旧的新闻模式日渐式微，原因有两种：一是其商业模式垮塌；二是许多人不再信任旧的新闻模式生产出来的产品，或觉得与自己无关。</p>
+<p>在新模式中，互动和社交技术的应用不断扩大，培养了网络受众，他们参与分享甚至生产内容。在类似 netroots 运动中，以及那些通过电脑手机疯狂传送的高度意识形态化信息中，我们看到了第二种模式的重要性；在许多其他信息领域，从政治和商业信息到大英百科全书以及维基百科这样的参考文献信息中，也能看到这两种模式的痕迹。</p>
+<p>旧的媒体消亡，会出现一些不伦不类的试验品填充它们的位置。当然，问题是，这些替代品是否具备足以支撑自己发展的商业模式和产品质量。有一个故事可以说明当今某些实验存在的问题。</p>
+<p>这是个真实的故事。一位风险投资人去参加一场报告会，整个会议死气沉沉的，对方代表来自一家半死不活的报纸，他们的建议是，报纸要登载“更多宠物和爱侣的照片”。这位投资人越听越担心，因为整个会议没有任何人提起新闻的事。</p>
+<p>他意识到，在报业发展的黄金时代，报纸的大幅受益在某种程度上支撑着高质量的政治报道；这种商业利润补给给公共产品的做法的确不多见，而现在，随着上市公司收购新闻媒体并榨干了最后一滴利润，已经没有公司还会这么做了。</p>
+<p>这位投资人说：“或许作为公共服务的新闻业，就如同国防、新鲜的空气、干净的水一样，属于公共产品……如果任其自便，市场力量就无法足量生产这种产品”。[“Lone Star Trailblazer: Will the Texas Tribune Transform Texas Jourmalism?” Columbia Journalism Review July–August, 39–43. 2012]</p>
+<p>想明白后，这位投资人帮助创办了《德克萨斯论坛报 The Texas Tribune》，这是一家致力于调查性新闻的网络报纸（<a href="http://www.texastribune.org）该报将自己的使命描述为：非营利、非党派的公共媒体组织，致力于促进公民对公共政策、政治、政府以及其他国内事务的关注和参与……">www.texastribune.org）该报将自己的使命描述为：非营利、非党派的公共媒体组织，致力于促进公民对公共政策、政治、政府以及其他国内事务的关注和参与……</a></p>
+<p>很明显，“非营利”、“公民参与”这些特性与长期以来占主导地位的新闻模式相去甚远；你在纽约时报、华尔街日报的办报宗旨中是看不到这些字眼的。</p>
+<p>本文及下一篇文章将探讨和介绍重塑新闻业的实验性做法。但是，其中一些尝试会面临一些问题，比如，通过私人慈善事业和基金会操作，作为一种模式是否具有可持续性或可行性。</p>
+<p>除了将新闻的焦点转向调查性报道和公民参与之外，《德克萨斯论坛报》还率先推出了互动数据库，使公众可以直接获取公共记录，这种做法引起了公众极大的兴趣。很多人订阅这份报纸不是为了浏览新闻和博客，而是为了访问它的数据库。</p>
+<p>由于技术的发展，公众可以直接获取自己所关心问题的答案，如 官员的薪水、竞选捐赠来源、学校的排名、交通罚单等等。而不是通过媒体的转述。事实上2010年的皮尤调查就已经发现，40%的成年互联网用户曾经查阅政府开支数据。[Jake Batsell ,Lone Star Trailblazer]</p>
+<p>只是关心和查阅还远远不够。如果公开数据不够真实、公开描述不够充分，公民应该知道还可以如何获取真相。这就是为什么 IYP 要介绍OSINT，这是互联网时代提供的前所未有的民主途径 —— 由公民掌握真相的机会。</p>
+<p>简单说，如果公民自己能够成为记者，提问与个人相关的问题，并通过基本技能寻找到真相作为答案，那么未来的公众将具有怎样的本质属性呢？是的，成为公民。或许在加密通讯和去中心化的社交媒体的帮助下，人们可以分享信息，并根据这些信息采取行动，从而培育了大量更为积极的公众 —— 媲美传统主流媒体的影响力。</p>
+<p>但另一方面，公众的声音也很可能被碎片化，成为孤立的利益群体，他们的声音很难被听到。</p>
+<p>当然，不论传统新闻模式及其把关行为的结局如何，目前的信息环境都会是不同信息流的大融合。</p>
+<p>彼此孤立的公民 ——</p>
+<p>数字时代的个性化潜能让很多民众为之神往。许多媒体顾问认为，对于传统新闻来说，最大的变化就是我们日常的信息发布正在变得愈发个性化，迎合消费者的个人口味。</p>
+<p>对这一趋势的第一反应就是“庆贺”，因为在这个正在膨胀的信息空间里，个人的选择余地越来越大，于是人们认为信息传播系统越个性化对民主就越有利。这种想法或许很诱人，但它是真的吗？</p>
+<p>如果民主只是每个公民脑子里滋生的东西，而不是在公共生活中枝繁叶茂，那么高度个性化可能就是完美的了。然而，正相反，它不是。</p>
+<p>就如政治学家 James Fishkin 批评的那样，即使是当前传播体系中最好的对话机制（如民意调查和脱口秀节目），也往往适得其反 —— 因为，它们只是在简单地将未被挑战的观念和偏见回传给了持有这些观念和偏见的个人，以及被割裂的受众群。</p>
+<p>Fishkin 指出，比较好的做法应该是这样的：利用调查、劝说、和焦点小组辩论等方式，组成互动的公民评判委员会，使这些人能接触到各种信息，聆听专家辩论，可以质疑专家，然后进行小组讨论，再公开宣布自己的观点。[The Voice of the People: Public Opinion and Democracy, James S. Fishkin]</p>
+<p>虽然在不同国家进行了几次实验表明，这些“议后”民意调查的结果还是很不错的，但是，向民众传递信息、调查民意、和利用民意的政治与传播趋势似乎都在朝着相反的方向前进；面对面的讨论越来越少，而个性化的信息却越来越多。这是互联网媒介在塑造人心中所起到的强大作用。</p>
+<p>根据 Fishkin 的观点，目前许多旨在鼓励公民参与传播过程的设计，均缺少了帮助人们更好地了解有关问题新知的条件。</p>
+<p>目前大多数民主政治信息体系都恰好缺少一些目标明确的公民间交流；而在媒体上是占主导地位的，⚠️通过民调和受众即时反馈所表达出来的意见强调的是易变的私人观点，根本不是真正的<em>舆论</em>，因为舆论是通过公共对话和讨论形成的。</p>
+<p>在公民决定新闻应该是什么样之前，或许他们更需要获得“议后”判断的机会。</p>
+<p>参与协商的公民 ——</p>
+<p>Fishkin 认为，不应该鼓励人们就某一问题直接发表不成熟的个人意见，而首先应该在互动的环境下，让人们接受新信息的挑战，进行思考，并参与讨论。</p>
+<p>在 Fishkin 早期举办的公共论坛里，参与者首先需要了解专家传递的信息，然后分成小组讨论自己所听到的信息，再对相关问题形成结论。</p>
+<p>1994年 Fishkin 对这一想法进行了开创性的实验。在几家印刷媒体和广播电视新闻的共同资助下，他随机选取了300名公民作为样本，他们要讨论的是犯罪问题。</p>
+<p>在阅读各种介绍资料、聆听专家意见、互相辩论之后，这些人对于如何解决犯罪问题，出现了戏剧性的观点变化。</p>
+<p>例如，实验前的调查显示，57%的人认为加重刑期是打击犯罪的有效手段；而了解到有关研究、并就刑罚与犯罪的关系进行了批判性思考之后，只有38%的人认为监禁是有效手段。</p>
+<p>Fishkin 不认为这是经历“实验”把人“变成了”自由主义者。他指出，在接触更多信息，参与讨论之后，他们对犯罪问题的严重性以及惩罚犯罪的必要性的关注，本质上并没有改变。然而，他们的政策主张却变得更加现实了，💡而且，最重要的是，不易被政治人物和新闻中肤浅的思想所影响。</p>
+<p>以这些早期的协商模型为基础，传播学者 John Gastil 建议组成公民座谈群组，对投票议题进行讨论，然后，各种须投票表决的问题、座谈群组的建议以及他们对各派观点的评定，可以随选票一起递送给投票者。</p>
+<p>Fishkin 认为，这样的论坛实验可以帮助我们学会如何听到“值得倾听的人民的声音”。</p>
+<p>包括 Fishkin 在内的许多观察家都认为，数字革命能让公民更多参与审议和协商的过程。然而，正在扩展的在线世界可能不会像许多乐观派一开始想象中那么容易适应有重点的、互动的公众体验。</p>
+<p>事实上，对在线社区进行观察会很容易发现，通过网络组织讨论的方式很少能够产生理想的结果。聊天室、电子公告栏、新闻群组、邮件列表、博客和维基百科，为使用者提供了大量的交流机会，但是，这样的在线交流往往没有约束，没有批判性思考，肤浅和极化，根本称不上商议。</p>
+<p>在面对面的人际交流中，人们也明显倾向于保持论前态度，就如 Diana Mutz 所分析的，大多数人会避免与观点不同的人一起讨论。[Hearing the Other Side: Deliberative versus Participatory Democracy, Diana C. Mutz]</p>
+<p>本文的目标就是分析信息传播的积极参与者如何可以避免孤立，促进智慧的政治行动。探讨公民信息的未来。</p>
+<p>个性化信息和民主的未来 ——</p>
+<p>一方面是碎片化、个性化的传播系统；另一方面是数字网络化社会的趋势。能在这种尴尬中求得平衡的个体或许将会作出理性的信息选择。</p>
+<p>或许，人们不会逃避社会与世界的难题，因为可以自由选择构建更加私人化的现实世界；当然，人们可能会回避那些他们认为“不会影响到自己”的问题，或是“没有希望被解决的问题”，或是需要更多思考和关切而自己又没兴趣付出精力的问题……有关新闻消费习惯和政治参与模式的研究结果并不那么鼓舞人心。</p>
+<p>在美国，从80年代开始至今的新闻消费研究表明，公众对国际、国内和地方新闻的关注都在呈现大滑坡态势。这一下滑态势与投票可能性降低、甚至是注册投票可能性降低，均息息相关。但与此同时，迅速扩张的数字传播网络为人们提供了以相对低廉的成本随时获取遥远信息的可能性。最近几年中，年轻公民展现的参与热情反应了公民思潮一种令人欣喜的转变。</p>
+<p>然而，如前所述，参与的质和量同样重要。一个令人担忧的问题就是，在目前的信息环境下，人们很可能会仅仅选择符合自己观点的信息。民主是否能在政治体验进一步碎片化、个性化的环境中生存下来并保持一体？</p>
+<p>以个人为中心形成的封闭信息圈的一个特点就是，社会现实本身也变成了一种愈加个性化的产物。对于“我是谁”、社会如何标示我这样的问题，许多人实际上都拥有实实在在的选择权，这在人类历史上可能前所未有。</p>
+<p>而其中的原因，正如很多社会理论家所指出的那样，是过去曾经与团体属性紧密相连的身份在变弱。如 阶级、商业、俱乐部或者社区协会等。随着个人身份中这些元素明显变弱，取而代之的是对生活方式和消费社区的无限选择。[具体解释详见《nobody cares 的背后究竟是什么》]</p>
+<p>公共领域凋零？——</p>
+<p>民主意味着一种公共生活，也就是说，人们对如何解决共同问题可以进行批判性思考。公众对民主决策的参与质量取决于人们可以分享的大众传播平台。在这样的平台上，他们可以表达个人关切，提出新的想法，并见证这些想法是否经得住日常辩论的考验。</p>
+<p>这些公共空间包括咖啡馆、酒馆、市民议会、读书俱乐部、小餐厅……它们构成了先锋传播理论学者 Jurgen Habermas 所称的<em>公共领域</em>。</p>
+<p>许多当地观察家都意识到，在现代社会公共领域正在缩小，或至少面临分裂的危险，而且讽刺的是，个人传播技术的扩张对公共领域的缩小要负很大一部分责任。</p>
+<p>例如社会学家 Todd Gitlin 认为，与其考虑具有凝聚力的公共领域，不如考虑一下微小的、变化中的“分公域”的扩张更有意义。[ Todd Gitlin, lecturer, University of Washington]</p>
+<p>这些按兴趣形成的分公域极具吸引力，通常会为逃避大社会带来的痛苦提供安慰。然而，如果人们不断适应这些传播技术构建并享受自己的私人世界，那么他们去什么地方汇聚并分享彼此的关切和信息呢？如此一来，形成共识的机会不就更少了吗？具有凝聚力的政治讨论离不开这样的聚会和分享。</p>
+<p>简而言之，我们进行政治传播的过程和我们如何一起采取政治行动，是密切相关的；即 如何界定目标、制定行动计划。</p>
+<p>国家政治的一个极端就是政治斗士，他们不断使用道德口号充斥各种媒体，热情地呼唤人们追随。但是因为受众已经分化，这些人只能在脱口秀和YouTube中走红，对于有闲看节目的人来说，他们提供了一种低成本的媒体奇观，但是对于更多厌倦的人来说，他们显然只是树立了糟糕的榜样。</p>
+<p>如前所述，如今许多人更倾向于躲避政治，或是至少希望政治话题局限在家里，而不愿在生活中毫无偏见地参与公共辩论。</p>
+<p>许多观察家都指出过，公共信息的权威基础本身在衰落；正因为每个人都能够分享信息，对他人分享的信息给予尊重的共同基础就被弱化了。新闻媒体并没有对这种个性化的信息趋势施加有意的影响；他们只是为了迎合大众情感和消费者口味，而不是为了传播具有挑战性的另类观点。</p>
+<p>简单说，从信息体系任何一个层面来看，无论是从新闻媒体的立场，还是政治角色的立场，抑或是民众角度还是技术因素，很显然，我们现在所处的信息环境正在发生重要的变化。</p>
+<p>—— 没有魔法 ——</p>
+<p>当下的传媒业不是民主的，这就是为什么它无法服务于民主。“新闻自由”被沦为了一场神话；人民被锁定在弱势的地位上，所有选择都是被安排好的，他们的政治反应被新闻模式的把关规则所过滤。</p>
+<p>这种情况下已经没有能独立决策的公民，公众最常出现的只是心理学家常说的“习得性无助”，他们要么逃离 — 从政治和公共生活中退出，要么拥抱完全不切实际的概念从而变得虚无。</p>
+<p>没有什么魔法可以改变这一局面。它不是一蹴而就的，改变的过程只会更加耗时；但是任何一种小的改变都是在为大的目标而积累。想想看我们可以提一些什么建议？</p>
+<p>给公民的建议 ——</p>
+<p>对于如何获取信息，公民可以进行更有创造性的思考，这样就会带来变化。</p>
+<p>首先是参加公共生活，但不要寄希望与那些不切实际的神话；然后开始自由想象，寻找替代方案，展开头脑风暴思考一下如何建立一个更完美的信息秩序，这不会产生什么成本。</p>
+<p>职业新闻已经快毁掉了，但这不是真相的结束。在思考传播的方程式时，或许人们应该更多在输出端考虑多样性及其质量问题，而不是在输入端纠结于“为什么无法改革”。</p>
+<p>除了开动脑筋思考如何设计一个更好的传播体系，公众还可以学习如何更好地利用现有的传播体系。IYP在“媒体和新闻自由”栏目中提出的思考和批判性分析有可能帮您解码新闻。</p>
+<p>如果人们能读出新闻的言外之意、看到照片背后的门道，就能对新闻少一点失望和困惑，能更清晰地知道自己的责任。</p>
+<p>简而言之，若想更好地了解世事，并非简单地加大阅读量就可以了，而是，要在批判的眼光下解码多方信息；若想更好地了解世事，不仅仅需要记住当天孤立的新闻事件中谁在什么时间什么地点在何种方式上做了什么。理解公共问题的政治原因和社会影响才能帮助你理清思绪，决定如何回应。</p>
+<p>以下这些简单的建议将有助于读者成为一个更具批判思想的公民。</p>
+<p>1、识别陈词滥调和情节公式</p>
+<p>当新的消息被装进旧的公式中，人们也就不会有什么动力去用新的观点代替原来的偏见了。</p>
+<p>政治人物最容易讲、记者最容易写的故事，往往建立在有关这个世界的熟悉形象上，而不是真正的事实 。除非这种炒冷饭的东西被识破、被扔掉，否则这样的新闻对公共讨论毫无帮助，只能固化肤浅的理解和老旧的思维。</p>
+<p>发现并抛弃那些诱导性的描述和时髦的流行语很重要，否则任何进步派支持者只会被惹恼，因为他们看到的是一睹高高耸立的高墙，阻碍了有意义的传播。</p>
+<p>诸如“左派”、“右派”、“大政府”、甚至“有地位的”、“知情人士”这样的说法都对信息进行限定，让人们作出选择性的解读。</p>
+<p>比如说，也许有些人真的是“恐怖分子”这个词所指的那种反社会人格，然而，泛泛地向恐怖主义“宣战”却为更多值得质疑的政治可能性提供了机会。而且，对恐怖主义的情绪化反应使值得怀疑的外交政策被轻易地贩售给公众，最典型的就是入侵伊拉克。其借口存在严重事实缺陷，但通过打感情牌，挡住了许多质疑的声音。当人们意识到问题时，为时已晚，（伊拉克战争是任何关于政治宣传如何操纵世界的论文中最多出现的案例）</p>
+<p>“恐怖分子”之概念还被用来当作绕开法律程序实施拷问的挡箭牌，更，让大规模窃听监视找到了最强的理由。</p>
+<p>这是媒体帮助构建出的概念 —— 也是“前期宣传”的一种，相关分析详见《操纵式宣传：五个过滤器和识别线索》</p>
+<p>大而化之的“反恐战争”标签也会妨碍对权利被剥夺群体的理解。对这一群体来说，如果他们想要社会关注，要想问题得到解决就只能破釜沉舟诉诸暴力，正如政治学家 Steven Livingston 所分析的，“恐怖主义”标签通常会被意欲推行自己政策议程的政治人物策略性地应用在新闻中，而这样的标签则会影响如何讲述关于他们政策的故事。[The Terrorism Spectacle by Steven Livingston]关于这个问题，更多分析详见《暴涨的种族冲突和身份证明的魔咒》</p>
+<p>2、寻找不符合情节的信息</p>
+<p>“世界上有三种谎言：谎言、彻头彻尾的谎言，和统计数字” —— 记住这句话很重要。</p>
+<p>文献、包括统计数据和图片，都可以被断章取义，拿来作为当下观点的证据。只要与“有力的形象”、熟悉的情节、或任何被深信的观点相吻合，它们就会被<em>看起来真实</em>。</p>
+<p>请记住关于<em>事实</em>的警句：事实从来不是整整齐齐、干干净净的。原始数据总是乱糟糟和模棱两可的。数据的模棱两可也恰恰是它们的优势 —— 可以激发人们进行批判性思考，并寻求新的可能。</p>
+<p>当事实与说辞配合得太完美时，它们提供的是心理上的肯定，而不是对事实的验证。很少有人有动力去挑战政府和名流的说辞。</p>
+<p>为了抵抗这种新闻心理，公众在接受某一“事实”之前必须仔细辨别其真伪。首先应该透过其夸夸其谈的迷雾，辨清某种说法是确有证据还是空口无凭的指责和断言。最重要的是，应该找出不严谨的事实，在此基础上，也许你能发现一个完全不同的故事。</p>
+<p>就那些值得推敲的事实进行分析解读，可以帮助我们看清值得关注的潜在政治问题。如果你不是急于将它们套进相关新闻的情节中，就会比较容易聚焦于这些游离的事实，并锁定它们的方向。</p>
+<p>3、通过其他信源核实意识形态倾向性的言论</p>
+<p>这里指的不是去“时代周刊”核实“新闻周刊”的报道，而是说，应该把那些提供了更多、更丰富的历史记录，反应了批评人士、反对组织或无利益纠葛的学者思想的出版物和文献纪录片当作参考。</p>
+<p>利用互联网可以很容易搜集到关于任何话题的海量信息，当然，算法在操纵你最可能看到什么，人们基本不会去浏览搜索引擎第三页及之后显示的内容；不过，学会搜索肯定是必要的，科学的搜索依旧能让你找到值得关注的内容。记下一些信誉好的独立媒体的域名也非常必要，我们在下一篇文章中会介绍<em>替代媒体</em>的概念，一些很成功的替代媒体是公民应该熟知的。</p>
+<p>关于如何进行更合理的搜索，详见《高级运算符辅助开源调查：巧用搜索引擎挖掘情报》。</p>
+<p>最后，为了驾驭信息，建议安装一个简易的信息聚合阅读器 RSS，肯定会比社交媒体上的信息轰炸要强很多。</p>
+<p>4、识别政治宣传和新闻运作</p>
+<p>有些时候，“新闻”中似乎找不到什么不严谨的事实可供另做解读。被成功控制住的“新闻”，其事实材料的数量刚好能满足政治剧本塑造形象的需要，特别能唬人。</p>
+<p>当政治人物成功推出他们按剧本表演的新闻事件 —— 或者说虚假的新闻事件时 —— 媒体倾向于只报道那些被特意植入的、可以增加可信性的片面事实。</p>
+<p>在这种情况下是极难辨别的，批评家必须学会识别虚假报道的特点，并解码其传递的政治讯息。当然，第一特征就是：成功的虚假新闻事件中不会让你看到很多漫无边际的事实。</p>
+<p>在这里看到更详细的分析《操纵式宣传：五个过滤器和识别线索》我们在后面还将有更多分析。</p>
+<p>当一位政客要对某种现象宣战时（不论是腐败还是黑社会还是恐怖主义），公民应该准备好从中寻找政治表演的痕迹。</p>
+<p>中国的反腐反黑就无需解释了。在美国，这种表演也是很有传统的。里根当年就宣布“向犯罪开战”。那是电视剧时代，政治表演还算朴素的。当时他宣布了一揽子立法，要让罪犯“付出更大的代价”。里根的整个表演目的是塑造一个强有力的领导者形象，汇集民意支持，笼络那些心存恐惧的、经济困难的民众。</p>
+<p>请注意这一表演是在里根遭受首次重大失败后的两天内提出的（因为国会推翻了他对一项重大的联邦开支法案的否决）。有没有可能里根的媒体公关团队已经设计好了他获胜的剧情安排并为之候场？细心的政治批判者应该能发现其中的政治表演痕迹，将演员与其政治际遇联系起来。</p>
+<p>老布什后来也模仿里根的做法，推出了“向毒品宣战”，他把道具运用得更加驾轻就熟。在这场戏里，新闻道具是一袋子强力可卡因，老布什在电视里举起这袋可卡因“宣战”。</p>
+<p>华盛顿邮报后来承认，老布什的这场戏是由某媒体顾问团队策划的。这篇报道在媒体中引起了强烈反应，并在此后被不断引用和提及，成为了一个经典的闹剧案例。</p>
+<p>华盛顿邮报说：为搞到这袋可卡因并不是易事。为了配合老布什撰稿人写的脚本，缉毒局的特工在总统讲话前四天，把一个可疑的毒贩骗到了拉法叶公园，上演了一场“抓毒贩”的戏码。实际上拉法叶公园广为人知，主要是因为在白宫对面，而并非是因为什么非法毒品活动。</p>
+<p>事实上，那个十几岁的嫌疑人是平生第一次接触到伪装成买家的便衣特工，似乎对他们的要求感到迷惑。</p>
+<p>“白宫在什么地方”。在被缉毒局特工秘密录音的对话中，那位嫌疑人这样问道。</p>
+<p>“我们不得不设法把他弄到这里”，缉毒局华盛顿地区办公室的特工 William McMullen 说，“这可真不容易”。[A ‘Sting’ Tailor-made for Bush，Michael Isikoff, 1989]</p>
+<p>这出戏被揭穿后，老布什接着又按照其媒体公关团队的导演，针对揭露者的批判做出了策略性的回应：时不时地对媒体发发飙。老布什的谋士们发现，对媒体发点小脾气能显得总统更强硬、更尽责。</p>
+<p>5、学会自我批判</p>
+<p>你可能会担心这些建议会让你变成一个愤世嫉俗的人而不是批判者。还有谁可以相信？还有什么值得相信？新闻批判的目标并不是要否定一切，而是面对人云亦云的压力，学会对世界大事进行独立的、自信的思考 —— 不是要怀疑所有的权威，而是要相信自己的判断。</p>
+<p>这会引出一条最重要的原则：先入为主的观念和偏见，在筛选和接收新闻信息时，会发挥明显的作用。</p>
+<p>认识到这一点就应该努力有意识地在任何可用的场合，选取与之相左的信息，挑战这些观念 —— 它说的哪里有道理，哪里值得探讨？自我批判并不是说要把原有的观念连根拔除，也不是说要像树立某种观念时那样快速地将它们拆毁。它的目的是确保我们的信念不会成为一面横在真相面前的墙。</p>
+<p>当信念有助于我们建设性参与解决问题时，它就会发挥更大的作用。</p>
+<p>但是，当信念被作为绝对真理来捍卫导致所有与之对立的证据被忽视时，它就会成为社会问题的根源。</p>
+<p>反对派尤其应该注意这点。你们的信念是正义的，但如果你希望获得更多的民众支持，你就需要在政治策略层面胜过你的对手。切勿让人们评说“反对派和他们反对的人一个鸟样”。</p>
+<p>6、寻找更多视角的信源</p>
+<p>这是一个大建议。而且不仅是寻找 —— 因为资本垄断导致认知的垄断，你有可能找不到其他视角（就如谷歌对独立媒体实施在搜索排名中降级）。于是针对这种状况需要的就不仅仅是技术了，而是一场运动。</p>
+<p>我们将在下篇文章中作出更多介绍。</p>
+<p>是充满生气的草根传播，还是与社会隔离的、以自我为中心的个人冥想？对于电子民主的未来而言，最好的可能性和最坏的可能性同时存在。新技术用来做什么？关于这个问题的公共辩论将影响电子民主的方向</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/14/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/16/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/14/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/16/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1574,9 +1629,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">223</span>
+          <span class="site-state-item-count">242</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>

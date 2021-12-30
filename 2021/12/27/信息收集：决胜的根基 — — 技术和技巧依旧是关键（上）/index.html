@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="信息收集：决胜的根基 — — 技术和技巧依旧是关键（上）英国人常说，没有什么信息是不相关的。这句话很有道理。即使是最微小的信息也可能促成社交工程人员的成功入侵 ：蛛丝马迹钓大鱼 🤔“战争的胜利百分之九十取决于情报”如何获得？英国人常说，没有什么信息是不相关的。这句话很有道理。即使是最微小的信息也可能促成社交工程人员的成功入侵 — — 蛛丝马迹钓大鱼。 渗透测试领域的大师 Mati Aharoni">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信息收集：决胜的根基 — — 技术和技巧依旧是关键（上）">
+<meta property="og:url" content="http://example.com/2021/12/27/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%9A%E5%86%B3%E8%83%9C%E7%9A%84%E6%A0%B9%E5%9F%BA%E2%80%8A%E2%80%94%E2%80%8A%E2%80%94%20%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7%E4%BE%9D%E6%97%A7%E6%98%AF%E5%85%B3%E9%94%AE%EF%BC%88%E4%B8%8A%EF%BC%89/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="信息收集：决胜的根基 — — 技术和技巧依旧是关键（上）英国人常说，没有什么信息是不相关的。这句话很有道理。即使是最微小的信息也可能促成社交工程人员的成功入侵 ：蛛丝马迹钓大鱼 🤔“战争的胜利百分之九十取决于情报”如何获得？英国人常说，没有什么信息是不相关的。这句话很有道理。即使是最微小的信息也可能促成社交工程人员的成功入侵 — — 蛛丝马迹钓大鱼。 渗透测试领域的大师 Mati Aharoni">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-27T15:38:08.000Z">
+<meta property="article:modified_time" content="2021-12-30T09:52:39.439Z">
+<meta property="article:author" content="眼魔王">
+<meta property="article:tag" content="反操纵">
+<meta property="article:tag" content="反欺骗">
+<meta property="article:tag" content="社交工程">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/12/27/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%9A%E5%86%B3%E8%83%9C%E7%9A%84%E6%A0%B9%E5%9F%BA%E2%80%8A%E2%80%94%E2%80%8A%E2%80%94%20%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7%E4%BE%9D%E6%97%A7%E6%98%AF%E5%85%B3%E9%94%AE%EF%BC%88%E4%B8%8A%EF%BC%89/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>信息收集：决胜的根基 — — 技术和技巧依旧是关键（上） | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/27/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%9A%E5%86%B3%E8%83%9C%E7%9A%84%E6%A0%B9%E5%9F%BA%E2%80%8A%E2%80%94%E2%80%8A%E2%80%94%20%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7%E4%BE%9D%E6%97%A7%E6%98%AF%E5%85%B3%E9%94%AE%EF%BC%88%E4%B8%8A%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          信息收集：决胜的根基 — — 技术和技巧依旧是关键（上）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-27 23:38:08" itemprop="dateCreated datePublished" datetime="2021-12-27T23:38:08+08:00">2021-12-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-30 17:52:39" itemprop="dateModified" datetime="2021-12-30T17:52:39+08:00">2021-12-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B-%E5%8F%8D%E6%93%8D%E7%BA%B5%E3%80%81%E5%8F%8D%E6%AC%BA%E9%AA%97/" itemprop="url" rel="index"><span itemprop="name">社交工程-反操纵、反欺骗</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="信息收集：决胜的根基-—-—-技术和技巧依旧是关键（上）"><a href="#信息收集：决胜的根基-—-—-技术和技巧依旧是关键（上）" class="headerlink" title="信息收集：决胜的根基 — — 技术和技巧依旧是关键（上）"></a>信息收集：决胜的根基 — — 技术和技巧依旧是关键（上）</h1><p>英国人常说，没有什么信息是不相关的。这句话很有道理。即使是最微小的信息也可能促成社交工程人员的成功入侵 ：蛛丝马迹钓大鱼 🤔<br>“战争的胜利百分之九十取决于情报”<br>如何获得？<br>英国人常说，没有什么信息是不相关的。这句话很有道理。即使是最微小的信息也可能促成社交工程人员的成功入侵 — — 蛛丝马迹钓大鱼。</p>
+<p>渗透测试领域的大师 Mati Aharoni 有一个亲身经历。他的任务是入侵一家在网上查不到什么信息的公司，于是依赖互联网直接的开源情报就不行了。</p>
+<p>通过大面积搜索他发现这家公司的一位高管的电子邮件地址出现在了一个集邮论坛上，通过浏览总结出，这位高管对20世纪50年代的邮票表现出了浓厚的兴趣。于是 Mati 迅速建立了一个域名，然后从谷歌上找来一堆20世纪50年代的邮票图片。他很快创建了一个“个人网站”展示他的“集邮册”，然后编写了一封电子邮件发给那位高管。</p>
+<p>是这样的：</p>
+<p>亲爱的**先生：我是 <a target="_blank" rel="noopener" href="http://www.forum.com/">www.forum.com</a> 的网友，发现您对20世纪50年代的邮票很感兴趣。最近我的祖父去世了，给我留下了一个集邮册，我想出售这本集邮册，于是建立了一个网站，如果您想看看的话，请访问：<a target="_blank" rel="noopener" href="http://www.stampcollection.com/">www.stampcollection.com</a><br>在发送这封邮件之前，他想要确保产生最大的影响。于是他在论坛上找到了该官员办公室的电话号码，给他打了个电话，说的就是邮件中同样的内容。</p>
+<p>目标很急切地等着看到那些邮票，于是稍晚些时候邮件到来时很快就被点击打开了。Mati 将一个恶意帧嵌入到网站页面中，帧中的代码会利用当时很“流行”的IE浏览器已知漏洞，使攻击者立刻能控制目标人的计算机。公司系统的边界防御就这样被打开了。</p>
+<p>仅仅是一条微小的信息 — — 受害人在寻找邮票时留下的公司邮箱地址 — — 就导致了这次入侵的发生。所以说，没什么信息是完全不想干的。那么，</p>
+<p>怎样收集信息？<br>社交工程人员收集信息可以利用的资源有哪些？<br>如何利用收集到的信息进一步描述目标？<br>如何对这些信息进行定位、储存及分类，才能够使之更易于使用？<br>这些只是需要解决的问题的一小部分。在信息多如牛毛的社交网络上，人们可以轻而易举地与其所选择对象分享自己生活的方方面面，这便使潜在的破坏性信息比任何时候都要多。</p>
+<p>收集信息</p>
+<p>收集信息就像盖房子，如果从屋顶盖起是不可能成功的。一栋坚实的房子需要先打下坚实的地基。收集信息时不用总想着怎么组织和运用这些数据，创建一个文件或信息收集服务才是当务之急。</p>
+<p>有很多现成的工具可以帮助收集和运动这些数据，比如 BackTrack 就是专门为这一目的设计的。和大多数 Linux发行版一样它是免费、开源的，最大的优点是集成了300多款安全审计工具。BackTrack 还支持 Live CD 和 Live USB 启动方式，用户可以直接从移动介质启动该系统而不用将系统安装在硬盘上。</p>
+<p>BackTrack 工具软件分成12大类:</p>
+<p>Information Gathering（信息收集）<br>Vulnerability Assessment（漏洞评定工具）<br>Exploitation Tools（攻击工具）<br>Privilege Escalation（用户提权）<br>Maintaining Access（维护登录）<br>Reverse Engineering（逆向工程）<br>RFID Tools（RFID工具）<br>Stress testing（压力测试）<br>Forensics（取证）<br>Reporting Tools（报告工具）<br>Services（服务）<br>Miscellaneous（杂项）<br>BackTrack 提供的工具质量非常高，其中许多都能与同类商业软件媲美，甚至高过后者。最为特别的两个适用于信息收集和储存的工具是：Dradis 和 BasKet，接下来分头说说。</p>
+<blockquote>
+<p>使用 BasKet</p>
+</blockquote>
+<p>BasKet 从功能上看有点像记事本，但比记事本强大太多了。可以从 <a target="_blank" rel="noopener" href="http://basket.kde.org/">http://basket.kde.org/</a> 上免费下载，网站上有详细介绍，安装很容易，界面也不复杂，很容易上手。屏幕左侧鼠标右键选择“New BasKet“ 会添加一个新的”BasKet“，用以保存数据：</p>
+<p>新建好后可以往里面复制/粘贴数据，添加屏幕截图，甚至可以添加 OpenOffice 办公软件或其他类型的图表数据。</p>
+<p>BasKet 组织和展示数据的方式是它的优势之一。你可以为不同类型的数据建立不同的 BasKet，例如域名查询数据、社交媒体信息等，然后使用 Google Maps 或者 Google Earth 获取目标的建筑和设施图片，保存到 BasKet 中。信息收集完成后快速提取和使用这些信息也很简单，比如下面这样，一个接近完工的 BasKet，其中有许多有用的信息和标签。</p>
+<p>尽可能往里面放信息，因为即便蛛丝马迹也很可能是非常有用的。收集的方向包括目标的网站内容、域名查询信息、社交网络、照片、各种形式的联系方式、简历、论坛、爱好等等一切与目标有关的信息。</p>
+<p>收集完成后点击 BasKet 菜单，选 Export，将整个 BasKet 导出为 HTML 网页文件。对生成报告和共享合作非常有用。</p>
+<blockquote>
+<p>使用 Dradis</p>
+</blockquote>
+<p>尽管 BasKet 是一个非常好的工具，但如果你要收集的信息很多，或者需要一组人共同完成信息收集、储存和调用操作，那么就需要一款能够供多用户共享数据的工具，就是：Dradis。</p>
+<p>根据 Dradis 开发者的描述，Dradis 是可以提供信息中央储存的独立 Web 应用，可以统一管理需要收集的信息。也是免费开源的，可以在这里找到：<a target="_blank" rel="noopener" href="http://dradisframework.org/">http://dradisframework.org/</a> 。Dradis 可以安装于 Linux、Windows 和 Mac 等不同系统上，网页上有详细的安装配置说明。</p>
+<p>安装并设置好后就可以浏览你分配的本地主机和端口，或者使用标准的 3004.只要打开浏览器在地址栏中输入 <a target="_blank" rel="noopener" href="https://localhost:3004/">https://localhost:3004/</a> 即可登陆使用。</p>
+<p>注意左上角的添加分支“Add Branch”按钮，点击后就可以像使用 BasKet 那样添加信息了，如备注、图片等等，甚至可以直接导入笔记数据。</p>
+<p>上述只是用来收集信息的两款小工具。不论操作系统是什么 Mac, Windows, or Linux，你都能找到相对应的工具，重要的是要用起来顺手，能处理大规模数据。Mac 和 Windows 自带的记事本和文本编辑器是无法满足需求的。</p>
+<p>信息源</p>
+<p>信息将产生于各种不同的来源，以下只是一些常用来源的介绍，需要根据您寻求的情报目的，找到最适合挖掘信息的渠道。</p>
+<blockquote>
+<p>网站上的收集</p>
+</blockquote>
+<p>公司和个人的网站是信息的重要来源，花点时间是完全值得的，可以帮你清除地了解目标的基本情况：</p>
+<p>他们做什么？<br>他们提供什么产品和服务？<br>地理位置？<br>招聘信息？<br>联系电话？<br>执行官和董事会成员的简介<br>支持的论坛<br>电子邮件命名规则<br>可能用于密码分析的特殊字符或短语…<br>个人网站是更有意思的事，上面的内容可能涉及他们生活的方方面面：孩子、房子、工作等等。将这些信息分类储存，因为可以用于日后的攻击。</p>
+<p>同一个企业的员工往往会登陆相同的论坛，有着类似的兴趣，甚至会喜欢相同的社交网站。如果你在 Linkedin 或者 Facebook 中找到一名员工，很可能就能找到他的好几个同事。很多人会在社交网站上使用标签的形式展示自己的职位，可以帮助社交工程人员勾勒出该公司某个部门的规模及其组织架构。</p>
+<p>1、搜索引擎</p>
+<p>我们介绍过一些简单的谷歌渗透测试方法，在这里找到《高级运算符辅助开源调查》，它也可以用于社交工程攻击的数据收集（这不是全部，将来还会陆续介绍）。这篇文章的目的是希望说明，熟悉搜索语法是非常关键的，可以帮助你更快速精准地找到有用信息。</p>
+<p>但要知道，提供如此惊人的数据挖掘的不止谷歌一家。一位叫 John Matherly 的研究人员发明了一个叫做 Shodan 的搜索引擎：其特殊之处不仅在于它能提供针对服务器、路由器和特定软件的搜索功能。</p>
+<p>这个搜索引擎重申了一个道理：网络上有惊人的数据量可供社交工程人员和开源调查分析师查询和分析，以提升信息收集的能力。</p>
+<p>2、Whois 域名信息查询</p>
+<p>Whois 能提供域名数据库查询服务。Whois 数据库中有很多有价值的信息，有些时候甚至包括网站管理员的网站联系方式。</p>
+<p>使用 Linux 命令行工具或者登录 <a target="_blank" rel="noopener" href="http://www.whois.net/">www.whois.net</a> 这样的网站，都可以查询到域名的注册信息，包括联系人、电子邮件地址、电话号码、甚至 DNS 服务器的 IP 地址。</p>
+<p>域名注册信息可以很好地帮助你了解目标公司，特别是他们的服务器。这些信息都可以用于发动强大的攻击。</p>
+<p>3、公共服务器</p>
+<p>企业对外的公共服务器往往会提供网站所没有的很多信息，比如服务器的操作系统、安装的应用程序和 IP 地址，这些信息可以大致反映企业的信息服务架构。了解平台和应用程序之后，便可以和域名组合在一起，在公开技术论坛上进一步搜索相关的配置信息。</p>
+<p>IP 地址可以说明服务器是在本地还是从提供商处租来的；通过域名解析记录可以看出服务器的名称、功能，以及 IP 地址的分布。</p>
+<p>值得一提的是端口扫描（使用诸如 NMAP 或者其他端口扫描工具去定位公共服务器的开放端口、软件版本和操作系统类型等）在有些地区是违法的。当然，如果是收费的安全审计，这些细节在合同中都应该写明白。对社交工程人员来说应该熟知当地法律，尽可能避免出师未捷。</p>
+<p>4、社交媒体</p>
+<p>这个就不用多说了哈，我们在 #OSINT 信息搜集演示中最多介绍的就是社交媒体挖掘。社交工程攻击也一样，只是目的不同。</p>
+<p>Crips 是一个在线 IP 工具的集合器，可以用来快速获取有关 IP 地址、网页和 DNS 记录的信息 , 支持 windows/linux，在这里看到介绍视频。功能包括：</p>
+<p>Whois lookup //whois 查询<br>Traceroute //使用 mtr 高级 traceroute 工具跟踪 Internet 连接的路径<br>DNS Lookup //使用 dig DNS 工具查找域名的 DNS 记录<br>Reverse DNS Lookup //查找 IP 地址或 IP 地址范围的反向 DNS 记录。<br>GeoIP Lookup //使用 GeoIP 工具查找 IP 地址的位置<br>Port Scan //简单的 TCP 端口扫描可快速确定面向服务或防火墙的 Internet 的状态。<br>Reverse IP Lookup //通过反向 IP 查找来发现共享IP地址的网络主机<br>INSTALL &amp; UPDATE //安装&amp;&amp;升级<br>5、个人网站和博客</p>
+<p>比如 <a target="_blank" rel="noopener" href="http://www.icanstalku.com/">www.icanstalku.com</a> 这样的网站，别误会它的名字，不是鼓励人们去跟踪别人，它跟踪的是那些毫无防范意识的 Twitter 用户。它可以遍历整个 Twitter，寻找那些蠢到用自己的智能手机拍摄照片并上传的人。依旧有为数不少的人没有意识到智能手机拍摄的照片会暴露 GPS 数据，有目的的攻击者就可以借此追踪你。（这类愚蠢的行为在微信几乎遍地都是）</p>
+<p>像 ICanStalkU 这样的网站强调了信息泄漏的危险。这些信息可以被利用来诱骗、欺诈、勒索、入室盗窃、拦路抢劫。这里有一个真实的故事《Twitter Connection to Home Robbery》</p>
+<p>对社交工程攻击来说，不同类型的信息可以帮助你全面了解目标。人们太喜欢在 Twitter 上分享信息了，正在哪里、和谁在一起、正在做什么……Facebook 这种可以用来分享照片、个人故事和其他相关信息的网站是社交工程攻击的金矿。只需片刻功夫就能找到目标人的住址、照片、工作学习状况、兴趣品味、情绪特点等等一系列有可能致命的信息。</p>
+<p>社交网络也非常适合伪装（详见我们此前关于社交工程攻击中伪装的技巧介绍），这个故事中描述了社交工程攻击者利用 Facebook 诱骗目标人的成功案例《人性弱点》。合适的伪装技术非常容易得手，还记得我们在“劝导术”系列文章中介绍过的《想象中的美女》吗？如果你能让目标人“认为”你是一个什么样的人，对方就能表现出你预期的“状态”，从而达到你的目的。</p>
+<p>6、其他</p>
+<p>其他信息收集来源与开源调查依旧很相似，也有些不同。比如公开的报告，目标的内部或外部的信息，包括季度报告、政府报告、分析报告及交易和收入信息等等，也是开源调查最常用的信息来源。这里的重点不仅仅是搜集，更重要的是分析。目前中国的评论文章 99% 没有有效的情报分析，人们太喜欢口水战了，这是极大的资源浪费。</p>
+<p>对社交工程人员来说更需要注重的是观察的能力。虽然观察称不上社交工程攻击工具，但简单的观察就能帮你收集到很多目标的信息。目标人使用钥匙、门禁卡还是其他方式进入重要地点？这附近哪里有指定的吸烟区？垃圾桶有没有上锁？大楼内部哪些位置有摄像头？供电系统和空调机组等外围设备的维修公司是哪家？等等，这些信息都能给社交工程人员带来极大的便利。</p>
+<p>这些问题只是几个例子。信息收集工作必需能包括仔细的观察，有必要的话使用隐形摄像机（装在领带上的那种，或者在帽子上）录制下来。回去后慢慢分析，很有可能研究出你在现场时完全没意识到的细节。你的知识量会暴增。</p>
+<p>另外，垃圾桶攻击就不介绍了，非常简单，因为太多人不注重垃圾的重要性，一些要命的资料文件副本随便撕几下就扔掉了。条形碎纸机根本没有一点意义，稍微花点时间就能重新拼凑起来（下图第一个）。要想防止垃圾桶攻击，你应该使用双向碎纸机（下图第二个）没人能复原那样的粉碎品。</p>
+<p>有些单位甚至直接将粗略粉碎后的垃圾交给第三方处理，之后就不管不问了。这就为社交工程人员提供了极大的便利。你可以轻而易举地冒充成回收垃圾的工作人员找到该服务的提供商。</p>
+<p>有些时候甚至不需要翻找垃圾也能得到非常致命的信息。很多人认为国防那种专业的单位部门肯定非常重视这些细节吧？那可不一定。加拿大反恐部队就是个典型的例子。他们计划建造一栋办公大楼，然而这栋楼的一些规划蓝图副本被当作垃圾扔掉了，甚至都没有粉碎过。图中清晰地标注着监控摄像头的安装位置、围栏位置、警报器、甚至很多绝密的信息。幸亏发现这张图的人没有恶意，或者后果不堪设想。</p>
+<p>下篇文章还会继续介绍工具。总之，我们需要您拥有正义的目标、道德感和良知，做正确的事。技术实力就是您绝佳的武器。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>眼魔王
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/12/27/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%9A%E5%86%B3%E8%83%9C%E7%9A%84%E6%A0%B9%E5%9F%BA%E2%80%8A%E2%80%94%E2%80%8A%E2%80%94%20%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7%E4%BE%9D%E6%97%A7%E6%98%AF%E5%85%B3%E9%94%AE%EF%BC%88%E4%B8%8A%EF%BC%89/" title="信息收集：决胜的根基 — — 技术和技巧依旧是关键（上）">http://example.com/2021/12/27/信息收集：决胜的根基 — — 技术和技巧依旧是关键（上）/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8F%8D%E6%93%8D%E7%BA%B5/" rel="tag"># 反操纵</a>
+              <a href="/tags/%E5%8F%8D%E6%AC%BA%E9%AA%97/" rel="tag"># 反欺骗</a>
+              <a href="/tags/%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B/" rel="tag"># 社交工程</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/27/%E5%87%BB%E8%B4%A5%E9%AA%97%E5%B1%80%E2%80%8A%E2%80%94%E2%80%8A9%E4%B8%AA%E9%98%B2%E5%BE%A1%E6%8A%80%E5%B7%A7/" rel="prev" title="击败骗局 — 9个防御技巧">
+      <i class="fa fa-chevron-left"></i> 击败骗局 — 9个防御技巧
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/27/%E4%BE%A6%E6%9F%A5%E5%92%8C%E6%AC%BA%E9%AA%97%EF%BC%9A%E8%BF%99%E9%87%8C%E6%98%AF%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%94%BB%E5%87%BB%E5%BF%85%E5%A4%87%E7%9A%84%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/" rel="next" title="侦查和欺骗：这里是社交工程攻击必备的技术工具">
+      侦查和欺骗：这里是社交工程攻击必备的技术工具 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%9A%E5%86%B3%E8%83%9C%E7%9A%84%E6%A0%B9%E5%9F%BA-%E2%80%94-%E2%80%94-%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7%E4%BE%9D%E6%97%A7%E6%98%AF%E5%85%B3%E9%94%AE%EF%BC%88%E4%B8%8A%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">信息收集：决胜的根基 — — 技术和技巧依旧是关键（上）</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">242</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

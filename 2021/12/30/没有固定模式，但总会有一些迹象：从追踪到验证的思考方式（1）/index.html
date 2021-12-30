@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="#没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）一些非常简单的技巧，有望帮助更多人掌握信息验证和追踪调查的方法【按】这里是一个新系列，主题如题，主要关注信息验证和简单的网络追踪调查。其中大多数经验和技巧我们曾经分头介绍过，于是本系列将作为另一个框架式的指南出现，将曾经分散的知识点在案例中串联起来，类似《解码秘密》等系列指南的结构。但本系列将更简单，倾向于更多人可以掌握的基本功。 当遇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）">
+<meta property="og:url" content="http://example.com/2021/12/30/%E6%B2%A1%E6%9C%89%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F%EF%BC%8C%E4%BD%86%E6%80%BB%E4%BC%9A%E6%9C%89%E4%B8%80%E4%BA%9B%E8%BF%B9%E8%B1%A1%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%881%EF%BC%89/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="#没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）一些非常简单的技巧，有望帮助更多人掌握信息验证和追踪调查的方法【按】这里是一个新系列，主题如题，主要关注信息验证和简单的网络追踪调查。其中大多数经验和技巧我们曾经分头介绍过，于是本系列将作为另一个框架式的指南出现，将曾经分散的知识点在案例中串联起来，类似《解码秘密》等系列指南的结构。但本系列将更简单，倾向于更多人可以掌握的基本功。 当遇">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-30T15:38:08.000Z">
+<meta property="article:modified_time" content="2021-12-30T10:59:33.107Z">
+<meta property="article:author" content="眼魔王">
+<meta property="article:tag" content="调查">
+<meta property="article:tag" content="获取真相">
+<meta property="article:tag" content="思考">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/12/30/%E6%B2%A1%E6%9C%89%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F%EF%BC%8C%E4%BD%86%E6%80%BB%E4%BC%9A%E6%9C%89%E4%B8%80%E4%BA%9B%E8%BF%B9%E8%B1%A1%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%881%EF%BC%89/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1） | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E6%B2%A1%E6%9C%89%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F%EF%BC%8C%E4%BD%86%E6%80%BB%E4%BC%9A%E6%9C%89%E4%B8%80%E4%BA%9B%E8%BF%B9%E8%B1%A1%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%881%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：18:59:33" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）"><a href="#没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）" class="headerlink" title="#没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）"></a>#没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）</h1><p><em>一些非常简单的技巧，有望帮助更多人掌握信息验证和追踪调查的方法<br>【按】这里是一个新系列，主题如题，主要关注信息验证和简单的网络追踪调查。其中大多数经验和技巧我们曾经分头介绍过，于是本系列将作为另一个框架式的指南出现，将曾经分散的知识点在案例中串联起来，类似《解码秘密》等系列指南的结构。但本系列将更简单，倾向于更多人可以掌握的基本功。</em></p>
+<p>当遇到具体的知识点时，在本系列中将以附带链接的形式出现；一如既往，如果您的社区/亲密团队采用该系列内容作为培训材料，请将其中关联的知识点单独讲解。</p>
+<p>此外作为普通互联网用户，您只需要掌握其中的三分之一左右，即 形成一种基本直觉，和几个简单的工具以验证疑惑，您将不至于上当受骗。</p>
+<p>IYP 列表-3 的 “让它民主” 板块收纳了很多信息验证的技巧，本系列内容大多来自职业调查记者，将作为上述板块的一个系统性补充。</p>
+<p>信息验证是开源情报尤其是社交媒体情报最民主化的用例之一。</p>
+<p>如今的几乎所有调查都涉及到社交媒体上的侦查。从背景资料到突发事件，再到时间跨度较长的调查，都是如此；社交媒体平台提供了一些最好的方式可以了解一个调查对象的真实生活  — — 他们的家庭、朋友、工作、个人政治和所在组织/社区  — — 同时也是了解调查对象的秘密想法和隐藏的关系网络的窗口。</p>
+<p>不要错过《巧用互联网，以找到您最想要的信息：搜索思维作为基本功》<br>人们越来越多地在网上生活，查找和搜索调查对象的社交媒体资料的工具无处不在。同时，无论是普通人还是坏人，都在隐藏行踪方面变得越来越聪明。与此同时，像 Facebook 这样的社交媒体平台更加倾向于将数据归为己有，该公司关闭了许多公民调查者和研究人员发掘故事和识别人物的调查工具。</p>
+<p>这是一个无奈的规律，这些监视资本家不会让独立的开源情报调查免费获得数据，即使只有这些独立调查才是对数据的真正民主用法。开源情报工具会层出不穷，但也很可能会被 Facebook 干掉，或者被更好的工具取代。最擅长这项工作的调查者都有自己的流程和趁手的小工具来达到目的，这需要在实践中摸索。但是您完全可以借鉴专业人士的经验，有一些规则可以完全适合初学者。</p>
+<p>用户名<br>一个用户名有时就是您调查的全部，比如您想追踪一个坏蛋。当时新罕布什尔州的一位共和党州议员就是这样，他建立了Reddit最热门的也是最可恶的男性社区之一。揭开 Reddit 的 “The Red Pill” 社区（现在是一个被隔离的社区）幕后人的调查，就是从用户名 “pk_atheist” 开始的。</p>
+<p>很多人都会使用相同的或者相似的用户名在不同的社交媒体平台和电子邮件地址上，这就是为什么跨平台追踪成为社交媒体情报的基本功之一 — — 相关工具非常多，都是免费的。而更加注重安全的人，比如新罕布什尔州这位议员，在每一次新的注册中都会创建完全不同的用户名。</p>
+<p>不管是什么情况，在入手的最初您都应该试试常规的跨平台追踪方法，有多个网站可以做到，把您要搜索的用户名输入进去就行了。</p>
+<p>首先，将目标的用户名插入谷歌。很多人  — — 尤其是那些想要避开大型社交媒体平台的年轻人  — — 往往会在更意想不到的地方留下数字足迹，包括评论区和论坛，这些地方可以引导您找到想要的信息和其他账户。</p>
+<p>还有一些是专有服务，它们要花钱，根据您的预算衡量吧，尽可能使用免费的工具。</p>
+<p>大多数商店都有 Nexis，它对公共记录和法庭文件非常有用，但遗憾的是缺乏电子邮件/用户名的类目，而且它更多偏重美国人。Pipl 和 Skopenow 是相关工具中最好的之一，用于交叉引用 “现实世界” 的信息，如电话号码和财产记录，与在线记录 如电子邮件和用户名，进行交叉查询，并且都可以在全球范围内使用。</p>
+<p>这些付费搜索引擎通常提供电话和财产记录，但它们也可以识别即使在账户被封锁后仍然存在的 Facebook 和 LinkedIn 资料。它们还可以找到人们已经基本遗忘的旧账户，比如旧的博客，甚至亚马逊的愿望清单  — — 这是一座金矿，可以帮助调查者了解目标人的阅读、购买和想要什么的内心世界。</p>
+<p>使用这些工具也可能会得到很多 “假阳性” 结果，所以您可以从它们的结果开始调查，然后继续采取其他验证手段。</p>
+<p>当您找到了一个您认为可能属于调查对象的用户名或电子邮件时，就可以把它插入一个在线工具，如 namechk 或 namecheckr，它可以同时在多个平台上寻找目标用户名。</p>
+<p>这些工具的设计目的是让营销人员能够轻松地查看他们计划注册的用户名是否在各个平台上被可用过，但它们也有助于检查您正在调查的用户名是否在其他地方也存在。显然，仅仅因为一个用户名在多个平台上注册过，并不意味着这些账户都属于同一个真实的个人，但这是一个跨平台查询的好起点。</p>
+<p>如果想进一步检查用户名，还有 haveibeenpwned.com 和 Dehashed.com 可用，这两个网站会搜索数据泄露的用户信息，可以快速验证一个电子邮件地址，并提供新的线索。</p>
+<p>照片<br>用户名并不总是足够，没有什么比照片更有说服力的了。资料照片是验证一个人在不同账户中身份的另一种方式。</p>
+<p>谷歌的反向图像搜索很好，但通常其他搜索引擎 — — 特别是俄罗斯的Yandex — — 可能会提供更好的结果。您可以使用 Reveye Chrome 扩展，它允许您右键点击图像，并在多个平台上搜索匹配的图像，包括谷歌、必应、Yandex 和 Tineye，这样会很高效。该图像搜索扩展也有一个整洁的捕获功能，允许您搜索图中图。</p>
+<p>对于反向图像搜索的不同工具对比《图像验证方法的能力对比》<br>当然，反向图像搜索也有问题。上面提到的搜索引擎在查找 Twitter 上的图片方面做得很差，而且对于从 Instagram 和 Facebook 等网站翻出的结果来说，也是毫无用处。</p>
+<p>有些时候同一个人的不同角度和不同光线下拍摄的照片可能 “判若两人”，基于照片识别特征，比如痣或面部毛发等可能会有帮助；比如 Face++ 这样的面部识别工具，它允许您上传两张照片，然后给出一个概率，关于这些照片是否属于同一个人。在实践中，该工具能够正面识别出一个人相隔10年的照片。它还能在 Twitter 和 Facebook 上的社交媒体资料照片中识别出目标人的同事和朋友。</p>
+<p>更多人脸识别搜索工具《新生情报工具（1）》；《新生情报工具（19）》<br>不要错过《针对人的追踪调查：开源情报思考方法（1）》<br>如果您在追逐调查trolls或骗子，您可能会发现他们在遮挡个人资料照片方面下了更多功夫，或者他们可能会使用假的照片。比如这里的案例《追踪网络水军团队：如何识别机器学习制造的假人脸 — 案例》。这种情况下，编辑照片和翻转照片可能会帮助逆向工程。</p>
+<p>不仅仅是个人资料照片可以成为线索。因为很多人依旧倾向于分享自己引以为傲的东西的照片。于是您可以通过 关联一辆汽车、一个房屋或一个宠物等事物的照片来识别目标人。从这个意义上说，照片成了连接账户和账户背后的人的一种手段，使您能够围绕目标建立起一个调查网络。这是调查社交媒体账户时的核心做法。</p>
+<p>例如，我们要确认一名在俄亥俄州代顿市一家酒吧外枪杀9人的男子的社交媒体账号。他的推特账号提供了他的政治意识形态的线索，但他的ID @iamthespookster 很独特，与当局公布的真名并不相像。事实上，他的受害者之一是他的亲人，一个变性人，他的名字不在公共记录中，而且还没有向公开，这使得识别关键人物的工作更加复杂。但是，在他和他家人的资料中，都有一只狗的形象出现，这只宠物狗是作为他的变性兄弟未公开的账户的横幅图片出现的。</p>
+<p>狗并不是前一张图片中唯一有用的细节。那张图片来自俄亥俄州枪手的父亲，帮助调查者核实了他的个人账户和属于他家人的账户。</p>
+<p>如果您在 Facebook 或 Twitter 上有一个账户，追踪者就可以知道您的出生日期，即使您没有在自己的个人资料上分享它或自己发布它。由于在突发事件情况下，出生日期往往是警方提供的首批识别性信息之一，因此验证社交媒体账户的可靠方法是在可疑账户上滚动到有关月份和日期，并寻找生日祝福相关的信息。即使自己的页面是空的，往往爸爸妈妈们（比如上面的 Connor Betts）也会发布关于孩子的生日。</p>
+<p>推特也是如此，因为谁不爱过生日呢？（如果您不想被追踪，还是不要在互联网上过生日比较好。在需要标注生日的地方用一个假的日期，也不要让任何认识您的人知道您的分身账户）</p>
+<p>要想在 Twitter 上要找到一个可以识别身份的帖子就更容易了，因为它的高级搜索工具是所有社交平台中提供的最好的工具之一。所有认识您的人都可能宣布您的生日，他们是好心人，但正是他们，为追踪者提供了重要线索。</p>
+<p>不要错过具体方法介绍《深挖推特：提供技巧、工具和平台》<br>《调查记者如何从社交媒体上挖掘情报？》<br>《社交网站上进行新闻收集和监视的基本指南》<br>《推特标签讲述的故事：解码秘密（8）》<br>生日只是其中一个例子。婚礼、葬礼、节日、周年纪念日、毕业典礼  — — 几乎每一个重要的人生标志都可能会在社交媒体上被庆祝。这些都为追踪和调查一个目标账户提供了机会。</p>
+<p>您还可以用 Facebook 搜索工具搜索这些关键词和通过其他过滤器，比如 whopostedwhat.com。</p>
+<p>人际关系<br>您可以通过一个人在社交媒体上的周边人来判断目标人 — — 通过考察与目标人在网上互动的人，来了解目标人的生活和倾向。</p>
+<p>任何社交媒体平台都不希望您 “孤独一人”，与您联系的人/您想要联系的人越多，这些平台就越赚钱，因为您会在此停留更长的时间，并且平台可以轻而易举获得您的关系网络 — — 也就是影响力网络，这类数据很值钱的。所以当一个人第一次注册账号的时候，平台的相关算法就会启动，受注册人手机里的联系人列表、注册人出现在哪些现有账户的联系人列表中、注册人的位置等等因素的影响，平台就会推荐此人关注一些账户。</p>
+<p>正因为这个道理，作为追踪调查，去看看目标账号<em>最早</em>的关注者和好友，总是很有启发意义的。TweetBeaver 是一个很好的工具，可以调查大型账户之间的联系，也可以下载小型账户的时间线和收藏夹等东西。对于较大的数据集，您可以依赖于一个有API访问权限的开发者。</p>
+<p>就拿 “Columbia Bugle” 来说吧，这是一个很热门的极右翼匿名推特账户，它自诩被特朗普的账号转发了两次。</p>
+<p>Max Delarge 是一个自称是 Columbia Bugle 编辑的账号，最早关注的是圣地亚哥特有的新闻来源和圣地亚哥特有的体育账号。由于 Columbia Bugle 的许多推文都包含了圣地亚哥特朗普集会和加州大学圣地亚哥分校活动的视频，所以可以推定这个账号背后的人就住在圣地亚哥附近。</p>
+<p>对于一个新的调查，您可以从目标人的 Twitter 历史开始，并在时间上向前推动。您可以在一个自动滚动器 chrome 扩展的协助下操作，或者可以使用 Twitter 的高级搜索，将时间范围限制在目标账户最初存在的前几个月。</p>
+<p>奇怪的是，此帐户的前六个月显示零推文。</p>
+<p>这说明 Columbia Bugle 背后的人可能已经删除了他之前的推文。为了找出原因，您可以调整搜索方式 —— 去寻找所有提到 Columbia Bugle 的推文，而不是该账号本身的推文。</p>
+<p>这些对话证实了 ColumbiaBugle 删除了第一年的推文，但并没有说这是为什么，而且与该账号最先互动的账号也没有提供很多线索。</p>
+<p>要想找到最近被删除的推文，可以搜索谷歌的缓存；旧的被删除的推文有时也可以在互联网档案馆的 Wayback Machine 或其他档案馆中找到。关于搜索已删除内容的方法见下面：</p>
+<p>一个综合指南《如何快速找到你想要的东西：追踪数字证据的小技巧》<br>技巧《巧用互联网，以找到您最想要的信息：搜索思维作为基本功》<br>《如何快速找到你想要的东西：追踪数字证据的小技巧》<br>手动搜索存档网站 archive.is 翻出了几条被删除的推文，显示 ColumbiaBugle 参加了一个大学生在校园里写亲特朗普的信息的活动。要查看有人可能从该账户存档的所有推文，您可以通过域名加账户名进行搜索，在账户名后使用星号，比如这样：</p>
+<p>警惕假账户<br>每个平台都有自己的特征，搜索功能和在不同新闻情况下的实用性。但对社交媒体账号要非常谨慎。有一群人以欺骗调查者为乐。尤其是在突发新闻的情况下，总会诞生一些假的账号，很多这类冒充账号都会发一些不祥的或威胁性的帖子，目的是吸引调查者，甚至操纵政治，比如下面这些：</p>
+<p>《享誉盛名的”五角大楼官员”事实上是一个假人，如何揭露”他”？（第一部分）》<br>《合谋的欺骗：虚假的五角大楼官员是如何被发明出来的？（第二部分）》<br>《一个惊人的案例：积极的反政府抗议者居然是个假人》<br>《揭露假记者：一个”深度造假”信息战的案例，提醒您旧有的验证技巧正在过时》<br>更普通的比如下面这个假的 Instagram 账号，使用了一个大规模枪击案枪手的名字，是在加州 Saugus 高中发生枪击事件后创建的。它通过推特上的截图获得了关注，但 BuzzFeed 新闻后来透露该账户并不属于真正的枪手。</p>
+<p>您应该尽可能通过各方面进行确认，而不是为了发布调查结果而匆忙相信自己的观察。</p>
+<p>最后，也许是最重要的一点是：完成这些步骤并没有一个可适用于一切状况的 “正确” 顺序。通常情况下您都会打开非常多的标签页，这并不是源于您的笨拙，但熟练后您就能更快找到最适合的路线。</p>
+<p>📌 创建一个您可以重复使用的模式/框架可能很重要，安全地记下自己的每一步发现，并在撞进死胡同后能够迅速从 “来路” 返回去，重新选择另一个方案。具体做法见《开源调查应该是一种心智》。</p>
+<p>下面是一个案例，关于在 Facebook 上追踪政府信息战。</p>
+<p>2016年秋天，投资分析师 John Victorino 给 Rappler 发来一份名单，他说有26个来自菲律宾的可疑 Facebook 账户。调查组织开始对这些账户进行监控，很快就发现他们的个人资料中列出的细节都是假的。在数周的调查过程中，这26个账户让调查者发现了一个更广泛的网页、群组和虚假账户的信息战网络。</p>
+<p>这些账户以及他们所关联的一组页面和群组，最终被 Facebook 删除。此案例还启发 Rappler 创建了 Sharktank，这是一个监测 Facebook 上信息流动情况的工具。这项工作构成了一系列关于 Facebook 上的宣传和信息操作如何影响菲律宾民主的调查报道的基础。</p>
+<p>以下是该调查组织的做法。</p>
+<p>验证身份，暴露袜子木偶<br>调查这组账户的第一步是尝试验证它们是否与真人有关。这一部分需要老式的事实核查技巧，首先创建一个电子表格来跟踪与账户相关的细节，包括他们列出的个人资料、他们点赞的页面和其他相关信息。</p>
+<p>例如，Facebook 用户 Mutya Bautista 声称自己是菲律宾最大的电视网 ABS-CBN 的 “软件分析师”。Rappler 向 ABS-CBN 核实，ABS-CBN 证实并没有此人为他们工作。</p>
+<p>使用反向图像搜索工具，发现这26个账号中很多都使用了名人或网络上搜索到的个人资料照片。</p>
+<p>例如，Bautista 使用了韩国流行音乐团体 Girl’s Generation 艺人润娥的照片。下图所示的 Lily Lopez 账户使用了韩国女星金莎朗的形象。</p>
+<p>另一个账号 Luvimin Cancio 使用了一个色情网站 softcorecams.com 上的图片作为个人资料照片。通过反向图像搜索工具 TinEye 确定该网站是照片的来源。</p>
+<p>这些帐户在个人资料上还使用了类似的封面照片。下方的 Jasmin De La Torre 帐户的封面照片与 Lily Lopez 的相同。</p>
+<p>这26个账号还有一个奇怪的地方 — — 他们所在的群组比他们的 “朋友” 还多。</p>
+<p>这很不寻常，因为在菲律宾，大多数人都有朋友和家人在国外，Facebook 基本上是人们与家人和朋友保持联系的沟通渠道。所以菲律宾用户往往拥有许多朋友，而不是成为大量群组的成员。</p>
+<p>Bautista 当时公开的朋友名单显示，她只有17个朋友。事实上在2016年发现的这26个账户中，每个账户的好友数字都不到50个。</p>
+<p>不过，Bautista 是一百多个群组的成员，包括为当时的副总统候选人小费迪南德·马科斯（Ferdinand Marcos Jr.）竞选的团体，一些海外菲律宾人的社区，以及买卖团体，每个团体的成员从几万到几十万不等。</p>
+<p>这些团体在 Facebook 上总共有230多万成员。以下是一些最大的群组列表，包括他们的粉丝数。此外，还包括 Bautista 在这些群组中发布的帖子列表。</p>
+<p>通过综合所有这些观察和相关数据，调查者得出结论，这些账户都是袜子木偶：使用虚构身份以支持特定观点。</p>
+<p>亲马科斯的网络<br>从这26个账户的第一张个人资料照片和早期帖子的相关日期可以看出，它们似乎是在2015年最后一个季度集中创建的，2016年5月就是选举。调查者还发现，这些账户一直在宣传否认1970年代马科斯政权下发生的被广泛记录的戒严法权力滥用行为的内容。这些账号还攻击这个前独裁者的儿子和副总统候选人的竞争对手。</p>
+<p>在下面的例子中，用户 Mutya Bautista 分享了一个现已被否定的说法，即 Bongbong 的竞争对手 — — 当时新宣布的副总统 Leni Robredo — — 在与她的第二任丈夫已故的内务与地方政务部长 Jesse Robredo 结婚之前，曾与一名活动家结婚。Bautista 将标题为 “Leni Robredo 在遇到 Jesse 之前，曾与一名反马科斯的人结婚？” 的帖子发布到名为 “亲马科斯国际势力” 的群组，并发表评论。</p>
+<p>另一个名字为 Raden Alfaro Payas 的可疑账户在同一天向名为 “Bongbong Marcos 忠实的 Facebook 战士” 的群组分享了同一篇文章，标题完全相同，内容一字不差，直到最后一个标点符号。</p>
+<p>虚假账号经常被用来在群组中发送垃圾链接，有时可以发现他们在发送垃圾链接时重复使用相同的文字。当时还可以使用 Facebook 图谱搜索来查看群组中用户的公开帖子。然而 Facebook 在 2019年关闭了许多图谱搜索功能，包括这个功能。解决方案见《搜人、照片、视频、位置 …… 大全：新的FB”图谱搜索”替代方案》。</p>
+<p>连接的网站<br>通过分析这些虚假账号分享的内容，能够看到这26个袜子木偶都在推广同一组网站：Okay Dito（OKD2.com）、Ask Philippines（askphilippines.com）和 why0why.com 等。</p>
+<p>OKD2.com 发布了一些骗局和其他有利于马科斯家族和总统罗德里戈·杜特尔特的宣传材料。它现在伪装成一个广告网站。但在2016年9月，调查者发现该网站的内容在 Facebook 上被分享了1.19万次，这部分要归功于该僵尸网络。</p>
+<p>通过这些网站，调查者最终追踪到了这26个账户的潜在僵尸牧民：一个名叫 Raden Alfaro Payas 的人。</p>
+<p>追踪僵尸牧民<br>OKD2.com 目前的域名注册记录是私密的。该网站也没有披露其编辑或所有者，没有任何联系信息。</p>
+<p>幸运的是，调查者能够使用历史域名记录来确定一个与该网站相关的人。使用 domaintools.com，可以看到，2015年7月，OKD2.com 是以一个叫 Raden Payas 的人的名字注册的，他是巴丹加斯州塔瑙安市的居民。追踪还发现，OKD2.com 与这26个账户所共享的其他网站，如 askphilippines.com 和 why0why.com 共享相同的谷歌 AdSense ID。</p>
+<p>通过查看这些网站上的网页源代码，并寻找一系列以字母 “ca-pub-” 开头的号码来识别这些网站的 AdSense ID。每个 Google AdSense 账户都有一个以 “ca-pub-” 开头的唯一ID，与账户链接的网站的每个页面上都会有这个代码。</p>
+<p>除了域名记录，还可以看到这26个账户中有一个叫 Raden Alfaro Payas（非官方）的账户，还发现他名下有一个用户名为 “realradenpayas” 的账号，该账号与一些僵尸账户进行了互动。</p>
+<p>例如，他评论了 Luvimin Cancio 的一篇文章，该文章链接到一篇否认马科斯统治下的戒严暴行的报道。Payas 的 “真实” 账号说，他在戒严时期上高中，他 “从未听说” 有人被杀或遭受酷刑。</p>
+<p>最后<br>这26个虚假账户及其影响力激发了调查组织创建其 Sharktank 数据库，并从公开的 Facebook 群组和页面中自动收集数据。截至2019年8月，已经跟踪了大约4万个拥有数百万粉丝的页面。</p>
+<p>起初是对一组可疑账户进行的调查，后来变成了对一个由数千个虚假和真实账户、群组和页面组成的信息战网络的持续研究，这些账户、团体和页面传播虚假信息和宣传，扭曲现实政治，削弱了一个国家的民主。⚪️</p>
+<p>—— 未完的待续 ——</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>眼魔王
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/12/30/%E6%B2%A1%E6%9C%89%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F%EF%BC%8C%E4%BD%86%E6%80%BB%E4%BC%9A%E6%9C%89%E4%B8%80%E4%BA%9B%E8%BF%B9%E8%B1%A1%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%881%EF%BC%89/" title="没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）">http://example.com/2021/12/30/没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%B0%83%E6%9F%A5/" rel="tag"># 调查</a>
+              <a href="/tags/%E8%8E%B7%E5%8F%96%E7%9C%9F%E7%9B%B8/" rel="tag"># 获取真相</a>
+              <a href="/tags/%E6%80%9D%E8%80%83/" rel="tag"># 思考</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/30/%E6%B5%8F%E8%A7%88%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E6%9B%9D%E5%85%89%E4%BD%A0%E7%9A%84%E5%86%85%E5%BF%83%E5%85%A8%E6%99%AF%E5%9B%BE%EF%BC%9A%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E6%BC%94%E7%A4%BA/" rel="prev" title="浏览历史记录曝光你的内心全景图：开源调查演示">
+      <i class="fa fa-chevron-left"></i> 浏览历史记录曝光你的内心全景图：开源调查演示
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/30/%E6%AD%A5%E6%AD%A5%E4%B8%BA%E8%90%A5%E6%B3%95%EF%BC%8C%E8%BD%BB%E6%9D%BE%E6%94%B9%E5%8F%98%E4%BB%96%E4%BA%BA%E7%9A%84%E8%A7%82%E7%82%B9%EF%BC%9A%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E8%AE%A9%E4%BD%A0%E6%83%B3%E7%9A%84%E4%BA%8B%EF%BC%887%EF%BC%89/" rel="next" title="步步为营法，轻松改变他人的观点：让你只想到我让你想的事（7）">
+      步步为营法，轻松改变他人的观点：让你只想到我让你想的事（7） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B2%A1%E6%9C%89%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F%EF%BC%8C%E4%BD%86%E6%80%BB%E4%BC%9A%E6%9C%89%E4%B8%80%E4%BA%9B%E8%BF%B9%E8%B1%A1%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%881%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">#没有固定模式，但总会有一些迹象：从追踪到验证的思考方式（1）</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">242</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
