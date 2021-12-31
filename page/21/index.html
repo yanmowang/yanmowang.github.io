@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
@@ -101,6 +101,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -135,11 +136,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -1127,7 +1155,7 @@
 <p>对过去几年来的无数次重大侵犯行为的解析结论是显而易见的：攻击者追逐的是用户和零日。即使粗略地浏览一下暗网，也可以看出，信誉良好的消息来源和那些寻求攻击的人提供的 Zero Day bug 奖金之间的差距是多么的巨大，详见《可怜正义没有钱》。然而，凭据的攻击能力更强大，来得更容易，可怕的是，组织和团体仍然没有能教会他们的成员安全使用互联网的习惯。</p>
 <p>任何威胁组织的社交工程部门人员通常都是通过监视人们在 Facebook，LinkedIn，Instagram 和其他社交平台上定期分享的信息，来找到他们所需要的东西的。这有助于他们制定针对性的和精确的攻击。你真的不用指望那些企业能关心你的安全。</p>
 <p>你应该知道，这一间谍步骤的执行速度究竟有多快。</p>
-<p>只需在 LinkedIn 上找到一个指定联系人的组织。然后交叉引用 Facebook 或 Instagram 或 WeChat 或微博上的个人资料，在那里，很容易利用宽松的隐私设置来收集到有关出生日期、亲属姓名、宠物、休闲时光甚至具体地点的信息。然后发送武器化的<a href="mailto:&#110;&#x61;&#x6d;&#101;&#46;&#115;&#x75;&#x72;&#110;&#x61;&#x6d;&#x65;&#64;&#116;&#x61;&#114;&#x67;&#x65;&#x74;&#x6f;&#x72;&#x67;&#46;&#99;&#111;&#109;">&#110;&#x61;&#x6d;&#101;&#46;&#115;&#x75;&#x72;&#110;&#x61;&#x6d;&#x65;&#64;&#116;&#x61;&#114;&#x67;&#x65;&#x74;&#x6f;&#x72;&#x67;&#46;&#99;&#111;&#109;</a> 来发动攻击。假设已经构建了有效载荷，则针对每个目标的整个过程大约只需要十分钟。</p>
+<p>只需在 LinkedIn 上找到一个指定联系人的组织。然后交叉引用 Facebook 或 Instagram 或 WeChat 或微博上的个人资料，在那里，很容易利用宽松的隐私设置来收集到有关出生日期、亲属姓名、宠物、休闲时光甚至具体地点的信息。然后发送武器化的<a href="mailto:&#x6e;&#x61;&#109;&#101;&#46;&#115;&#x75;&#114;&#x6e;&#x61;&#x6d;&#101;&#64;&#116;&#97;&#x72;&#x67;&#x65;&#x74;&#111;&#114;&#103;&#x2e;&#99;&#x6f;&#x6d;">&#x6e;&#x61;&#109;&#101;&#46;&#115;&#x75;&#114;&#x6e;&#x61;&#x6d;&#101;&#64;&#116;&#97;&#x72;&#x67;&#x65;&#x74;&#111;&#114;&#103;&#x2e;&#99;&#x6f;&#x6d;</a> 来发动攻击。假设已经构建了有效载荷，则针对每个目标的整个过程大约只需要十分钟。</p>
 <p>惊人的效率，并具有惊人的高命中率。</p>
 <p>随着用户越来越多地将自己的个人生活细节在越来越“不卫生”的社交网络上更加充分地暴露，组织和团队需要认识到，这会带来真正的危险。</p>
 <p>至今仍然只有很少的用户知道 Facebook 等应用程序中最基本的隐私设置，或者面向公众的个人资料图片可以产生有关个人的有价值信息有如此高危险性的概念。这是更大的恐怖。</p>
@@ -1411,6 +1439,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

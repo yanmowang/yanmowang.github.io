@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="侦查和欺骗：这里是社交工程攻击必备的技术工具反抗绝不是简单的异议，反抗需要充分的知识技能、高超的心智和实战经验此前我们已经做过多次攻击演示，足够说明一些微小的细节性疏忽都会导致严重的后果，如果遇到高手的话，那是防不胜防的。人性弱点具有极高的可利用性，但除了不断警告这些可能的威胁之外别无他法。而多数人尚且没有遭遇到社交工程攻击的高手，于是很难体验到这些警告意味着什么，直到中招，为时已晚。 社交工程学">
@@ -106,6 +106,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -140,11 +141,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -321,7 +349,7 @@
 <p>2、CeWL</p>
 <p>其开发者的描述是，CeWL 是一个 Ruby 应用程序，它可以通过给定的 URL 进行指定深度的搜索，并可扩展到外部链接，最终生成一个可用于密码破解的字典文件，John the Ripper 等密码破解工具可以使用这个字典进行密码破解。有关 CeWL 的更多资料可以在这里找到：<a target="_blank" rel="noopener" href="http://www.digininja.org/projects/cewl.php">www.digininja.org/projects/cewl.php</a></p>
 <p>下面看一下在 BackTrack4 中使用的情况。</p>
-<p>root@bt:/pentest/passwords/cewl# ruby cewl.rb<br>— help cewl 3.0 Robin Wood (<a href="mailto:&#x64;&#110;&#x69;&#x6e;&#x6a;&#x61;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;">&#x64;&#110;&#x69;&#x6e;&#x6a;&#x61;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;</a>)<br>(<a target="_blank" rel="noopener" href="http://www.digininja.org/">www.digininja.org</a>)<br>Usage: cewl [OPTION] … URL — help, -h: show help — depth x, -d x: depth to spider to,<br>default 2 — min_word_length, -m: minimum word length, default 3 — offsite, -o: let the<br>spider visit other sites — write, -w file: write the output to the file — ua, -u user-<br>agent: useragent to send — no-words, -n: don’t output the wordlist — meta, -a file:<br>include meta data, optional output file — email, -e file: include email addresses,<br>optional output file — meta-temp-dir directory: the temporary directory,default /tmp -v:<br>verbose URL: The site to spider.<br>root@bt:/pentest/passwords/cewl# ./cewl.rb -d 1 -w pass.txt <a target="_blank" rel="noopener" href="http://www.targetcompany.com/about.php">http://www.targetcompany.com/about.php</a><br>root@bt:/pentest/passwords/cewl# cat passwords.txt |wc -l 430<br>root@bt:/pentest/passwords/cewl#<br>这是针对某个目标公司网站使用 CeWL 的案例，从其网站的一个网页中产生了430个可能的密码。</p>
+<p>root@bt:/pentest/passwords/cewl# ruby cewl.rb<br>— help cewl 3.0 Robin Wood (<a href="mailto:&#100;&#110;&#x69;&#110;&#106;&#x61;&#x40;&#103;&#109;&#97;&#x69;&#108;&#46;&#99;&#111;&#109;">&#100;&#110;&#x69;&#110;&#106;&#x61;&#x40;&#103;&#109;&#97;&#x69;&#108;&#46;&#99;&#111;&#109;</a>)<br>(<a target="_blank" rel="noopener" href="http://www.digininja.org/">www.digininja.org</a>)<br>Usage: cewl [OPTION] … URL — help, -h: show help — depth x, -d x: depth to spider to,<br>default 2 — min_word_length, -m: minimum word length, default 3 — offsite, -o: let the<br>spider visit other sites — write, -w file: write the output to the file — ua, -u user-<br>agent: useragent to send — no-words, -n: don’t output the wordlist — meta, -a file:<br>include meta data, optional output file — email, -e file: include email addresses,<br>optional output file — meta-temp-dir directory: the temporary directory,default /tmp -v:<br>verbose URL: The site to spider.<br>root@bt:/pentest/passwords/cewl# ./cewl.rb -d 1 -w pass.txt <a target="_blank" rel="noopener" href="http://www.targetcompany.com/about.php">http://www.targetcompany.com/about.php</a><br>root@bt:/pentest/passwords/cewl# cat passwords.txt |wc -l 430<br>root@bt:/pentest/passwords/cewl#<br>这是针对某个目标公司网站使用 CeWL 的案例，从其网站的一个网页中产生了430个可能的密码。</p>
 <p>CUPP 和 CeWL 只是用来帮助分析和生成潜在密码的诸多工具中的两个。你可以运用这些工具做一个有趣的实验，输入自己的信息，看看你的密码是否能够被生成。能够帮你清楚地认识到密码安全的重要性。</p>
 <p>总结</p>
 <p>正所谓“好马配好鞍，良将配宝刀”，技术工具是社交工程的重要方面，掌握工具的功能并且能熟练使用它们就是决胜的关键。</p>
@@ -528,6 +556,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

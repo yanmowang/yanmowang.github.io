@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="💎 超级情报收集工具库：开源验证和调查工具及使用方法欢迎来到免费提供的数字工具和方法列表～ 用于我们的信息验证和开源情报研究 #OSINT。工具很重要，它们能让您的智慧得到更充分的发挥。技术是强大的实力，正义的公民力量完全可以取代那些不专业的“媒体”。一起来，挖掘真相！ 该列表包括卫星和地图服务、用于验证照片和视频的工具、用于存档超链接的网站等等，以及很多“小邪恶”的技术。名单有点长，但是，后面">
@@ -106,6 +106,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -140,11 +141,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -227,7 +255,7 @@
 <p>DigitalGlobe：卫星图像供应商。通过 catalogus 预览，非常容易使用的搜索工具；</p>
 <p>DualMaps：将 Google 的路线图、鸟瞰图和街景视图结合在一个嵌入式工具中。探照灯一般；</p>
 <p>EarthExplorer：来自美国地质局。主要提供美国图像。提供对 Landsat 卫星数据以及 NASA 土地数据产品和服务的访问。 USGS 全球可视化查看器（GloVis）提供遥感数据。USGS 档案包含完整且维护良好的 NASA Landsat 数据集。</p>
-<p>EOS Landviewer：EOS Landviewer 提供最多 10 张图片的免费服务。更多图像和分析以折扣价提供给记者。联系方式：Artem Seredyuk <a href="mailto:&#x61;&#114;&#116;&#x65;&#109;&#x2e;&#x73;&#101;&#114;&#101;&#100;&#x79;&#117;&#x6b;&#x40;&#101;&#111;&#x73;&#x64;&#x61;&#x2e;&#x63;&#111;&#x6d;">&#x61;&#114;&#116;&#x65;&#109;&#x2e;&#x73;&#101;&#114;&#101;&#100;&#x79;&#117;&#x6b;&#x40;&#101;&#111;&#x73;&#x64;&#x61;&#x2e;&#x63;&#111;&#x6d;</a>。 EOS 正在开发一项暂时被称为 EOS Media 的服务，该服务将提供免费图像和主要自然灾害分析。</p>
+<p>EOS Landviewer：EOS Landviewer 提供最多 10 张图片的免费服务。更多图像和分析以折扣价提供给记者。联系方式：Artem Seredyuk <a href="mailto:&#x61;&#114;&#116;&#x65;&#109;&#46;&#115;&#x65;&#114;&#101;&#x64;&#x79;&#117;&#x6b;&#x40;&#x65;&#111;&#115;&#x64;&#97;&#46;&#99;&#111;&#109;">&#x61;&#114;&#116;&#x65;&#109;&#46;&#115;&#x65;&#114;&#101;&#x64;&#x79;&#117;&#x6b;&#x40;&#x65;&#111;&#115;&#x64;&#97;&#46;&#99;&#111;&#109;</a>。 EOS 正在开发一项暂时被称为 EOS Media 的服务，该服务将提供免费图像和主要自然灾害分析。</p>
 <p>ESA Earth Online：整合欧洲航天局关于温度、农业和冰盖等主题的地球观测数据。</p>
 <p>find2places：允许在给定半径内以精确的距离查询两个特定位置的 Google Maps API。用于地理定位照片和视频。这是个脚本，用户界面还不那么好看。关联我们的文章《用于信息验证的基本地理定位工具》</p>
 <p>Geograph：地理配准图像。</p>
@@ -580,6 +608,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

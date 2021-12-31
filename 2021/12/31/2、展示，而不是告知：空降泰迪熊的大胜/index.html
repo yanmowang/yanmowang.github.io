@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="2、展示，而不是告知：空降泰迪熊的大胜欢迎来到知识点栏目！今天将继续探讨行动主义的小技巧和一些相关问题。先回顾一下本系列曾经发布过的内容： 当压倒性的国家镇压使标准异议成为不可能时，你需要找到使普通行为具有颠覆性的方法《如果抗议是非法的，那就让日常生活成为抗议》愤怒是有力的。但要明智地使用它。如果你能占领道德制高点，愤怒才能是引人注目的，人们会加入你。如果你不这样做，你的愤怒会看起来像自以为是的歇">
@@ -106,6 +106,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -140,11 +141,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -337,8 +365,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/12/31/3%E3%80%81%E6%98%8E%E6%99%BA%E5%9C%B0%E9%80%89%E6%8B%A9%E4%BD%A0%E7%9A%84%E7%9B%AE%E6%A0%87%EF%BC%9A%E7%BB%98%E5%88%B6%E6%9D%83%E5%8A%9B%E5%9C%B0%E5%9B%BE/" rel="prev" title="3、明智地选择你的目标：绘制权力地图">
-      <i class="fa fa-chevron-left"></i> 3、明智地选择你的目标：绘制权力地图
+    <a href="/2021/12/31/3%E3%80%81%E6%A1%86%E6%9E%B6%E6%98%AF%E4%B8%80%E7%A7%8D%E6%9D%83%E5%8A%9B/" rel="prev" title="3、框架是一种权力">
+      <i class="fa fa-chevron-left"></i> 3、框架是一种权力
     </a></div>
       <div class="post-nav-item">
     <a href="/2021/12/31/2%E3%80%81%E5%88%86%E5%B8%83%E5%BC%8F%E8%A1%8C%E5%8A%A8%E7%9A%84%E8%A1%97%E5%A4%B4%E6%B4%BE%E5%AF%B9/" rel="next" title="分布式行动的街头派对">
@@ -499,6 +527,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

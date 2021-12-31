@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
@@ -101,6 +101,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -135,11 +136,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -158,6 +186,116 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/31/3%E3%80%81%E6%A1%86%E6%9E%B6%E6%98%AF%E4%B8%80%E7%A7%8D%E6%9D%83%E5%8A%9B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/31/3%E3%80%81%E6%A1%86%E6%9E%B6%E6%98%AF%E4%B8%80%E7%A7%8D%E6%9D%83%E5%8A%9B/" class="post-title-link" itemprop="url">3、框架是一种权力</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-31 23:38:08" itemprop="dateCreated datePublished" datetime="2021-12-31T23:38:08+08:00">2021-12-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-30 22:26:52" itemprop="dateModified" datetime="2021-12-30T22:26:52+08:00">2021-12-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B3%E4%BA%8E%E5%85%AC%E6%B0%91%E7%A4%BE%E4%BC%9A%E5%92%8C%E5%8F%8D%E6%8A%97/" itemprop="url" rel="index"><span itemprop="name">关于公民社会和反抗</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="3、框架是一种权力"><a href="#3、框架是一种权力" class="headerlink" title="3、框架是一种权力"></a>3、框架是一种权力</h1><p>欢迎来到知识点栏目！今天将继续探讨社会运动的小技巧和原理。</p>
+<p>这是导读部分：</p>
+<p>“问题不在于夺取权力，而在于行使权力。” ——《共识只是手段而不是目的》；<br>“展示运动的广度、多样性和力量；你不需要把队友集中在同一个大目标上” ——《分布式行动的街头派对》；<br>“关于框架有一个基本的事实：如果你接受了别人的框架，你就输了” —— 《框架是一种权力》；<br>“你永远不可能仅仅通过对抗现有的现实来改变这一切。要改变某些东西，你必须建立一个新的模型，使现有模型过时” —— 《预设性干预战术》</p>
+<p>“关于框架有一个基本的事实：如果你接受了别人的框架，你就输了” —— George Lakoff </p>
+<p>还记得我们在《互联网霸主的时间线》那篇长报告中一开始所阐述的问题吗？没错：叙事。也就是讲故事。这非常重要。</p>
+<p>人类本身实际上是用叙事连接起来的。</p>
+<p>故事是我们生活的线索，是故事把人们编织在一起，形成人类文化的结构。</p>
+<p>故事可以是立即通知、也或者是欺骗，可以是启发、也或者是娱乐，再或者是所有上述这一切。我们生活在一个由故事塑造的世界中。</p>
+<p>传统的分析使组织者和活动家能够理解关键目标决策者和盟友之间的权力关系和制度动态。</p>
+<p>叙事分析则提供了一个框架，将权力分析扩展到叙事空间 —— 故事、思想和假设的无形领域，构成公众对情况和有关参与者的看法。</p>
+<p>叙事有助于定义什么是正常的，什么是合理的，以及政治上可能的限制。所有权力关系都有这样一个叙事组成部分。</p>
+<p>💡叙事的基础是认识到故事的价值不在于真理，而在于意义。</p>
+<p>也就是说，故事的强大之处在于，故事如何在听众的心灵和思想中创造意义。</p>
+<p>如你所知，说服人们的障碍通常不是由于他们尚不知道什么，而是他们已经知道的却没能理解的。</p>
+<p>换句话说，人们现有的假设和信念在充当叙事的过滤器，以防止他们去<em>理解</em>社会变化的信息。</p>
+<p>就如大多数人都知道“我的TL”和“他的TL”不一样，于是“我眼中的热点”和“他眼中的热点”不一样；这就是算法专制，但是，也正是大多数人依旧在假设这个互联网是信息自由的、或者干脆说依赖这个互联网带来信息自由，于是他们会下意识地拒绝去<em>理解</em>什么是算法专制。</p>
+<p>叙事权力分析旨在挖掘这些有害叙事的隐藏阻塞，以便解放性叙述可以更好地挑战它们。</p>
+<p>💡简单说，你的叙述不仅需要能挑战所面临的经济和政治力量，而且，还应该挑战支持这些力量的叙述 ——这种叙述自我合法化并允许构建它的权力发挥威胁性。</p>
+<p>目前的现实往往植根于压迫性叙事。作为变革推动者的角色就是要破坏这些叙述，并用有助于建立一个更公平、更自由的世界的新叙事取而代之。</p>
+<p>叙事最重要的是框架。</p>
+<p>赢得辩论的最简单方法是由你来定义辩论条款。</p>
+<p>重构是通过加宽框架、缩小框架或将框架完全移动到另一个场景，来用新的故事替换旧故事的过程。</p>
+<p>当权者通常会以一种有利于他们利益的方式来制定他们的议程；你要做的就是打破他们的框架。</p>
+<p>就像相机的取景器一样，叙事的框架将公众聚焦于反映制定者利益的特定信息上。</p>
+<p>如何重新定义一个问题？第一步就是进行叙事权力分析，寻求确定对手的基本假设 —— 例如 “这是独一无二的”、“天下的天鹅都是白色的”、“C 国是世界上最伟大的国家”……</p>
+<p>根据你的叙事权力分析，提出另一个揭露错误假设的故事。</p>
+<p>⚠️重构通常包括通过突出显示故事中已被排除在主线之外的方面来使隐藏的部分变为可见。</p>
+<p>接下来，设计一个重新定位故事的重构动作。将公众的注意力转移到犯罪现场，以揭露一个恶行。</p>
+<p>使用与历史叙事相关的标志性位置，例如纪念碑或公园，其名称在故事中很重要；将您的行动与即将备受关注的高调活动或重要日期联系起来，构建并预示围绕这些庆祝活动的公众对话。</p>
+<p>“重要日期”甚至可以不是传统的，只要它是大众所熟知的 —— ⚠️请注意，是大众而不是小众，不能将反对派群体自己的“重要日期”理解为大众。</p>
+<p>如果您希望将重构行动扩展为一场运动，您可能会成功地将强大的新 meme 注入到媒体和政策语话中。芝加哥 Arise Workers Center 的 Adam Kader 提供了这样一个例子：</p>
+<p>像劳工部和主流媒体这样的机构将剥削工人的现象称为“不支付工资”。</p>
+<p>但是，工人中心设计了“工资盗窃”的 meme，直接推翻了主导假设，即：工资是老板的财产，它只是在与工人分享。</p>
+<p>相反，在这个新的叙述中，工资被强调是工人的财产，并且被老板偷走了。</p>
+<p>这是一个成功的反击性叙事。</p>
+<p>⚠️想想看，中国当局一直将可怕的社交媒体情报描述为“舆情分析”，暗示权势在通过社交媒体“了解民意”，事实上这是监视，只有“情报”的叙述才能体现出挖掘和操纵的阴暗。然而包括知识分子在内的几乎所有人都在沿用当权者的叙述 —— 依附于对手的框架，导致大众一直对这种明目张胆的监视不以为然。</p>
+<p>现实中有很多这样的例子，活动家们应该努力开发它们，争取更全面地夺取叙事框架的权力。⚪️</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -278,116 +416,6 @@
 <p>在关键的行动中，随着权力转移或您得到的情报更加充分，请根据需要重新审视和修改这些图。</p>
 <p>你会知道在什么时候需要修改。</p>
 <p>鉴于您所知道的原因，本工具无法切实举例说明；但是它已经足够清晰，您完全可以在实际行动策划中套用。好运</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/31/3%E3%80%81%E6%A1%86%E6%9E%B6%E6%98%AF%E4%B8%80%E7%A7%8D%E6%9D%83%E5%8A%9B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="眼魔王">
-      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="眼魔王">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/31/3%E3%80%81%E6%A1%86%E6%9E%B6%E6%98%AF%E4%B8%80%E7%A7%8D%E6%9D%83%E5%8A%9B/" class="post-title-link" itemprop="url">3、框架是一种权力</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-31 23:38:08" itemprop="dateCreated datePublished" datetime="2021-12-31T23:38:08+08:00">2021-12-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-30 22:26:52" itemprop="dateModified" datetime="2021-12-30T22:26:52+08:00">2021-12-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B3%E4%BA%8E%E5%85%AC%E6%B0%91%E7%A4%BE%E4%BC%9A%E5%92%8C%E5%8F%8D%E6%8A%97/" itemprop="url" rel="index"><span itemprop="name">关于公民社会和反抗</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="3、框架是一种权力"><a href="#3、框架是一种权力" class="headerlink" title="3、框架是一种权力"></a>3、框架是一种权力</h1><p>欢迎来到知识点栏目！今天将继续探讨社会运动的小技巧和原理。</p>
-<p>这是导读部分：</p>
-<p>“问题不在于夺取权力，而在于行使权力。” ——《共识只是手段而不是目的》；<br>“展示运动的广度、多样性和力量；你不需要把队友集中在同一个大目标上” ——《分布式行动的街头派对》；<br>“关于框架有一个基本的事实：如果你接受了别人的框架，你就输了” —— 《框架是一种权力》；<br>“你永远不可能仅仅通过对抗现有的现实来改变这一切。要改变某些东西，你必须建立一个新的模型，使现有模型过时” —— 《预设性干预战术》</p>
-<p>“关于框架有一个基本的事实：如果你接受了别人的框架，你就输了” —— George Lakoff </p>
-<p>还记得我们在《互联网霸主的时间线》那篇长报告中一开始所阐述的问题吗？没错：叙事。也就是讲故事。这非常重要。</p>
-<p>人类本身实际上是用叙事连接起来的。</p>
-<p>故事是我们生活的线索，是故事把人们编织在一起，形成人类文化的结构。</p>
-<p>故事可以是立即通知、也或者是欺骗，可以是启发、也或者是娱乐，再或者是所有上述这一切。我们生活在一个由故事塑造的世界中。</p>
-<p>传统的分析使组织者和活动家能够理解关键目标决策者和盟友之间的权力关系和制度动态。</p>
-<p>叙事分析则提供了一个框架，将权力分析扩展到叙事空间 —— 故事、思想和假设的无形领域，构成公众对情况和有关参与者的看法。</p>
-<p>叙事有助于定义什么是正常的，什么是合理的，以及政治上可能的限制。所有权力关系都有这样一个叙事组成部分。</p>
-<p>💡叙事的基础是认识到故事的价值不在于真理，而在于意义。</p>
-<p>也就是说，故事的强大之处在于，故事如何在听众的心灵和思想中创造意义。</p>
-<p>如你所知，说服人们的障碍通常不是由于他们尚不知道什么，而是他们已经知道的却没能理解的。</p>
-<p>换句话说，人们现有的假设和信念在充当叙事的过滤器，以防止他们去<em>理解</em>社会变化的信息。</p>
-<p>就如大多数人都知道“我的TL”和“他的TL”不一样，于是“我眼中的热点”和“他眼中的热点”不一样；这就是算法专制，但是，也正是大多数人依旧在假设这个互联网是信息自由的、或者干脆说依赖这个互联网带来信息自由，于是他们会下意识地拒绝去<em>理解</em>什么是算法专制。</p>
-<p>叙事权力分析旨在挖掘这些有害叙事的隐藏阻塞，以便解放性叙述可以更好地挑战它们。</p>
-<p>💡简单说，你的叙述不仅需要能挑战所面临的经济和政治力量，而且，还应该挑战支持这些力量的叙述 ——这种叙述自我合法化并允许构建它的权力发挥威胁性。</p>
-<p>目前的现实往往植根于压迫性叙事。作为变革推动者的角色就是要破坏这些叙述，并用有助于建立一个更公平、更自由的世界的新叙事取而代之。</p>
-<p>叙事最重要的是框架。</p>
-<p>赢得辩论的最简单方法是由你来定义辩论条款。</p>
-<p>重构是通过加宽框架、缩小框架或将框架完全移动到另一个场景，来用新的故事替换旧故事的过程。</p>
-<p>当权者通常会以一种有利于他们利益的方式来制定他们的议程；你要做的就是打破他们的框架。</p>
-<p>就像相机的取景器一样，叙事的框架将公众聚焦于反映制定者利益的特定信息上。</p>
-<p>如何重新定义一个问题？第一步就是进行叙事权力分析，寻求确定对手的基本假设 —— 例如 “这是独一无二的”、“天下的天鹅都是白色的”、“C 国是世界上最伟大的国家”……</p>
-<p>根据你的叙事权力分析，提出另一个揭露错误假设的故事。</p>
-<p>⚠️重构通常包括通过突出显示故事中已被排除在主线之外的方面来使隐藏的部分变为可见。</p>
-<p>接下来，设计一个重新定位故事的重构动作。将公众的注意力转移到犯罪现场，以揭露一个恶行。</p>
-<p>使用与历史叙事相关的标志性位置，例如纪念碑或公园，其名称在故事中很重要；将您的行动与即将备受关注的高调活动或重要日期联系起来，构建并预示围绕这些庆祝活动的公众对话。</p>
-<p>“重要日期”甚至可以不是传统的，只要它是大众所熟知的 —— ⚠️请注意，是大众而不是小众，不能将反对派群体自己的“重要日期”理解为大众。</p>
-<p>如果您希望将重构行动扩展为一场运动，您可能会成功地将强大的新 meme 注入到媒体和政策语话中。芝加哥 Arise Workers Center 的 Adam Kader 提供了这样一个例子：</p>
-<p>像劳工部和主流媒体这样的机构将剥削工人的现象称为“不支付工资”。</p>
-<p>但是，工人中心设计了“工资盗窃”的 meme，直接推翻了主导假设，即：工资是老板的财产，它只是在与工人分享。</p>
-<p>相反，在这个新的叙述中，工资被强调是工人的财产，并且被老板偷走了。</p>
-<p>这是一个成功的反击性叙事。</p>
-<p>⚠️想想看，中国当局一直将可怕的社交媒体情报描述为“舆情分析”，暗示权势在通过社交媒体“了解民意”，事实上这是监视，只有“情报”的叙述才能体现出挖掘和操纵的阴暗。然而包括知识分子在内的几乎所有人都在沿用当权者的叙述 —— 依附于对手的框架，导致大众一直对这种明目张胆的监视不以为然。</p>
-<p>现实中有很多这样的例子，活动家们应该努力开发它们，争取更全面地夺取叙事框架的权力。⚪️</p>
 
       
     </div>
@@ -1694,6 +1722,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
