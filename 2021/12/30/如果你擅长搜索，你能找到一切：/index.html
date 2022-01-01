@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="如果你擅长搜索，你能找到一切：没有谷歌的强大搜索世界本手册是 OSINT 工具包，请将其用于正义的目的这是高信息技术和社交网络的数字化的时代。 有人喜欢它，有人不喜欢，有人试图隐藏真实身份信息，不会出现在任何社交网络中、删除所有密码和注册。想要做到这点正在变得越来越难。 然而，事实上，您可以使用 OSINT 技术找到有关每个用户的任何信息，这一事实首先得到了20世纪50年代美国间谍机构的公开证实。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如果你擅长搜索，你能找到一切：*没有谷歌*的强大搜索世界">
+<meta property="og:url" content="http://example.com/2021/12/30/%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%93%85%E9%95%BF%E6%90%9C%E7%B4%A2%EF%BC%8C%E4%BD%A0%E8%83%BD%E6%89%BE%E5%88%B0%E4%B8%80%E5%88%87%EF%BC%9A/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="如果你擅长搜索，你能找到一切：没有谷歌的强大搜索世界本手册是 OSINT 工具包，请将其用于正义的目的这是高信息技术和社交网络的数字化的时代。 有人喜欢它，有人不喜欢，有人试图隐藏真实身份信息，不会出现在任何社交网络中、删除所有密码和注册。想要做到这点正在变得越来越难。 然而，事实上，您可以使用 OSINT 技术找到有关每个用户的任何信息，这一事实首先得到了20世纪50年代美国间谍机构的公开证实。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-30T15:38:08.000Z">
+<meta property="article:modified_time" content="2021-12-30T11:17:47.100Z">
+<meta property="article:author" content="眼魔王">
+<meta property="article:tag" content="调查">
+<meta property="article:tag" content="获取真相">
+<meta property="article:tag" content="思考">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/12/30/%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%93%85%E9%95%BF%E6%90%9C%E7%B4%A2%EF%BC%8C%E4%BD%A0%E8%83%BD%E6%89%BE%E5%88%B0%E4%B8%80%E5%88%87%EF%BC%9A/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>如果你擅长搜索，你能找到一切：*没有谷歌*的强大搜索世界 | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%93%85%E9%95%BF%E6%90%9C%E7%B4%A2%EF%BC%8C%E4%BD%A0%E8%83%BD%E6%89%BE%E5%88%B0%E4%B8%80%E5%88%87%EF%BC%9A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如果你擅长搜索，你能找到一切：*没有谷歌*的强大搜索世界
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：19:17:47" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="如果你擅长搜索，你能找到一切：没有谷歌的强大搜索世界"><a href="#如果你擅长搜索，你能找到一切：没有谷歌的强大搜索世界" class="headerlink" title="如果你擅长搜索，你能找到一切：没有谷歌的强大搜索世界"></a>如果你擅长搜索，你能找到一切：<em>没有谷歌</em>的强大搜索世界</h1><p>本手册是 OSINT 工具包，请将其用于正义的目的<br>这是高信息技术和社交网络的数字化的时代。</p>
+<p>有人喜欢它，有人不喜欢，有人试图隐藏真实身份信息，不会出现在任何社交网络中、删除所有密码和注册。想要做到这点正在变得越来越难。</p>
+<p>然而，事实上，您可以使用 OSINT 技术找到有关每个用户的任何信息，这一事实首先得到了20世纪50年代美国间谍机构的公开证实。</p>
+<p>今天的互联网速度更快了、更容易获得想要的东西。正如您所知，你可以找到几乎一切 —— 只要您擅长搜索。</p>
+<p>但最重要的问题是，它还给我们带来了什么 —— 好处还是麻烦？</p>
+<p>毕竟，事实证明，我们没有多少选择的权利，也没有机会在网络中被忽视。甚至一个孩子都可以应对“电话号码搜索”这样的简单任务。</p>
+<p>每年 OSINT 技术的可能性都会快速增长、并变得真正无限！</p>
+<p>⚠️想想普通用户在互联网上都干了什么。你就能知道 OSINT 可以多强大。</p>
+<p>以下是 Domo Data Never Sleeps 5.0 的统计数据，<em>仅仅</em>每分钟 —— 请注意是每分钟：</p>
+<p>– Snapchat 发布 527,760 张照片;<br>– 超过 120 位专业人士加入领英;<br>– YouTube 用户正在观看 4,146,600 个视频;<br>– 向 Twitter 发送了 456,000 条推文;<br>– Instagram 上有 46,740 张新照片出现 ……</p>
+<p>是每分钟。而且仅仅是社交媒体。</p>
+<p>然后还有电子邮件、在线支付、数百个热门应用程序、云存储、工作站点和服务等等，这使得开源调查可以在搜索和处理任何信息方面拥有无限的可能性。</p>
+<p>但是，人们尚未完全考虑搜索引擎的吸引力 —— 全球每天50亿的最新数据！</p>
+<p>⚠️ 普通的网络搜索和 OSINT 技术之间的主要区别在于方法的深度、以及各种方法和算法的可用性。</p>
+<p>这些方法和算法可以帮助我们实现任何任务：检测网络上用户的数字足迹、进行深度调查、追踪其数字关系链……</p>
+<p>可以根据搜索任务和您拥有的初始数据使用它们。</p>
+<p>1.确定您拥有的源信息（照片、姓名、电子邮件地址、电话号码等）；<br>2.确定您想要了解的最终目标；<br>3.借助某些服务收集网络信息；<br>4.分析和反向查找收到的信息；<br>5.使用新接收的数据返回搜索；<br>6.确认假设、或获得新假设。</p>
+<p>OSINT 技术与互联网上的简单搜索有何不同？</p>
+<p>💡不同在于：普通的搜索将在 OSINT 功能刚刚开始的地方结束。</p>
+<p>对于 OSINT 技术，没有统一的方法和模式化的调查算法，每个案例都是独特的，需要一个单独的方法。也就是说需要您的经验+创造力。</p>
+<p>这不是能够通过讲座传授的。</p>
+<p>💡 您需要不断参考成功的演示案例、积极研究新工具的使用技巧、以及最重要的是，不断尝试挑战自己。</p>
+<p>在这里看到工具箱《超级情报收集工具库：开源验证和调查工具及使用方法》；在我们的 OSINT 栏目看到很多操作案例演示《OSINT》—— 不断更新中。</p>
+<p>get到思考方式很重要，而不是工具，思考方式能帮助您知道什么时候使用什么工具是最好的。</p>
+<p>本文只介绍搜索引擎。也就是贯穿 OSINT 的一条主线。</p>
+<p>搜索引擎不一定是谷歌，虽然谷歌的确很强大，但需要根据您的调查目标，选取最适合的搜索引擎 —— 尤其是，⚠️如果您的调查内容非常敏感，您肯定不会希望在调查结论实现变革目标之前被当局抓到。</p>
+<p>也就是说，隐蔽性是您首先应该考虑的内容。</p>
+<p>本手册将把隐私放在第一个。</p>
+<p>面向隐私的搜索引擎</p>
+<p>什么是“面向隐私”：意思是它们不会出卖你，不会记录你的动作，也没有什么可以提供给警察和间谍的。至少是这样承诺的。</p>
+<p>DuckDuckGo：在线调查人的常用，在Tor浏览器搜索。<br>Startpage：从 Google 获取结果但是不跟踪其用户。<br>Peekier：面向隐私的搜索引擎，使用自己的搜索算法获取结果。<br>Qwant：总部设在法国的家伙。<br>Oscobo：总部设在英国家伙。<br>Swisscows：瑞士的隐私安全 WEB 搜索。<br>Privatelee：私密搜索网络和图像。<br>Gigablast：开源的搜索引擎。<br>Gibiru：未经审查的匿名搜索引擎。<br>元搜索引擎</p>
+<p>什么是元搜索引擎：元搜索引擎又称集合型搜索引擎，将多个单一搜索引擎集成在一起，提供统一的检索界面，将用户的检索提问同时提交给多个独立的搜索引擎，同时检索多个数据库；并根据多个独立搜索引擎的检索结果进行二次加工，如对检索结果去重复、排序等。</p>
+<p>Excite<br>Search<br>MetaGer<br>Zapmeta<br>etools: 汇总主要国际搜索引擎的结果，不收集不共享其用户的个人信息，保护用户隐私。此搜索引擎非常快，并显示每个搜索查询的摘要 —— 在右侧 —— 详细说明其结果的来源。<br>All the interne: 查询主要搜索引擎，包括亚马逊和eBay等购物网站。<br>izito: 汇总来自多个来源（Yahoo，Bing，Wikipedia，YouTube 和其他网点）的数据，以生成包括图像、视频、新闻和文章在内的最佳结果。<br>Metacrawler: 来自 Google 和 Yahoo 的汇总结果。<br>My all search: 通过 Bing、DuckDuckGo、AOL Search、Ask、Oscobo、Mojeek、ZapMeta、MetaCrawler 汇总结果。<br>Carrot2: 开源；聚合结果来自 GoogleAPI、Bing API、eTools Meta Search、Lucene、SOLR 等。<br>elocalfinder: 从 Google、Yahoo！、Ask 和 Bing 获取结果。<br>Opentext: 元搜索引擎基于 Google、Yahoo！、Ask、Bing、Wikipedia 和 Open Directory。<br>All-in-One<br>Searx<br>FTP搜索引擎</p>
+<p>什么是FTP搜索引擎：是指专门用于搜索网络上匿名 FTP 服务器上各类文件的搜索引擎。FTP 搜索引擎相对 WWW 搜索引擎来说，并不提供摘要，一般仅提供文件的名称、类型、大小、URL 等信息。</p>
+<p>Global file search<br>Archie<br>File watcher<br>Mamont<br>NAPALM FTP Indexer<br>文件搜索引擎</p>
+<p>此工具使用可以轻松搜索各种非 HTML（标准网页）文件格式。某些文件通常用于不同目的，您需要事先知道您要找的是什么格式。</p>
+<p>Faganfinder<br>ShareDir<br>图片搜索引擎</p>
+<p>社交媒体网站共享的图片：</p>
+<p>Lakako<br>Flickr<br>Flicker map:<br>My Pics map: 在 Google 地图上查看 Flickr 照片。<br>idGettr: 查找 Flicker ID账号，也可搜群组。<br>Flickr Hive Mind: 用于 Flickr 摄影数据库的数据挖掘工具。<br>Instagram<br>Websta: 高级搜索 Instagram 网站。<br>Stalkture: Instagram 的在线Web查看器。<br>Mininsta: 高级搜索 Instagram。<br>Pinterest<br>在专门的网站和新闻媒体上出现的图像：</p>
+<p>Gettyimages: 包含来自新闻、娱乐、时尚、体育和档案的图像。<br>Reuters pictures<br>News press<br>Associated Press images portal<br>PA images<br>European pressphoto agency<br>Canadian Press images archive<br>反向图像搜索（除了谷歌之外还有）：</p>
+<p>Karmadecay<br>TinEye<br>REVERSE IMAGE SEARCH<br>Imagebrief<br>Cam finds App: 这是适用于 Android 和 Apple 设备的应用程序。它使用视觉搜索技术识别上传的图片，并提供相关图像和大量网络搜索的即时结果。<br>Image Identification Project<br>物联网（IoT）设备搜索引擎</p>
+<p>Shodan: 它是该功能领域的鼻祖。至今都是非常好用的。<br>ZoomEye<br>123cam<br>Airport webcams<br>Insecam<br>Lookr<br>Earthcam<br>Openstreetcam<br>Opentopia<br>Pictimo<br>Reolink — list of unsecured cameras<br>The webcam network<br>Thingful<br>Thingiverse<br>Webcam.nl (NL)<br>Webcams.travel<br>Worldcam<br>censys<br>⚠️搜索漏洞利用：</p>
+<p>sploitus<br>Google Hacking Database (GHDB)<br>exploit-db<br>新闻/报纸搜索引擎</p>
+<p>1stHeadlines: 突发新闻<br>Google News Archive<br>Google Newspaper Archive<br>News Now<br>Newspaper Archives: 报纸档案 1607–2017年。<br>All you can read<br>Newspapers Search<br>Findmypast: 美国和世界历史报纸档案（中国、丹麦、法国、德国、牙买加、和南非也可在该集合中搜索）。<br>Daily Earth<br>Search U.S. Newspaper Directory, 1690-Present<br>Newspaper Map<br>World News<br>The paperboy<br>Newsography: 国际关系和武装冲突全球新闻聚合器和历史数据库。<br>Online Newspapers: 全球在线报纸目录。<br>YouGotTheNews: 搜索数以千计的国家、企业和本地新闻来源。<br>Library of Congress Newspapers directory &amp; 100 Years Ago Today: 使用美国国会图书馆的这两个链接搜索美国报纸，1690年至今。<br>利基搜索引擎</p>
+<p>Secret Search Engine Labs: 向您展示主流搜索巨头经常忽略的的搜索结果。<br>AllAreaCodes: 电话和区号搜索<br>查专利的搜索引擎</p>
+<p>Google Advanced Patent Search Engine<br>European Patent Office<br>Israel Patent Office Database<br>Norwegian Industrial Property Office<br>Swedish Patent and Registration Office<br>Switzerland<br>Taiwan Intellectual Property Office<br>Japan Patent Office<br>World Intellectual Property Organization (WIPO)<br>Korean Intellectual Property Rights Information Service (KIPRIS)<br>State Intellectual Property Office (SIPO) of the People’s Republic of China<br>Australia Patent Search<br>Canadian Intellectual Property Office<br>Danish Patent and Trademark Office<br>Finnish Patent and Registration Office<br>France Patent Search<br>Germany Patent Office<br>UK Patent Search Engine<br>India Patent Office<br>stopfakes: 美国商务部国际贸易管理局（ITA）负责管理 STOPfakes.gov，以协助美国企业在全球市场上的所谓知识产权。<br>FreePatentsOnline: 专利元数据搜索引擎。<br>Patent Lens<br>Directory of Intellectual Property Offices Worldwide<br>灰色文献搜索引擎</p>
+<p>什么是灰色文献：是指介于正式发行的白色文献、和不公开出版并具有隐密性的黑色文献之间的文献，即 虽已出版但难以使用一般方式获得。</p>
+<p>目前对灰色文献的定义多取自1997年举行的“第三次国际灰色文献会议”中所提出的：不经营利出版者控制的，而由各级政府、学术单位、工商业界所产制的各类印刷与电子形式的资料。</p>
+<p>想搜索重要的东西使用以下搜索引擎：</p>
+<p>Academia<br>Academic index<br>Academic torrents<br>American Doctoral Dissertations<br>ArchiveGrid<br>Google scholar<br>Bielefeld academic search engine<br>Archive portal Europe<br>Social Science Research Network<br>National library of Australia<br>ScienceDirect<br>PQDT Open<br>The national archive of the United Kingdom<br>Oxford academic<br>Page Press<br>CERN Document Server<br>High wire<br>Grey guide<br>Beyond citation<br>Crossref<br>透明度革命网站</p>
+<p>WikiLeaks<br>Cryptome<br>GlobaLeaks: 开源自由软件，旨在实现安全和匿名的揭露。<br>BalkanLeaks: 这是 Wikileaks 最成功的复制品。我们介绍过它，详见《与中国何其相似，巴尔干解密喜忧参半》<br>Al Jazeera’s Investigative Unit: 这是阿拉伯国家的透明度革命。<br>—— 社交媒体情报 ——</p>
+<p>《什么是社交媒体情报？你的推特如何成为抓捕你的理由？》这里面有介绍。这种东西不仅警察和间谍能用，也是 OSINT 的重要工具。</p>
+<p>以下推荐的都是工具，只要您能正确使用，它们很有效，⚠️但也很危险。请不要恶意使用（当然，恶意者长期研究这些，他们对此非常熟悉）</p>
+<p>⚠️本手册介绍它们是为了隐私保护者，如果您不希望被 doxing 和 trolling，不希望因网上言论而入狱，请根据我们的《大清洗》指南中介绍的思路，搜索自己，并移除有可能会令您陷入危险的信息。</p>
+<p>Facebook 的：</p>
+<p>(由于 Facebook 图谱搜索功能关闭，故至少四个最好用的搜索引擎失效。在这里看到原因《Facebook 正在令真相挖掘事业陷入困境》)</p>
+<p>Lookup ID: 查找 Facebook个人 ID /群组 ID /页面 ID。<br>FindMyFbid: 查找 Facebook 个人数字ID。<br>Facebook Search Tool: 在Facebook上进行高级搜索。<br>LikeAlyzer: 分析和监控 Facebook 页面。<br>Face Live: Facebook 直播视频搜索。<br>Wallflux: 提供 RSS feeds, Facebook 群组和页面中最近帖子的更新。<br>Facebook People/Pages/Places name directory<br>Information for Law Enforcement/Authorities when seeking information from Facebook<br>Who posted what?: Facebook 关键字搜索生成器。它搜索 Facebook 帖子并可以将结果限制在特定日期。<br>ExtractFace: 自动从 Facebook 个人资料中提取数据。<br>Twitter 的：</p>
+<p>Twitter search home<br>Twitter advanced search page<br>Twitter Deck<br>All My Tweets: 查看任何 Twitter 帐户发布的所有公开推文。<br>Trendsmap: 展示世界各地的 Twitter上最受欢迎的趋势、主题标签和关键字。<br>Foller: 分析 Twitter 帐户（个人资料公开信息、推文和粉丝数量、主题、标签、提及等等）。<br>First Tweet: 查找任何搜索关键字或链接的第一条推文。<br>Social bearing: 分析 Twitter 帐户。<br>Twitter Email Test<br>Twicsy<br>Follower wonk<br>Sleeping Time: 预测 Twitter 上任何人几点睡觉（这也有用？是的，比如钓鱼攻击，选取目标对象精力不足的时段下手胜算更大/ 或者研究目标人使用的时区结合其他线索以估计其地理位置）。<br>Simple Twitter Profile Analyzer (Python script).<br>Tag board: 在 Twitter、Facebook 上搜索主题标签。<br>TINFOLEAK<br>TET: 检查输入的电子邮件地址是否用于 Twitter 帐户。<br>Spoonbill: 监控您在 Twitter 上关注的人员的个人资料变化。<br>Export Tweet: 这是一个非常先进的 Twitter 分析服务，您可以下载生成的报告以供离线使用。要解锁完整功能，您需要付费。<br>LinkedIn 的：</p>
+<p>Recently Updated Profiles<br>LinkedIn Contact Extractor<br>LinkedIn Résumés<br>LinkedIn People Finder (International)<br>Instagram 的：</p>
+<p>INK361<br>iconosquare<br>picodash: 一个强大的搜索引擎，可以探索 Instagram 和 Twitter 的照片、视频、用户和位置。<br>ToFo<br>Reddit 的：</p>
+<p>metareddit: 搜索 subreddits.<br>Mostly Harmless: 查找您当前正在查看的页面，看看它是否曾经提交过 reddit。<br>redditarchive<br>Reddit Enhancement Suite: Google Chrome加载项。<br>reddit investigator: 调查 Reddit 用户。<br>reddit metrics: 用于跟踪 reddits 用户统计信息、并发现 reddit 上发展最快的社区。<br>atomiks: 分析 Reddit 用户。<br>SnoopSnoo: 深入了解任何 reddit 用户的活动。<br>Reddit Comment Search: 搜索特定 reddit 用户的评论。<br>社交媒体心理分析工具</p>
+<p>我们做过这样的演示，《情感分析：如何在社交网络上抓取并分析大众对某些话题的情绪？》以及《对特朗普推文的情感分析: Python 🐍》</p>
+<p>以下是一些自动化的工具（在分析群体和群体事件时比较有用）当然，如果您觉得自动化工具不够深刻，请使用上述两个演示中介绍的方法自定义工具。</p>
+<p>Tone Analyzer: 这是一项在线服务，提供免费的语言分析，以检测人类的情感 —— 如快乐、恐惧、悲伤、愤怒、自信、和试探性的口吻 —— 在文本中找到 —— 如推文、电子邮件和 Facebook 消息。<br>Watson Tone Analyzer: 这是由 IBM 创建的基于云的服务器，它分析在线内容（例如 Facebook 帖子、评论和推文）中的情绪和口吻，以预测作者的情绪状态。此服务可以在不同的场景中使用。<br>Facebook and Twitter Prediction: 预测一个人的心理状况 —— 该服务可以分析您的 Facebook 和 Twitter 帖子，以洞察您的个性 —— 心理弱点，可用来针对性营销⚠️或钓鱼。您还可以在该网站中插入任何文本，以预测其作者的心理状况。<br>Fake Sport: 该网站分析亚马逊、Yelp、TripAdvisor 和 Apple App 商店用户的评论，以检查这些评论的可信度。<br>Review Meta: 调查亚马逊上的用户评论，以检查哪一个可能是假的或误导性的。<br>TweetGenie: 这是一个荷兰的项目，通过推特用户名预测目标的年龄和性别。<br>找人</p>
+<p>一般的人物搜索</p>
+<p>Truth finder: TruthFinder 拥有庞大的社交媒体资料库存，地址历史记录、联系信息、公共记录（国家和地区数据源）以及其他商业资源数据库，除了城市/州之外，您还可以使用目标的名字进行搜索，找到目标的居住地或以前生活过的地方。<br>411: 搜索美国境内的人，搜索参数包括全名、位置、反向电话查询、电子邮件和业务。<br>Pipl<br>Spokeo<br>TruePeopleSearch<br>US Search<br>Peek You<br>Zaba Search: 使用姓名或电话号码在美国寻找任何人。<br>White Pages: 使用姓名、电话号码、公司或地址搜索美国境内的人。<br>Been Verified: 使用姓名、电话号码、公司或地址搜索美国境内的人。<br>Address Search: 和上面一样，仅限美国。<br>Lullar: 使用目标的电子邮件地址或名字和姓氏或用户名，搜索社交媒体网站。<br>Yasni<br>My Life<br>Snoop Station: 使用全名和位置搜索人。<br>Advanced Background Check<br>Family Tree Now<br>Radaris<br>Profile Engine<br>Info Space<br>Cubib: 免费搜索数百万在线数据记录。汇总数据来自人员搜索、营销数据、财产记录、车辆记录、法院记录、专利、商业登记、域名注册、和白宫访问记录等。<br>Fast People Search<br>Speedy hunt<br>That’s Them<br>Webmii<br>How many of me<br>Genealogy<br>Sorted By Name: 搜家谱……<br>用户名检查</p>
+<p>Check user name: 检查160个社交网络上特定用户名的使用情况，如果他/她在多个平台上使用相同的用户名，很容易找到（⚠️这就是为什么警告敏感账户一定要独立，使用完全不同的照片、简介、名字和注册邮箱）<br>Namechk: 检查指定的用户名是否用于主要域名和社交媒体网站。<br>Namecheckr: 检查多个网络上的域名和社交用户名的可用性。<br>User Search: 扫描45个流行的社交媒体网站。<br><a target="_blank" rel="noopener" href="https://twitter.com/DonEvansWm/status/1149161869522829312">https://twitter.com/DonEvansWm/status/1149161869522829312</a><br>电邮搜寻</p>
+<p>电邮验证服务。此服务检查一个电子邮件地址是否存在，并提供有关它的其他详细技术信息。</p>
+<p>《如果做一个与自己身份完全无关的电邮地址》</p>
+<p>Email Dossier: 提供有关电子邮件的详细技术验证报告。<br>Emailhippo<br>Verifalia<br>Hunter<br>Email Checker: 验证电子邮件地址是否真实。<br>Mail Tester<br>Byte Plant Email Validator<br>Email Format<br>Email Permutator+<br>Emails4Corporations.com<br>Scam Dex<br>Email Header Analysis 获取从电子邮件标头中提取的详细技术信息，其中包括发件人 IP 地址、发件人 ISP 以及地理信息。<br>电话号码搜索</p>
+<p>在这里看到演示《如果只知道一个电话号码，你能挖出多少有效信息？》</p>
+<p>Z lookup: 国际反向电话查询，包括手机。<br>Reverse Phone Lookup<br>Inter800<br>Twilio<br>Spy Dialer<br>Who calld<br>Info Bel<br>Fone Finder<br>True Caller<br>Free Carrier Lookup<br>Phone Lookup</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>眼魔王
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/12/30/%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%93%85%E9%95%BF%E6%90%9C%E7%B4%A2%EF%BC%8C%E4%BD%A0%E8%83%BD%E6%89%BE%E5%88%B0%E4%B8%80%E5%88%87%EF%BC%9A/" title="如果你擅长搜索，你能找到一切：*没有谷歌*的强大搜索世界">http://example.com/2021/12/30/如果你擅长搜索，你能找到一切：/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%B0%83%E6%9F%A5/" rel="tag"># 调查</a>
+              <a href="/tags/%E8%8E%B7%E5%8F%96%E7%9C%9F%E7%9B%B8/" rel="tag"># 获取真相</a>
+              <a href="/tags/%E6%80%9D%E8%80%83/" rel="tag"># 思考</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/30/%E5%AF%BB%E6%89%BE%E6%97%B6%E9%97%B4%E7%9A%84%E8%B8%AA%E8%BF%B9%EF%BC%9A%E4%BE%A6%E6%8E%A2%E6%8C%91%E6%88%98%E6%B8%B8%E6%88%8F/" rel="prev" title="寻找时间的踪迹：侦探挑战游戏">
+      <i class="fa fa-chevron-left"></i> 寻找时间的踪迹：侦探挑战游戏
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/30/%E5%A6%82%E4%BD%95%E8%BF%8E%E6%8E%A5%E6%9B%B4%E5%A4%9A%E7%9A%84%E2%80%9C%E5%B7%B4%E6%8B%BF%E9%A9%AC%E6%96%87%E4%BB%B6%E2%80%9D%EF%BC%9F/" rel="next" title="如何迎接更多的“巴拿马文件”？">
+      如何迎接更多的“巴拿马文件”？ <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%93%85%E9%95%BF%E6%90%9C%E7%B4%A2%EF%BC%8C%E4%BD%A0%E8%83%BD%E6%89%BE%E5%88%B0%E4%B8%80%E5%88%87%EF%BC%9A%E6%B2%A1%E6%9C%89%E8%B0%B7%E6%AD%8C%E7%9A%84%E5%BC%BA%E5%A4%A7%E6%90%9C%E7%B4%A2%E4%B8%96%E7%95%8C"><span class="nav-number">1.</span> <span class="nav-text">如果你擅长搜索，你能找到一切：没有谷歌的强大搜索世界</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">242</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
