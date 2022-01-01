@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
@@ -77,7 +77,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <div class="container">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -101,6 +101,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -113,6 +114,11 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -130,11 +136,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -175,6 +208,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -195,6 +230,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E6%8F%AD%E9%9C%B2%E5%81%87%E8%AE%B0%E8%80%85%EF%BC%9A%E4%B8%80%E4%B8%AA%E2%80%9D%E6%B7%B1%E5%BA%A6%E9%80%A0%E5%81%87%E2%80%9D%E4%BF%A1%E6%81%AF%E6%88%98%E7%9A%84%E6%A1%88%E4%BE%8B%EF%BC%8C%E6%8F%90%E9%86%92%E6%82%A8%E6%97%A7%E6%9C%89%E7%9A%84%E9%AA%8C%E8%AF%81%E6%8A%80%E5%B7%A7%E6%AD%A3%E5%9C%A8%E8%BF%87%E6%97%B6/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E6%8F%AD%E9%9C%B2%E5%81%87%E8%AE%B0%E8%80%85%EF%BC%9A%E4%B8%80%E4%B8%AA%E2%80%9D%E6%B7%B1%E5%BA%A6%E9%80%A0%E5%81%87%E2%80%9D%E4%BF%A1%E6%81%AF%E6%88%98%E7%9A%84%E6%A1%88%E4%BE%8B%EF%BC%8C%E6%8F%90%E9%86%92%E6%82%A8%E6%97%A7%E6%9C%89%E7%9A%84%E9%AA%8C%E8%AF%81%E6%8A%80%E5%B7%A7%E6%AD%A3%E5%9C%A8%E8%BF%87%E6%97%B6/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -313,6 +362,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -333,6 +384,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E6%90%9C%E4%BA%BA%E3%80%81%E7%85%A7%E7%89%87%E3%80%81%E8%A7%86%E9%A2%91%E3%80%81%E4%BD%8D%E7%BD%AE%20%E2%80%A6%E2%80%A6%20%E5%A4%A7%E5%85%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E6%90%9C%E4%BA%BA%E3%80%81%E7%85%A7%E7%89%87%E3%80%81%E8%A7%86%E9%A2%91%E3%80%81%E4%BD%8D%E7%BD%AE%20%E2%80%A6%E2%80%A6%20%E5%A4%A7%E5%85%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -646,6 +711,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -666,6 +733,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E6%90%9C%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E3%80%81%E6%91%84%E5%83%8F%E5%A4%B4%E3%80%81%E6%89%93%E5%8D%B0%E6%9C%BA%E3%80%81%E5%AE%B6%E7%94%A8%E8%AE%BE%E5%A4%87%20%E2%80%A6/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E6%90%9C%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E3%80%81%E6%91%84%E5%83%8F%E5%A4%B4%E3%80%81%E6%89%93%E5%8D%B0%E6%9C%BA%E3%80%81%E5%AE%B6%E7%94%A8%E8%AE%BE%E5%A4%87%20%E2%80%A6/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -830,6 +911,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -850,6 +933,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E6%93%8D%E7%BA%B5%E8%80%85%E5%A6%82%E4%BD%95%E7%94%A8%E6%8F%8F%E8%BF%B0%E8%BD%AC%E5%8F%98%E4%BD%A0%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%9A%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E8%AE%A9%E4%BD%A0%E6%83%B3%E7%9A%84%E4%BA%8B%EF%BC%886%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E6%93%8D%E7%BA%B5%E8%80%85%E5%A6%82%E4%BD%95%E7%94%A8%E6%8F%8F%E8%BF%B0%E8%BD%AC%E5%8F%98%E4%BD%A0%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%9A%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E8%AE%A9%E4%BD%A0%E6%83%B3%E7%9A%84%E4%BA%8B%EF%BC%886%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -999,120 +1096,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E6%96%AD%E7%AB%A0%E5%8F%96%E4%B9%89%E7%9A%84%E8%A7%86%E9%A2%91%E5%92%8C%E6%AD%AA%E6%9B%B2%E7%9A%84%E6%8F%8F%E8%BF%B0%E5%A6%82%E4%BD%95%E6%8C%91%E8%B5%B7%E5%AF%B9%E5%AE%89%E6%9B%BF%E6%B3%95(Antifa)%E5%B7%A6%E7%BF%BC%E6%B4%BB%E5%8A%A8%E5%AE%B6%E7%9A%84%E4%BB%87%E6%81%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="眼魔王">
-      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="眼魔王">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/30/%E6%96%AD%E7%AB%A0%E5%8F%96%E4%B9%89%E7%9A%84%E8%A7%86%E9%A2%91%E5%92%8C%E6%AD%AA%E6%9B%B2%E7%9A%84%E6%8F%8F%E8%BF%B0%E5%A6%82%E4%BD%95%E6%8C%91%E8%B5%B7%E5%AF%B9%E5%AE%89%E6%9B%BF%E6%B3%95(Antifa)%E5%B7%A6%E7%BF%BC%E6%B4%BB%E5%8A%A8%E5%AE%B6%E7%9A%84%E4%BB%87%E6%81%A8/" class="post-title-link" itemprop="url">断章取义的视频和歪曲的描述如何挑起对安替法(Antifa)左翼活动家的仇恨</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：19:04:22" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="断章取义的视频和歪曲的描述如何挑起对安替法-Antifa-左翼活动家的仇恨"><a href="#断章取义的视频和歪曲的描述如何挑起对安替法-Antifa-左翼活动家的仇恨" class="headerlink" title="#断章取义的视频和歪曲的描述如何挑起对安替法(Antifa)左翼活动家的仇恨"></a>#断章取义的视频和歪曲的描述如何挑起对安替法(Antifa)左翼活动家的仇恨</h1><p>当您看到一个照片或视频的时候，先别忙着相信发布者的描述</p>
-<p>2020年11月14日，美国总统特朗普的数千名支持者聚集在华盛顿特区，抗议乔·拜登在美国总统大选中取得胜利。记者在现场注意到，这次活动被打上了 “百万MAGA游行” 的烙印，大部分参与者都是相当主流的保守派特朗普支持者。但更多极端分子也在场。</p>
-<p>此前曾出现质疑犹太人在大屠杀中被杀人数的白人民族主义者尼克·富恩特斯（Nick Fuentes）发表了一场参与度很高的演讲。白人至上主义帮派 “美国卫队” 的现任领袖、极端主义的 Vinlanders 社交俱乐部（VSC）组织的创始人布里恩·詹姆斯（Brien James）也被拍到身穿 “骄傲男孩” 的服饰，与该组织一起游行。</p>
-<p>虽然白天的集会中发生了几起小规模的冲突，但日落之后，暴力事件的数量明显升级。有大量证据表明，亲特朗普的示威者实施了暴力。其中一人袭击了自由记者塔利亚·简（Talia Jane），而一名 “骄傲男孩” 成员被拍到殴打一名法国摄影师的脸。有一次，一大群 “骄傲男孩” 成员和特朗普的支持者集体向反示威者发起进攻。要知道，也有证据显示左翼示威者的攻击行为，后来特朗普也着重强调了这一点。但是，特朗普对事件的构思抹杀了自己支持者的暴力行为，并描绘了一个误导性的、片面的说法。</p>
-<p>特朗普在网上提出这一理由时，得到了一个拥有热门推特账户的极右翼煽动者网络的帮助。这些男人和女人发布了断章取义地经过编辑的视频片段，并配以挑衅性的描述，似乎有明确的目的，即：推销一种持续的、无端的所谓左翼暴力的叙事。</p>
-<p>最近几个月，这已经成为一个熟悉的主题，一些在 BLM 抗议活动中发生的多起事件的视频被断章取义地编辑了，以夸大和歪曲它们被拍摄的周围环境。</p>
-<p>虽然存在一些以左翼为主角的暴力事件，包括在百万MAGA游行中，但是，右翼账号在这些事件后传播的视频往往并不能说明整个故事。当这些断章取义的内容引起企业媒体和特朗普等政客的推动时，它们就会传播得很远很广，造成严重的误导。</p>
-<p>为了分析这个过程是如何发生的一个例子，本文将分析百万MAGA游行中的一段最热门的争执录像。虽然这段录像并没有为左翼抗议者开脱  — — 其中一些人明显参与了暴力事件，后来似乎也被逮捕了 — — 但是，它确实显示了右翼宣传者如何设法操纵这类事件的周围背景，同时尽量减少右翼暴力事件，以进一步美化他们自己的议程。</p>
-<p>“罗马人”<br>有关的具体事件发生在当地时间（美国东部时间）下午2点多，似乎是在一场混乱的街头混战后不久开始的（详见下面嵌入的视频，由 Daily Caller 拍摄并发布到 YouTube 上），当时两名特朗普的支持者走近并推搡一名手持扩音器的反抗议者。</p>
-<p>画面显示，两人从对面走近拿着扩音器的男子，一个在前，一个在后。身穿亚利桑那连帽衫的男子看起来像是准备袭击他，在强行抓住他之前 …</p>
-<p>拿着扩音器的男子转身面对着那个身穿亚利桑那连帽衫的人，然后被另一个身穿印有RO MA字母夹克的男子从后面推了一把（估计是代表罗马，或者可能是代表罗马体育俱乐部）。下文中将称他为 “罗马人”。</p>
-<p>罗马人又继续推了拿扩音器的人两次。第一次推搡打掉了受害者的眼镜，当他弯腰去捡眼镜时，袭击者将他推倒在地。这一切发生的时候，附近有人喊 “杀了他们！”。</p>
-<p>一旦受害者倒在地上，罗马人似乎试图站在他的头上，尽管（鉴于这段视频从不同的角度拍摄）他也可能是失去平衡了，试图绕过他刚刚被暴力推倒在地的人。</p>
-<p>紧接着，”罗马人” 被一名旁观者推开。这似乎是周围的反示威者对这个人第一次使用武力。</p>
-<p>随后，罗马人转身面对推他的人，并用拳头威胁对方。另一名反示威者从后面走过来推他。</p>
-<p>这个人迅速后退，罗马人又转过身来，向两位年轻女子扑过去，其中一位女士当时正在用手机拍摄他，之前都没有打过他。他推了两个女人一把。</p>
-<p>穿绿色外套的女人逃跑了，正在拍摄他的黑人女人被撞倒在地。</p>
-<p>然后，罗马人主动接近拍摄他的第二个人时，从后面被踢了出去。</p>
-<p>他似乎比受害人还愤怒，并向一位似乎渴望避免局势升级的反示威者大喊。</p>
-<p>正在这时，一名身穿灰色连帽衫的女子走近罗马人，似乎要扇他耳光。然后，罗马男人冲过去推搡连帽衫女人以及穿绿色外套的女人。人群随之而来，他被其中一个人抓住了。</p>
-<p>然后，他冲回了示威者的人群中，用力地推了另一名向他大喊但从来没有碰过他的女人。</p>
-<p>接下来，他推了一个拿着牌子的人，顺便把那个标语牌也撕了。这个人也从来没有打过他。</p>
-<p>一名反示威者此时向罗马人扑过去，至少打了他两拳。这名反示威者被推开，此后没有再动手。</p>
-<p>另一名反示威者则试图缓和局势，向其他人群伸出双手，让他们给罗马人留出空间。但罗马人决定从背后强行推搡这个试图维和的人。</p>
-<p>在这之后，罗马人开始从人群中走出来，可能是试图离开这里，也可能是走向另外两名反示威者。这时，另一个拿着牌子的人跑到罗马人身后，一拳打在他的头上，把他打倒在地。随后有人出现踢他的头部。这场持续了数分钟的争吵就这样残酷地结束了。</p>
-<p>视频中发生的事似乎很清楚：</p>
-<p>这个罗马人先推搡、殴打和威胁了多个人，然后他自己也遭到了残酷的攻击。两组示威者在录像中都没有表现得很好。显然，针对罗马人的耳光、脚踢和拳头，尤其是最后一拳和一脚，无论如何都不能宽恕。但是，似乎确实很清楚，事件最初是由罗马人以及另一个身穿亚利桑那帽衫的人挑起的。最后的一拳显然不是一次突如其来的自发攻击。然而，正如我们将看到的那样，一些在社交媒体上拥有大量粉丝的有影响力的右翼人士并没有这样去描述这起事件。</p>
-<p>断章取义地编辑视频<br>上述我们一直在分析的镜头是由右翼新闻网站 The Daily Caller 的现场记者 Jorge Ventura 拍摄的。然而，第一个将这场争执中的镜头发到网上的是右翼活动家 Andy Ngo。</p>
-<p>必须指出的是，在 Ventura 拍摄的长达两分钟的视频中，事发前的画面提供了很好的背景，显示的似乎是一场流动的街头斗殴，从罗马人的情节开始。</p>
-<p>在影片中，我们可以看到身穿绿色夹克的女子扇了一个举着旗子的男子一巴掌，以及一个戴着摩托车头盔的人和其他人之间发生了打斗。</p>
-<p>人群中似乎包含了右翼和左翼两边的示威者。</p>
-<p>尽管双方的抗议者都在那里，而且视频中似乎显示了特朗普支持者以及他们的对手的暴力行动，但Ngo在 Twitter 上将这段视频定性为 “BLM- Antifa 暴徒” 的帖子中声称：“他们在华盛顿的街道上四处奔走，殴打他人”。</p>
-<p>虽然 Ngo 对这个视频的描述是错误的，但视频本身至少为观众提供了一个较为完整的事件交代。</p>
-<p>然而，在这段视频首次发布约3小时后，极右翼评论员 Dinish D’Souza 就在推特上发布了一段选择性极强的18秒的视频  — — 显示的只是罗马人倒地时的被击中的最后一拳一脚。这似乎给人的印象是，罗马人被左翼抗议者突然袭击，而没有提及之前的事件。具有严重的误导性。</p>
-<p>特朗普随后转发了这段18秒的视频，截至发稿时，这段视频已经获得了2.8万次转发和6.2万次点赞。虽然这种暴力行为不能被纵容，但也必须指出，这绝不是故事的全部。</p>
-<p>另外，另一位右翼摄像师 Kalen D’Almeida 的视频片段，从与 Ventura 稍有不同的角度拍摄了同一事件。</p>
-<p>D’Almeida 首先发布了整个事件的完整视频，然后才剪下了最后罗马人被从背后击中的断章取义版本。这第二段视频提供了与 D’Souza 推特中18秒的视频类似的产品。同样，这第二个片段，在原始视频的20分钟后发布，没有显示任何背景 — — 完全抹去了早期事件和罗马人的侵略性，在最后的拳头之前发生的事被取消了。</p>
-<p>在撰写本文时，D’Almeida 发布的完全视频已经收到了400个转发，500个评论推文和900个点赞（尽管被Pin在他的时间线的顶部） — — 您可以和上述极右翼的歪曲帖子对比一下。</p>
-<p>相比下 D’Almeida 发布的罗马人被击中的断章取义视频片段获得了7,000个点赞和类似数量的转推。此外，缩短后的片段被浏览了560多万次，大大超过了完整视频的22.5万次浏览量。这种差异很可能是由于拥有更多粉丝的Ngo在不久之后又在自己的另一条推文中嵌入了该片段。</p>
-<p>Ngo 将这段视频描述为 “BLM暴徒” 打晕了一名 “正在离开#百万MAGA大游行” 的男子。他还指责他们在该男子倒地时偷走了他的手机。在 D’Almeida 的视频中，这一点并不清楚，但在 Ventura 早些时候的视频中，两名妇女确实拿起了一个手机然后跑开了。</p>
-<p>当Ngo发布这条推文时，他一定知道他的总结和视频本身并没有提供事件的完整背景。因为他在几个小时前才刚发布了一段更详细的争执片段。事实上，Ngo 的推文和 D’Almeida 摘录的视频都没有提供完整的事件版本，但这并没有阻止这一歪曲大范围地传播。</p>
-<p>不到半小时后，特朗普就转发了 Andy Ngo 的推文，导致 “左翼暴徒袭击和平的MAGA抗议者” 的错误说法在社交媒体上进一步传播。然而，从这一分析中可以看出，这远不是这些事件的全部真相和背景，在这些事件中，左翼和右翼抗议者都在相互对抗，并采取了暴力行为。</p>
-<p>考虑到被断章取义的视频的浏览量和转发量如此之大，所谓的左翼暴徒的说法似乎也获得了更大的吸引力，这在很大程度上要归功于特朗普、D’Souza 和 Ngo。</p>
-<p>在华盛顿特区发生的事，或者后来网上对该事件的错误描述，都不是什么新鲜事。右翼社交媒体人物分享去语境化的视频以引发对左翼的愤怒，这种循环已经持续了很多年。2019年，Ngo亲自报道了波特兰地区一家名为 Cider Riot 的酒吧发生的大规模斗殴事件，他的推文将其定格为 “Antifa 分子的无端攻击”。</p>
-<p>然而几周后，在右翼组织 “爱国者祈祷” 内部卧底的人公布了数小时在集会上拍摄到的视频。这段在 Cider Riot 战斗前录制的视频清楚地显示，爱国者祈祷组织的成员正在检查他们的武器，并讨论他们袭击酒吧的计划。一个站在 Ngo 附近的人清楚的说： “将会有一场大的战斗”。在这一切的过程中，Ngo 唯一的反应就是笑了几次。他并没有报告他在行进到 Cider Riot 时听到的情况。</p>
-<p>根据那些泄露的视频的证据，爱国者祈祷组织的6名成员被指控为煽动暴动的重罪。然而，Ngo 在极右翼媒体生态系统中的地位丝毫没有因此受到伤害，也没有因为分享在华盛顿特区举行的百万MAGA游行中经过欺骗性编辑的视频而受到伤害，事实上，11月16日，小唐纳德-特朗普还向他的630万粉丝分享了Ngo的 Patreon 和 Paypal 链接。</p>
-<p>📌 总之，不得不重复那句早已说烂了的话 —— 当您看到一个视频、照片、故事时，请问问自己：这可能是怎么回事？背景是什么？它完整吗？来源是什么？谁第一个发布的？这些内容想让你相信什么？这些内容在传播过程中被描述的东西是否是事实？…… 这是开源情报唯一有利于公民大众的价值。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E6%94%BF%E6%B2%BB%E6%B6%82%E9%B8%A6%E5%92%8C%E9%9A%90%E8%97%8F%E7%9A%84%E4%BF%A1%E6%81%AF%EF%BC%9A%E6%A0%87%E5%BF%97%E3%80%81%E7%AC%A6%E5%8F%B7%E5%92%8C%E5%85%B6%E4%BB%96%E8%A7%86%E8%A7%89%E7%BA%BF%E7%B4%A2%E5%8D%8F%E5%8A%A9%E8%BF%BD%E8%B8%AA%E8%B0%83%E6%9F%A5%E7%9A%84%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1131,6 +1114,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1151,6 +1136,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E6%94%BF%E6%B2%BB%E6%B6%82%E9%B8%A6%E5%92%8C%E9%9A%90%E8%97%8F%E7%9A%84%E4%BF%A1%E6%81%AF%EF%BC%9A%E6%A0%87%E5%BF%97%E3%80%81%E7%AC%A6%E5%8F%B7%E5%92%8C%E5%85%B6%E4%BB%96%E8%A7%86%E8%A7%89%E7%BA%BF%E7%B4%A2%E5%8D%8F%E5%8A%A9%E8%BF%BD%E8%B8%AA%E8%B0%83%E6%9F%A5%E7%9A%84%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E6%94%BF%E6%B2%BB%E6%B6%82%E9%B8%A6%E5%92%8C%E9%9A%90%E8%97%8F%E7%9A%84%E4%BF%A1%E6%81%AF%EF%BC%9A%E6%A0%87%E5%BF%97%E3%80%81%E7%AC%A6%E5%8F%B7%E5%92%8C%E5%85%B6%E4%BB%96%E8%A7%86%E8%A7%89%E7%BA%BF%E7%B4%A2%E5%8D%8F%E5%8A%A9%E8%BF%BD%E8%B8%AA%E8%B0%83%E6%9F%A5%E7%9A%84%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1359,6 +1358,136 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E6%96%AD%E7%AB%A0%E5%8F%96%E4%B9%89%E7%9A%84%E8%A7%86%E9%A2%91%E5%92%8C%E6%AD%AA%E6%9B%B2%E7%9A%84%E6%8F%8F%E8%BF%B0%E5%A6%82%E4%BD%95%E6%8C%91%E8%B5%B7%E5%AF%B9%E5%AE%89%E6%9B%BF%E6%B3%95(Antifa)%E5%B7%A6%E7%BF%BC%E6%B4%BB%E5%8A%A8%E5%AE%B6%E7%9A%84%E4%BB%87%E6%81%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/30/%E6%96%AD%E7%AB%A0%E5%8F%96%E4%B9%89%E7%9A%84%E8%A7%86%E9%A2%91%E5%92%8C%E6%AD%AA%E6%9B%B2%E7%9A%84%E6%8F%8F%E8%BF%B0%E5%A6%82%E4%BD%95%E6%8C%91%E8%B5%B7%E5%AF%B9%E5%AE%89%E6%9B%BF%E6%B3%95(Antifa)%E5%B7%A6%E7%BF%BC%E6%B4%BB%E5%8A%A8%E5%AE%B6%E7%9A%84%E4%BB%87%E6%81%A8/" class="post-title-link" itemprop="url">断章取义的视频和歪曲的描述如何挑起对安替法(Antifa)左翼活动家的仇恨</a>
+        </h2>
+
+        <div class="post-meta">
+          
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-30 23:38:08 / 修改时间：19:04:22" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E6%96%AD%E7%AB%A0%E5%8F%96%E4%B9%89%E7%9A%84%E8%A7%86%E9%A2%91%E5%92%8C%E6%AD%AA%E6%9B%B2%E7%9A%84%E6%8F%8F%E8%BF%B0%E5%A6%82%E4%BD%95%E6%8C%91%E8%B5%B7%E5%AF%B9%E5%AE%89%E6%9B%BF%E6%B3%95(Antifa)%E5%B7%A6%E7%BF%BC%E6%B4%BB%E5%8A%A8%E5%AE%B6%E7%9A%84%E4%BB%87%E6%81%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E6%96%AD%E7%AB%A0%E5%8F%96%E4%B9%89%E7%9A%84%E8%A7%86%E9%A2%91%E5%92%8C%E6%AD%AA%E6%9B%B2%E7%9A%84%E6%8F%8F%E8%BF%B0%E5%A6%82%E4%BD%95%E6%8C%91%E8%B5%B7%E5%AF%B9%E5%AE%89%E6%9B%BF%E6%B3%95(Antifa)%E5%B7%A6%E7%BF%BC%E6%B4%BB%E5%8A%A8%E5%AE%B6%E7%9A%84%E4%BB%87%E6%81%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="断章取义的视频和歪曲的描述如何挑起对安替法-Antifa-左翼活动家的仇恨"><a href="#断章取义的视频和歪曲的描述如何挑起对安替法-Antifa-左翼活动家的仇恨" class="headerlink" title="#断章取义的视频和歪曲的描述如何挑起对安替法(Antifa)左翼活动家的仇恨"></a>#断章取义的视频和歪曲的描述如何挑起对安替法(Antifa)左翼活动家的仇恨</h1><p>当您看到一个照片或视频的时候，先别忙着相信发布者的描述</p>
+<p>2020年11月14日，美国总统特朗普的数千名支持者聚集在华盛顿特区，抗议乔·拜登在美国总统大选中取得胜利。记者在现场注意到，这次活动被打上了 “百万MAGA游行” 的烙印，大部分参与者都是相当主流的保守派特朗普支持者。但更多极端分子也在场。</p>
+<p>此前曾出现质疑犹太人在大屠杀中被杀人数的白人民族主义者尼克·富恩特斯（Nick Fuentes）发表了一场参与度很高的演讲。白人至上主义帮派 “美国卫队” 的现任领袖、极端主义的 Vinlanders 社交俱乐部（VSC）组织的创始人布里恩·詹姆斯（Brien James）也被拍到身穿 “骄傲男孩” 的服饰，与该组织一起游行。</p>
+<p>虽然白天的集会中发生了几起小规模的冲突，但日落之后，暴力事件的数量明显升级。有大量证据表明，亲特朗普的示威者实施了暴力。其中一人袭击了自由记者塔利亚·简（Talia Jane），而一名 “骄傲男孩” 成员被拍到殴打一名法国摄影师的脸。有一次，一大群 “骄傲男孩” 成员和特朗普的支持者集体向反示威者发起进攻。要知道，也有证据显示左翼示威者的攻击行为，后来特朗普也着重强调了这一点。但是，特朗普对事件的构思抹杀了自己支持者的暴力行为，并描绘了一个误导性的、片面的说法。</p>
+<p>特朗普在网上提出这一理由时，得到了一个拥有热门推特账户的极右翼煽动者网络的帮助。这些男人和女人发布了断章取义地经过编辑的视频片段，并配以挑衅性的描述，似乎有明确的目的，即：推销一种持续的、无端的所谓左翼暴力的叙事。</p>
+<p>最近几个月，这已经成为一个熟悉的主题，一些在 BLM 抗议活动中发生的多起事件的视频被断章取义地编辑了，以夸大和歪曲它们被拍摄的周围环境。</p>
+<p>虽然存在一些以左翼为主角的暴力事件，包括在百万MAGA游行中，但是，右翼账号在这些事件后传播的视频往往并不能说明整个故事。当这些断章取义的内容引起企业媒体和特朗普等政客的推动时，它们就会传播得很远很广，造成严重的误导。</p>
+<p>为了分析这个过程是如何发生的一个例子，本文将分析百万MAGA游行中的一段最热门的争执录像。虽然这段录像并没有为左翼抗议者开脱  — — 其中一些人明显参与了暴力事件，后来似乎也被逮捕了 — — 但是，它确实显示了右翼宣传者如何设法操纵这类事件的周围背景，同时尽量减少右翼暴力事件，以进一步美化他们自己的议程。</p>
+<p>“罗马人”<br>有关的具体事件发生在当地时间（美国东部时间）下午2点多，似乎是在一场混乱的街头混战后不久开始的（详见下面嵌入的视频，由 Daily Caller 拍摄并发布到 YouTube 上），当时两名特朗普的支持者走近并推搡一名手持扩音器的反抗议者。</p>
+<p>画面显示，两人从对面走近拿着扩音器的男子，一个在前，一个在后。身穿亚利桑那连帽衫的男子看起来像是准备袭击他，在强行抓住他之前 …</p>
+<p>拿着扩音器的男子转身面对着那个身穿亚利桑那连帽衫的人，然后被另一个身穿印有RO MA字母夹克的男子从后面推了一把（估计是代表罗马，或者可能是代表罗马体育俱乐部）。下文中将称他为 “罗马人”。</p>
+<p>罗马人又继续推了拿扩音器的人两次。第一次推搡打掉了受害者的眼镜，当他弯腰去捡眼镜时，袭击者将他推倒在地。这一切发生的时候，附近有人喊 “杀了他们！”。</p>
+<p>一旦受害者倒在地上，罗马人似乎试图站在他的头上，尽管（鉴于这段视频从不同的角度拍摄）他也可能是失去平衡了，试图绕过他刚刚被暴力推倒在地的人。</p>
+<p>紧接着，”罗马人” 被一名旁观者推开。这似乎是周围的反示威者对这个人第一次使用武力。</p>
+<p>随后，罗马人转身面对推他的人，并用拳头威胁对方。另一名反示威者从后面走过来推他。</p>
+<p>这个人迅速后退，罗马人又转过身来，向两位年轻女子扑过去，其中一位女士当时正在用手机拍摄他，之前都没有打过他。他推了两个女人一把。</p>
+<p>穿绿色外套的女人逃跑了，正在拍摄他的黑人女人被撞倒在地。</p>
+<p>然后，罗马人主动接近拍摄他的第二个人时，从后面被踢了出去。</p>
+<p>他似乎比受害人还愤怒，并向一位似乎渴望避免局势升级的反示威者大喊。</p>
+<p>正在这时，一名身穿灰色连帽衫的女子走近罗马人，似乎要扇他耳光。然后，罗马男人冲过去推搡连帽衫女人以及穿绿色外套的女人。人群随之而来，他被其中一个人抓住了。</p>
+<p>然后，他冲回了示威者的人群中，用力地推了另一名向他大喊但从来没有碰过他的女人。</p>
+<p>接下来，他推了一个拿着牌子的人，顺便把那个标语牌也撕了。这个人也从来没有打过他。</p>
+<p>一名反示威者此时向罗马人扑过去，至少打了他两拳。这名反示威者被推开，此后没有再动手。</p>
+<p>另一名反示威者则试图缓和局势，向其他人群伸出双手，让他们给罗马人留出空间。但罗马人决定从背后强行推搡这个试图维和的人。</p>
+<p>在这之后，罗马人开始从人群中走出来，可能是试图离开这里，也可能是走向另外两名反示威者。这时，另一个拿着牌子的人跑到罗马人身后，一拳打在他的头上，把他打倒在地。随后有人出现踢他的头部。这场持续了数分钟的争吵就这样残酷地结束了。</p>
+<p>视频中发生的事似乎很清楚：</p>
+<p>这个罗马人先推搡、殴打和威胁了多个人，然后他自己也遭到了残酷的攻击。两组示威者在录像中都没有表现得很好。显然，针对罗马人的耳光、脚踢和拳头，尤其是最后一拳和一脚，无论如何都不能宽恕。但是，似乎确实很清楚，事件最初是由罗马人以及另一个身穿亚利桑那帽衫的人挑起的。最后的一拳显然不是一次突如其来的自发攻击。然而，正如我们将看到的那样，一些在社交媒体上拥有大量粉丝的有影响力的右翼人士并没有这样去描述这起事件。</p>
+<p>断章取义地编辑视频<br>上述我们一直在分析的镜头是由右翼新闻网站 The Daily Caller 的现场记者 Jorge Ventura 拍摄的。然而，第一个将这场争执中的镜头发到网上的是右翼活动家 Andy Ngo。</p>
+<p>必须指出的是，在 Ventura 拍摄的长达两分钟的视频中，事发前的画面提供了很好的背景，显示的似乎是一场流动的街头斗殴，从罗马人的情节开始。</p>
+<p>在影片中，我们可以看到身穿绿色夹克的女子扇了一个举着旗子的男子一巴掌，以及一个戴着摩托车头盔的人和其他人之间发生了打斗。</p>
+<p>人群中似乎包含了右翼和左翼两边的示威者。</p>
+<p>尽管双方的抗议者都在那里，而且视频中似乎显示了特朗普支持者以及他们的对手的暴力行动，但Ngo在 Twitter 上将这段视频定性为 “BLM- Antifa 暴徒” 的帖子中声称：“他们在华盛顿的街道上四处奔走，殴打他人”。</p>
+<p>虽然 Ngo 对这个视频的描述是错误的，但视频本身至少为观众提供了一个较为完整的事件交代。</p>
+<p>然而，在这段视频首次发布约3小时后，极右翼评论员 Dinish D’Souza 就在推特上发布了一段选择性极强的18秒的视频  — — 显示的只是罗马人倒地时的被击中的最后一拳一脚。这似乎给人的印象是，罗马人被左翼抗议者突然袭击，而没有提及之前的事件。具有严重的误导性。</p>
+<p>特朗普随后转发了这段18秒的视频，截至发稿时，这段视频已经获得了2.8万次转发和6.2万次点赞。虽然这种暴力行为不能被纵容，但也必须指出，这绝不是故事的全部。</p>
+<p>另外，另一位右翼摄像师 Kalen D’Almeida 的视频片段，从与 Ventura 稍有不同的角度拍摄了同一事件。</p>
+<p>D’Almeida 首先发布了整个事件的完整视频，然后才剪下了最后罗马人被从背后击中的断章取义版本。这第二段视频提供了与 D’Souza 推特中18秒的视频类似的产品。同样，这第二个片段，在原始视频的20分钟后发布，没有显示任何背景 — — 完全抹去了早期事件和罗马人的侵略性，在最后的拳头之前发生的事被取消了。</p>
+<p>在撰写本文时，D’Almeida 发布的完全视频已经收到了400个转发，500个评论推文和900个点赞（尽管被Pin在他的时间线的顶部） — — 您可以和上述极右翼的歪曲帖子对比一下。</p>
+<p>相比下 D’Almeida 发布的罗马人被击中的断章取义视频片段获得了7,000个点赞和类似数量的转推。此外，缩短后的片段被浏览了560多万次，大大超过了完整视频的22.5万次浏览量。这种差异很可能是由于拥有更多粉丝的Ngo在不久之后又在自己的另一条推文中嵌入了该片段。</p>
+<p>Ngo 将这段视频描述为 “BLM暴徒” 打晕了一名 “正在离开#百万MAGA大游行” 的男子。他还指责他们在该男子倒地时偷走了他的手机。在 D’Almeida 的视频中，这一点并不清楚，但在 Ventura 早些时候的视频中，两名妇女确实拿起了一个手机然后跑开了。</p>
+<p>当Ngo发布这条推文时，他一定知道他的总结和视频本身并没有提供事件的完整背景。因为他在几个小时前才刚发布了一段更详细的争执片段。事实上，Ngo 的推文和 D’Almeida 摘录的视频都没有提供完整的事件版本，但这并没有阻止这一歪曲大范围地传播。</p>
+<p>不到半小时后，特朗普就转发了 Andy Ngo 的推文，导致 “左翼暴徒袭击和平的MAGA抗议者” 的错误说法在社交媒体上进一步传播。然而，从这一分析中可以看出，这远不是这些事件的全部真相和背景，在这些事件中，左翼和右翼抗议者都在相互对抗，并采取了暴力行为。</p>
+<p>考虑到被断章取义的视频的浏览量和转发量如此之大，所谓的左翼暴徒的说法似乎也获得了更大的吸引力，这在很大程度上要归功于特朗普、D’Souza 和 Ngo。</p>
+<p>在华盛顿特区发生的事，或者后来网上对该事件的错误描述，都不是什么新鲜事。右翼社交媒体人物分享去语境化的视频以引发对左翼的愤怒，这种循环已经持续了很多年。2019年，Ngo亲自报道了波特兰地区一家名为 Cider Riot 的酒吧发生的大规模斗殴事件，他的推文将其定格为 “Antifa 分子的无端攻击”。</p>
+<p>然而几周后，在右翼组织 “爱国者祈祷” 内部卧底的人公布了数小时在集会上拍摄到的视频。这段在 Cider Riot 战斗前录制的视频清楚地显示，爱国者祈祷组织的成员正在检查他们的武器，并讨论他们袭击酒吧的计划。一个站在 Ngo 附近的人清楚的说： “将会有一场大的战斗”。在这一切的过程中，Ngo 唯一的反应就是笑了几次。他并没有报告他在行进到 Cider Riot 时听到的情况。</p>
+<p>根据那些泄露的视频的证据，爱国者祈祷组织的6名成员被指控为煽动暴动的重罪。然而，Ngo 在极右翼媒体生态系统中的地位丝毫没有因此受到伤害，也没有因为分享在华盛顿特区举行的百万MAGA游行中经过欺骗性编辑的视频而受到伤害，事实上，11月16日，小唐纳德-特朗普还向他的630万粉丝分享了Ngo的 Patreon 和 Paypal 链接。</p>
+<p>📌 总之，不得不重复那句早已说烂了的话 —— 当您看到一个视频、照片、故事时，请问问自己：这可能是怎么回事？背景是什么？它完整吗？来源是什么？谁第一个发布的？这些内容想让你相信什么？这些内容在传播过程中被描述的东西是否是事实？…… 这是开源情报唯一有利于公民大众的价值。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E6%AD%A5%E6%AD%A5%E4%B8%BA%E8%90%A5%E6%B3%95%EF%BC%8C%E8%BD%BB%E6%9D%BE%E6%94%B9%E5%8F%98%E4%BB%96%E4%BA%BA%E7%9A%84%E8%A7%82%E7%82%B9%EF%BC%9A%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E8%AE%A9%E4%BD%A0%E6%83%B3%E7%9A%84%E4%BA%8B%EF%BC%887%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1377,6 +1506,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1397,6 +1528,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E6%AD%A5%E6%AD%A5%E4%B8%BA%E8%90%A5%E6%B3%95%EF%BC%8C%E8%BD%BB%E6%9D%BE%E6%94%B9%E5%8F%98%E4%BB%96%E4%BA%BA%E7%9A%84%E8%A7%82%E7%82%B9%EF%BC%9A%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E8%AE%A9%E4%BD%A0%E6%83%B3%E7%9A%84%E4%BA%8B%EF%BC%887%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E6%AD%A5%E6%AD%A5%E4%B8%BA%E8%90%A5%E6%B3%95%EF%BC%8C%E8%BD%BB%E6%9D%BE%E6%94%B9%E5%8F%98%E4%BB%96%E4%BA%BA%E7%9A%84%E8%A7%82%E7%82%B9%EF%BC%9A%E8%AE%A9%E4%BD%A0%E5%8F%AA%E6%83%B3%E5%88%B0%E6%88%91%E8%AE%A9%E4%BD%A0%E6%83%B3%E7%9A%84%E4%BA%8B%EF%BC%887%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1511,6 +1656,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1531,6 +1678,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E6%B2%A1%E6%9C%89%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F%EF%BC%8C%E4%BD%86%E6%80%BB%E4%BC%9A%E6%9C%89%E4%B8%80%E4%BA%9B%E8%BF%B9%E8%B1%A1%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%881%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E6%B2%A1%E6%9C%89%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F%EF%BC%8C%E4%BD%86%E6%80%BB%E4%BC%9A%E6%9C%89%E4%B8%80%E4%BA%9B%E8%BF%B9%E8%B1%A1%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%881%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1657,6 +1818,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1677,6 +1840,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E6%B5%8F%E8%A7%88%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E6%9B%9D%E5%85%89%E4%BD%A0%E7%9A%84%E5%86%85%E5%BF%83%E5%85%A8%E6%99%AF%E5%9B%BE%EF%BC%9A%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E6%BC%94%E7%A4%BA/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E6%B5%8F%E8%A7%88%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E6%9B%9D%E5%85%89%E4%BD%A0%E7%9A%84%E5%86%85%E5%BF%83%E5%85%A8%E6%99%AF%E5%9B%BE%EF%BC%9A%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E6%BC%94%E7%A4%BA/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1799,6 +1976,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1819,6 +1998,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E6%BC%94%E7%A4%BA%EF%BC%9A%E5%AF%B9%20Elon%20Musk%20%E6%AF%94%E7%89%B9%E5%B8%81%E8%AF%88%E9%AA%97%E7%9A%84%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E6%BC%94%E7%A4%BA%EF%BC%9A%E5%AF%B9%20Elon%20Musk%20%E6%AF%94%E7%89%B9%E5%B8%81%E8%AF%88%E9%AA%97%E7%9A%84%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1858,14 +2051,14 @@
 <p>谁是 IP 地址的所有者？</p>
 <p>有趣的是，这三个诈骗域名用的是同一个服务供应商“storm-pro.net” 。从 Whois 数据可以看到：</p>
 <p>steve@dev:~$ whois m-tesla.me<br>Domain Name: M-TESLA.ME<br>…<br>Name Server: DNS2.STORM-PRO.NET<br>Name Server: DNS1.STORM-PRO.NET<br>…<br>但是域名好像没有网站，而且所有有用的 Whois 信息都被打码处理了，输入 host -t a storm-pro. net 看到：</p>
-<p>steve@dev:<del>$ host -t a storm-pro.net<br>storm-pro.net has no A record<br>steve@dev:</del>$ host -t a <a target="_blank" rel="noopener" href="http://www.storm-pro.net/">www.storm-pro.net</a><br>Host <a target="_blank" rel="noopener" href="http://www.storm-pro.net/">www.storm-pro.net</a> not found: 3(NXDOMAIN)<br>steve@dev:~$ whois storm-pro.net<br>…<br>Registrant Name: GDPR Masked<br>Registrant Organization: GDPR Masked<br>Registrant Street: GDPR Masked GDPR Masked GDPR Masked<br>Registrant City: GDPR Masked<br>Registrant State/Province: GDPR Masked<br>Registrant Postal Code: 00000<br>Registrant Country: GDPR Masked<br>Registrant Phone: +0.00000000<br>Registrant Phone Ext:<br>Registrant Fax:<br>Registrant Fax Ext:<br>Registrant Email: <a href="mailto:&#103;&#x64;&#x70;&#x72;&#45;&#109;&#97;&#115;&#x6b;&#x69;&#x6e;&#103;&#64;&#x67;&#x64;&#112;&#114;&#x2d;&#109;&#97;&#115;&#107;&#x65;&#100;&#x2e;&#99;&#111;&#x6d;">&#103;&#x64;&#x70;&#x72;&#45;&#109;&#97;&#115;&#x6b;&#x69;&#x6e;&#103;&#64;&#x67;&#x64;&#112;&#114;&#x2d;&#109;&#97;&#115;&#107;&#x65;&#100;&#x2e;&#99;&#111;&#x6d;</a><br>Admin Email: <a href="mailto:&#x67;&#100;&#x70;&#114;&#x2d;&#x6d;&#97;&#115;&#x6b;&#x69;&#110;&#103;&#x40;&#x67;&#x64;&#x70;&#x72;&#45;&#109;&#x61;&#115;&#x6b;&#x65;&#x64;&#46;&#x63;&#111;&#109;">&#x67;&#100;&#x70;&#114;&#x2d;&#x6d;&#97;&#115;&#x6b;&#x69;&#110;&#103;&#x40;&#x67;&#x64;&#x70;&#x72;&#45;&#109;&#x61;&#115;&#x6b;&#x65;&#x64;&#46;&#x63;&#111;&#109;</a><br>Registry Tech ID: Not Available From Registry<br>Tech Name: GDPR Masked<br>Tech Organization: GDPR Masked<br>Tech Street: GDPR Masked GDPR Masked GDPR Masked<br>Tech City: GDPR Masked<br>Tech State/Province: GDPR Masked<br>Tech Postal Code: 00000<br>Tech Country: GDPR Masked<br>Tech Phone: +0.00000000<br>Tech Phone Ext:<br>Tech Fax:<br>Tech Fax Ext:<br>Tech Email: <a href="mailto:&#x67;&#x64;&#112;&#x72;&#x2d;&#x6d;&#x61;&#x73;&#x6b;&#x69;&#110;&#103;&#64;&#103;&#x64;&#x70;&#114;&#45;&#109;&#97;&#x73;&#x6b;&#x65;&#x64;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#x64;&#112;&#x72;&#x2d;&#x6d;&#x61;&#x73;&#x6b;&#x69;&#110;&#103;&#64;&#103;&#x64;&#x70;&#114;&#45;&#109;&#97;&#x73;&#x6b;&#x65;&#x64;&#x2e;&#x63;&#111;&#x6d;</a><br>…<br>那我们试试直接从 IP 地址抓取内容，看看背后可能有什么。当我们试图访问<a href="https://193[.]233[.]15[.]163">https://193[.]233[.]15[.]163</a> 时，显示的是这个：</p>
+<p>steve@dev:<del>$ host -t a storm-pro.net<br>storm-pro.net has no A record<br>steve@dev:</del>$ host -t a <a target="_blank" rel="noopener" href="http://www.storm-pro.net/">www.storm-pro.net</a><br>Host <a target="_blank" rel="noopener" href="http://www.storm-pro.net/">www.storm-pro.net</a> not found: 3(NXDOMAIN)<br>steve@dev:~$ whois storm-pro.net<br>…<br>Registrant Name: GDPR Masked<br>Registrant Organization: GDPR Masked<br>Registrant Street: GDPR Masked GDPR Masked GDPR Masked<br>Registrant City: GDPR Masked<br>Registrant State/Province: GDPR Masked<br>Registrant Postal Code: 00000<br>Registrant Country: GDPR Masked<br>Registrant Phone: +0.00000000<br>Registrant Phone Ext:<br>Registrant Fax:<br>Registrant Fax Ext:<br>Registrant Email: <a href="mailto:&#x67;&#x64;&#x70;&#x72;&#45;&#109;&#x61;&#x73;&#107;&#105;&#110;&#x67;&#x40;&#103;&#100;&#112;&#114;&#45;&#x6d;&#x61;&#x73;&#x6b;&#x65;&#100;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#x64;&#x70;&#x72;&#45;&#109;&#x61;&#x73;&#107;&#105;&#110;&#x67;&#x40;&#103;&#100;&#112;&#114;&#45;&#x6d;&#x61;&#x73;&#x6b;&#x65;&#100;&#x2e;&#99;&#x6f;&#x6d;</a><br>Admin Email: <a href="mailto:&#103;&#100;&#x70;&#x72;&#45;&#109;&#97;&#115;&#107;&#x69;&#110;&#103;&#x40;&#103;&#x64;&#x70;&#x72;&#x2d;&#x6d;&#97;&#x73;&#x6b;&#x65;&#x64;&#x2e;&#x63;&#x6f;&#109;">&#103;&#100;&#x70;&#x72;&#45;&#109;&#97;&#115;&#107;&#x69;&#110;&#103;&#x40;&#103;&#x64;&#x70;&#x72;&#x2d;&#x6d;&#97;&#x73;&#x6b;&#x65;&#x64;&#x2e;&#x63;&#x6f;&#109;</a><br>Registry Tech ID: Not Available From Registry<br>Tech Name: GDPR Masked<br>Tech Organization: GDPR Masked<br>Tech Street: GDPR Masked GDPR Masked GDPR Masked<br>Tech City: GDPR Masked<br>Tech State/Province: GDPR Masked<br>Tech Postal Code: 00000<br>Tech Country: GDPR Masked<br>Tech Phone: +0.00000000<br>Tech Phone Ext:<br>Tech Fax:<br>Tech Fax Ext:<br>Tech Email: <a href="mailto:&#103;&#100;&#112;&#114;&#x2d;&#x6d;&#x61;&#x73;&#x6b;&#x69;&#x6e;&#103;&#x40;&#x67;&#x64;&#x70;&#x72;&#x2d;&#109;&#x61;&#x73;&#107;&#101;&#x64;&#46;&#99;&#x6f;&#109;">&#103;&#100;&#112;&#114;&#x2d;&#x6d;&#x61;&#x73;&#x6b;&#x69;&#x6e;&#103;&#x40;&#x67;&#x64;&#x70;&#x72;&#x2d;&#109;&#x61;&#x73;&#107;&#101;&#x64;&#46;&#99;&#x6f;&#109;</a><br>…<br>那我们试试直接从 IP 地址抓取内容，看看背后可能有什么。当我们试图访问<a href="https://193[.]233[.]15[.]163">https://193[.]233[.]15[.]163</a> 时，显示的是这个：</p>
 <p>看起来诈骗者用这个服务商运行他们的网站。看起来这个是面向俄语市场的提供 DDOS 攻击防御和网站服务的公司。</p>
 <p>这个公司的网站上提供的信息很少，但是他们的 LinkedIn 页面显示他们是一家在斯洛伐克注册的公司，员工有4人，其中3个在俄罗斯，1个在捷克。到目前为止我们知道，诈骗网站不是被这家公司就是被诈骗者自己关闭了。</p>
 <p>在同一个服务器和网站上还有别的线索吗？</p>
 <p>因为这个诈骗在统一子网上有很多 IP，查找一下子网的所有者就有价值了，这里可以用到 BGPView.io。</p>
 <p>从193.233.15.0/24 子网的搜索结果看，一部分自动化系统是由一个叫 Smart Telecom SARL 的黎巴嫩注册的公司所有，而公司地点可能是在塞舌尔<br>深入调查我们可以发现上游提供商(提供网路服务的公司)。我们又看到了 StormWall，那就是说他们在为那个 IP 提供 HTTP 代理：</p>
 <p>STORMSYSTEMS-AG = StormWall<br>对 193.233.15.0/24 子网进行 Whois，可以看到一家叫 Safe Value Management 的公司：</p>
-<p>steve@dev:~$ whois 193.233.15.0/24<br>% This is the RIPE Database query service.<br>% The objects are in RPSL format.<br>%<br>…<br>organisation:   ORG-SVL6-RIPE<br>org-name:       Safe Value Limited<br>org-type:       OTHER<br>address:        Global Gateway 8, Rue de la Perle, Providence, Mahe, Seychelles<br>geoloc:         -4.678633 55.467250<br>abuse-c:        SVM142-RIPE<br>mnt-ref:        safevalue-mnt<br>mnt-ref:        FREENET-MNT<br>mnt-by:         safevalue-mnt<br>mnt-by:         FREENET-MNT<br>created:        2017-03-13T16:19:46Z<br>last-modified:  2017-04-30T08:54:48Z<br>source:         RIPE # Filtered<br>role:           Safe Value Management<br>address:        Global Gateway 8, Rue de la Perle, Providence, Mahe, Seychelles<br>abuse-mailbox:  <a href="mailto:&#97;&#x62;&#x75;&#x73;&#101;&#x73;&#x40;&#x73;&#97;&#102;&#x65;&#x76;&#97;&#x6c;&#117;&#x65;&#x2e;&#112;&#114;&#111;">&#97;&#x62;&#x75;&#x73;&#101;&#x73;&#x40;&#x73;&#97;&#102;&#x65;&#x76;&#97;&#x6c;&#117;&#x65;&#x2e;&#112;&#114;&#111;</a><br>nic-hdl:        SVM142-RIPE<br>…<br>从被打码的邮箱 abuses@safevalue. pro，我们可以猜测到公司的主页。我们来看看：</p>
+<p>steve@dev:~$ whois 193.233.15.0/24<br>% This is the RIPE Database query service.<br>% The objects are in RPSL format.<br>%<br>…<br>organisation:   ORG-SVL6-RIPE<br>org-name:       Safe Value Limited<br>org-type:       OTHER<br>address:        Global Gateway 8, Rue de la Perle, Providence, Mahe, Seychelles<br>geoloc:         -4.678633 55.467250<br>abuse-c:        SVM142-RIPE<br>mnt-ref:        safevalue-mnt<br>mnt-ref:        FREENET-MNT<br>mnt-by:         safevalue-mnt<br>mnt-by:         FREENET-MNT<br>created:        2017-03-13T16:19:46Z<br>last-modified:  2017-04-30T08:54:48Z<br>source:         RIPE # Filtered<br>role:           Safe Value Management<br>address:        Global Gateway 8, Rue de la Perle, Providence, Mahe, Seychelles<br>abuse-mailbox:  <a href="mailto:&#x61;&#98;&#117;&#115;&#101;&#x73;&#64;&#115;&#97;&#102;&#101;&#118;&#x61;&#x6c;&#x75;&#101;&#x2e;&#x70;&#x72;&#111;">&#x61;&#98;&#117;&#115;&#101;&#x73;&#64;&#115;&#97;&#102;&#101;&#118;&#x61;&#x6c;&#x75;&#101;&#x2e;&#x70;&#x72;&#111;</a><br>nic-hdl:        SVM142-RIPE<br>…<br>从被打码的邮箱 abuses@safevalue. pro，我们可以猜测到公司的主页。我们来看看：</p>
 <p>主页上找不到关于公司的具体信息。虽然从 Whois 的记录来看公司的位置是在塞舌尔，可主页上也没有找到明显的关于公司位置的情报。</p>
 <p>虽然主页上没有明显的选择其他语言的功能，其实您可以手动进入一个可以显示俄语鼠标弹窗 (mouseover) 的网页，虽然网页内容还是英语。就是在 <a target="_blank" rel="noopener" href="https://safevalue.pro/">https://safevalue.pro</a> 后面加上 /ru 来实现。尝试其他语言会显示 404 (就是说只有俄语选项)。</p>
 <p>在 safevalue.pro/ru 里, 虽然网页还是英语，但您可以看到俄语的 mouseover.。尝试其他语言会显示 404<br>那其他相邻子网的情况呢？他们在什么地点、由谁控制？下边的 whois 脚本(粗体)就是用来查找这些 193.233.15.0/24 的相邻子网的所在国家和注册组织的：</p>
@@ -1881,12 +2074,12 @@
 <p>查询 193.233.15.0/24 下的网址都会显示类似的结果。实际上，在这篇文章写作的时间里，Spamhaus 把这整个子网都视为危险。</p>
 <p>那到底是谁在背后？</p>
 <p>意料之中的是，我们找到的关联诈骗网站的邮箱都是 privacy/abuse 邮箱。就是打了码，所以没法确定拥有者：</p>
-<p><a href="mailto:&#x31;&#57;&#100;&#100;&#53;&#x65;&#97;&#x35;&#x37;&#x66;&#x32;&#x62;&#x34;&#102;&#x35;&#x33;&#56;&#x38;&#102;&#x35;&#102;&#x35;&#48;&#x36;&#x63;&#x62;&#53;&#97;&#x39;&#x30;&#57;&#57;&#46;&#112;&#114;&#x6f;&#116;&#x65;&#x63;&#x74;&#x40;&#x77;&#104;&#111;&#x69;&#x73;&#103;&#x75;&#x61;&#x72;&#x64;&#46;&#x63;&#111;&#109;">&#x31;&#57;&#100;&#100;&#53;&#x65;&#97;&#x35;&#x37;&#x66;&#x32;&#x62;&#x34;&#102;&#x35;&#x33;&#56;&#x38;&#102;&#x35;&#102;&#x35;&#48;&#x36;&#x63;&#x62;&#53;&#97;&#x39;&#x30;&#57;&#57;&#46;&#112;&#114;&#x6f;&#116;&#x65;&#x63;&#x74;&#x40;&#x77;&#104;&#111;&#x69;&#x73;&#103;&#x75;&#x61;&#x72;&#x64;&#46;&#x63;&#111;&#109;</a><br><a href="mailto:&#51;&#52;&#x37;&#49;&#x34;&#x34;&#x33;&#64;&#x50;&#x52;&#73;&#86;&#65;&#67;&#89;&#x2d;&#x4c;&#73;&#x4e;&#x4b;&#x2e;&#67;&#79;&#77;">&#51;&#52;&#x37;&#49;&#x34;&#x34;&#x33;&#64;&#x50;&#x52;&#73;&#86;&#65;&#67;&#89;&#x2d;&#x4c;&#73;&#x4e;&#x4b;&#x2e;&#67;&#79;&#77;</a><br><a href="mailto:&#x61;&#98;&#117;&#x73;&#101;&#64;&#49;&#48;&#x31;&#x64;&#111;&#109;&#97;&#105;&#110;&#46;&#99;&#x6f;&#109;">&#x61;&#98;&#117;&#x73;&#101;&#64;&#49;&#48;&#x31;&#x64;&#111;&#109;&#97;&#105;&#110;&#46;&#99;&#x6f;&#109;</a><br>And so on…<br>换句话说，全都没用。有一些明文邮箱倒是可以找到，可在这片文章里不做深入调查，而且那些明文邮箱也好像和诈骗关系不大 (比如, elonmusk[.]ooo)。</p>
+<p><a href="mailto:&#x31;&#x39;&#x64;&#100;&#53;&#x65;&#x61;&#x35;&#55;&#102;&#x32;&#98;&#52;&#x66;&#53;&#x33;&#56;&#56;&#x66;&#x35;&#x66;&#53;&#x30;&#54;&#x63;&#98;&#53;&#x61;&#x39;&#x30;&#57;&#x39;&#46;&#x70;&#114;&#x6f;&#x74;&#101;&#x63;&#116;&#x40;&#119;&#104;&#111;&#x69;&#x73;&#x67;&#117;&#97;&#114;&#100;&#46;&#x63;&#111;&#x6d;">&#x31;&#x39;&#x64;&#100;&#53;&#x65;&#x61;&#x35;&#55;&#102;&#x32;&#98;&#52;&#x66;&#53;&#x33;&#56;&#56;&#x66;&#x35;&#x66;&#53;&#x30;&#54;&#x63;&#98;&#53;&#x61;&#x39;&#x30;&#57;&#x39;&#46;&#x70;&#114;&#x6f;&#x74;&#101;&#x63;&#116;&#x40;&#119;&#104;&#111;&#x69;&#x73;&#x67;&#117;&#97;&#114;&#100;&#46;&#x63;&#111;&#x6d;</a><br><a href="mailto:&#51;&#x34;&#x37;&#x31;&#52;&#52;&#x33;&#64;&#80;&#82;&#x49;&#x56;&#65;&#67;&#x59;&#45;&#x4c;&#x49;&#x4e;&#x4b;&#x2e;&#67;&#79;&#77;">&#51;&#x34;&#x37;&#x31;&#52;&#52;&#x33;&#64;&#80;&#82;&#x49;&#x56;&#65;&#67;&#x59;&#45;&#x4c;&#x49;&#x4e;&#x4b;&#x2e;&#67;&#79;&#77;</a><br><a href="mailto:&#x61;&#98;&#x75;&#115;&#101;&#x40;&#x31;&#x30;&#49;&#100;&#111;&#x6d;&#x61;&#105;&#x6e;&#46;&#99;&#111;&#x6d;">&#x61;&#98;&#x75;&#115;&#101;&#x40;&#x31;&#x30;&#49;&#100;&#111;&#x6d;&#x61;&#105;&#x6e;&#46;&#99;&#111;&#x6d;</a><br>And so on…<br>换句话说，全都没用。有一些明文邮箱倒是可以找到，可在这片文章里不做深入调查，而且那些明文邮箱也好像和诈骗关系不大 (比如, elonmusk[.]ooo)。</p>
 <p>利用环境内容深入调查</p>
 <p>我们了解到有关诈骗的多个域名都用的是同一个基础设施，我们可以用其中一个域名的信息来帮助查找其他的。我们在回到 Whois 去查寻，3个诈骗域名有2个是用 NameCheap 注册的，只有1个不是：</p>
 <p>Spiderfoot 发现3个诈骗域名有2个是用 NameCheap 注册的, 只有1个不是<br>当使用 Whois 时，您把查询指向特定的服务器，很多时候人们只关心他们首先看到的 Whois 信息。但是，有时候 Whois 里一些周边信息更可能关系到调查能否有突破还是进入死胡同。</p>
 <p>steve@dev:~$ whois m-tesla.me<br>Domain Name: M-TESLA.ME<br>Registry Domain ID: D425500000070248173-AGRS<br>Registrar WHOIS Server: whois.namecheap.com<br>…<br>当进行 Whois 查询时，您所用的 Whois 客户端软件会向内置的一些默认 Whois 服务端自动查询。 Whois 的结果经常会来自一些权威的 whois 服务器，因为可能会有更多信息。就像黑体字显示的，那我们在 Linux 的 Whois 中加入 -h 来看看：</p>
-<p>steve@dev:~$ whois m-tesla.me -h whois.namecheap.com<br>Domain name: m-tesla.me<br>Registry Domain ID: D425500000070248173-AGRS<br>Registrar WHOIS Server: whois.namecheap.com<br>Registrar URL: <a target="_blank" rel="noopener" href="http://www.namecheap.com/">http://www.namecheap.com</a><br>Updated Date: 2018-11-07T11:29:42.00Z<br>Creation Date: 2018-11-07T11:29:42.00Z<br>Registrar Registration Expiration Date: 2019-11-07T11:29:42.00Z<br>Registrar: NAMECHEAP INC<br>Registrar IANA ID: 1068<br>Registrar Abuse Contact Email: <a href="mailto:&#97;&#98;&#x75;&#x73;&#101;&#64;&#x6e;&#x61;&#x6d;&#101;&#x63;&#x68;&#101;&#97;&#x70;&#x2e;&#x63;&#x6f;&#109;">&#97;&#98;&#x75;&#x73;&#101;&#64;&#x6e;&#x61;&#x6d;&#101;&#x63;&#x68;&#101;&#97;&#x70;&#x2e;&#x63;&#x6f;&#109;</a><br>Registrar Abuse Contact Phone: +1.6613102107<br>Reseller: NAMECHEAP INC<br>Domain Status: clientTransferProhibited <a target="_blank" rel="noopener" href="https://icann.org/epp#clientTransferProhibited">https://icann.org/epp#clientTransferProhibited</a><br>Domain Status: serverTransferProhibited <a target="_blank" rel="noopener" href="https://icann.org/epp#serverTransferProhibited">https://icann.org/epp#serverTransferProhibited</a><br>Registry Registrant ID: ti1srjorhfz8q94w<br>Registrant Name: WhoisGuard Protected<br>Registrant Organization: WhoisGuard, Inc.<br>Registrant Street: P.O. Box 0823-03411<br>Registrant City: Panama<br>Registrant State/Province: Panama<br>Registrant Postal Code:<br>Registrant Country: PA<br>Registrant Phone: +507.8365503<br>Registrant Phone Ext:<br>Registrant Fax: +51.17057182<br>Registrant Fax Ext:<br>Registrant Email: <a href="mailto:&#x38;&#x31;&#x63;&#52;&#x61;&#97;&#x36;&#56;&#100;&#102;&#x35;&#x36;&#52;&#x30;&#97;&#51;&#97;&#x66;&#x64;&#57;&#x38;&#54;&#99;&#101;&#x34;&#51;&#x38;&#x61;&#102;&#97;&#50;&#x36;&#x2e;&#112;&#x72;&#x6f;&#116;&#101;&#x63;&#116;&#x40;&#x77;&#x68;&#111;&#105;&#x73;&#103;&#117;&#97;&#x72;&#100;&#46;&#x63;&#x6f;&#109;">&#x38;&#x31;&#x63;&#52;&#x61;&#97;&#x36;&#56;&#100;&#102;&#x35;&#x36;&#52;&#x30;&#97;&#51;&#97;&#x66;&#x64;&#57;&#x38;&#54;&#99;&#101;&#x34;&#51;&#x38;&#x61;&#102;&#97;&#50;&#x36;&#x2e;&#112;&#x72;&#x6f;&#116;&#101;&#x63;&#116;&#x40;&#x77;&#x68;&#111;&#105;&#x73;&#103;&#117;&#97;&#x72;&#100;&#46;&#x63;&#x6f;&#109;</a><br>Registry Admin ID: y8otwk46zno0fdku<br>Admin Name: WhoisGuard Protected<br>Admin Organization: WhoisGuard, Inc.<br>Admin Street: P.O. Box 0823-03411<br>Admin City: Panama<br>Admin State/Province: Panama<br>Admin Postal Code:<br>Admin Country: PA<br>Admin Phone: +507.8365503<br>Admin Phone Ext:<br>Admin Fax: +51.17057182<br>Admin Fax Ext:<br>Admin Email: <a href="mailto:&#56;&#x31;&#99;&#x34;&#97;&#97;&#54;&#x38;&#x64;&#102;&#53;&#54;&#x34;&#48;&#x61;&#51;&#97;&#x66;&#100;&#x39;&#56;&#x36;&#x63;&#x65;&#52;&#51;&#x38;&#97;&#102;&#97;&#x32;&#54;&#46;&#112;&#114;&#111;&#116;&#x65;&#x63;&#116;&#x40;&#119;&#104;&#x6f;&#x69;&#115;&#103;&#x75;&#97;&#114;&#x64;&#46;&#99;&#111;&#109;">&#56;&#x31;&#99;&#x34;&#97;&#97;&#54;&#x38;&#x64;&#102;&#53;&#54;&#x34;&#48;&#x61;&#51;&#97;&#x66;&#100;&#x39;&#56;&#x36;&#x63;&#x65;&#52;&#51;&#x38;&#97;&#102;&#97;&#x32;&#54;&#46;&#112;&#114;&#111;&#116;&#x65;&#x63;&#116;&#x40;&#119;&#104;&#x6f;&#x69;&#115;&#103;&#x75;&#97;&#114;&#x64;&#46;&#99;&#111;&#109;</a><br>Registry Tech ID: q5fk9pxjotdst0s1<br>Tech Name: WhoisGuard Protected<br>Tech Organization: WhoisGuard, Inc.<br>Tech Street: P.O. Box 0823-03411<br>Tech City: Panama<br>Tech State/Province: Panama<br>Tech Postal Code:<br>Tech Country: PA<br>Tech Phone: +507.8365503<br>Tech Phone Ext:<br>Tech Fax: +51.17057182<br>Tech Fax Ext:<br>Tech Email: <a href="mailto:&#x38;&#49;&#99;&#x34;&#x61;&#x61;&#54;&#56;&#x64;&#102;&#53;&#54;&#x34;&#48;&#x61;&#51;&#97;&#102;&#100;&#x39;&#x38;&#54;&#99;&#101;&#x34;&#x33;&#56;&#x61;&#x66;&#97;&#x32;&#54;&#46;&#112;&#114;&#x6f;&#116;&#101;&#x63;&#x74;&#64;&#x77;&#104;&#x6f;&#x69;&#115;&#x67;&#x75;&#97;&#x72;&#x64;&#46;&#99;&#111;&#x6d;">&#x38;&#49;&#99;&#x34;&#x61;&#x61;&#54;&#56;&#x64;&#102;&#53;&#54;&#x34;&#48;&#x61;&#51;&#97;&#102;&#100;&#x39;&#x38;&#54;&#99;&#101;&#x34;&#x33;&#56;&#x61;&#x66;&#97;&#x32;&#54;&#46;&#112;&#114;&#x6f;&#116;&#101;&#x63;&#x74;&#64;&#x77;&#104;&#x6f;&#x69;&#115;&#x67;&#x75;&#97;&#x72;&#x64;&#46;&#99;&#111;&#x6d;</a><br>Name Server: dns1.storm-pro.net<br>Name Server: dns2.storm-pro.net<br>DNSSEC: unsigned<br>URL of the ICANN WHOIS Data Problem Reporting System: <a target="_blank" rel="noopener" href="http://wdprs.internic.net/">http://wdprs.internic.net/</a></p>
+<p>steve@dev:~$ whois m-tesla.me -h whois.namecheap.com<br>Domain name: m-tesla.me<br>Registry Domain ID: D425500000070248173-AGRS<br>Registrar WHOIS Server: whois.namecheap.com<br>Registrar URL: <a target="_blank" rel="noopener" href="http://www.namecheap.com/">http://www.namecheap.com</a><br>Updated Date: 2018-11-07T11:29:42.00Z<br>Creation Date: 2018-11-07T11:29:42.00Z<br>Registrar Registration Expiration Date: 2019-11-07T11:29:42.00Z<br>Registrar: NAMECHEAP INC<br>Registrar IANA ID: 1068<br>Registrar Abuse Contact Email: <a href="mailto:&#x61;&#98;&#x75;&#115;&#x65;&#x40;&#x6e;&#97;&#109;&#x65;&#99;&#x68;&#x65;&#97;&#112;&#46;&#x63;&#x6f;&#109;">&#x61;&#98;&#x75;&#115;&#x65;&#x40;&#x6e;&#97;&#109;&#x65;&#99;&#x68;&#x65;&#97;&#112;&#46;&#x63;&#x6f;&#109;</a><br>Registrar Abuse Contact Phone: +1.6613102107<br>Reseller: NAMECHEAP INC<br>Domain Status: clientTransferProhibited <a target="_blank" rel="noopener" href="https://icann.org/epp#clientTransferProhibited">https://icann.org/epp#clientTransferProhibited</a><br>Domain Status: serverTransferProhibited <a target="_blank" rel="noopener" href="https://icann.org/epp#serverTransferProhibited">https://icann.org/epp#serverTransferProhibited</a><br>Registry Registrant ID: ti1srjorhfz8q94w<br>Registrant Name: WhoisGuard Protected<br>Registrant Organization: WhoisGuard, Inc.<br>Registrant Street: P.O. Box 0823-03411<br>Registrant City: Panama<br>Registrant State/Province: Panama<br>Registrant Postal Code:<br>Registrant Country: PA<br>Registrant Phone: +507.8365503<br>Registrant Phone Ext:<br>Registrant Fax: +51.17057182<br>Registrant Fax Ext:<br>Registrant Email: <a href="mailto:&#x38;&#49;&#99;&#x34;&#97;&#97;&#54;&#x38;&#x64;&#x66;&#53;&#x36;&#52;&#48;&#x61;&#x33;&#97;&#x66;&#100;&#x39;&#x38;&#x36;&#x63;&#x65;&#x34;&#51;&#56;&#x61;&#x66;&#x61;&#50;&#x36;&#x2e;&#x70;&#114;&#x6f;&#x74;&#x65;&#99;&#x74;&#64;&#119;&#x68;&#111;&#x69;&#x73;&#103;&#117;&#x61;&#114;&#100;&#46;&#99;&#111;&#109;">&#x38;&#49;&#99;&#x34;&#97;&#97;&#54;&#x38;&#x64;&#x66;&#53;&#x36;&#52;&#48;&#x61;&#x33;&#97;&#x66;&#100;&#x39;&#x38;&#x36;&#x63;&#x65;&#x34;&#51;&#56;&#x61;&#x66;&#x61;&#50;&#x36;&#x2e;&#x70;&#114;&#x6f;&#x74;&#x65;&#99;&#x74;&#64;&#119;&#x68;&#111;&#x69;&#x73;&#103;&#117;&#x61;&#114;&#100;&#46;&#99;&#111;&#109;</a><br>Registry Admin ID: y8otwk46zno0fdku<br>Admin Name: WhoisGuard Protected<br>Admin Organization: WhoisGuard, Inc.<br>Admin Street: P.O. Box 0823-03411<br>Admin City: Panama<br>Admin State/Province: Panama<br>Admin Postal Code:<br>Admin Country: PA<br>Admin Phone: +507.8365503<br>Admin Phone Ext:<br>Admin Fax: +51.17057182<br>Admin Fax Ext:<br>Admin Email: <a href="mailto:&#x38;&#49;&#x63;&#x34;&#x61;&#97;&#x36;&#56;&#100;&#102;&#x35;&#54;&#52;&#x30;&#97;&#51;&#97;&#x66;&#100;&#x39;&#56;&#x36;&#99;&#101;&#x34;&#x33;&#x38;&#x61;&#x66;&#x61;&#50;&#54;&#x2e;&#112;&#x72;&#111;&#116;&#x65;&#x63;&#116;&#x40;&#x77;&#x68;&#x6f;&#x69;&#x73;&#103;&#117;&#x61;&#x72;&#100;&#46;&#x63;&#x6f;&#109;">&#x38;&#49;&#x63;&#x34;&#x61;&#97;&#x36;&#56;&#100;&#102;&#x35;&#54;&#52;&#x30;&#97;&#51;&#97;&#x66;&#100;&#x39;&#56;&#x36;&#99;&#101;&#x34;&#x33;&#x38;&#x61;&#x66;&#x61;&#50;&#54;&#x2e;&#112;&#x72;&#111;&#116;&#x65;&#x63;&#116;&#x40;&#x77;&#x68;&#x6f;&#x69;&#x73;&#103;&#117;&#x61;&#x72;&#100;&#46;&#x63;&#x6f;&#109;</a><br>Registry Tech ID: q5fk9pxjotdst0s1<br>Tech Name: WhoisGuard Protected<br>Tech Organization: WhoisGuard, Inc.<br>Tech Street: P.O. Box 0823-03411<br>Tech City: Panama<br>Tech State/Province: Panama<br>Tech Postal Code:<br>Tech Country: PA<br>Tech Phone: +507.8365503<br>Tech Phone Ext:<br>Tech Fax: +51.17057182<br>Tech Fax Ext:<br>Tech Email: <a href="mailto:&#x38;&#x31;&#99;&#x34;&#x61;&#97;&#54;&#x38;&#x64;&#x66;&#x35;&#x36;&#52;&#48;&#x61;&#51;&#97;&#102;&#x64;&#x39;&#56;&#54;&#99;&#101;&#52;&#x33;&#x38;&#97;&#x66;&#x61;&#50;&#54;&#46;&#x70;&#114;&#111;&#116;&#101;&#x63;&#116;&#x40;&#119;&#104;&#111;&#105;&#x73;&#x67;&#x75;&#97;&#114;&#100;&#x2e;&#x63;&#111;&#x6d;">&#x38;&#x31;&#99;&#x34;&#x61;&#97;&#54;&#x38;&#x64;&#x66;&#x35;&#x36;&#52;&#48;&#x61;&#51;&#97;&#102;&#x64;&#x39;&#56;&#54;&#99;&#101;&#52;&#x33;&#x38;&#97;&#x66;&#x61;&#50;&#54;&#46;&#x70;&#114;&#111;&#116;&#101;&#x63;&#116;&#x40;&#119;&#104;&#111;&#105;&#x73;&#x67;&#x75;&#97;&#114;&#100;&#x2e;&#x63;&#111;&#x6d;</a><br>Name Server: dns1.storm-pro.net<br>Name Server: dns2.storm-pro.net<br>DNSSEC: unsigned<br>URL of the ICANN WHOIS Data Problem Reporting System: <a target="_blank" rel="noopener" href="http://wdprs.internic.net/">http://wdprs.internic.net/</a></p>
 <blockquote>
 <blockquote>
 <blockquote>
@@ -1894,7 +2087,7 @@
 </blockquote>
 </blockquote>
 </blockquote>
-<p>steve@dev:~$ whois elonmusk.id -h whois.namecheap.com<br>Domain name: elonmusk.id<br>…<br>Registrant Name: Sergey Ishuk<br>Registrant Organization:<br>Registrant Street: lenina 131 lenina 131 kv 2<br>Registrant City: Xarkov<br>Registrant State/Province: Xarkov<br>Registrant Postal Code: DN3 6GB<br>Registrant Country: GB<br>Registrant Phone: +380.957370883<br>Registrant Phone Ext:<br>Registrant Fax:<br>Registrant Fax Ext:<br>Registrant Email: <a href="mailto:&#112;&#x32;&#56;&#x36;&#55;&#53;&#x39;&#x34;&#56;&#56;&#x40;&#x79;&#97;&#x6e;&#x64;&#x65;&#x78;&#x2e;&#x72;&#117;">&#112;&#x32;&#56;&#x36;&#55;&#53;&#x39;&#x34;&#56;&#56;&#x40;&#x79;&#97;&#x6e;&#x64;&#x65;&#x78;&#x2e;&#x72;&#117;</a><br>…<br>现在有意思了！名字 (Sergey Ishuk), 地址 (lenina 131 lenina 131 kv 2,Xarkov)，电话(+380.957370883) and 邮箱 (<a href="mailto:&#x70;&#x32;&#x38;&#x36;&#x37;&#53;&#x39;&#52;&#56;&#x38;&#64;&#121;&#x61;&#110;&#x64;&#101;&#x78;&#x2e;&#114;&#117;">&#x70;&#x32;&#x38;&#x36;&#x37;&#53;&#x39;&#52;&#56;&#x38;&#64;&#121;&#x61;&#110;&#x64;&#101;&#x78;&#x2e;&#114;&#117;</a>) 。 也许细节是假的，但我们用搜索引擎 (比如 google) 查查电话看看 +380.957370883：</p>
+<p>steve@dev:~$ whois elonmusk.id -h whois.namecheap.com<br>Domain name: elonmusk.id<br>…<br>Registrant Name: Sergey Ishuk<br>Registrant Organization:<br>Registrant Street: lenina 131 lenina 131 kv 2<br>Registrant City: Xarkov<br>Registrant State/Province: Xarkov<br>Registrant Postal Code: DN3 6GB<br>Registrant Country: GB<br>Registrant Phone: +380.957370883<br>Registrant Phone Ext:<br>Registrant Fax:<br>Registrant Fax Ext:<br>Registrant Email: <a href="mailto:&#x70;&#50;&#x38;&#x36;&#55;&#53;&#x39;&#x34;&#56;&#56;&#x40;&#x79;&#97;&#x6e;&#x64;&#101;&#120;&#x2e;&#x72;&#x75;">&#x70;&#50;&#x38;&#x36;&#55;&#53;&#x39;&#x34;&#56;&#56;&#x40;&#x79;&#97;&#x6e;&#x64;&#101;&#120;&#x2e;&#x72;&#x75;</a><br>…<br>现在有意思了！名字 (Sergey Ishuk), 地址 (lenina 131 lenina 131 kv 2,Xarkov)，电话(+380.957370883) and 邮箱 (<a href="mailto:&#112;&#50;&#56;&#54;&#55;&#53;&#57;&#x34;&#56;&#56;&#64;&#x79;&#x61;&#110;&#x64;&#x65;&#x78;&#46;&#114;&#x75;">&#112;&#50;&#56;&#54;&#55;&#53;&#57;&#x34;&#56;&#56;&#64;&#x79;&#x61;&#110;&#x64;&#x65;&#x78;&#46;&#114;&#x75;</a>) 。 也许细节是假的，但我们用搜索引擎 (比如 google) 查查电话看看 +380.957370883：</p>
 <p>发现了一个明显的诈骗网路 (give-coinbase.com)。我们还查到了更多的邮箱和名字信息。</p>
 <p>相似域名: 潜在的诈骗？</p>
 <p>这次 twitter 上诈骗的是价值 18 万美元的比特币，估计还有不少类似的网站诈骗更多。看看不同顶级域 (TLDs) 上的其他相似域名，很可能诈骗者在未来还会用 Elon Musk 的名义诈骗。</p>
@@ -2036,10 +2229,59 @@
   </span>
   <span class="author" itemprop="copyrightHolder">眼魔王</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -2054,15 +2296,11 @@
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
 <script src="/js/utils.js"></script>
 
-<script src="/js/motion.js"></script>
 
-
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -2075,6 +2313,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -2089,6 +2331,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

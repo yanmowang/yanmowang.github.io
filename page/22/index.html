@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
@@ -77,7 +77,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <div class="container">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -101,6 +101,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -113,6 +114,11 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -130,11 +136,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -175,6 +208,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -201,6 +236,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E4%BA%A4%E6%B5%81%E5%87%BA%E7%8E%B0%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%AD%EF%BC%89%E7%BD%91%E7%BB%9C%E8%88%86%E8%AE%BA%E5%9C%BA%E7%9A%84%E4%BA%A4%E6%B5%81%E9%9A%9C%E7%A2%8D%E5%92%8C%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E4%BA%A4%E6%B5%81%E5%87%BA%E7%8E%B0%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%AD%EF%BC%89%E7%BD%91%E7%BB%9C%E8%88%86%E8%AE%BA%E5%9C%BA%E7%9A%84%E4%BA%A4%E6%B5%81%E9%9A%9C%E7%A2%8D%E5%92%8C%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -273,6 +322,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -299,6 +350,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E4%BA%BA%E6%80%A7%E5%BC%B1%E7%82%B9%E8%83%BD%E6%91%A7%E6%AF%81%E4%B8%80%E5%88%87%E9%98%B2%E7%81%AB%E5%A2%99%EF%BC%9A%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%94%BB%E5%87%BB%E5%AE%9E%E8%B7%B5%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%BD%A0%E5%BF%85%E9%A1%BB%E5%9C%A8%E4%B9%8E%E7%9A%84%E9%97%AE%E9%A2%98/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E4%BA%BA%E6%80%A7%E5%BC%B1%E7%82%B9%E8%83%BD%E6%91%A7%E6%AF%81%E4%B8%80%E5%88%87%E9%98%B2%E7%81%AB%E5%A2%99%EF%BC%9A%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%94%BB%E5%87%BB%E5%AE%9E%E8%B7%B5%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%BD%A0%E5%BF%85%E9%A1%BB%E5%9C%A8%E4%B9%8E%E7%9A%84%E9%97%AE%E9%A2%98/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -390,6 +455,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -416,6 +483,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E4%BA%BA%E6%80%A7%E7%9A%84%E6%87%A6%E5%BC%B1%EF%BC%9A%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%94%BB%E5%87%BB%E5%92%8C%E8%A1%8C%E4%B8%BA%E6%93%8D%E7%BA%B5%E7%9A%84%E4%BE%BF%E6%8D%B7%E5%85%A5%E5%8F%A3/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E4%BA%BA%E6%80%A7%E7%9A%84%E6%87%A6%E5%BC%B1%EF%BC%9A%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%94%BB%E5%87%BB%E5%92%8C%E8%A1%8C%E4%B8%BA%E6%93%8D%E7%BA%B5%E7%9A%84%E4%BE%BF%E6%8D%B7%E5%85%A5%E5%8F%A3/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -505,6 +586,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -531,6 +614,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E4%BE%A6%E6%9F%A5%E5%92%8C%E6%AC%BA%E9%AA%97%EF%BC%9A%E8%BF%99%E9%87%8C%E6%98%AF%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%94%BB%E5%87%BB%E5%BF%85%E5%A4%87%E7%9A%84%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E4%BE%A6%E6%9F%A5%E5%92%8C%E6%AC%BA%E9%AA%97%EF%BC%9A%E8%BF%99%E9%87%8C%E6%98%AF%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%94%BB%E5%87%BB%E5%BF%85%E5%A4%87%E7%9A%84%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -641,7 +738,7 @@
 <p>2、CeWL</p>
 <p>其开发者的描述是，CeWL 是一个 Ruby 应用程序，它可以通过给定的 URL 进行指定深度的搜索，并可扩展到外部链接，最终生成一个可用于密码破解的字典文件，John the Ripper 等密码破解工具可以使用这个字典进行密码破解。有关 CeWL 的更多资料可以在这里找到：<a target="_blank" rel="noopener" href="http://www.digininja.org/projects/cewl.php">www.digininja.org/projects/cewl.php</a></p>
 <p>下面看一下在 BackTrack4 中使用的情况。</p>
-<p>root@bt:/pentest/passwords/cewl# ruby cewl.rb<br>— help cewl 3.0 Robin Wood (<a href="mailto:&#100;&#x6e;&#x69;&#110;&#x6a;&#97;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#100;&#x6e;&#x69;&#110;&#x6a;&#97;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a>)<br>(<a target="_blank" rel="noopener" href="http://www.digininja.org/">www.digininja.org</a>)<br>Usage: cewl [OPTION] … URL — help, -h: show help — depth x, -d x: depth to spider to,<br>default 2 — min_word_length, -m: minimum word length, default 3 — offsite, -o: let the<br>spider visit other sites — write, -w file: write the output to the file — ua, -u user-<br>agent: useragent to send — no-words, -n: don’t output the wordlist — meta, -a file:<br>include meta data, optional output file — email, -e file: include email addresses,<br>optional output file — meta-temp-dir directory: the temporary directory,default /tmp -v:<br>verbose URL: The site to spider.<br>root@bt:/pentest/passwords/cewl# ./cewl.rb -d 1 -w pass.txt <a target="_blank" rel="noopener" href="http://www.targetcompany.com/about.php">http://www.targetcompany.com/about.php</a><br>root@bt:/pentest/passwords/cewl# cat passwords.txt |wc -l 430<br>root@bt:/pentest/passwords/cewl#<br>这是针对某个目标公司网站使用 CeWL 的案例，从其网站的一个网页中产生了430个可能的密码。</p>
+<p>root@bt:/pentest/passwords/cewl# ruby cewl.rb<br>— help cewl 3.0 Robin Wood (<a href="mailto:&#100;&#x6e;&#x69;&#110;&#x6a;&#x61;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#100;&#x6e;&#x69;&#110;&#x6a;&#x61;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a>)<br>(<a target="_blank" rel="noopener" href="http://www.digininja.org/">www.digininja.org</a>)<br>Usage: cewl [OPTION] … URL — help, -h: show help — depth x, -d x: depth to spider to,<br>default 2 — min_word_length, -m: minimum word length, default 3 — offsite, -o: let the<br>spider visit other sites — write, -w file: write the output to the file — ua, -u user-<br>agent: useragent to send — no-words, -n: don’t output the wordlist — meta, -a file:<br>include meta data, optional output file — email, -e file: include email addresses,<br>optional output file — meta-temp-dir directory: the temporary directory,default /tmp -v:<br>verbose URL: The site to spider.<br>root@bt:/pentest/passwords/cewl# ./cewl.rb -d 1 -w pass.txt <a target="_blank" rel="noopener" href="http://www.targetcompany.com/about.php">http://www.targetcompany.com/about.php</a><br>root@bt:/pentest/passwords/cewl# cat passwords.txt |wc -l 430<br>root@bt:/pentest/passwords/cewl#<br>这是针对某个目标公司网站使用 CeWL 的案例，从其网站的一个网页中产生了430个可能的密码。</p>
 <p>CUPP 和 CeWL 只是用来帮助分析和生成潜在密码的诸多工具中的两个。你可以运用这些工具做一个有趣的实验，输入自己的信息，看看你的密码是否能够被生成。能够帮你清楚地认识到密码安全的重要性。</p>
 <p>总结</p>
 <p>正所谓“好马配好鞍，良将配宝刀”，技术工具是社交工程的重要方面，掌握工具的功能并且能熟练使用它们就是决胜的关键。</p>
@@ -686,6 +783,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -712,6 +811,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%9A%E5%86%B3%E8%83%9C%E7%9A%84%E6%A0%B9%E5%9F%BA%E2%80%8A%E2%80%94%E2%80%8A%E2%80%94%20%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7%E4%BE%9D%E6%97%A7%E6%98%AF%E5%85%B3%E9%94%AE%EF%BC%88%E4%B8%8A%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%9A%E5%86%B3%E8%83%9C%E7%9A%84%E6%A0%B9%E5%9F%BA%E2%80%8A%E2%80%94%E2%80%8A%E2%80%94%20%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7%E4%BE%9D%E6%97%A7%E6%98%AF%E5%85%B3%E9%94%AE%EF%BC%88%E4%B8%8A%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -824,6 +937,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -850,6 +965,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E5%87%BB%E8%B4%A5%E9%AA%97%E5%B1%80%E2%80%8A%E2%80%94%E2%80%8A9%E4%B8%AA%E9%98%B2%E5%BE%A1%E6%8A%80%E5%B7%A7/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E5%87%BB%E8%B4%A5%E9%AA%97%E5%B1%80%E2%80%8A%E2%80%94%E2%80%8A9%E4%B8%AA%E9%98%B2%E5%BE%A1%E6%8A%80%E5%B7%A7/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -938,6 +1067,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -964,6 +1095,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E5%8F%AA%E6%9C%89%E8%87%AA%E5%B7%B1%E5%AD%A6%E4%BC%9A%E4%BC%AA%E8%A3%85%E6%89%8D%E8%83%BD%E8%AF%86%E7%A0%B4%E4%BC%AA%E8%A3%85%E8%80%85%20%E2%80%94%20%E2%80%94%20%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E5%AD%A6%E6%94%BB%E9%98%B2%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%8B%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E5%8F%AA%E6%9C%89%E8%87%AA%E5%B7%B1%E5%AD%A6%E4%BC%9A%E4%BC%AA%E8%A3%85%E6%89%8D%E8%83%BD%E8%AF%86%E7%A0%B4%E4%BC%AA%E8%A3%85%E8%80%85%20%E2%80%94%20%E2%80%94%20%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E5%AD%A6%E6%94%BB%E9%98%B2%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%8B%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1056,6 +1201,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1082,6 +1229,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%9D%A5%E6%94%BB%E5%87%BB%202FA%EF%BC%9F/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%9D%A5%E6%94%BB%E5%87%BB%202FA%EF%BC%9F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1156,6 +1317,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1182,6 +1345,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E5%A6%82%E4%BD%95%E5%85%8B%E6%9C%8D%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E5%A6%82%E4%BD%95%E5%85%8B%E6%9C%8D%E7%A4%BE%E4%BA%A4%E7%84%A6%E8%99%91/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1242,6 +1419,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1268,6 +1447,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E5%A6%82%E4%BD%95%E8%AE%A9%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%BF%83%E7%94%98%E6%83%85%E6%84%BF%E5%90%90%E9%9C%B2%E9%87%8D%E8%A6%81%E4%BF%A1%E6%81%AF%EF%BC%9F%E2%80%8A%E2%80%94%E2%80%8A%E2%80%94%20%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%94%BB%E5%87%BB%E2%80%9C%E8%AF%B1%E5%AF%BC%E7%9A%84%E8%89%BA%E6%9C%AF%E2%80%9D/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E5%A6%82%E4%BD%95%E8%AE%A9%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%BF%83%E7%94%98%E6%83%85%E6%84%BF%E5%90%90%E9%9C%B2%E9%87%8D%E8%A6%81%E4%BF%A1%E6%81%AF%EF%BC%9F%E2%80%8A%E2%80%94%E2%80%8A%E2%80%94%20%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E6%94%BB%E5%87%BB%E2%80%9C%E8%AF%B1%E5%AF%BC%E7%9A%84%E8%89%BA%E6%9C%AF%E2%80%9D/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1474,10 +1667,59 @@
   </span>
   <span class="author" itemprop="copyrightHolder">眼魔王</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -1492,15 +1734,11 @@
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
 <script src="/js/utils.js"></script>
 
-<script src="/js/motion.js"></script>
 
-
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -1513,6 +1751,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -1527,6 +1769,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
@@ -77,7 +77,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <div class="container">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -101,6 +101,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -113,6 +114,11 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -130,11 +136,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -175,6 +208,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -201,6 +236,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/28/%E6%AC%BA%E9%AA%97%E4%B8%8D%E6%98%AF%E6%92%92%E8%B0%8E%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95%EF%BC%9A%E5%AF%B9%E5%B3%99%E7%9A%84%E8%89%BA%E6%9C%AF%EF%BC%881%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/28/%E6%AC%BA%E9%AA%97%E4%B8%8D%E6%98%AF%E6%92%92%E8%B0%8E%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95%EF%BC%9A%E5%AF%B9%E5%B3%99%E7%9A%84%E8%89%BA%E6%9C%AF%EF%BC%881%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -374,6 +423,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -400,6 +451,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/28/%E7%9C%8B%E8%B5%B7%E6%9D%A5%E4%B8%93%E4%B8%9A%E4%B8%8D%E6%84%8F%E5%91%B3%E7%9D%80%E6%AD%A3%E7%A1%AE%EF%BC%9A%E5%8F%8D%E7%9F%A5%E8%AF%86%E7%9A%84%E8%BF%B7%E6%83%91%E6%80%A7%EF%BC%884%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/28/%E7%9C%8B%E8%B5%B7%E6%9D%A5%E4%B8%93%E4%B8%9A%E4%B8%8D%E6%84%8F%E5%91%B3%E7%9D%80%E6%AD%A3%E7%A1%AE%EF%BC%9A%E5%8F%8D%E7%9F%A5%E8%AF%86%E7%9A%84%E8%BF%B7%E6%83%91%E6%80%A7%EF%BC%884%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -451,6 +516,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -477,6 +544,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/28/%E7%A7%98%E5%AF%86%E8%A1%8C%E5%8A%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/28/%E7%A7%98%E5%AF%86%E8%A1%8C%E5%8A%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -533,6 +614,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -559,6 +642,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/28/%E8%AE%A9%E4%BD%A0%E7%9C%8B%E8%A7%81%20%E2%80%94%20%E6%AC%BA%E9%AA%97%E7%9A%84%E7%A7%AF%E6%9E%81%E6%96%B9%E6%B3%95%E4%B9%8B%E4%BA%8C%EF%BC%885%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/28/%E8%AE%A9%E4%BD%A0%E7%9C%8B%E8%A7%81%20%E2%80%94%20%E6%AC%BA%E9%AA%97%E7%9A%84%E7%A7%AF%E6%9E%81%E6%96%B9%E6%B3%95%E4%B9%8B%E4%BA%8C%EF%BC%885%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -706,6 +803,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -732,6 +831,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/28/%E8%BE%9F%E8%B0%A3%E5%BE%80%E5%BE%80%E6%97%A0%E6%95%88%E9%99%A4%E9%9D%9E%E8%87%AA%E6%88%91%E6%89%B9%E9%A9%B3%20%E2%80%94%20%E8%AF%86%E5%88%AB%E6%88%98%E7%95%A5%E6%80%A7%E6%AC%BA%E9%AA%97%E7%9A%84%E4%B8%BB%E8%A6%81%E9%80%94%E5%BE%84%EF%BC%886%E2%80%8A-%E2%80%8A%E4%B8%8B%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/28/%E8%BE%9F%E8%B0%A3%E5%BE%80%E5%BE%80%E6%97%A0%E6%95%88%E9%99%A4%E9%9D%9E%E8%87%AA%E6%88%91%E6%89%B9%E9%A9%B3%20%E2%80%94%20%E8%AF%86%E5%88%AB%E6%88%98%E7%95%A5%E6%80%A7%E6%AC%BA%E9%AA%97%E7%9A%84%E4%B8%BB%E8%A6%81%E9%80%94%E5%BE%84%EF%BC%886%E2%80%8A-%E2%80%8A%E4%B8%8B%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -785,6 +898,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -795,6 +910,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/28/1%E4%BD%A0%E7%9A%84%E5%85%A8%E8%83%BD%E9%92%A5%E5%8C%99%E6%89%A3%EF%BC%9A%E4%BD%9C%E4%B8%BA%E4%B8%80%E5%90%8D%E5%85%AC%E6%B0%91%E8%B0%83%E6%9F%A5%E8%80%85%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%84%91%E5%9B%BE1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/28/1%E4%BD%A0%E7%9A%84%E5%85%A8%E8%83%BD%E9%92%A5%E5%8C%99%E6%89%A3%EF%BC%9A%E4%BD%9C%E4%B8%BA%E4%B8%80%E5%90%8D%E5%85%AC%E6%B0%91%E8%B0%83%E6%9F%A5%E8%80%85%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%84%91%E5%9B%BE1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -878,6 +1007,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -904,6 +1035,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/5%E7%A7%8D%E6%9C%89%E6%95%88%E7%9A%84%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E5%90%AF%E5%8F%91%E6%9C%AF/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/5%E7%A7%8D%E6%9C%89%E6%95%88%E7%9A%84%E7%A4%BE%E4%BA%A4%E5%B7%A5%E7%A8%8B%E5%90%AF%E5%8F%91%E6%9C%AF/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -991,6 +1136,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1017,6 +1164,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E2%80%9C%E6%88%91%E6%B0%B8%E8%BF%9C%E6%AD%A3%E7%A1%AE%E2%80%9D%E8%83%8C%E5%90%8E%E7%9A%84%E5%8A%A8%E6%9C%BA/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E2%80%9C%E6%88%91%E6%B0%B8%E8%BF%9C%E6%AD%A3%E7%A1%AE%E2%80%9D%E8%83%8C%E5%90%8E%E7%9A%84%E5%8A%A8%E6%9C%BA/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1081,6 +1242,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1107,6 +1270,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E7%96%8F%E5%BF%BD%E5%B0%86%E6%8B%96%E7%B4%AF%E6%89%80%E6%9C%89%E4%BA%BA%E9%99%B7%E5%85%A5%E5%8D%B1%E9%99%A9/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E7%96%8F%E5%BF%BD%E5%B0%86%E6%8B%96%E7%B4%AF%E6%89%80%E6%9C%89%E4%BA%BA%E9%99%B7%E5%85%A5%E5%8D%B1%E9%99%A9/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1122,7 +1299,7 @@
 <p>对过去几年来的无数次重大侵犯行为的解析结论是显而易见的：攻击者追逐的是用户和零日。即使粗略地浏览一下暗网，也可以看出，信誉良好的消息来源和那些寻求攻击的人提供的 Zero Day bug 奖金之间的差距是多么的巨大，详见《可怜正义没有钱》。然而，凭据的攻击能力更强大，来得更容易，可怕的是，组织和团体仍然没有能教会他们的成员安全使用互联网的习惯。</p>
 <p>任何威胁组织的社交工程部门人员通常都是通过监视人们在 Facebook，LinkedIn，Instagram 和其他社交平台上定期分享的信息，来找到他们所需要的东西的。这有助于他们制定针对性的和精确的攻击。你真的不用指望那些企业能关心你的安全。</p>
 <p>你应该知道，这一间谍步骤的执行速度究竟有多快。</p>
-<p>只需在 LinkedIn 上找到一个指定联系人的组织。然后交叉引用 Facebook 或 Instagram 或 WeChat 或微博上的个人资料，在那里，很容易利用宽松的隐私设置来收集到有关出生日期、亲属姓名、宠物、休闲时光甚至具体地点的信息。然后发送武器化的<a href="mailto:&#x6e;&#x61;&#x6d;&#x65;&#46;&#x73;&#117;&#x72;&#x6e;&#97;&#109;&#101;&#64;&#x74;&#97;&#x72;&#x67;&#x65;&#x74;&#111;&#114;&#103;&#46;&#99;&#111;&#x6d;">&#x6e;&#x61;&#x6d;&#x65;&#46;&#x73;&#117;&#x72;&#x6e;&#97;&#109;&#101;&#64;&#x74;&#97;&#x72;&#x67;&#x65;&#x74;&#111;&#114;&#103;&#46;&#99;&#111;&#x6d;</a> 来发动攻击。假设已经构建了有效载荷，则针对每个目标的整个过程大约只需要十分钟。</p>
+<p>只需在 LinkedIn 上找到一个指定联系人的组织。然后交叉引用 Facebook 或 Instagram 或 WeChat 或微博上的个人资料，在那里，很容易利用宽松的隐私设置来收集到有关出生日期、亲属姓名、宠物、休闲时光甚至具体地点的信息。然后发送武器化的<a href="mailto:&#110;&#97;&#x6d;&#101;&#x2e;&#x73;&#x75;&#114;&#110;&#97;&#109;&#x65;&#64;&#x74;&#97;&#114;&#103;&#x65;&#116;&#x6f;&#114;&#x67;&#x2e;&#99;&#x6f;&#x6d;">&#110;&#97;&#x6d;&#101;&#x2e;&#x73;&#x75;&#114;&#110;&#97;&#109;&#x65;&#64;&#x74;&#97;&#114;&#103;&#x65;&#116;&#x6f;&#114;&#x67;&#x2e;&#99;&#x6f;&#x6d;</a> 来发动攻击。假设已经构建了有效载荷，则针对每个目标的整个过程大约只需要十分钟。</p>
 <p>惊人的效率，并具有惊人的高命中率。</p>
 <p>随着用户越来越多地将自己的个人生活细节在越来越“不卫生”的社交网络上更加充分地暴露，组织和团队需要认识到，这会带来真正的危险。</p>
 <p>至今仍然只有很少的用户知道 Facebook 等应用程序中最基本的隐私设置，或者面向公众的个人资料图片可以产生有关个人的有价值信息有如此高危险性的概念。这是更大的恐怖。</p>
@@ -1173,6 +1350,8 @@
         </h2>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -1199,6 +1378,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/27/%E4%BA%A4%E6%B5%81%E5%87%BA%E7%8E%B0%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%8A%EF%BC%89%E4%B8%BA%E4%BB%80%E4%B9%88%E6%80%BB%E6%98%AF%E9%9A%BE%E4%BB%A5%E8%AF%B4%E6%9C%8D%E4%BB%96%E4%BA%BA%EF%BC%9F/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/27/%E4%BA%A4%E6%B5%81%E5%87%BA%E7%8E%B0%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%8A%EF%BC%89%E4%B8%BA%E4%BB%80%E4%B9%88%E6%80%BB%E6%98%AF%E9%9A%BE%E4%BB%A5%E8%AF%B4%E6%9C%8D%E4%BB%96%E4%BA%BA%EF%BC%9F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -1372,10 +1565,59 @@
   </span>
   <span class="author" itemprop="copyrightHolder">眼魔王</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -1390,15 +1632,11 @@
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
 <script src="/js/utils.js"></script>
 
-<script src="/js/motion.js"></script>
 
-
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -1411,6 +1649,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -1425,6 +1667,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

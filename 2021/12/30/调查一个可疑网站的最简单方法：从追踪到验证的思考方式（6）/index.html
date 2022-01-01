@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="#调查一个可疑网站的最简单方法：从追踪到验证的思考方式（6）即便您不理解技术，也可以使用最简单的方法挖掘到一些证据 在追踪网络水军、虚假信息政治宣传、欺诈骗钱等很多调查案例中，您都会遇到网站作为线索；即便您不理解技术，也可以使用最简单的方法挖掘到一些证据，最重要的是，您需要知道该注意哪里。 欢迎回来！ 如果您错过了前面的内容，可以在这里回顾： 《没有固定模式，但总会有一些迹象：从追踪到验证的思考方">
@@ -82,7 +82,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+  <div class="container">
     <div class="headband"></div>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -106,6 +106,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -118,6 +119,11 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -135,11 +141,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -180,6 +213,8 @@
         </h1>
 
         <div class="post-meta">
+          
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
@@ -200,6 +235,27 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E8%B0%83%E6%9F%A5%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%96%91%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%80%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%886%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E8%B0%83%E6%9F%A5%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%96%91%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%80%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%9A%E4%BB%8E%E8%BF%BD%E8%B8%AA%E5%88%B0%E9%AA%8C%E8%AF%81%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%886%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -263,7 +319,7 @@
 <p>您可能想收藏的其他负担得起的服务是 DNSlytics、Security Trails 和 Whoisology。一个很好的但更贵的选择是 DomainTools 的Iris调查产品。</p>
 <p>例如，如果在 DomainBigData 中输入 dentondaily.com，可以看到它已被隐私保护。幸运的是，仍然可以看到，它注册于2019年8月。</p>
 <p>另一个例子，在 DomainBigData 搜索 newsweek.com。立即看到所有者并没有为隐私保护付费。这里有一个公司的名字，一个电子邮件地址，电话和传真号码。</p>
-<p>还可以看到，这个实体自1994年5月以来一直拥有这个域名，而且该网站目前的主机是52.201.10.13这个IP地址。接下来要注意的是，该公司的名称、电子邮件和IP地址都是链接，这意味着它们可以将您引向属于 Newsweek LLC 的其他域名，<a href="mailto:&#x64;&#x6f;&#x6d;&#97;&#105;&#110;&#115;&#x40;&#x69;&#98;&#x74;&#105;&#109;&#x65;&#x73;&#x2e;&#x63;&#x6f;&#109;">&#x64;&#x6f;&#x6d;&#97;&#105;&#110;&#115;&#x40;&#x69;&#98;&#x74;&#105;&#109;&#x65;&#x73;&#x2e;&#x63;&#x6f;&#109;</a>，以及托管在同一IP地址的其他网站。这些联系在调查中是非常重要的，所以查看同一人或实体拥有的其他域名总是可能有效。</p>
+<p>还可以看到，这个实体自1994年5月以来一直拥有这个域名，而且该网站目前的主机是52.201.10.13这个IP地址。接下来要注意的是，该公司的名称、电子邮件和IP地址都是链接，这意味着它们可以将您引向属于 Newsweek LLC 的其他域名，<a href="mailto:&#100;&#111;&#x6d;&#97;&#105;&#110;&#115;&#64;&#x69;&#98;&#116;&#105;&#x6d;&#101;&#x73;&#46;&#99;&#x6f;&#109;">&#100;&#111;&#x6d;&#97;&#105;&#110;&#115;&#64;&#x69;&#98;&#116;&#105;&#x6d;&#101;&#x73;&#46;&#99;&#x6f;&#109;</a>，以及托管在同一IP地址的其他网站。这些联系在调查中是非常重要的，所以查看同一人或实体拥有的其他域名总是可能有效。</p>
 <p>至于IP地址，要注意完全没有联系的网站可能被托管在同一台服务器上。这通常是因为人们使用同一家托管公司来托管他们的网站。一个一般的规则是，在同一服务器上托管的网站越少，它们就越有可能相关。但这并不确定。</p>
 <p>如果您看到一个服务器上有数百个网站托管，它们之间可能没有所有权连接。但是，如果您看到只有九个，例如，您感兴趣的那个网站有私人注册信息，就值得对其他八个域名进行whois搜索，看看它们是否可能有一个共同的所有者，以及这个人是否可能也拥有您正在调查的网站。人们可能为一些网络域名支付隐私保护费，但却忽略了对其他域名的保护。</p>
 <p>使用IP、内容和/或注册信息是识别网络和其背后行为者的最基本方法。</p>
@@ -334,6 +390,7 @@
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -443,10 +500,59 @@
   </span>
   <span class="author" itemprop="copyrightHolder">眼魔王</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -461,15 +567,11 @@
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
 <script src="/js/utils.js"></script>
 
-<script src="/js/motion.js"></script>
 
-
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -482,6 +584,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -496,6 +602,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
