@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="#如何知道有人正在线人肉你？6个简单的方法追踪和反追踪用的是同一套方法，这或许就是这个互联网最有趣的地方 —— 正义和邪恶，谁掌握的技能多，谁就能获胜还记得我们介绍过的自我人肉技巧吗？这是为了帮助您在被恶意者挖到之前先自己找到泄露的细节并删除它们。您可以在下面回顾： 《自我人肉（1）基本方法》《社交媒体情报和反情报基本工具手册：自我人肉（2）》如果您曾经尝试做过，就会知道，在几乎任何地方都有可能挖">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何知道有人正在线人肉你？6个简单的方法">
+<meta property="og:url" content="http://example.com/2021/12/30/%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E6%9C%89%E4%BA%BA%E6%AD%A3%E5%9C%A8%E7%BA%BF%E4%BA%BA%E8%82%89%E4%BD%A0%EF%BC%9F6%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="#如何知道有人正在线人肉你？6个简单的方法追踪和反追踪用的是同一套方法，这或许就是这个互联网最有趣的地方 —— 正义和邪恶，谁掌握的技能多，谁就能获胜还记得我们介绍过的自我人肉技巧吗？这是为了帮助您在被恶意者挖到之前先自己找到泄露的细节并删除它们。您可以在下面回顾： 《自我人肉（1）基本方法》《社交媒体情报和反情报基本工具手册：自我人肉（2）》如果您曾经尝试做过，就会知道，在几乎任何地方都有可能挖">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-30T15:38:08.000Z">
+<meta property="article:modified_time" content="2022-02-06T18:49:32.627Z">
+<meta property="article:author" content="眼魔王">
+<meta property="article:tag" content="调查">
+<meta property="article:tag" content="获取真相">
+<meta property="article:tag" content="思考">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/12/30/%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E6%9C%89%E4%BA%BA%E6%AD%A3%E5%9C%A8%E7%BA%BF%E4%BA%BA%E8%82%89%E4%BD%A0%EF%BC%9F6%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>如何知道有人正在线人肉你？6个简单的方法 | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E6%9C%89%E4%BA%BA%E6%AD%A3%E5%9C%A8%E7%BA%BF%E4%BA%BA%E8%82%89%E4%BD%A0%EF%BC%9F6%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何知道有人正在线人肉你？6个简单的方法
+        </h1>
+
+        <div class="post-meta">
+          
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-30 23:38:08" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-07 02:49:32" itemprop="dateModified" datetime="2022-02-07T02:49:32+08:00">2022-02-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E6%9C%89%E4%BA%BA%E6%AD%A3%E5%9C%A8%E7%BA%BF%E4%BA%BA%E8%82%89%E4%BD%A0%EF%BC%9F6%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E6%9C%89%E4%BA%BA%E6%AD%A3%E5%9C%A8%E7%BA%BF%E4%BA%BA%E8%82%89%E4%BD%A0%EF%BC%9F6%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="如何知道有人正在线人肉你？6个简单的方法"><a href="#如何知道有人正在线人肉你？6个简单的方法" class="headerlink" title="#如何知道有人正在线人肉你？6个简单的方法"></a>#如何知道有人正在线人肉你？6个简单的方法</h1><p>追踪和反追踪用的是同一套方法，这或许就是这个互联网最有趣的地方 —— 正义和邪恶，谁掌握的技能多，谁就能获胜<br>还记得我们介绍过的自我人肉技巧吗？这是为了帮助您在被恶意者挖到之前先自己找到泄露的细节并删除它们。您可以在下面回顾：</p>
+<p>《自我人肉（1）基本方法》<br>《社交媒体情报和反情报基本工具手册：自我人肉（2）》<br>如果您曾经尝试做过，就会知道，在几乎任何地方都有可能挖到关于您的真实身份信息 —— 其中也许包含很致命的信息，如果落在恶意者手里，将对您非常不利。</p>
+<p>那么，您如何才能得知有人正在网上人肉你呢？幸运的是，其中大多数资源都具有监视服务，您可以在有人搜索您的名字和相关重要信息时使用该服务来获取警报。</p>
+<p>本文将介绍一些非常简单的操作，您可以设置警报或监视其他人何时使用互联网查询您的名字。一共6个部分。</p>
+<p>从最简单的开始。</p>
+<p>1、LinkedIn个人资料视图</p>
+<p>任何人都可以从 LinkedIn 内搜索您的名字，并以这种方式访问​​您的公开个人资料信息。</p>
+<p>我们介绍过 LinkedIn 追踪的方法，在下面回顾：</p>
+<p>《如何从求职网站快速追踪挖掘情报：高级LinkedIn搜索》<br>《把 LinkedIn 作为情报挖掘工具：简易指南》<br>LinkedIn 为会员提供了一种轻松的方法，以了解谁查看了您的个人资料。</p>
+<p>要查看此信息，请登录您的 LinkedIn 帐户。在屏幕左侧的个人资料名称下，您会看到一个名为谁查看过您的个人资料的链接 。</p>
+<p>在链接的右侧，您可以查看最近有多少人查看了您的个人资料。要查看更多详细信息，请单击链接。</p>
+<p>向下滚动到 “All profile viewers” 部分。在这里，您将看到有关谁最近查看了您的 LinkedIn 帐户的一些详细信息。</p>
+<p>这些信息包括：</p>
+<p>名字<br>受雇的的公司<br>他们如何找到你的个人资料<br>您的 LinkedIn 人际关系中的哪些也与此人有关<br>他们在多久前查看了您的个人资料<br>不幸的是，您看不到查看过您个人资料的人的整个列表，除非购买高级LinkedIn会员。</p>
+<p>如果您确实需要知道谁在查看您的 LinkedIn 个人资料，那么该高级会员身份可能是值得的。</p>
+<p>🌟调查人员任何避免这点？—— 当然是使用袜子木偶账户进行调查，即便目标人发现了你，他也不知道你是谁。在下面看到具体做法：</p>
+<p>《某些行动者，你需要一个袜子木偶》<br>总 — 基础知识《摆脱追踪者：您的行动必须是匿名的，否则没有可持续性》<br>2、为您的名字创建 Google 提醒</p>
+<p>人们用来在互联网上查找有关您的信息的最常用工具是Google。我们介绍过谷歌在深度调查方面的用法：</p>
+<p>《攻防皆可用：GoogleDorking 高级运算符完整列表》<br>《一个搜索统治一切：调查用心而非技术》<br>虽然您可能无法监视是谁在使用Google搜索你的名字，但是你可以监视何时有人开始挖你。</p>
+<p>您需要一个提醒，以便在任何提及您名字的内容被创建时及时提醒你，请访问 Google Alerts。</p>
+<p>确保您已经登录了Google帐户。在 “Create an alert about” 字段中，键入您的名字或者最常用的昵称再或者最关键的信息 —— 你知道自己最在乎什么，然后选择 “创建提醒”。</p>
+<p>每当您将任何内容添加到 Google 提醒列表时，或者任何时候对包含您的姓名的网站进行新的搜索时，您都会收到一封有关该 Google 提醒的电子邮件。该电子邮件将包含指向提及您名字的网站的链接。</p>
+<p>您会注意到，在电子邮件的底部，您可以单击链接以RSS提要的方式接收提醒。这将使您可以将提要添加到您可以使用的任何种类的提要阅读器中。</p>
+<p>🌟作为调查人员，如何避免被调查目标发觉？—— 很简单，不要用谷歌，使用更加私密的搜索引擎。在这里看到大全《如果你擅长搜索，你能找到一切：<em>没有谷歌</em>的强大搜索世界》。</p>
+<p>3、Facebook Story Viewers</p>
+<p>Facebook 用户最常见的要求之一是想要知道谁查看了他们的 Facebook 个人资料。不幸的是，没有办法直接做到这一点。</p>
+<p>但是，在 Facebook 的某些区域中，您可以看到访客。</p>
+<p>如果您定期发布 Facebook 帖子，那么知道谁查看过您帖子的唯一方法是有多少“点赞”该帖子的人。可惜这不是准确的。</p>
+<p>但是，当您添加到 Facebook Stories 时就不是这样了。如果您选择该字段来输入 Facebook 帖子，您会注意到可以将帖子从 “News Feed” 切换到 “Your Story”。</p>
+<p>您可以将最多20秒的视频（或图像）发布到您的 Facebook Story 中。该信息将保持活动状态24小时，然后消失。</p>
+<p>发布后您会注意到一个眼睛图标显示在该帖子的左下角，旁边有一个数字。</p>
+<p>该数字代表的是查看过该帖子的 “朋友” 的数量。如果单击那个眼睛图标，则可以看到查看过该帖子的人都是谁。</p>
+<p>如果您查看 Facebook 新闻源，那么在右侧可以看到指向您的故事的链接。</p>
+<p>在左侧，您会看到带有+符号的个人资料照片。如果单击此按钮，可以查看所有最近的故事帖子，以及哪些朋友已查看这些帖子。</p>
+<p>不幸的是，Facebook 没有为常规帖子提供此功能，但是至少在您发布到 “Story” 列表时，您可以看到所有查看过该帖子的朋友。那么很简单，您认为重要的内容就这样发布吧。</p>
+<p>关于利用 Facebook 进行调查追踪的方法和工具有非常多；</p>
+<p>《搜人、照片、视频、位置 …… 大全：新的FB”图谱搜索”替代方案 — — 尤其强调防御》<br>提醒防御《如何跨社交媒体平台追踪目标人？⚠️ 警告安全意识》<br>不要错过《在互联网上识别和追踪一个人的基本方法》<br>4、Facebook 好友算法</p>
+<p>虽然看不到查看过您的特定 Facebook 帖子的朋友列表，但是可以通过间接的方式查看哪些朋友与您的 Facebook 个人资料互动最多。</p>
+<p>如果发现可疑的莫名其妙的账户，拉黑TA。</p>
+<p>没有人真的知道 Facebook 在好友列表中显示好友的顺序的具体细节。但是进行足够的研究后会能知道，它至少考虑了以下所有这些因素：</p>
+<p>Facebook 互动：您与这些朋友在 Facebook 上互动的频率。<br>个人资料查看：这些朋友查看您的个人资料的频率、或您查看他们的个人资料的频率。<br>照片标记：在照片中添加了您的标签的朋友。<br>Wall Posts：在你的时间线上发布的朋友。<br>点赞：他人点赞您的信息的频率，或者您点赞他们的信息的频率。<br>评论：您或朋友对彼此的帖子或图片发表评论的频率。<br>照片：你们查看彼此照片的频率。<br>在线：如果朋友当前在线，则更有可能出现在您的朋友列表的顶部。<br>由于 Facebook 上最常见的活动是查看目标人的个人资料和帖子，而无需与他们进行互动，所以，您能看到的朋友列表顶部的显示的人是最常查看您的个人资料和帖子的人。</p>
+<p>5、Twitter Viewers</p>
+<p>与 Facebook 相比，Twitter 提供了更多有关 Twitter 关注者的信息，但仍未提供正在搜索您的人的姓名。</p>
+<p>但是，您可以了解到有关与您的推文进行交互的人的很多信息。</p>
+<p>要查看您的受众信息，您需要使用 Twitter Analytics。您可以通过单击个人资料名字旁边的向下箭头并选择 Analytics（分析）来访问它。</p>
+<p>此页面将向您显示您的主要关注者是谁，以及所有推文的总体效果。</p>
+<p>您可以单击查看关注者仪表板，以查看有关您的 Twitter 受众的常规详细信息。</p>
+<p>您可以看到一些统计信息，例如性别、家庭收入和关注者的兴趣；这可能不会告诉您在 Twitter 上寻找您的人究竟是谁，但至少可以告诉您他们的兴趣倾向，以便您可以为关注者量身定制发布的主题。</p>
+<p>🌟对于调查人员来说，袜子木偶依旧是好的选择 —— 尤其是当您的调查对象是政府高官、僵尸牧民、信息战领军者等等，他们可能有很好的反侦察防备，所以您必修保护好自己的匿名性。</p>
+<p>关于通过 Twitter 进行开源情报调查的一些常规有效技术，在下面回顾：</p>
+<p>《如何只用电子邮件地址追踪到 Twitter 帐户？》<br>《如何从推特挖掘情报（1）：一个流行工具的具体介绍》<br>《观察追踪者的思考方式：挖掘推特情报的基础教程（2）》<br>《调查记者如何从社交媒体上挖掘情报？》<br>《绕开推特算法噪音、使用基本运算符挖掘推特数据的方法》<br>《如何可视化推特对话：极简小工具》<br>《从推特中挖掘真相不需要太复杂的工具：一个常用工具的全面指南》<br>《如何在Google表格中保存任何你想要的推文？调查者和分析师的工具》<br>6、使用 Google Analytics（分析）创建个人资料网站</p>
+<p>很多平台可以让你轻松建立自己的个人资料网站，其中包含有关您的背景和经验的信息。</p>
+<p>个人资料网站是一种与潜在的雇主轻松分享您的背景和职业经历的绝佳方式。</p>
+<p>如果您已经为自己的名字购买了一个网站域名，那么当人们搜索您的名字时，它也将成为最热门的搜索结果。</p>
+<p>这将成为大多数人在网上寻找您时可能会点击的链接。</p>
+<p>如果您将 Google Analytics 嵌入到此网站中，则可以收集有关在网络上查找有关您的信息的人员的大量信息。</p>
+<p>Google Analytics 可能不会提供访问您网站的人的姓名，但是您可以了解其他任何信息。例如以下这些：</p>
+<p>年龄<br>性别<br>国家/地区<br>兴趣<br>访问频率<br>使用的搜索字词<br>这些信息可以使您深入了解在线搜索您的人的类型。</p>
+<p>如果您是作家或从事向人们提供信息的任何其他公司或公民社会组织，那么这些信息可以帮助您和组织调整您的发布，以便令受众群更满意。简单说就是营销思路。</p>
+<p>IYP不使用营销思路，我们提供的内容都是根据我们的民主经验认为成为一个合格公民所需要掌握的技能、知识、和技巧。</p>
+<p>谁在找你？</p>
+<p>如您所见，LinkedIn 和其他社交媒体网站是查看特定在线搜索对象的最佳方式。但是 Google 提醒和您的网站也可以提供更多见解。</p>
+<p>您采用哪种方法取决于您想了解目标对象什么样的信息。当然，最有效的永远是开源情报调查 —— 并不是所有人肉贩子都擅长完美的袜子木偶；糟糕的袜子比比皆是，挖出其背后的真实身份可能不难。</p>
+<p>简单说就是反向追踪：Watching The Watchers。所有技巧方法参见我们的 “开源情报” 栏目。易于追踪是这个互联网的本性，追踪技术被谁掌握，将决定它是正义还是邪恶。</p>
+<p>你是好孩子，你应该比那些坏家伙懂得更多，能力更强。这样我们才能做到以正压邪。加油。⚪️</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>眼魔王
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/12/30/%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E6%9C%89%E4%BA%BA%E6%AD%A3%E5%9C%A8%E7%BA%BF%E4%BA%BA%E8%82%89%E4%BD%A0%EF%BC%9F6%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95/" title="如何知道有人正在线人肉你？6个简单的方法">http://example.com/2021/12/30/如何知道有人正在线人肉你？6个简单的方法/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%B0%83%E6%9F%A5/" rel="tag"># 调查</a>
+              <a href="/tags/%E8%8E%B7%E5%8F%96%E7%9C%9F%E7%9B%B8/" rel="tag"># 获取真相</a>
+              <a href="/tags/%E6%80%9D%E8%80%83/" rel="tag"># 思考</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/30/%E5%A6%82%E4%BD%95%E8%AE%A9%E6%A8%A1%E7%B3%8A%E5%9B%BE%E5%83%8F%E5%8F%98%E6%B8%85%E6%99%B0%EF%BC%9F-%20%E5%BC%80%E6%BA%90%E6%83%85%E6%8A%A5%E5%88%9D%E7%BA%A7%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/" rel="prev" title="如何让模糊图像变清晰？- 开源情报初级处理工具">
+      <i class="fa fa-chevron-left"></i> 如何让模糊图像变清晰？- 开源情报初级处理工具
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/30/%E5%A6%82%E4%BD%95%E6%8B%A5%E6%9C%89%E4%B8%8A%E5%B8%9D%E7%9A%84%E7%9C%BC%E7%9D%9B%EF%BC%9A%E7%9B%91%E8%A7%86%E3%80%81%E8%BF%BD%E8%B8%AA%E3%80%81%E5%AF%BC%E8%88%AA%E3%80%81%E5%9B%9E%E6%BA%AF%E3%80%81%E9%98%B4%E5%BD%B1%E8%AF%86%E5%88%AB%E2%80%A6%E2%80%A6/" rel="next" title="如何拥有上帝的眼睛：监视、追踪、导航、回溯、阴影识别…… 这是您需要了解的一切 - 最大限度挖掘地图的能力 *完整手册*">
+      如何拥有上帝的眼睛：监视、追踪、导航、回溯、阴影识别…… 这是您需要了解的一切 - 最大限度挖掘地图的能力 *完整手册* <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E6%9C%89%E4%BA%BA%E6%AD%A3%E5%9C%A8%E7%BA%BF%E4%BA%BA%E8%82%89%E4%BD%A0%EF%BC%9F6%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">#如何知道有人正在线人肉你？6个简单的方法</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">244</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

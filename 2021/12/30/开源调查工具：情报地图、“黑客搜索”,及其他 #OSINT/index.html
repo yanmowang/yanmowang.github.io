@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="开源调查工具：情报地图、“黑客搜索”,及其他 #OSINT我们以前在诸多开源调查演示中已经陆续介绍过一些工具，本文专门介绍几种工具，及其有趣的用法。具体如何使用，要看您需要找的证据线索是什么，基于您最完美的逻辑，相信它们都有其最佳用途。在真相如此易于挖掘的当下时代，假消息和阴谋论理论上是没有存在空间的。但最重要的还是，需要更多人行动起来。 开源情报（OSINT）是指来自公共来源的数据集合，用于情报">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开源调查工具：情报地图、“黑客搜索”,及其他">
+<meta property="og:url" content="http://example.com/2021/12/30/%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%83%85%E6%8A%A5%E5%9C%B0%E5%9B%BE%E3%80%81%E2%80%9C%E9%BB%91%E5%AE%A2%E6%90%9C%E7%B4%A2%E2%80%9D,%E5%8F%8A%E5%85%B6%E4%BB%96%20#OSINT/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="开源调查工具：情报地图、“黑客搜索”,及其他 #OSINT我们以前在诸多开源调查演示中已经陆续介绍过一些工具，本文专门介绍几种工具，及其有趣的用法。具体如何使用，要看您需要找的证据线索是什么，基于您最完美的逻辑，相信它们都有其最佳用途。在真相如此易于挖掘的当下时代，假消息和阴谋论理论上是没有存在空间的。但最重要的还是，需要更多人行动起来。 开源情报（OSINT）是指来自公共来源的数据集合，用于情报">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-30T15:38:08.000Z">
+<meta property="article:modified_time" content="2022-02-06T18:49:32.632Z">
+<meta property="article:author" content="眼魔王">
+<meta property="article:tag" content="调查">
+<meta property="article:tag" content="获取真相">
+<meta property="article:tag" content="思考">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/12/30/%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%83%85%E6%8A%A5%E5%9C%B0%E5%9B%BE%E3%80%81%E2%80%9C%E9%BB%91%E5%AE%A2%E6%90%9C%E7%B4%A2%E2%80%9D,%E5%8F%8A%E5%85%B6%E4%BB%96%20#OSINT/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>开源调查工具：情报地图、“黑客搜索”,及其他 | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/30/%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%83%85%E6%8A%A5%E5%9C%B0%E5%9B%BE%E3%80%81%E2%80%9C%E9%BB%91%E5%AE%A2%E6%90%9C%E7%B4%A2%E2%80%9D,%E5%8F%8A%E5%85%B6%E4%BB%96%20#OSINT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          开源调查工具：情报地图、“黑客搜索”,及其他
+        </h1>
+
+        <div class="post-meta">
+          
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-30 23:38:08" itemprop="dateCreated datePublished" datetime="2021-12-30T23:38:08+08:00">2021-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-07 02:49:32" itemprop="dateModified" datetime="2022-02-07T02:49:32+08:00">2022-02-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A9%E5%AE%83%E6%B0%91%E4%B8%BB-%E6%8E%8C%E6%8F%A1%E7%9C%9F%E7%9B%B8%E7%9A%84%E6%8A%80%E6%9C%AF%E5%92%8C%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">让它民主-掌握真相的技术和技巧</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/30/%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%83%85%E6%8A%A5%E5%9C%B0%E5%9B%BE%E3%80%81%E2%80%9C%E9%BB%91%E5%AE%A2%E6%90%9C%E7%B4%A2%E2%80%9D,%E5%8F%8A%E5%85%B6%E4%BB%96%20#OSINT/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/30/%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%83%85%E6%8A%A5%E5%9C%B0%E5%9B%BE%E3%80%81%E2%80%9C%E9%BB%91%E5%AE%A2%E6%90%9C%E7%B4%A2%E2%80%9D,%E5%8F%8A%E5%85%B6%E4%BB%96%20#OSINT/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="开源调查工具：情报地图、“黑客搜索”-及其他-OSINT"><a href="#开源调查工具：情报地图、“黑客搜索”-及其他-OSINT" class="headerlink" title="开源调查工具：情报地图、“黑客搜索”,及其他 #OSINT"></a>开源调查工具：情报地图、“黑客搜索”,及其他 #OSINT</h1><p>我们以前在诸多开源调查演示中已经陆续介绍过一些工具，本文专门介绍几种工具，及其有趣的用法。具体如何使用，要看您需要找的证据线索是什么，基于您最完美的逻辑，相信它们都有其最佳用途。在真相如此易于挖掘的当下时代，假消息和阴谋论理论上是没有存在空间的。但最重要的还是，需要更多人行动起来。</p>
+<p>开源情报（OSINT）是指来自公共来源的数据集合，用于情报环境，这类信息往往被链接爬行搜索引擎（如谷歌）所忽略，也就是说，大多数时候您无法通过常规搜索获得。此外，按照美国国防部的规定，OSINT 是“从公开获得的信息中产生的，并且可以及时收集，利用和传播给适当的受众，以满足特定的情报需求。”</p>
+<p>情报和信息不是同一种东西，我们在前面的文章中简单介绍过。</p>
+<p>— — Talos — —</p>
+<p>Talos 情报地图是一个世界地图，它可以实时报告全世界电子邮件流量数据。地图是互动的，如果你点击一个指示，就可以深入信息点，例如，通过点击北京方向的蓝色指示来获得下一个图像。</p>
+<p>您可以看到网上有很多关于谁产生的电子邮件流量的信息，在这种情况下它是合法流量，但查看垃圾邮件流或恶意软件类型的电子邮件会更有趣，对吧。</p>
+<p>首页左上角你会看到一个搜索框，可以搜索实时威胁数据。</p>
+<p>在底部的图像中您会看到在美国生成的垃圾邮件呈爆炸状态。</p>
+<p>这不止是一个地图哦，根据页面顶部的栏目设置，有兴趣的人可以更多地了解所使用的产品和漏洞信息。</p>
+<p>— — 卡巴斯基网络威胁实时地图 — —</p>
+<p>卡巴斯基网络威胁实时地图显示与公司实时发布的网络攻击方面有关的信息。这是一个三维呈现的地图，显示网络空间和主要威胁。</p>
+<p>地图是互动的，所以您可以选择任何一个国家（比如选中国），你能获得一些重要信息，包括与最易受攻击排名中的位置相关联。</p>
+<p>地图可以被操控，放大，缩小并提供许多其他信息，尤其是关于攻击类型的信息，很重要。</p>
+<p>画面很壮观的。</p>
+<p>— — 入侵检测 — —</p>
+<p>Vectra Cognito 平台将人工智能（AI）、深度机器学习和流量监控结合到一个工具中，该工具能够检测其他程序遗漏的威胁，即使它们已经在受保护的网络中根深蒂固。</p>
+<p>Cognito 被归类为流量监控工具虽然不是太适合。Cognito 更像是一个称职的入侵检测系统（IDS）。它展示了面对高级入侵时未来 IDS 系统的运行方式。甚至还有一个威胁搜寻组件，使任何简单的分类变得更加详细。</p>
+<p>目前，Cognito 的 brains 仅作为硬件提供。每个设备可以处理多达 500 个传感器的数据，许多组织可能只需要一个。报告由设备编译并发送到仪表板界面，使其在这方面像更传统的安全信息和事件管理（SIEM）控制台。如果需要，Cognito 还可以将其数据发送到许多其他 SIEM 或安全设备。</p>
+<p>— — Shodan — —</p>
+<p>Shodan 是一种搜索引擎，被誉为“黑客搜索引擎”，对于研究人员来说，这是一个惊人的金矿，可让用户使用各种过滤器查找连接到互联网的特定类型的设备（网络摄像头，路由器，服务器等）。嗯，就是你知道的那样，可以有<em>很高效</em>的用途。有些还将其描述为服务横幅的搜索引擎，这是服务器发送回客户端的元数据。这可以是有关服务器软件的信息、服务支持哪些选项、欢迎消息或客户端在与服务器交互之前可以找到的其他信息。</p>
+<p>Shodan 主要收集在 Web 服务器上的数据（ HTTP / HTTPS — 端口 80,8080,443,8443）以及FTP（端口 21），SSH（端口 22），Telnet（端口 23），SNMP（端口 161），SIP（端口 5060），和实时流协议（ RTSP，端口 554）。后者可用于访问网络摄像头及其视频流。</p>
+<p>它是由计算机程序员 John Matherly 于 2009 年推出的，他在 2003 年设想了搜索与互联网相关的设备的想法。</p>
+<p>Shodan 用户能够找到包括交通信号灯，安全摄像机，家庭供暖系统以及水上乐园，加油站，水厂，电网，核电站和粒子回旋加速器的控制系统 ; 多数有小保安。许多设备使用“admin”作为其用户名，“1234”作为其密码，连接到它们的唯一软件是 Web 浏览器（如果不是这样的用户名和密码，需要稍微花点时间）</p>
+<p>该网站专注于 SCADA（监控和数据采集）系统。 Shodan 目前将10个结果返回给没有帐户的用户，而有账户的用户则能收到 50 个。如果用户想要删除限制，则需要提供理由并支付费用。 Shodan 的主要用户是网络安全专业人员、研究人员和执法机构。虽然社交工程师、OSINT 研究人员、网络犯罪分子也可以使用该网站，但一些网络犯罪分子通常可以访问能完成相同任务而无需经过身份检测的僵尸网络。</p>
+<p>SHODAN Diggity — 为SHODAN搜索引擎提供免费，易于使用的扫描界面<br>SHODAN 查询的批量搜索和处理可以使用 SHODAN Diggity 执行（SearchDiggity 的一部分，Bishop Fox 的免费搜索引擎攻击工具套件）。免费工具通过 SHODAN API 为流行的黑客搜索引擎提供了一个易于使用的扫描界面。</p>
+<p>SHODAN Diggity 配备了一个名为 SHODAN Hacking Database（SHDB）的预制字典文件中的 167 个搜索查询的便捷列表。这本词典有助于针对各种技术，包括网络摄像头、打印机、VoIP 设备、路由器、烤面包机、交换机，甚至 SCADA / 工业控制系统（ICS）等等。嗯，细思极恐。不过对于调查来说非常方便。</p>
+<p>SHODAN 黑客警报 — 在阅读器中监控RSS源</p>
+<p>SHODAN 黑客警报 — 创建 RSS 源<br>网上有很多使用指南，很容易找到。</p>
+<p>— — theHarvester — —</p>
+<p>这也是个小邪恶的工具，不仅能用于开源调查，也能很方便社交工程攻击的信息收集工作（对于后者，我们会令起篇幅单独介绍）。</p>
+<p>TheHarvester 能够收集电子邮件账号、用户名、主机名和子域名等信息。它通过 Google、Bing、PGP、LinkedIn、Baidu、Yandex、People123、Jigsaw、Shodan 等公开资源整理收集这些信息。这些信息将在后期的渗透测试阶段发挥巨大的作用。</p>
+<p>这款工具可以帮助渗透测试工作者在渗透测试的早期阶段对目标进行互联网资料采集，同时也可以帮助人们了解自己的个人信息在网络上是否存在。</p>
+<p>使用方法和下载很容易找到。</p>
+<p>— — Recon-Ng — —</p>
+<p>Recon-Ng 是对目标进行侦察的另一个有用工具，也是内置于 Kali Linux 中的。Recon-ng 具有内置的各种模块，其用法有点类似于 Metasploit。以下是 Kali Linux 上 Recon-ng 的欢迎屏幕。</p>
+<p>Recon-ng 具有各种内置模块。下面显示了一小部分内容：</p>
+<p>可以创建工作区来执行其中的所有操作。只要工作区被创建，用户将被重定向到该工作区。一旦进入工作区，就可以使用添加域 <domainname> 来指定域。将域添加到重新调用后，重新调用模块可用于提取有关此域的信息。</p>
+<p>有一些优秀的模块，比如 bing_domain_Web 和 google_site_web 可以找到与初始目标域相关的其他域。这些域的输出将成为这些搜索引擎的所有索引域。</p>
+<p>另一个方便的模块是 bing_linkedin_cache，它可以用来获取与域相关的电子邮件地址，这些地址可以进一步用于执行社交工程。所以，通过其他模块，我们可以获得有关目标的其他信息。</p>
+<p>— — Maltego — —</p>
+<p>Maltego 由 Paterva 开发，是 Kali Linux 内置工具（附带社区版）。Maltego 可以借助几个内置转换（以及提供编写自定义转换的功能）帮助执行对目标的重要侦察。使用 Maltego，首先用户应该在 Paterva 网站上注册。</p>
+<p>注册后，用户可以创建新机器，或者运行机器来实现目标上的变换。配置完成后，需要启动已配置的机器。Maltego 内部有各种脚印，可以抵挡目标。Maltego 会开始使用 Maltego 服务器运行所有转换。</p>
+<p>预期的结果可能是域到 IP 的转换已经发生，netblock 将被识别，AS 号码也被识别，还有位置和其他短语。这些都是 Maltego 中的所有图标，并提供了有关所有这些图标的详细信息。研究人员可以继续这个过程来挖掘更多关于目标的信息。</p>
+<p>绝对奇妙的工具，通过互联网跟踪单个实体的脚印！</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>眼魔王
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/12/30/%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%83%85%E6%8A%A5%E5%9C%B0%E5%9B%BE%E3%80%81%E2%80%9C%E9%BB%91%E5%AE%A2%E6%90%9C%E7%B4%A2%E2%80%9D,%E5%8F%8A%E5%85%B6%E4%BB%96%20#OSINT/" title="开源调查工具：情报地图、“黑客搜索”,及其他">http://example.com/2021/12/30/开源调查工具：情报地图、“黑客搜索”,及其他 #OSINT/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%B0%83%E6%9F%A5/" rel="tag"># 调查</a>
+              <a href="/tags/%E8%8E%B7%E5%8F%96%E7%9C%9F%E7%9B%B8/" rel="tag"># 获取真相</a>
+              <a href="/tags/%E6%80%9D%E8%80%83/" rel="tag"># 思考</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/30/%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%EF%BC%9A%E6%94%B6%E9%9B%86%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA%E9%92%B1%E7%9A%84%E8%BD%A8%E8%BF%B9%20#OSINT%20%E5%9F%BA%E7%A1%80%E5%92%8C%E4%B8%80%E4%B8%AA%20Timeline%20%E7%A4%BA%E4%BE%8B/" rel="prev" title="开源调查：收集信息追踪钱的轨迹">
+      <i class="fa fa-chevron-left"></i> 开源调查：收集信息追踪钱的轨迹
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/30/%E5%B7%A7%E7%94%A8%E4%BA%92%E8%81%94%E7%BD%91%EF%BC%8C%E4%BB%A5%E6%89%BE%E5%88%B0%E6%82%A8%E6%9C%80%E6%83%B3%E8%A6%81%E7%9A%84%E4%BF%A1%E6%81%AF%EF%BC%9A%E6%90%9C%E7%B4%A2%E6%80%9D%E7%BB%B4%E4%BD%9C%E4%B8%BA%E5%9F%BA%E6%9C%AC%E5%8A%9F/" rel="next" title="巧用互联网，以找到您最想要的信息：搜索思维作为基本功">
+      巧用互联网，以找到您最想要的信息：搜索思维作为基本功 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%83%85%E6%8A%A5%E5%9C%B0%E5%9B%BE%E3%80%81%E2%80%9C%E9%BB%91%E5%AE%A2%E6%90%9C%E7%B4%A2%E2%80%9D-%E5%8F%8A%E5%85%B6%E4%BB%96-OSINT"><span class="nav-number">1.</span> <span class="nav-text">开源调查工具：情报地图、“黑客搜索”,及其他 #OSINT</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">244</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
