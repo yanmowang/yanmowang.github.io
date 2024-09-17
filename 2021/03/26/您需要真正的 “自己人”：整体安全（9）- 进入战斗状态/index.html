@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="您需要真正的 “自己人”：整体安全（9）- 进入战斗状态【2021年3月26日】您身上的东西既可以在预防或应对攻击或事故时非常有用，也可以被用作骚扰您的借口##欢迎回来！ 如果您错过了前面的内容，可以在这里回顾： 《头疼医头是不够的：整体安全（1）- 行动主义能持续的关键》 《“抓特务” 不是解决方案：整体安全（2）- 威胁响应》 《知己知彼，是有效行动策划的第一步：整体安全（3）- 愿景、战略和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="您需要真正的 “自己人”：整体安全（9）- 进入战斗状态">
+<meta property="og:url" content="http://example.com/2021/03/26/%E6%82%A8%E9%9C%80%E8%A6%81%E7%9C%9F%E6%AD%A3%E7%9A%84%20%E2%80%9C%E8%87%AA%E5%B7%B1%E4%BA%BA%E2%80%9D%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%889%EF%BC%89-%20%E8%BF%9B%E5%85%A5%E6%88%98%E6%96%97%E7%8A%B6%E6%80%81/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="您需要真正的 “自己人”：整体安全（9）- 进入战斗状态【2021年3月26日】您身上的东西既可以在预防或应对攻击或事故时非常有用，也可以被用作骚扰您的借口##欢迎回来！ 如果您错过了前面的内容，可以在这里回顾： 《头疼医头是不够的：整体安全（1）- 行动主义能持续的关键》 《“抓特务” 不是解决方案：整体安全（2）- 威胁响应》 《知己知彼，是有效行动策划的第一步：整体安全（3）- 愿景、战略和">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-26T15:38:08.000Z">
+<meta property="article:modified_time" content="2024-09-17T11:23:15.948Z">
+<meta property="article:author" content="眼魔王">
+<meta property="article:tag" content="整体安全">
+<meta property="article:tag" content="战斗状态">
+<meta property="article:tag" content="自己人">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/03/26/%E6%82%A8%E9%9C%80%E8%A6%81%E7%9C%9F%E6%AD%A3%E7%9A%84%20%E2%80%9C%E8%87%AA%E5%B7%B1%E4%BA%BA%E2%80%9D%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%889%EF%BC%89-%20%E8%BF%9B%E5%85%A5%E6%88%98%E6%96%97%E7%8A%B6%E6%80%81/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>您需要真正的 “自己人”：整体安全（9）- 进入战斗状态 | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/26/%E6%82%A8%E9%9C%80%E8%A6%81%E7%9C%9F%E6%AD%A3%E7%9A%84%20%E2%80%9C%E8%87%AA%E5%B7%B1%E4%BA%BA%E2%80%9D%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%889%EF%BC%89-%20%E8%BF%9B%E5%85%A5%E6%88%98%E6%96%97%E7%8A%B6%E6%80%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          您需要真正的 “自己人”：整体安全（9）- 进入战斗状态
+        </h1>
+
+        <div class="post-meta">
+          
+          
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-26 23:38:08" itemprop="dateCreated datePublished" datetime="2021-03-26T23:38:08+08:00">2021-03-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-17 19:23:15" itemprop="dateModified" datetime="2024-09-17T19:23:15+08:00">2024-09-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">整体安全</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/03/26/%E6%82%A8%E9%9C%80%E8%A6%81%E7%9C%9F%E6%AD%A3%E7%9A%84%20%E2%80%9C%E8%87%AA%E5%B7%B1%E4%BA%BA%E2%80%9D%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%889%EF%BC%89-%20%E8%BF%9B%E5%85%A5%E6%88%98%E6%96%97%E7%8A%B6%E6%80%81/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/26/%E6%82%A8%E9%9C%80%E8%A6%81%E7%9C%9F%E6%AD%A3%E7%9A%84%20%E2%80%9C%E8%87%AA%E5%B7%B1%E4%BA%BA%E2%80%9D%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%889%EF%BC%89-%20%E8%BF%9B%E5%85%A5%E6%88%98%E6%96%97%E7%8A%B6%E6%80%81/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="您需要真正的-“自己人”：整体安全（9）-进入战斗状态"><a href="#您需要真正的-“自己人”：整体安全（9）-进入战斗状态" class="headerlink" title="您需要真正的 “自己人”：整体安全（9）- 进入战斗状态"></a>您需要真正的 “自己人”：整体安全（9）- 进入战斗状态</h1><h2 id="【2021年3月26日】您身上的东西既可以在预防或应对攻击或事故时非常有用，也可以被用作骚扰您的借口"><a href="#【2021年3月26日】您身上的东西既可以在预防或应对攻击或事故时非常有用，也可以被用作骚扰您的借口" class="headerlink" title="【2021年3月26日】您身上的东西既可以在预防或应对攻击或事故时非常有用，也可以被用作骚扰您的借口##"></a>【2021年3月26日】您身上的东西既可以在预防或应对攻击或事故时非常有用，也可以被用作骚扰您的借口##</h2><p>欢迎回来！</p>
+<p>如果您错过了前面的内容，可以在这里回顾：</p>
+<p>《头疼医头是不够的：整体安全（1）- 行动主义能持续的关键》</p>
+<p>《“抓特务” 不是解决方案：整体安全（2）- 威胁响应》</p>
+<p>《知己知彼，是有效行动策划的第一步：整体安全（3）- 愿景、战略和参与者》</p>
+<p>《夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产》</p>
+<p>《每一种变化都有原因，您需要及时抓取威胁信号 — 整体安全（5）- 紧贴时局》</p>
+<p>《草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性》</p>
+<p>《充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的”》</p>
+<p>《安全是追求，而不是任务：整体安全（8）- 准备好进入行动》</p>
+<p>本集内容将进入您的行动主义组织内部的关系构建，然后开启行动。只有当你们能够互相支援、互相依仗时，所有人才能获得安全，您的行动才有获胜的机会。</p>
+<p>关于什么是支援和依仗，还记得我们举过的枪战的例子吗？您非常有必要找到那样的感觉。</p>
+<p>为了更有效地和安全地进行抗议，您就非常有必要与一群朋友或同事进行协调，以便共同行动和相互照顾。这是需要技巧的。在这里，我们考虑一些有用的策略来协调您的行动，以保证您自己和他人的安全。</p>
+<p>创建一个亲密团队<br>亲密团队是由抗议者同伴或朋友组成的小团体，他们一起准备、执行抗议活动，并且，作为一个 “单位” 与更大规模的抗议活动互动。</p>
+<p>📌 他们共同制定安全计划，并对行动和紧急情况下的反应进行分工。亲密团队通常由2～15人组成，即 规模小到可以让成员之间进行个人分享、直接信任和关怀。</p>
+<p>这样的小团体可以为某项特别的活动（如非暴力行动、抗议、示威）而成立，也可以成为一项大型运动的连续组成部分。它们可以是自主的，也可以由其成员分别组成一个更大的团体。</p>
+<p>📌 如果您成立了一个亲密团队，请考虑首先决定每个人各自的角色（如协调员、代表、媒体联络人、医疗支持、“观察员” 等等，基于每个人的性格特征和专长，并建立一个决策结构。</p>
+<p>每个人都会在决策中发挥作用，所有人的共同协作就能让一项任务顺利和完美。</p>
+<p>重要的是，您的亲密团队在行动中要保持密切沟通，共同应对紧急情况，并一起撤离。</p>
+<p>所有成员花时间一起规划行动，检查彼此对安全问题的看法。行动结束后，最好一起离开并进行汇报。理想的情况是，团队中的一两个成员应具备在紧急情况下进行急救和心理互助的能力。这很重要！</p>
+<p>维护您的心理健康<br>如果您希望自己的行动具备可持续性，就必须首先学会照护自己和队友。随着时间的推移，压力、疲劳和创伤都是任何活动家面对的最大威胁，有很多活动家往往在还没有直面维稳当局的时候，就被自己的心理压力击垮了。</p>
+<p>这就是为什么心理健康必须是整体安全的一个重要部分之一。保持您的健康并不是为了宠爱自己；事实上自我照护本身就是激进的、是政治的，对于应对创伤、愤世嫉俗和倦怠等威胁至关重要。</p>
+<p>📌 抵抗现有的系统在身体和心理上都很困难，所以在您开始行动之前，请考虑以下问题：</p>
+<p>1、当您达到一个不健康的压力水平时，您的身体状态和心理状态倾向于如何做出反应？还记得您在前面教程中构建的压力测量表吗，现在就用它来监测您自己的健康状态。</p>
+<p>找出哪些做法或资源有助于帮助您的身心恢复到健康状态，以及如何将它们融入到您的反抗行动中。</p>
+<p>2、在您的亲密团队中培养一种文化，在这种文化中，您可以分享自己的恐惧，公开谈论压力和创伤经历，而不会担心被误解和嘲笑。</p>
+<p>这也许不是容易的，反抗团体有一种根深蒂固的且普遍的内部文化，即 将恐惧和压力视为懦弱和无能，甚至可疑。这导致人们不得不隐藏自己的真实心态，原本可以建立知心关系从而实现更默契协作的队友之间，因此而产生心理隔膜。</p>
+<p>中文里面有一句话说的很好，“一万句我爱你，不如一句我懂你”，互相理解是活动家团队之间构建亲和力的最佳途径。</p>
+<p>3、练习积极的倾听，建立团结和相互关怀。</p>
+<p>这不是简单说说的，因为并不容易做到。任何团体都会受到其成员所在的社会环境的影响，反抗团体也一样；如果您所在的社会是人情淡薄的、物质主义的、互相利用的人际关系，您就想需要警惕这些东西被带入到您的行动主义团队中。</p>
+<p>📌 行动者的成功永远不会是个人成功，对于行动者来说只有好的团体协作才能获得真正的成功；所以您知道，在争执中占上风并不会给您带来任何荣誉感，它只会让您失去队友的支持，从而失去获得真正成功的机会。</p>
+<p>积极的倾听是技术，而不仅仅是态度，您可以在这里看到更多解释。这需要练习才能做到，尤其是在社交媒体与真实生活之间的界限越来越模糊的当下时代，社交媒体上的偏执和变态的超个人主义已经在侵蚀现实生活中最重要的福祉来源。行动者必须警惕这点，并主动培育积极的倾听。</p>
+<p>正如您在我们的另一个新系列 “行动主义” 第2集中看到的，当权者也必须紧密团结其各种支柱机构，才能维护其权力稳固；如果反抗者不能做到更团队彼此，你们将难以击败那些齐心合力镇压你们的权势。</p>
+<p>4、在抗议活动期间，确保您有足够的食物和水，并为不同的天气条件做好准备。下一集中将对此有更多细节。</p>
+<p>5、抗议结束后，确保在到达安全地点后，花时间与您的亲密团队进行汇报。这也非常重要。您将在后面的教程中看到更多对此的介绍。</p>
+<p>6、腾出时间与您的团队进行必要的分享和互相支援，但也要花一些时间独处，以处理这段经历，并回归您的日常生活。</p>
+<p>“完整” 对任何一种行动来说都很重要，就如科学的作息时间能帮助维护您的健康那样，反抗行动也有其科学的节奏，如果您希望自己在每一次出击时都能有焕然一新的精神状态、能发挥自己最好的水平，您就有必要在日常照护好自己。</p>
+<p>构建包容性的运动<br>当我们谈论安全时，我们不仅仅是在谈论保护自己不受催泪瓦斯的伤害。对我们许多人来说，安全感来自归属感、团结和相互尊重，特别是在人们可能因性别认同、种族、性取向、外表、或其他因素而受到歧视甚至遭受暴力的情况下。</p>
+<p>如果您是受歧视较少的人，或享有较多特权的人，可能甚至没有注意到，当您计划或实际参加抗议活动时，您正在用自己的行动复制您的特权，并助长边缘化。在您的运动中，有多少有影响力的职位是由来自传统特权群体的人所占据的（比如同性别的男性、社会上的中高阶层、名人）？因性别认同、种族、宗教、性取向、经济地位、社会地位或教育地位、或其他类似因素而继承的特权和相应的歧视，往往是不公正的产物。</p>
+<p>📌 如果您要与社会上的不公正现象作斗争，您就必须首先在自己的人权运动中与这些现象作斗争。</p>
+<p>花时间仔细看看您的团队，考虑一下您是否需要在这些线上更平等地分配责任。如果团队中的一部分人似乎拥有所有的权力，那么就要对此提出挑战。</p>
+<p>考虑给人们一些机会，让他们因自己的身份而在社会上被剥夺的机会，能够在您的亲和力团队中重新获得。</p>
+<p>在您的运动中，对任何歧视、性骚扰或暴力都应该是零容忍的。明确指出，任何从事这些行为的人都将受到惩罚，或可能因此被从运动中除名。</p>
+<p>这些问题决不是一个 “轻松” 的玩笑素材。要知道，面临歧视的人可能也需要特别的保护措施，或者在抗议活动中更积极地融入。在制定安全计划时您需要提出这个问题，并根据这个问题考虑您的行动策略。</p>
+<p>进入抗议行动，第一步：考虑带什么<br>重要的是要认真思考 —— 您要带什么去参加抗议。请记得，您身上的东西既可以在预防或应对攻击或事故时非常有用，也可以被用作骚扰您的借口。</p>
+<p>您应该已经在前几集的练习中进行了充分的背景和风险分析后，才考虑要带什么东西。您需要与您的亲密团队进行协调，根据每个人的责任分配资源。</p>
+<p>虽然每一种情况都是独特的，但下面的说明性清单可能会有帮助：</p>
+<p>📌 不要带什么 ——<br>1、如果您不完全清楚电子设备上有什么，就不要带电子设备。</p>
+<p>自从有智能手机的那一天开始，它就被用于镇压抗议者了，直到如今。镇压者对智能手机的利用一直在不断快速提升，事实上您很可能无法做到完全 “清楚” 地知道当权者会如何借助您的手机来对付您，直到黑客将警察的秘密文件公之于众。</p>
+<p>所以，理性的建议应该是不要携带智能手机，但很多时候在抗议现场的人需要记录现场状况，对警察的暴力行为取证，并且行动主义团队需要彼此间保持联络，有手机会更方便。总之您必须根据自己的具体情况进行权衡，您的选择必须能让收益高过风险，您愿意为收益承担风险，尤其是，您需要明确知道该如何减轻和避免风险：</p>
+<p>基本注意事项《指南：当您准备参加抗议活动…》</p>
+<p>替代方案《买不起/买不到一次性手机怎么办？这里是您在参加敏感行动之前需要了解的事》</p>
+<p>在现场的注意事项《在将抗议现场的照片和视频发布到社交媒体上之前，请执行此操作》</p>
+<p>基本须知《如何识别抗议活动中可见的和不可见的监视》</p>
+<p>2、不要携带任何可能给您带来麻烦的东西：任何可能被认为是武器的东西，或任何非法药物或酒精。</p>
+<p>总之，镇压者会努力寻找把柄以控制您，不要给他们制造机会。</p>
+<p>📌 需要带什么 ——<br>1、携带您需要的特殊药物 —— 不是控制药品！是能帮助您维护健康状况的必要药物。</p>
+<p>抗议活动现场理论上应该有医疗团队，但他们携带的药物和急救工具往往倾向于医治暴力冲突导致的创伤；如果您有慢性病，他们的急救箱里不一定有适合您的药物。您应该自己携带。</p>
+<p>2、一些现金，以备不时之需 —— 是现金，而不是银行卡和在线支付账户！能识别您的手机的人就能冻结您的账户，这是一种威胁抗议者妥协的常用方法。如果您有现金，就不需要担心这样的状况。</p>
+<p>您往往不会知道一场抗议活动会持续多久，有现金在身上会很方便。</p>
+<p>3、舒适的衣服，让您可以轻松活动的款式 —— 不论您的抗议活动是否完全和平非暴力，您都应该为镇压做好准备。为您的应激反应动作做好准备，随时可以奔跑、攀爬、躲闪，衣服和鞋子的选择很重要。</p>
+<p>4、如果您需要带手机，可以考虑换一张新的没有实名的SIM卡，或者新的一次性手机。记得提前充值通话时间，并携带一个移动充电器。</p>
+<p>5、紧急联系人：考虑将最重要的联系人写在手臂或腿上 —— 是写在自己身上！而不是放在手机里。您的手机可能丢失、可能被警察抢走、可能没电和摔坏，您不应该把最重要的东西放在里面。</p>
+<p>您的紧急联系人应该是您最信任的人和最可能需要的人，比如律师、亲属、队友，您肯定知道您需要谁。</p>
+<p>6、急救和卫生：小型急救箱、卫生纸和卫生巾 —— 可以帮助您自己处理简单的伤势，也可以帮助身边人。一个团队中只需要一个人携带急救和卫生用品即可，但是，其他人需要知道如何随时联系到这个人，不要走散。</p>
+<p>7、食物和水 —— 带一些高能量的体积小的食物，巧克力或者压缩饼干、能量棒等，以及紧急情况下既能饮用又能清洗伤口的洁净水。带上足够的物资，以备万一有什么变故，您也能维持比计划中的抗议时间更长的时间。</p>
+<p>8、带上泳镜/护目镜、围巾、面罩 —— 以抵制催泪瓦斯，携带一些治疗催泪瓦斯引起的烧伤的抗酸溶液。</p>
+<p>比如抗酸药（例如美乐事）水溶液可以对抗催泪弹造成的烧伤，或者稀释过的抗酸药和碳酸氢钠水溶液。在遇到催泪瓦斯时，首先要做的就是尽快远离，躲避到通风良好、有新鲜空气的地方；由于比空气重的CS气体会往下沉，因此不要蹲在地上。要快速跑起来。</p>
+<p>9、考虑携带一个小型相机，用以记录警察的暴行 —— 您的团队中最好可以安排特定的接受过这方面专业训练的队友负责拍摄记录。如前所述，您的亲密团队已经在行动之前做好了明确分工，并且每个人之间都知道彼此的角色，以及在什么时候如何与最需要的队友协作。</p>
+<p>10、在一些国家，没有携带身份证件可能会成为逮捕的借口，但在其他国家，没有义务携带身份证件，甚至身份证件可能会被警察用来对付你。与您的亲密团队协调是否要带身份证件，如果要带，带哪种。</p>
+<p>上图组织这本书在这里下载；<a target="_blank" rel="noopener" href="https://www.patreon.com/posts/hei-shi-zi-hui-42154240">https://www.patreon.com/posts/hei-shi-zi-hui-42154240</a></p>
+<p>做好被搜查的准备<br>在许多情况下，维稳当局拦截和搜查抗议者是一种很常见的做法，他们声称防止将武器或其他非法物品(如酒精或毒品)带到抗议现场。然而，这也常常被用作对抗议者进行恐吓和骚扰的借口。</p>
+<p>很可能有既定的行为准则来规范警察可以如何搜查你。请咨询相关律师，了解警方在此面临的法律约束，以及每种情况下的实践现实。了解您的权利。</p>
+<p>准备并练习任何应对搜查的口头抵抗（如果在某些情况下可以抵抗的话），并确保您没有携带任何非法物品。并且，如果遇到被搜查的情况，要告诉您的团队，让大家提高警惕。⚪️</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>眼魔王
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/03/26/%E6%82%A8%E9%9C%80%E8%A6%81%E7%9C%9F%E6%AD%A3%E7%9A%84%20%E2%80%9C%E8%87%AA%E5%B7%B1%E4%BA%BA%E2%80%9D%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%889%EF%BC%89-%20%E8%BF%9B%E5%85%A5%E6%88%98%E6%96%97%E7%8A%B6%E6%80%81/" title="您需要真正的 “自己人”：整体安全（9）- 进入战斗状态">http://example.com/2021/03/26/您需要真正的 “自己人”：整体安全（9）- 进入战斗状态/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8/" rel="tag"># 整体安全</a>
+              <a href="/tags/%E6%88%98%E6%96%97%E7%8A%B6%E6%80%81/" rel="tag"># 战斗状态</a>
+              <a href="/tags/%E8%87%AA%E5%B7%B1%E4%BA%BA/" rel="tag"># 自己人</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/23/%E8%BA%B2%E9%81%BF%E6%80%9D%E7%BB%B4%E9%99%B7%E9%98%B1%EF%BC%8C%E7%AB%9E%E4%BA%89%E6%80%A7%E5%81%87%E8%AE%BE%E5%88%86%E6%9E%90%E6%B3%95%EF%BC%9A%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%EF%BC%885%EF%BC%89/" rel="prev" title="躲避思维陷阱，竞争性假设分析法：思考方式（5）">
+      <i class="fa fa-chevron-left"></i> 躲避思维陷阱，竞争性假设分析法：思考方式（5）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/26/%E5%A6%82%E4%BD%95%E8%AE%B2%E8%BF%B0%E6%95%85%E4%BA%8B%EF%BC%9A%E5%BC%80%E6%BA%90%E6%83%85%E6%8A%A5%E7%A0%94%E7%A9%B6%E5%88%9D%E5%AD%A6%E8%80%85%E7%9A%84%E6%8C%87%E5%8D%97/" rel="next" title="如何讲述故事：开源情报研究初学者的指南">
+      如何讲述故事：开源情报研究初学者的指南 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%82%A8%E9%9C%80%E8%A6%81%E7%9C%9F%E6%AD%A3%E7%9A%84-%E2%80%9C%E8%87%AA%E5%B7%B1%E4%BA%BA%E2%80%9D%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%889%EF%BC%89-%E8%BF%9B%E5%85%A5%E6%88%98%E6%96%97%E7%8A%B6%E6%80%81"><span class="nav-number">1.</span> <span class="nav-text">您需要真正的 “自己人”：整体安全（9）- 进入战斗状态</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%902021%E5%B9%B43%E6%9C%8826%E6%97%A5%E3%80%91%E6%82%A8%E8%BA%AB%E4%B8%8A%E7%9A%84%E4%B8%9C%E8%A5%BF%E6%97%A2%E5%8F%AF%E4%BB%A5%E5%9C%A8%E9%A2%84%E9%98%B2%E6%88%96%E5%BA%94%E5%AF%B9%E6%94%BB%E5%87%BB%E6%88%96%E4%BA%8B%E6%95%85%E6%97%B6%E9%9D%9E%E5%B8%B8%E6%9C%89%E7%94%A8%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E8%A2%AB%E7%94%A8%E4%BD%9C%E9%AA%9A%E6%89%B0%E6%82%A8%E7%9A%84%E5%80%9F%E5%8F%A3"><span class="nav-number">1.1.</span> <span class="nav-text">【2021年3月26日】您身上的东西既可以在预防或应对攻击或事故时非常有用，也可以被用作骚扰您的借口##</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">327</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">103</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

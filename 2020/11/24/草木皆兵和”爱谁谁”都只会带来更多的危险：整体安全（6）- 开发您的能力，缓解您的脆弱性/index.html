@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。##欢迎回来！ 如果您错过了前面的内容，可以在这里回顾： 《头疼医头是不够的：整体安全（1）- 行动主义能持续的关键》 《“抓特务” 不是解决方案：整体安全（2）- 威">
+<meta property="og:type" content="article">
+<meta property="og:title" content="草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性">
+<meta property="og:url" content="http://example.com/2020/11/24/%E8%8D%89%E6%9C%A8%E7%9A%86%E5%85%B5%E5%92%8C%E2%80%9D%E7%88%B1%E8%B0%81%E8%B0%81%E2%80%9D%E9%83%BD%E5%8F%AA%E4%BC%9A%E5%B8%A6%E6%9D%A5%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%8D%B1%E9%99%A9%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%886%EF%BC%89-%20%E5%BC%80%E5%8F%91%E6%82%A8%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E7%BC%93%E8%A7%A3%E6%82%A8%E7%9A%84%E8%84%86%E5%BC%B1%E6%80%A7/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。##欢迎回来！ 如果您错过了前面的内容，可以在这里回顾： 《头疼医头是不够的：整体安全（1）- 行动主义能持续的关键》 《“抓特务” 不是解决方案：整体安全（2）- 威">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-24T15:38:08.000Z">
+<meta property="article:modified_time" content="2024-09-17T11:16:51.357Z">
+<meta property="article:author" content="眼魔王">
+<meta property="article:tag" content="整体安全">
+<meta property="article:tag" content="能力和脆弱性">
+<meta property="article:tag" content="威胁因素">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2020/11/24/%E8%8D%89%E6%9C%A8%E7%9A%86%E5%85%B5%E5%92%8C%E2%80%9D%E7%88%B1%E8%B0%81%E8%B0%81%E2%80%9D%E9%83%BD%E5%8F%AA%E4%BC%9A%E5%B8%A6%E6%9D%A5%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%8D%B1%E9%99%A9%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%886%EF%BC%89-%20%E5%BC%80%E5%8F%91%E6%82%A8%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E7%BC%93%E8%A7%A3%E6%82%A8%E7%9A%84%E8%84%86%E5%BC%B1%E6%80%A7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性 | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/24/%E8%8D%89%E6%9C%A8%E7%9A%86%E5%85%B5%E5%92%8C%E2%80%9D%E7%88%B1%E8%B0%81%E8%B0%81%E2%80%9D%E9%83%BD%E5%8F%AA%E4%BC%9A%E5%B8%A6%E6%9D%A5%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%8D%B1%E9%99%A9%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%886%EF%BC%89-%20%E5%BC%80%E5%8F%91%E6%82%A8%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E7%BC%93%E8%A7%A3%E6%82%A8%E7%9A%84%E8%84%86%E5%BC%B1%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性
+        </h1>
+
+        <div class="post-meta">
+          
+          
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-24 23:38:08" itemprop="dateCreated datePublished" datetime="2020-11-24T23:38:08+08:00">2020-11-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-17 19:16:51" itemprop="dateModified" datetime="2024-09-17T19:16:51+08:00">2024-09-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">整体安全</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/11/24/%E8%8D%89%E6%9C%A8%E7%9A%86%E5%85%B5%E5%92%8C%E2%80%9D%E7%88%B1%E8%B0%81%E8%B0%81%E2%80%9D%E9%83%BD%E5%8F%AA%E4%BC%9A%E5%B8%A6%E6%9D%A5%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%8D%B1%E9%99%A9%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%886%EF%BC%89-%20%E5%BC%80%E5%8F%91%E6%82%A8%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E7%BC%93%E8%A7%A3%E6%82%A8%E7%9A%84%E8%84%86%E5%BC%B1%E6%80%A7/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/24/%E8%8D%89%E6%9C%A8%E7%9A%86%E5%85%B5%E5%92%8C%E2%80%9D%E7%88%B1%E8%B0%81%E8%B0%81%E2%80%9D%E9%83%BD%E5%8F%AA%E4%BC%9A%E5%B8%A6%E6%9D%A5%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%8D%B1%E9%99%A9%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%886%EF%BC%89-%20%E5%BC%80%E5%8F%91%E6%82%A8%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E7%BC%93%E8%A7%A3%E6%82%A8%E7%9A%84%E8%84%86%E5%BC%B1%E6%80%A7/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）-开发您的能力，缓解您的脆弱性"><a href="#草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）-开发您的能力，缓解您的脆弱性" class="headerlink" title="草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性"></a>草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性</h1><h2 id="【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。"><a href="#【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。" class="headerlink" title="【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。##"></a>【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。##</h2><p>欢迎回来！</p>
+<p>如果您错过了前面的内容，可以在这里回顾：</p>
+<p>《头疼医头是不够的：整体安全（1）- 行动主义能持续的关键》</p>
+<p>《“抓特务” 不是解决方案：整体安全（2）- 威胁响应》</p>
+<p>《知己知彼，是有效行动策划的第一步：整体安全（3）- 愿景、战略和参与者》</p>
+<p>《夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产》</p>
+<p>《每一种变化都有原因，您需要及时抓取威胁信号 — 整体安全（5）- 紧贴时局》</p>
+<p>📌 本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。</p>
+<p>应对威胁<br>前文中我们和您一起分析了所有可能发生的威胁和发生形式 —— 从来自人身的到来自技术的，接下来就可以开始分析如何应对这些威胁了。</p>
+<p>在建立安全策略时，人们从来都不是从零开始的；您的直觉已经在日常生活中帮助您避免威胁或应对威胁，此外，您还有某些社会化的实践 —— 即 “常识” —— 有时候也可以使您免受伤害。比如，群体事件发生时要做好应对断网的准备（见《如何用指标预测网络中断》）</p>
+<p>再比如，一些中国互联网用户有这样的 “常识”：如果您在社交媒体上的言论忽然遭遇大批水军围攻，那么就需要警惕稍后可能会有警察上门。</p>
+<p>📌 但这显然是不够准确的判断，它来自于人们所了解的发生在他人身上的一些前车之鉴。如果您就此认为 “如果我没有被水军围攻，就没必要担心警察上门”，那就是错误的：我们称之为 “虚假的安全感”；反之，如果您经常遭遇水军围攻，因此经常陷在担心警察上门的恐慌中，那也是错误的：这是一种凭空制造的压力，长此以往您的身心将受到明显伤害，恐慌导致愈发难以判断真正的威胁 ，难以及时准确地作出反应 —— 而这正是维稳警察最期待的 “效果”，正如我们在本系列第1集的导言中所讲述的（下图）。</p>
+<p>📌 在本集中，我们将考虑这些做法以及您的其他能力，尤其是您的弱点，以培养批判性思维，避免错误的 “安全感”。</p>
+<p>为了从本集中获得最大的收获，请确保您已经完成了上一集中的背景分析练习。</p>
+<p>威胁、能力和脆弱性<br>为了制定应对您所面临的威胁的措施，可以从使您更容易或更不容易受到这些威胁的因素来考虑。这些因素就是您的能力和脆弱性：</p>
+<p>能力有助于使您更安全地抵御特定的威胁（即 降低其可能性或影响）</p>
+<p>脆弱性会使您更容易受到威胁（即 增加了威胁的可能性或影响）</p>
+<p>能力和脆弱性可能来自您自身、也可能来自其他行为者、或者您所处环境中与您的安全有关的特征。比如，如果您的爱人有点不够沉稳，心里藏不住话，那么TA就可能是您的 “脆弱性”；再比如，您的办公室网络升级了一系列安防措施、并对成员进行了安全培训，就会为您和其他同事带来 “能力” ……</p>
+<p>📌 一旦您确定了这些特征，就可以采取行动，以减少脆弱性、并建设您的能力，以最大限度地降低威胁的可能性或影响，从而最大限度地降低每一种威胁所带来的风险。</p>
+<p>现有做法和能力<br>如上所述，步骤是首先评估您目前的防御做法和能力。大多数人在日常生活中已经采取了一些基本的安全措施：比如锁上办公室的门和为自己的在线账户设置强大的密码，等等，都是安全措施。但是，必需努力避免自满 —— 虚假的安全感是危险的。非常建议采取批判性思考，想想看自己现有的做法是否与您在前文的练习中所发现的威胁直接相关？是否已经将压力水平和保持您的整体健康的标准考虑在内了？</p>
+<p>📌 我们在列表-5 “护盾” 板块中收集的内容是专门提供给敏感人士的；并且，在《难以被追踪》和《完美隐身》两个系列中系统性地讲解了安全防护 —— 链接是两个系列的最有一集，其中包含该系列完整列表。</p>
+<p>考虑一下哪些&lt;能力&gt;与您已经确定的威胁的不同方面相对应 —— 比如：</p>
+<p>在司法骚扰案件中：您具有良好的法律知识</p>
+<p>在被没收电脑的情况下：您有加密的硬盘、隐藏的加密分区设置妥当</p>
+<p>技术角度上要采取我们在《敌对环境中的安全性》系列中介绍的思考方式（当敏感人士考虑安全问题时，几乎所有值得分析的环境都是敌对环境）。</p>
+<p>在下面的练习中，您可以开始回顾您已经确定的威胁以及它们的表现形式 —— 谁和什么会受到影响？会在哪里发生、如何发生？威胁来自谁、它将产生什么样的连锁反应？ —— 根据您已经拥有的做法和能力进行评估。</p>
+<p>练习<br>在此练习中，您可以根据自己现有的安全实践和与之相关的其他能力，考虑您在前面内容中确定并认为最重要的每一种威胁。这将为您提供一个 “基准线”，您可以在此基础上进行建设和改进。</p>
+<p>对于您所确定的每一种威胁，都有一系列的问题。在这里，您可以将您现有的安全做法和能力与这些问题中的每一个问题联系起来，具体如下：</p>
+<p>谁/或什么会受到威胁？ —— 在此确定有哪些能力（如果有的话）已经在保护此人或此物免受威胁。&lt;能力&gt; 的例子可以包括，比如：</p>
+<p>在司法骚扰案件中：您具有良好的法律知识</p>
+<p>在被没收电脑的情况下：您有加密的硬盘、隐藏的加密分区设置妥当</p>
+<p>威胁的背后操手是谁？—— 您是否已经有某种策略来与这个行为者接触？您是否有任何策略或资源可以阻止他们对您采取行动？如果有，是什么？如果他们以前曾对您采取过行动，您是否以某种方式做出了回应？如果有，如何回应的？如果没有，也没关系：这在帮助您找出差距时很重要。</p>
+<p>【举例】如果您的对手是政府间谍，他们正在试图从您和队友的私密交流中挖掘能把你们连锅端的情报线索，那么您能阻止他们成功的策略就是加密、隐写术、加密卷等技术；您的资源是对技术的熟练掌握和队友之间的密切合作；想想看您有没有曾经遭遇过类似的事？还是您听说其他人经历过？其中有什么经验教训能帮您在下一次做得更好？总结它们。</p>
+<p>攻击者会怎么做？—— 他们需要哪些信息来进行攻击？您是否采取了任何信息保护措施或反监视做法，以防止这些信息落入攻击者手中？</p>
+<p>【举例】如上面例子，攻击者首先要知道您和队友的真实身份，才能对你们采取行动。如果您是活动家，是站在前台的人，您可能难以采取假名身份，但您的队友是行动者，成败更多取决于他们。于是，如果您的队友采取的假身份，那么即便攻击者的入侵拿到了你们的私密对话，他们也不知道行动者的真实身份，就无法做到在行动之前扼杀它。您所要做的就是，避免让攻击者了解到与您合作的人的真实身份。您的组织中应该对此做好安全培训。</p>
+<p>在哪里？ —— 攻击者需要怎样接近您或进入您的财产？您如何保护自己周围的物理空间（如 建筑物、车辆、电子设备、私人财产等）？例如，在危险的环境中，您有哪些 “常识性” 的做法可以保障自己的人身安全？</p>
+<p>【举例】一些中国朋友曾经讲述过一个在警察敲门前的 “终极做法”，即 准备一堆强磁铁，将电脑和磁铁包在一起，塞到妥当的地方。这就是常识性的做法。但无法保证这样做能完全避免取证软件，反而会显得您 “很可疑”，警察会因此脑补出很多秘密。所以加密分区的方法将更好，在这里。</p>
+<p>心理、情感和健康策略 —— 包括为应对这一威胁而采取的任何做法：您是否有任何有助于减轻压力、疲惫等心理威胁的做法、并提高可能有助于应对这一威胁的心态和意识？</p>
+<p>如前文所述，只有当您能保持精力和敏锐度的时候，才更容易发现并有效应对威胁带来的挑战。</p>
+<p>📌 在可能的情况下，试着考虑这些方面相对于您所确定的每一个威胁。如果您想不出一个或多个问题的答案，那也没关系：这意味着您发现了一个有待填补的缺口。</p>
+<p>您将在后面的练习中考虑这些差距，并利用这些差距来确定您需要哪些新的资源和做法。</p>
+<p>备注和技巧 ——<br>请注意：对于您给出的每一个答案，都要考虑这种做法或能力是否积极。您是如何知道的？如果您错误地认为现有的做法可以保护您的安全，就会有一种制造虚假安全感的危险。</p>
+<p>如果您对某件事情不确定，不妨花点时间好好想一想，和您的同事或值得信赖的朋友谈谈，以便获得新的看法。</p>
+<p>找出差距和漏洞<br>下一步要从一个稍微困难的问题开始。还有哪些差距可能使您容易受到这些威胁？您的哪些无益的心态或缺乏足够的知识或技能是您的 &lt;弱点&gt;？</p>
+<p>考虑和确定自己的弱点在情感上可能是一个艰难的过程。然而，这种洞察力将有助于您更准确地确定自己需要建立的新资源和技能，以改善安全性。</p>
+<p>在思考这个问题时，请记住，如果缺乏足够的信息，或承受压力、恐惧和创伤，可能会导致您产生毫无根据的恐惧或未认识到的威胁。</p>
+<p>📌 您必须努力在掌握信息和过度思考之间取得平衡！可以采取一些步骤，通过小组讨论、或与值得信赖的盟友和朋友交谈，来检查自己的看法。</p>
+<p>根据您在前面练习中的分析，可以反思自己所知道的有关自己所面临的威胁的细节，以及预防或减轻这些威胁的现有做法。</p>
+<p>下面的练习旨在帮助您找出自己与每种威胁有关的 &lt;差距和弱点&gt;。</p>
+<p>练习<br>在此练习中，您可以根据您现有的安全实践中的差距和您的弱点，考虑您在前文练习中确定并优先考虑的每一种威胁。这将使您更清楚地了解自己需要在哪些方面开始建设新的能力。</p>
+<p>准备好笔和纸或其他书写材料。</p>
+<p>再一次，使用您在前文练习中确定的威胁列表，以及在上面练习中确定的现有能力和做法。</p>
+<p>在这里，您可以尝试确定自己现有实践中的差距和您的弱点，与您之前回答的每个问题相关。</p>
+<p>请考虑以下问题：</p>
+<p>谁/或什么受到威胁？—— 在此确定存在哪些差距或弱点（如果有的话）会使这个人或事物更容易受到威胁。</p>
+<p>【举例】脆弱性可能包括：</p>
+<p>在遭遇司法骚扰的情况下，一个人没有多少法律知识</p>
+<p>在被没收电脑的情况下，没有密码的硬盘，或没有加密</p>
+<p>谁是威胁的幕后黑手？ —— 也就是您的对手是谁？您在影响这个行为者的能力方面存在哪些弱点或差距？例如，如果没有办法直接与这个对手接触，使其接受您的工作、或阻止他们发起攻击，这可以被认为是一个差距。</p>
+<p>这些威胁行为者会怎么做？—— 他们进行攻击所需的信息是什么？您在处理与自己的工作有关的信息的方式上是否有任何漏洞可能会助长这种威胁或使其更具破坏性？</p>
+<p>漏洞在哪里 —— 您周围的物理空间（如建筑物、车辆、电子设备、私人财产等）的哪些方面使这种威胁更有可能发生或更具破坏性？例如，在办公室遭到警方突袭和被盗窃的情况下，门锁不牢固就是一个弱点。</p>
+<p>心理、情感和健康方面的考虑 —— 在这一威胁的背景下，压力、疲劳等会对您产生什么影响？在您的健康实践中存在哪些差距或弱点，可能使这一威胁更有可能发生或更具破坏性？就如疲劳驾驶容易翻车，一样的道理。您需要对自己有清楚的了解，基于您通过前面章节中的练习得出的答案。</p>
+<p>尽可能改善您找到的一切弱点。</p>
+<p>识别新能力<br>到目前为止，您应该对自己所面临的威胁、自己相对于每一种威胁的能力和脆弱性，以及您的做法中存在的一些差距和改进的余地，有了很好的了解。这些差距正是您可以考虑建立新能力的地方。这些新的能力首先应该与您在上一次练习中发现的差距和弱点相对应。</p>
+<p>练习<br>在本练习中，您可以考虑在前面练习中确定和优先考虑的每种威胁，您的能力和脆弱性，以识别需要建立的新能力，以维持自己的生活。</p>
+<p>📌 在这里，您将尝试大胆构想您想要建立的新能力。考虑以下问题，可能有助于您确定这些能力：</p>
+<p>谁/或什么受到威胁？—— 受威胁的人应该建立哪些新的能力，以减少已查明的威胁的可能性或影响？</p>
+<p>威胁的背后推手是什么人？ —— 您可以如何尝试影响这些识别出的威胁背后的人或机构的成本效益分析？比如，当您的防护措施令对手不得不采用以色列那种几百万美元的间谍软件才能对您下手时，他们就需要三思一下了。</p>
+<p>想想看，您有什么办法可以提高对手对您工作的容忍度或接受度，或者阻止他们对您采取行动？</p>
+<p>📌 就如我们在《完美隐身》系列中介绍过的思考方式：没错，世上并没有百分百的安全，威胁行为者更多拼的是财力和实力，于是您需要做的就是最大程度上增加他们攻击您的成本，耗尽他们的财力和精力，您就赢了。</p>
+<p>攻击者会怎么做？—— 哪些信息是他们进行攻击所必需的？如何进一步保护工作中的敏感信息，防止其落入坏人手中？</p>
+<p>在什么地方 —— 如何提高您周围物理空间（如建筑物、车辆、电子设备、私人财产）的安全能力，以降低某种威胁的可能性或破坏性？</p>
+<p>心理、情感和健康方面的考虑 —— 在这一威胁的背景下，您可以采取哪些做法来减少压力和疲劳，以便更清楚地认识到这一威胁、并作出更有创造性的反应？给攻击者以措手不及。</p>
+<p>在接下来的内容中我们将探索有关如何在整体安全策略中开发和实施新能力的动力。</p>
+<p>📌 定义一个全面的安全战略与简单地采取临时或即兴的方法来保护安全，有很大的不同。您对威胁的许多本能反应或临时性安全协议，也许能保证您的安全，但其中一些不一定有效，甚至还可能是有害的。</p>
+<p>现在，您已经开始通过前面练习中确认的新战术和能力来更新您的安全战略。这些应与维持和扩大您作为人权维护者工作的社会政治 “空间” 的总体战略有关；这一概念将在下文中阐述。</p>
+<p>安全策略：为您的敏感工作留出空间<br>📌 有效的安全战略和计划必须符合您开展反抗工作的具体政治、经济、社会、技术、法律和环境背景。</p>
+<p>如前文所述，政治威胁来自其他行为者，这些对手的利益可能会受到您的工作的影响，因此他们打算封锁您开展工作的社会和政治空间。安全策略可以帮助您确定对手接触的策略，以维持或扩大这个空间。</p>
+<p>思考三大类型的安全战略是有用的：</p>
+<p>1、接受战略涉及与其他行为者 —— 盟友、中立方和反对者 —— 接触，以促进社会对您的反抗活动的容忍、接受度和最终的支持。这通常是通过宣传、运动、交涉和教育活动进行的。</p>
+<p>2、保护战略强调学习或实施新的方法和做法，重点是捍卫您的工作空间。这也可能意味着利用您的盟友的力量来进行保护 —— 合作很重要，并弥补您现有安全做法中的不足。</p>
+<p>3、威慑战略的重点是提高对手攻击您或您的工作的成本 —— 无论是金钱成本、名誉成本还是其他成本。这些战略在很大程度上还取决于宣传、运动、交涉和教育活动，并要求您有一个完善的威胁行为体图谱，以便知道哪些盟友可以帮助提高攻击您的成本。这就是在前面内容中完成的部分。</p>
+<p>许多安全战略和计划将包括属于上述两类或所有三类的活动：当然，这取决于您所确定的背景和威胁。</p>
+<p>试着完成以下练习，将您想建立的能力（在上面练习中确定的东西）与最适合您工作的战略目标相匹配。</p>
+<p>练习<br>在这一练习中，您可以进一步发展您所确定的提高安全的必要新能力。从接受、威慑和保护战略的角度来考虑这些能力，将有助于您了解自己的总体安全战略，并帮助您想出更多的策略以进行发展。</p>
+<p>如果您想写下练习的结果，可以考虑使用下面这样的格式：</p>
+<p>步骤1：查看您在上一练习中确定的&lt;准备新构建的能力&gt;。考虑它们是否是：</p>
+<p>一个有效的招数？</p>
+<p>威慑战术？</p>
+<p>护身符？</p>
+<p>还是上述各项的结合</p>
+<p>步骤2：现在，针对每种威胁，考虑可以采用的其他新策略，以便：</p>
+<p>提高对手或社会对您的工作的容忍度和接受度</p>
+<p>通过提高攻击成本来阻止对手对您采取行动</p>
+<p>保护自己免受威胁，并更有效地应对威胁</p>
+<p>继续使用您提出的新想法来扩展这个新能力的列表。</p>
+<p>步骤3：对于已确定的每种新能力，请考虑您将需要使用的资源（财务和物质）以建立这些能力。</p>
+<p>能力建设和外部资源<br>一旦您确定了按照上述总体战略解决安全方面的差距和脆弱性的方法，就可能需要进行某种形式的能力建设了。这可能意味着学习一种新的技能，也可能需要长期改变您的工作方式。</p>
+<p>考虑以下有助于促进行为改变的因素：</p>
+<p>1、福祉：不仅意味着敏感人士的身心处于可以积极学习的条件下，而且还包括，拥有足够的时间和安全的学习空间。</p>
+<p>2、态度：您在多大程度上认为这一学习过程是有价值的、有用的和合乎逻辑的？📌 请记住，态度是主观的，可能会受到压力、恐惧和创伤经历的不利影响。</p>
+<p>3、知识：对您所处的政治、经济、社会、技术、法律和环境背景的深刻理解，使您能拥有建立新能力的坚实基础。</p>
+<p>4、技能：您能够参与和操控环境的核心。这些技能可能包括身体健康和自我照护、政治动员的技能、使用加密技术的技能，以及更多。</p>
+<p>5、资源：在很大程度上影响着您改善上述要素的程度。想一想您和您的同事可以利用的任何资源，以及在必要时如何获得其他资源以进行能力建设。</p>
+<p>IYP致力于成为您的资源。您甚至不需要让我们知道您在使用IYP作为资源。您可以在本系列这一培训材料的基础上尽情发挥，以满足您和团队的现实需求。</p>
+<p>外部培训和顾问<br>培训和外部顾问在帮助组织和网络制定安全计划和技能方面往往非常有用。IYP提供的培训材料都是免费的，但如果您需要现场培训和实操，那可能会比较贵；如果您的组织內部沒有人能提供相同技能或培訓，依旧值得作出这样的預算。</p>
+<p>📌 最好的顾问会针对您自己的安全情况赋予您权力，而不是为您提供所谓的「快速解决方案」！利用他们来培训您认为与您的活动相关的工具和策略，并弥补您现有安全策略的不足。</p>
+<p>请注意，外部顾问不应该在没有组织成员参与的情况下，对您的机构的安全实务进行分析，也不应替您作出改变或决策。</p>
+<p>选择培训或培训师<br>朋友、和您一起从事敏感政治工作的同事、值得信赖的国际组织，都是选择安全问题培训的良好建议来源。</p>
+<p>📌 试着对您期望学到的东西有一个明确的想法，但要尊重培训师的意见，即 在给定的时间框架内可以实现什么。</p>
+<p>在您决定聘请他们之前，请考虑他们应该具备什么样的经验或知识。考虑语言、时间、地点和后续行动的选择等因素；之后您是否有时间练习或使用新技能、知识或资源？练习非常重要，只有您行动起来才能真正掌握这些技能。</p>
+<p>在您的组织内讨论这些问题，以达成一个对大家都有效的解决方案。如果一些成员不感兴趣，就会对培训产生负面影响，并会降低随后可能产生的效益。</p>
+<p>📌 我们无法进行在线的培训（并非没有尝试过），但即便是免费的，也很难确保所有参与者都能按时上线；并且互动方面受到参与者各自兴趣点偏差的阻碍（如果互动不充分，就不如我写一套指南分发给人们。培训的目标就是现场解决问题）。</p>
+<p>我们不会阻拦您进行在线远程培训的尝试，如果您认为现场培训非常危险的话 —— 有些情况下的确如此。但您真的需要斟酌在线培训的效率问题 —— 它可能会奇低。因为您真的不应该使用视频会议软件，更多见《不止是 Zoom，Google Meet、Microsoft Teams 和 Webex 都不安全》。</p>
+<p>安全的物质资源<br>建立和提高您的安全能力往往会产生财务影响，并可能给已经捉襟见肘的资金预算带来压力。无论是更换硬件受损的新笔记本电脑的费用，还是培训费用，最终您的安全都可能需要钱。</p>
+<p>有一些组织会向需要解决安全问题的人权维护者提供财政支持，申请过程有点复杂，而且需要时间，您需要考虑到这些；并且尽可能令您的申请过程保持私密，因为比如在中国，申请外国组织的资金很有可能被所谓的 “间谍法” 捕获，在当局想要惩罚您的时候拿出来作为把柄。</p>
+<p>对于相关资源，在这里下载一份手册：《New Protection Manual for Human Rights Defenders》。</p>
+<p>下一集中我们将继续讲解创建安全计划和协议的一些方法，并推荐练习以帮助您找到最适合自己和团队的方法。下次见。⚪️</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>眼魔王
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2020/11/24/%E8%8D%89%E6%9C%A8%E7%9A%86%E5%85%B5%E5%92%8C%E2%80%9D%E7%88%B1%E8%B0%81%E8%B0%81%E2%80%9D%E9%83%BD%E5%8F%AA%E4%BC%9A%E5%B8%A6%E6%9D%A5%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%8D%B1%E9%99%A9%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%886%EF%BC%89-%20%E5%BC%80%E5%8F%91%E6%82%A8%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E7%BC%93%E8%A7%A3%E6%82%A8%E7%9A%84%E8%84%86%E5%BC%B1%E6%80%A7/" title="草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性">http://example.com/2020/11/24/草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8/" rel="tag"># 整体安全</a>
+              <a href="/tags/%E8%83%BD%E5%8A%9B%E5%92%8C%E8%84%86%E5%BC%B1%E6%80%A7/" rel="tag"># 能力和脆弱性</a>
+              <a href="/tags/%E5%A8%81%E8%83%81%E5%9B%A0%E7%B4%A0/" rel="tag"># 威胁因素</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/17/%E2%80%9C%E6%8A%93%E7%89%B9%E5%8A%A1%E2%80%9D%20%E4%B8%8D%E6%98%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%882%EF%BC%89-%20%E5%A8%81%E8%83%81%E5%93%8D%E5%BA%94/" rel="prev" title="“抓特务” 不是解决方案：整体安全（2）- 威胁响应">
+      <i class="fa fa-chevron-left"></i> “抓特务” 不是解决方案：整体安全（2）- 威胁响应
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/11/24/%E6%AF%8F%E4%B8%80%E7%A7%8D%E5%8F%98%E5%8C%96%E9%83%BD%E6%9C%89%E5%8E%9F%E5%9B%A0%EF%BC%8C%E6%82%A8%E9%9C%80%E8%A6%81%E5%8F%8A%E6%97%B6%E6%8A%93%E5%8F%96%E5%A8%81%E8%83%81%E4%BF%A1%E5%8F%B7%20%E2%80%93%20%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%885%EF%BC%89-%20%E7%B4%A7%E8%B4%B4%E6%97%B6%E5%B1%80/" rel="next" title="每一种变化都有原因，您需要及时抓取威胁信号 – 整体安全（5）- 紧贴时局">
+      每一种变化都有原因，您需要及时抓取威胁信号 – 整体安全（5）- 紧贴时局 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8D%89%E6%9C%A8%E7%9A%86%E5%85%B5%E5%92%8C%E2%80%9D%E7%88%B1%E8%B0%81%E8%B0%81%E2%80%9D%E9%83%BD%E5%8F%AA%E4%BC%9A%E5%B8%A6%E6%9D%A5%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%8D%B1%E9%99%A9%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%886%EF%BC%89-%E5%BC%80%E5%8F%91%E6%82%A8%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%8C%E7%BC%93%E8%A7%A3%E6%82%A8%E7%9A%84%E8%84%86%E5%BC%B1%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%902020%E5%B9%B412%E6%9C%884%E6%97%A5%E5%AD%98%E6%A1%A3%E3%80%91%E6%9C%AC%E7%B3%BB%E5%88%97%E5%86%85%E5%AE%B9%E6%98%AF%E4%B8%80%E5%A5%97%E5%9F%B9%E8%AE%AD%E6%89%8B%E5%86%8C%E9%9C%80%E8%A6%81%E6%8C%89%E9%A1%BA%E5%BA%8F%E9%98%85%E8%AF%BB%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%90%8E%E9%9D%A2%E7%9A%84%E5%86%85%E5%AE%B9%E5%B0%86%E4%BD%BF%E7%94%A8%E5%89%8D%E9%9D%A2%E7%9A%84%E5%86%85%E5%AE%B9%E4%B8%AD%E5%B8%AE%E5%8A%A9%E6%82%A8%E6%9E%84%E5%BB%BA%E5%A5%BD%E7%9A%84%E5%B7%A5%E5%85%B7%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%8E%AA%E6%96%BD%E3%80%82%E8%BF%99%E9%87%8C%E6%98%AF%E7%AC%AC6%E9%9B%86%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。##</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">327</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">103</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

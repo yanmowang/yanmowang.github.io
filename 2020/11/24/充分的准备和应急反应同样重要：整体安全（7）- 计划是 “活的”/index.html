@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的”【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。##欢迎回来！ 如果您错过了前面的内容，可以在这里回顾： 《头疼医头是不够的：整体安全（1）- 行动主义能持续的关键》 《“抓特务” 不是解决方案：整体安全（2）- 威胁响应》 《知己知彼，是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的”">
+<meta property="og:url" content="http://example.com/2020/11/24/%E5%85%85%E5%88%86%E7%9A%84%E5%87%86%E5%A4%87%E5%92%8C%E5%BA%94%E6%80%A5%E5%8F%8D%E5%BA%94%E5%90%8C%E6%A0%B7%E9%87%8D%E8%A6%81%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%887%EF%BC%89-%20%E8%AE%A1%E5%88%92%E6%98%AF%20%E2%80%9C%E6%B4%BB%E7%9A%84%E2%80%9D/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的”【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。##欢迎回来！ 如果您错过了前面的内容，可以在这里回顾： 《头疼医头是不够的：整体安全（1）- 行动主义能持续的关键》 《“抓特务” 不是解决方案：整体安全（2）- 威胁响应》 《知己知彼，是">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-24T15:38:08.000Z">
+<meta property="article:modified_time" content="2024-09-17T11:18:41.962Z">
+<meta property="article:author" content="眼魔王">
+<meta property="article:tag" content="整体安全">
+<meta property="article:tag" content="准备和应急反应">
+<meta property="article:tag" content="计划是活的">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2020/11/24/%E5%85%85%E5%88%86%E7%9A%84%E5%87%86%E5%A4%87%E5%92%8C%E5%BA%94%E6%80%A5%E5%8F%8D%E5%BA%94%E5%90%8C%E6%A0%B7%E9%87%8D%E8%A6%81%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%887%EF%BC%89-%20%E8%AE%A1%E5%88%92%E6%98%AF%20%E2%80%9C%E6%B4%BB%E7%9A%84%E2%80%9D/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的” | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/24/%E5%85%85%E5%88%86%E7%9A%84%E5%87%86%E5%A4%87%E5%92%8C%E5%BA%94%E6%80%A5%E5%8F%8D%E5%BA%94%E5%90%8C%E6%A0%B7%E9%87%8D%E8%A6%81%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%887%EF%BC%89-%20%E8%AE%A1%E5%88%92%E6%98%AF%20%E2%80%9C%E6%B4%BB%E7%9A%84%E2%80%9D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的”
+        </h1>
+
+        <div class="post-meta">
+          
+          
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-24 23:38:08" itemprop="dateCreated datePublished" datetime="2020-11-24T23:38:08+08:00">2020-11-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-17 19:18:41" itemprop="dateModified" datetime="2024-09-17T19:18:41+08:00">2024-09-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">整体安全</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/11/24/%E5%85%85%E5%88%86%E7%9A%84%E5%87%86%E5%A4%87%E5%92%8C%E5%BA%94%E6%80%A5%E5%8F%8D%E5%BA%94%E5%90%8C%E6%A0%B7%E9%87%8D%E8%A6%81%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%887%EF%BC%89-%20%E8%AE%A1%E5%88%92%E6%98%AF%20%E2%80%9C%E6%B4%BB%E7%9A%84%E2%80%9D/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/24/%E5%85%85%E5%88%86%E7%9A%84%E5%87%86%E5%A4%87%E5%92%8C%E5%BA%94%E6%80%A5%E5%8F%8D%E5%BA%94%E5%90%8C%E6%A0%B7%E9%87%8D%E8%A6%81%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%887%EF%BC%89-%20%E8%AE%A1%E5%88%92%E6%98%AF%20%E2%80%9C%E6%B4%BB%E7%9A%84%E2%80%9D/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="充分的准备和应急反应同样重要：整体安全（7）-计划是-“活的”"><a href="#充分的准备和应急反应同样重要：整体安全（7）-计划是-“活的”" class="headerlink" title="充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的”"></a>充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的”</h1><h2 id="【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。"><a href="#【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。" class="headerlink" title="【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。##"></a>【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。##</h2><p>欢迎回来！</p>
+<p>如果您错过了前面的内容，可以在这里回顾：</p>
+<p>《头疼医头是不够的：整体安全（1）- 行动主义能持续的关键》</p>
+<p>《“抓特务” 不是解决方案：整体安全（2）- 威胁响应》</p>
+<p>《知己知彼，是有效行动策划的第一步：整体安全（3）- 愿景、战略和参与者》</p>
+<p>《夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产》</p>
+<p>《每一种变化都有原因，您需要及时抓取威胁信号 — 整体安全（5）- 紧贴时局》</p>
+<p>《草木皆兵和”爱谁谁”都只会带来更多的危险：整体安全（6）- 开发您的能力，缓解您的脆弱性》</p>
+<p>📌 本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。</p>
+<p>本集开始将和您一起制定安全计划和协议。</p>
+<p>一旦您明确了您和组织在活动中所面临的威胁，就可以开始将您的需求组织成安全计划或协议。这些计划可以是正式的书面文件，也可以是非正式的共享协议，但无论哪种方式，它们都应被视为 “活的”，并应定期更新和审查。</p>
+<p>您可以根据任何适合您的逻辑来组织这些计划和协议，例如 按您的反抗活动、按您组织动员的地区、按人、按星期、或按照任何其他符合您工作方式的标准。无论您如何安排自己的计划，所有好的计划都应该包括一些共同的要素。</p>
+<p>安全计划和协议的要素<br>📌 大多数好的安全计划都能达到以下一个或两个目的：</p>
+<p>预防威胁 —— 这些策略旨在防止已查明的威胁发生 (即减少其可能性)。</p>
+<p>比如，您穿上了防弹衣，就是为了防止/减少可能的大规模枪击威胁的影响；您制作了并熟练使用了加密卷，就能防止/减少电脑被警察查抄后重要资料丢失和您被起诉定罪的威胁。</p>
+<p>应急反应 —— 也称为应急计划，是您在威胁成为现实时所采取的行动。这些行动的目的一般是减轻事件的影响、减少事件发生后的进一步伤害，并阻止侵略者 (如果有的话) 进行进一步的伤害。</p>
+<p>比如，您在参加抗议活动中被便衣警察瞄准了，他们想要抢走您的设备，于是您快速禁用了生物识别功能；这就可以让警察费点劲、甚至很难打开您的手机；再比如，您在办公室里不仅配置了明显的监视摄像头（比如在屋顶的墙角上）而且配置了隐藏的摄像头，这样一来，即便闯入者迅速毁掉了那些明显的摄像头，您的隐藏摄像头会继续工作，以记录下闯入者的行为。</p>
+<p>对于您在前面的练习中已经识别出的每一种威胁，您通常应该同时具备预防和应对策略（参见上一集中的练习）。</p>
+<p>下面我们将更详细地探讨这在不同情况下可能意味着什么。</p>
+<p>预防威胁<br>📌 许多预防策略将反映您的接受、威慑和保护（或自卫）战略。这些策略可能包括宣传您的抗议运动、或其他形式的与公众或民事/军事当局的接触，以提高人们对您的工作的认识和接受。或者，这些措施可能涉及加强您与盟友的联系，或采取其他策略，建立您自己的能力和灵活性。</p>
+<p>这些措施一旦实施，很快就会成为您的工作和个人生活的一个 “正常” 方面，尽管可能需要时间来适应。</p>
+<p>紧急应变<br>要知道，即使是最好的计划也可能会失败。有些时候，也许是由于环境瞬息万变，尽管您已经尽了最大的努力去预防，但还是会遇到侵害或事故。于是您需要 PlanB。有了应急预案，您就可以有条不紊地应对安全事件，并限制伤害。</p>
+<p>应急预案通常都是针对具体案例的。正如前文中所讨论的那样。诸如轻微犯罪或自然灾害等因素可能会严重影响您的工作，也是许多敏感人士经常遇到的威胁，因此，如果您认为这些威胁已经构成风险，就必须制定应急计划，以应对这些可能发生的情况。</p>
+<p>📌 一些简单的例子可能是，比如手头有一个可信赖的好律师的联系方式，商量好在抗议活动期间被捕时发送加密的警报信息，或者只是在办公室里准备一个急救箱，以防携带武器的闯入者导致您和队友受伤。</p>
+<p>不要错过我们的 “在灾难中幸存” 系列 — 此链接为本系列最后一集，其中包含完整列表</p>
+<p>福祉和设备<br>至关重要的是，要包括您自己的福祉和管理您的设备和信息的策略。</p>
+<p>📌 应该考虑采取哪些行动来保持您的体力，并对您的工作和安全保持一种完整的关注，例如，安排吃饭、睡觉、放松和享受的时间和地点，不要忘记这些因素同样重要！您还应该考虑开展工作所依赖的设备—— 不论是电脑还是打印机、扫描仪还是录像机，以及确保能够控制谁可以访问您的信息和通信的策略。</p>
+<p>📌 下面是一个敏感人士简单安全计划的例子，帮您了解所有这些在实践中看起来是什么样的。</p>
+<p>目标任务：收集侵犯人权行为受害者的证词。</p>
+<p>地点：在农村地区。</p>
+<p>威胁  — — 被警察骚扰或逮捕。</p>
+<p>被没收电脑、手机。</p>
+<p>因此而丢失数据。</p>
+<p>损害受害者的匿名性。</p>
+<p>预防策略  — — 行动和资源</p>
+<p>提醒同事、友好的大使馆和国际组织，关于行动的时间期限和地点。</p>
+<p>将地方当局/侵犯人权责任人的详细联系资料提供给大使馆和国际组织。</p>
+<p>每12小时与同事签到一次。</p>
+<p>证人证言将被立即保存到加密卷中。</p>
+<p>证人证言会用GPG加密后发给同事 —— 每天晚上固定时间发送。</p>
+<p>邮件收件箱和已发文件夹在使用后将被彻底清理。</p>
+<p>安全指标和签到将通过安全的端对端加密通讯共享。</p>
+<p>应对策略 —— 行动和资源</p>
+<p>编写警报信息 (暗语)，以便在发生被监视/被跟踪的情况下发送给接应您的队友。暗语是只有你们两人能理解的话。</p>
+<p>准备好被捕时发送的警报信息（代码/暗语）。</p>
+<p>将律师的号码放在快速拨号上。</p>
+<p>应急预案 ——</p>
+<p>如果被抓，要发警报信息给同伴，并打电话给律师。</p>
+<p>同伴在收到报警信息后，会向盟友组织报警 —— 使馆和国际组织等。</p>
+<p>要求国际组织发出紧急呼吁。</p>
+<p>如果在发生致命威胁的情况下，要交出的加密卷外层密码。</p>
+<p>福祉方面的考虑 —— 您的心理健康是能否敏锐反应的决定性因素</p>
+<p>在当地一家体面的餐馆吃饭，每天至少两次（selfcare + 保存您的体力）</p>
+<p>在用餐时间关闭手机和所有其他设备（享受当下）</p>
+<p>每天晚上通过安全渠道给家人打电话联系（家庭是坚实的后盾）</p>
+<p>设备和信息 ——</p>
+<p>手机上有加密的通信应用</p>
+<p>具有加密卷和加密电子邮件的电脑，并具有如 GPG 这样的功能</p>
+<p>📌 请注意，上面的例子仍然意味着盟友的密切合作、协调一致的行动，以建立一个新的联盟。不要让自己孤立无援。</p>
+<p>当涉及到团体或组织时，规划的过程可能会涉及一些额外的步骤，以确保团体动态不会受到负面影响。</p>
+<p>如前面的内容所述，拥有坚实的最新安全计划是您的复原力和灵活性的重要补充，但是，不能取代它们。📌 除了详细的分析和规划外，您还必须为意外情况做好准备。虽然安全计划和协议是重要而有用的工具，但如果情况需要，灵活地放弃它们的能力同样重要，甚至更重要。当出现您没有 —— 或不可能 —— 计划到的情况时，培养中心意识和冷静是至关重要的。</p>
+<p>团体和组织的安全<br>团体和组织具有复杂的内部动态和文化，影响着您的互动方式和安全计划。当您考虑到，作为一个群体，在工作过程中，不愉快的事发生在自己身上的真正可能性时，这可能会变得更加复杂。</p>
+<p>在一个群体中进行安全规划可能会带来压力和情绪化，担心显得过于偏执是很常见的。从实际情况来看，在小组中进行分析并达成协议也是很困难的。为了使安全计划成功，需要每个人都能认同，但在团体中，这可能是一个高难度的任务！</p>
+<p>在此，我们将探讨在团体和组织内建立和改进安全策略和计划的一些关键问题。</p>
+<p>创建和维护安全计划<br>📌 一旦小组进行了风险分析（使用前文练习中概述的工具），在制定安全计划时，您可以记住一些要素：</p>
+<p>实现协调 —— 合理地介绍您的计划，并与您的同事讨论每一个步骤。安全是一个非常情绪化的问题，我们每个人对它都有不同的看法，这意味着谈论它是一个需要时间和安全空间的话题。尽量不要吓唬人，但要给人们提供事实，并创造一个平静的空间，让人们提出问题和关切。</p>
+<p>参与式设计 —— 有些人可能不欢迎未经他们协商就决定的安全计划。高风险的活动和紧急情况可能会让人感到痛苦，重要的是每个人都要对自己被分配的角色感到满意，如果不满意，也有一个空间可以提前表达自己的担忧。在计划还在制定的时候，尽量让更多的人参与进来。</p>
+<p>角色扮演 —— 在某些情况下，设计一个角色扮演，使组织成员能够练习如何应对某种情况或紧急情况，可能是有用的。然而，要谨慎行事，确保每个人都愿意参与，因为角色扮演可能会引发过去经历过创伤的人的情绪反应。</p>
+<p>重新规划和考虑 —— 请记住，所有安全计划都应被视为 “活的”，并应定期进行重新评估和讨论，特别是在新成员加入小组时。包括固定的日期来审查您的安全实践和计划，并确保安全不是事后的想法，而是您的战略计划的核心。</p>
+<p>团体和组织的应急计划<br>制定紧急或应急计划是至关重要的，因为没有任何预防措施能在任何时候都100%有效。在制定这种计划时，要考虑到以下关键因素：</p>
+<p>1、紧急情况的定义<br>决定什么是 “紧急情况” —— 即我们应该开始实施计划中的行动和应急措施的时间点。这一点很重要，因为有时会不清楚 —— 比如 您想象一下这样的情况，比如在外地任务中与同伴失去联系，您会等多久才宣布紧急情况？</p>
+<p>2、角色和责任<br>给每个人分配一个明确的角色，并让他们事先知道并同意 —— 这将减少事件发生时的混乱和恐慌。在每一种威胁的情况下，考虑您可能必须承担的不同角色，以及应对紧急情况时的实际情况。</p>
+<p>在此范围内，应对紧急情况的一个重要策略是启动一个支持网络 —— 一个由您的盟友组成的广泛网络，其中可能包括朋友和家人、社区、当地盟友、以及国内或国际的盟友，如非政府组织和国际独立记者。您的盟友如何支持您？您是否应该事先与他们联系，确认他们是否愿意在紧急情况下帮助您，并让他们知道您对他们的期望？</p>
+<p>3、沟通渠道<br>协调对紧急情况的反应总是涉及协调行动，因此数字通信越来越重要。决定在不同情况下与每个行为者进行沟通的最安全、最有效的手段是什么，并确定一个备用手段。</p>
+<p>在紧急情况下，制定明确的指导原则可能会有帮助：</p>
+<p>沟通的内容（要点）</p>
+<p>使用哪些渠道（尽可能安全；如果无法做到，要使用暗语/隐写）</p>
+<p>对谁（在前文中您构建的盟友清单中位居前列的选项）</p>
+<p>4、预警和响应系统<br>这是一个有用的工具，可以协调您对紧急情况或迫在眉睫的高风险情况的反应。</p>
+<p>早期警报及应变系统基本上是一份高度保密的文件 (不论是电子形式还是其他形式)，在发生紧急情况时可打开，用以记录所有有关安全指标和已发生事件的详细资料，清楚说明计划中的应变行动和次序，以及所要达到的指标。它还应包括为保护有关人员免受进一步伤害和帮助他们身心康复而采取的善后行动。</p>
+<p>📌 早期预警和反应系统提供了有用的文件，以便随后分析所发生的事，以及如何改进您的预防策略和今后对威胁的反应。</p>
+<p>改善组织安全管理<br>各组织必须将安全管理以及管理人员、工作人员和志愿者对安全管理的执行视为一个持续的重新评估过程。</p>
+<p>定期评估您的安全策略和计划在多大程度上不仅与您的运作环境相一致，而且还被您的成员所接受和实施，这是个好主意</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>眼魔王
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2020/11/24/%E5%85%85%E5%88%86%E7%9A%84%E5%87%86%E5%A4%87%E5%92%8C%E5%BA%94%E6%80%A5%E5%8F%8D%E5%BA%94%E5%90%8C%E6%A0%B7%E9%87%8D%E8%A6%81%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%887%EF%BC%89-%20%E8%AE%A1%E5%88%92%E6%98%AF%20%E2%80%9C%E6%B4%BB%E7%9A%84%E2%80%9D/" title="充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的”">http://example.com/2020/11/24/充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的”/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8/" rel="tag"># 整体安全</a>
+              <a href="/tags/%E5%87%86%E5%A4%87%E5%92%8C%E5%BA%94%E6%80%A5%E5%8F%8D%E5%BA%94/" rel="tag"># 准备和应急反应</a>
+              <a href="/tags/%E8%AE%A1%E5%88%92%E6%98%AF%E6%B4%BB%E7%9A%84/" rel="tag"># 计划是活的</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/24/%E6%AF%8F%E4%B8%80%E7%A7%8D%E5%8F%98%E5%8C%96%E9%83%BD%E6%9C%89%E5%8E%9F%E5%9B%A0%EF%BC%8C%E6%82%A8%E9%9C%80%E8%A6%81%E5%8F%8A%E6%97%B6%E6%8A%93%E5%8F%96%E5%A8%81%E8%83%81%E4%BF%A1%E5%8F%B7%20%E2%80%93%20%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%885%EF%BC%89-%20%E7%B4%A7%E8%B4%B4%E6%97%B6%E5%B1%80/" rel="prev" title="每一种变化都有原因，您需要及时抓取威胁信号 – 整体安全（5）- 紧贴时局">
+      <i class="fa fa-chevron-left"></i> 每一种变化都有原因，您需要及时抓取威胁信号 – 整体安全（5）- 紧贴时局
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/01/07/%E6%94%B9%E9%9D%A9%E8%BF%98%E6%98%AF%E5%8F%98%E9%9D%A9%EF%BC%9F/" rel="next" title="这不是"他们的"战斗，而是"我们的"：哈萨克斯坦起义 - 不是抗议者，而是革命者">
+      这不是"他们的"战斗，而是"我们的"：哈萨克斯坦起义 - 不是抗议者，而是革命者 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%85%E5%88%86%E7%9A%84%E5%87%86%E5%A4%87%E5%92%8C%E5%BA%94%E6%80%A5%E5%8F%8D%E5%BA%94%E5%90%8C%E6%A0%B7%E9%87%8D%E8%A6%81%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%887%EF%BC%89-%E8%AE%A1%E5%88%92%E6%98%AF-%E2%80%9C%E6%B4%BB%E7%9A%84%E2%80%9D"><span class="nav-number">1.</span> <span class="nav-text">充分的准备和应急反应同样重要：整体安全（7）- 计划是 “活的”</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%902020%E5%B9%B412%E6%9C%884%E6%97%A5%E5%AD%98%E6%A1%A3%E3%80%91%E6%9C%AC%E7%B3%BB%E5%88%97%E5%86%85%E5%AE%B9%E6%98%AF%E4%B8%80%E5%A5%97%E5%9F%B9%E8%AE%AD%E6%89%8B%E5%86%8C%E9%9C%80%E8%A6%81%E6%8C%89%E9%A1%BA%E5%BA%8F%E9%98%85%E8%AF%BB%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%90%8E%E9%9D%A2%E7%9A%84%E5%86%85%E5%AE%B9%E5%B0%86%E4%BD%BF%E7%94%A8%E5%89%8D%E9%9D%A2%E7%9A%84%E5%86%85%E5%AE%B9%E4%B8%AD%E5%B8%AE%E5%8A%A9%E6%82%A8%E6%9E%84%E5%BB%BA%E5%A5%BD%E7%9A%84%E5%B7%A5%E5%85%B7%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%8E%AA%E6%96%BD%E3%80%82%E8%BF%99%E9%87%8C%E6%98%AF%E7%AC%AC6%E9%9B%86%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">【2020年12月4日存档】本系列内容是一套培训手册需要按顺序阅读，因为后面的内容将使用前面的内容中帮助您构建好的工具和基本措施。这里是第6集。##</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">327</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">103</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

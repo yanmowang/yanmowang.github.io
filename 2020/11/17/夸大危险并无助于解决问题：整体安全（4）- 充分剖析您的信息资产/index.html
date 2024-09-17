@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产【2020年11月24日】敏感人士信息的安全至关重要，事关本人和相关一群人的生命安危；因此如何保护信息的问题可能会引起焦虑。有效且及时更新的信息安全策略可使您放心地专注于自己的反抗目标、并以健康的方式开展工作。##恐惧来自未知。 人们只会害怕那些自己没有充分了解的东西，黑暗和模糊会产生可怕的联想。 人们看到的往往只是抓捕、迫害、骚扰、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产">
+<meta property="og:url" content="http://example.com/2020/11/17/%E5%A4%B8%E5%A4%A7%E5%8D%B1%E9%99%A9%E5%B9%B6%E6%97%A0%E5%8A%A9%E4%BA%8E%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%884%EF%BC%89-%20%E5%85%85%E5%88%86%E5%89%96%E6%9E%90%E6%82%A8%E7%9A%84%E4%BF%A1%E6%81%AF%E8%B5%84%E4%BA%A7/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产【2020年11月24日】敏感人士信息的安全至关重要，事关本人和相关一群人的生命安危；因此如何保护信息的问题可能会引起焦虑。有效且及时更新的信息安全策略可使您放心地专注于自己的反抗目标、并以健康的方式开展工作。##恐惧来自未知。 人们只会害怕那些自己没有充分了解的东西，黑暗和模糊会产生可怕的联想。 人们看到的往往只是抓捕、迫害、骚扰、">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-17T15:38:08.000Z">
+<meta property="article:modified_time" content="2024-09-17T11:11:06.561Z">
+<meta property="article:author" content="眼魔王">
+<meta property="article:tag" content="整体安全">
+<meta property="article:tag" content="信息资产">
+<meta property="article:tag" content="信息安全">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2020/11/17/%E5%A4%B8%E5%A4%A7%E5%8D%B1%E9%99%A9%E5%B9%B6%E6%97%A0%E5%8A%A9%E4%BA%8E%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%884%EF%BC%89-%20%E5%85%85%E5%88%86%E5%89%96%E6%9E%90%E6%82%A8%E7%9A%84%E4%BF%A1%E6%81%AF%E8%B5%84%E4%BA%A7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产 | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/17/%E5%A4%B8%E5%A4%A7%E5%8D%B1%E9%99%A9%E5%B9%B6%E6%97%A0%E5%8A%A9%E4%BA%8E%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%884%EF%BC%89-%20%E5%85%85%E5%88%86%E5%89%96%E6%9E%90%E6%82%A8%E7%9A%84%E4%BF%A1%E6%81%AF%E8%B5%84%E4%BA%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产
+        </h1>
+
+        <div class="post-meta">
+          
+          
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-17 23:38:08" itemprop="dateCreated datePublished" datetime="2020-11-17T23:38:08+08:00">2020-11-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-17 19:11:06" itemprop="dateModified" datetime="2024-09-17T19:11:06+08:00">2024-09-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">整体安全</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/11/17/%E5%A4%B8%E5%A4%A7%E5%8D%B1%E9%99%A9%E5%B9%B6%E6%97%A0%E5%8A%A9%E4%BA%8E%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%884%EF%BC%89-%20%E5%85%85%E5%88%86%E5%89%96%E6%9E%90%E6%82%A8%E7%9A%84%E4%BF%A1%E6%81%AF%E8%B5%84%E4%BA%A7/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/17/%E5%A4%B8%E5%A4%A7%E5%8D%B1%E9%99%A9%E5%B9%B6%E6%97%A0%E5%8A%A9%E4%BA%8E%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%884%EF%BC%89-%20%E5%85%85%E5%88%86%E5%89%96%E6%9E%90%E6%82%A8%E7%9A%84%E4%BF%A1%E6%81%AF%E8%B5%84%E4%BA%A7/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="夸大危险并无助于解决问题：整体安全（4）-充分剖析您的信息资产"><a href="#夸大危险并无助于解决问题：整体安全（4）-充分剖析您的信息资产" class="headerlink" title="夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产"></a>夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产</h1><h2 id="【2020年11月24日】敏感人士信息的安全至关重要，事关本人和相关一群人的生命安危；因此如何保护信息的问题可能会引起焦虑。有效且及时更新的信息安全策略可使您放心地专注于自己的反抗目标、并以健康的方式开展工作。"><a href="#【2020年11月24日】敏感人士信息的安全至关重要，事关本人和相关一群人的生命安危；因此如何保护信息的问题可能会引起焦虑。有效且及时更新的信息安全策略可使您放心地专注于自己的反抗目标、并以健康的方式开展工作。" class="headerlink" title="【2020年11月24日】敏感人士信息的安全至关重要，事关本人和相关一群人的生命安危；因此如何保护信息的问题可能会引起焦虑。有效且及时更新的信息安全策略可使您放心地专注于自己的反抗目标、并以健康的方式开展工作。##"></a>【2020年11月24日】敏感人士信息的安全至关重要，事关本人和相关一群人的生命安危；因此如何保护信息的问题可能会引起焦虑。有效且及时更新的信息安全策略可使您放心地专注于自己的反抗目标、并以健康的方式开展工作。##</h2><p>恐惧来自未知。</p>
+<p>人们只会害怕那些自己没有充分了解的东西，黑暗和模糊会产生可怕的联想。</p>
+<p>人们看到的往往只是抓捕、迫害、骚扰、各种惩罚手段，人们被吓坏了，开始认为 “对手无比强大”，甚至 “不论如何我都无法逃脱”。这并无助于解决问题，相反，却给了您的对手一个肆意妄为的机会。</p>
+<p>未知带来的恐惧会让您陷入困境。</p>
+<p>本系列内容希望引导您和您的组织通过分析拨开迷雾，点亮那些黑暗的角落；当您对自己和对手有了一个全面了解的时候，您才有希望进入精力充沛的对战状态。</p>
+<p>欢迎回来！</p>
+<p>如果您错过了前面的内容，可以在这里回顾：</p>
+<p>《头疼医头是不够的：整体安全（1）- 行动主义能持续的关键》</p>
+<p>《“抓特务” 不是解决方案：整体安全（2）- 威胁响应》</p>
+<p>《知己知彼，是有效行动策划的第一步：整体安全（3）- 愿景、战略和参与者》</p>
+<p>作为敏感人士，为了全面了解您的安全状况，就必须将您的信息作为您在工作中产生的和使用的重要资产，来仔细研究它与您的安全的关系。</p>
+<p>本集内容将鼓励您系统性地绘制信息概况，并探索对其完整性的威胁，从而得出保护它的最佳方法。</p>
+<p>首先需要了解的是，当在工作中谈论 “信息” 或 “数据” 时，它指的是许多东西，例如：</p>
+<p>您工作的产物；报告、数据库、图像、语音和视频记录；</p>
+<p>运营信息；例如您的短信、文件和进度报告以及其他办公信息和通讯；</p>
+<p>可以将您识别为某个组织成员或专业联盟成员的个人信息；</p>
+<p>您在工作时通过使用数字设备生成的数据 即“元数据”，可用于跟踪您的活动或监视您的私人关系。</p>
+<p>📌 这些信息可以以多种方式储存和传播，一旦被人获取，就会让您的对手对您的行动和团队关系有一个令人震惊的全面了解。</p>
+<p>这就是为什么它必须是非常宝贵的资产，必需谨慎对待。随着敏感人士越来越多地接触数字技术，特别是近年来，你们的对手对进入你们的设备或截获你们的数字通信越来越感兴趣。</p>
+<p>📌 不幸的是，敏感人士得到的帮助经常是错误的和过时的，大多数最流行的数字工具几乎不能保护您的信息免受资源充足的对手的攻击 —— 比如政府和间谍。并且，您需要知道，您的一些对手很可能与提供您的软件或在线服务的公司或机构有着秘密且密切的合作关系 —— 请思考斯诺登文件，以及您在中国了解到的同类事；因此，将这些供应商也添加到您的行为者图谱中是很必要的。</p>
+<p>🔐 因此，敏感人士尤其需要学习数字技术的基本运作方式，提高自己的数字素养，这是您的行动主义中重要的且有力的一步。</p>
+<p>常见威胁<br>1、数据丢失 —— 由于计算机卫生状况不佳、恶意软件感染、断电或硬件老化，计算机和其他设备有时会停止工作，从而导致丢失数据。</p>
+<p>2、账户入侵 —— 有时，您的密码或 “秘语” 并不是很难破解，或者您遭受到网络钓鱼攻击（可能是随机的或特别针对您的），并在不知情的情况下将凭据泄漏给了第三方，继而被攻击者访问您的电子邮件或社交媒体帐户。</p>
+<p>3、设备被警察没收或被盗 —— 电子设备是小偷最看重的目标，因为这里面远不止物件本身的价值。在威权国家生活的人，比如中国人，尤其需要注意的是警察和国安部门强行拿走你的电子设备。应对这点的方案见如下系列：</p>
+<p>《来自人身的威胁：如何在敌对环境中保护自己（1）》</p>
+<p>《最低程度的技术性获得最大幅度的安全提升：如何在敌对环境中保护自己（2）》</p>
+<p>《手机应该有且只有一个用途：在敌对环境中保护自己（3）》</p>
+<p>《为最坏的情况做准备，迎接最好的结果：在敌对环境中保护自己（4）》</p>
+<p>此外，如果您的工作面临严峻的风险，您的办公室和住所可能会遭到国家或非国家行为者的袭击，计算机、手机、硬盘驱动器、USB密钥和服务器，都可能会被 “没收” 或被盗，以进行所谓的数字取证。</p>
+<p>《警察查手机的东西长什么样？ — — 从技术角度看移动设备取证》</p>
+<p>《数字取证正在泛滥：政府可以从你的手机中提取哪些数据？》</p>
+<p>《清空废纸篓无法真正”删除”文件，如何彻底删除以抵制任何取证工具？》</p>
+<p>《让政府机构从您使用的应用程序中提取大量数据的秘密技术：云取证》</p>
+<p>4、强行搜查 —— 中国人对于查手机应该再熟悉不过了，这在其他国家也是如此，尤其是过境点，比如美国。敏感人士可能会在越过边境或军事检查站时被暂时没收电子设备，这一过程中可能会复制您的数据、甚至更糟的是计算机可能感染了间谍软件或连接了硬件键盘记录程序。</p>
+<p>5、信息被移交 —— 如果警察能拿到传票，互联网服务提供商以及您使用的电子邮件和社交网站的提供商，就必须将您的数据移交给某些政府机构。这种情况正在根据商业和政治利益而不断变化，随时都会发生。</p>
+<p>6、追踪监视 —— 数据经纪人、互联网服务提供商、电子邮件提供商、和许多其他公司，一直在通过收集和汇总您的在线活动的详细信息，对普通人群进行监视和操纵。这就是监视资本主义。</p>
+<p>它将所有人变成深入的监视目标，当然也包括敏感人士。</p>
+<p>定向广告不是简单的事，您需要了解的监视资本主义工作方式，见《单向镜的背后：监视资本家和政府的联手一直在如何折腾你？》</p>
+<p>7、被恶意软件瞄准 —— 有针对性的恶意软件是一个正在快速发展的行业：一些国家机构和其他组织花了很多钱投资那些旨在诱使敏感人士下载并随后允许攻击者访问其设备上的大部分或全部数据的软件。</p>
+<p>并且，这些武器级的间谍软件一直在基本不受阻碍地出口。具体内容见：</p>
+<p>专栏 “以色列和NSO”</p>
+<p>《Report：以色列 NSO 生产的间谍软件 Pegasus 在45个国家被用于监视和攻击异议人士及活动家 — ⚠️ 亚洲有香港》</p>
+<p>《以色列间谍软件公司出售监视技术和知识在130个国家针对记者、异议和LGBT人群》</p>
+<p>📌 敏感人士信息的安全至关重要，事关本人和相关一群人的生命安危；因此如何保护信息的问题可能会引起焦虑。有效且及时更新的信息安全策略可使您放心地专注于自己的反抗目标、并以健康的方式开展工作。</p>
+<p>要做到这一点，第一步就是要对您的信息的所有实例或版本进行尽可能编目。</p>
+<p>对您自己的信息 “生态系统” 中存在的元素有一种心理上的理解，将有助于摆脱将 “信息” 视为模糊的海量数据的认识，而将其更好地理解为有形且重要的资产。</p>
+<p>通过将您的信息分类为各种组成部分和类型，您可以确定自己的信息可能或不可能变得脆弱的任何潜在情况和途径，以及需要改进其安全性的领域。</p>
+<p>📌 此过程取决于先前文章中介绍的练习的结果，在此过程中，您已经确定了背景中的 “参与者”，包括您自己、盟友、反对者、和当前的中立方。您可能会回溯并扩大参与者图谱，以通过信息映射过程确定潜在的新参与者。</p>
+<p>这就是为什么要建议您按照顺序阅读本系列内容，因为内容是进阶的。</p>
+<p>该图谱还将有助于理解您的信息要素与您的盟友和对手及其意图和能力之间的关系。</p>
+<p>接下来将介绍一些关键概念，以了解如何对您的信息进行分类，然后进行 “信息生态系统” 练习，这将有助于您绘制最重要的信息资产的图表。</p>
+<p>信息类别<br>📌 制定信息安全策略的第一步是了解您所拥有的全部信息、这些信息所在的位置、以及如何从一个地方转移到另一个地方。</p>
+<p>开始此分类过程的一种简单方法是根据动态的和不动的状况来思考。例如，存储在文件柜中的财务信息（静止不动的信息），在即将发生的事件中通过移动电话交换的消息（动态的信息）。</p>
+<p>这种区别主要用作组织原则，以帮助进行分类。重要的是要记住，当今您的许多信息都是数字形式的，并且随着互联网和远程存储服务（即所谓的 “云”）的使用不断增加，您拥有的许多信息都在运动中。</p>
+<p>同样，由于手持设备（例如智能手机和平板电脑）的日益普及，存储容量的增加以及这些设备的实际移动性，存储在此类设备上的任何信息（尽管可能是数字“静止”的）实际上都是在物理空间中移动。</p>
+<p>值得重复的是，在以上分类中，您的通信（例如电子邮件、聊天、短信、和电话）是 “运动中的信息”，并且这是非常普遍的，尤其是在通过互联网保持近乎恒定的连接的情况下。</p>
+<p>当您决定采用策略以更好地保护自己的信息时，这种组织原则就很有用，因为有多种方法可以保护静态信息和动态信息。</p>
+<p>静态信息 ——<br>一旦确立了愿景，您就必须考虑可以采用什么样的方法来实现它。</p>
+<p>您可能会以个人或组织的身份开展各种各样的活动，以实现反抗目标。您的 “工作领域” 或从事的活动是什么？重要的是要明确列出它们，并首先考虑它们是否适合实现您设定的目标。</p>
+<p>您的工作不是在真空中进行的，而是在丰富多样的环境中，通常会具有一些冲突的特征。您的行动策划是您与这场冲突以及您试图影响的国家和社会的 “接口”；是您试图改变周围环境中各种行为者（个人、机构和组织）的状况、看法和行为的手段。其中一些参与者将从中受益，相信并支持您的行动；但是其他人会觉得这些行动不符合他们的利益，并会试图缩小和压制您的工作空间。</p>
+<p>所有这些通常都可以提供有关个人、项目、运动或组织的信息源，因此，盗窃和没收计算机、手机和存储设备是镇压敏感人士的常见策略。</p>
+<p>在整理您的 “静态信息” 列表时，请考虑下面这些问题：</p>
+<p>这些信息在哪儿？</p>
+<p>谁有权访问这些信息？</p>
+<p>这些信息的内容对您、您的组织或文档中提及的任何人员 —— 例如目击证人或受害人 —— 有多敏感？</p>
+<p>保留这些信息有多重要？</p>
+<p>应该保留多长时间？</p>
+<p>动态信息 ——<br>如前所述，您拥有的许多信息资产 —— 尤其是数字形式的信息资产 —— 在某个时候从一个地方传输到另一个地方。请考虑您的信息移动的所有方式：</p>
+<p>装满文件的盒子，通过快递投送</p>
+<p>通过移动网络拨打的任何电话</p>
+<p>在线上传到某个服务器的任何视频</p>
+<p>参加抗议活动时手机中的任何联系人信息</p>
+<p>如上，您可以看到信息移动的各种方式：在物理空间中传播的物理信息，或在互联网上传输的数字信息，或在物理空间中移动的数字信息（存储在物理设备中的数字信息）。</p>
+<p>还应该注意信息移动的不同方式：</p>
+<p>1、传输：无论是在办公室工作期间，还是通过互联网将附件发送给同事，或者将敏感文件备份到另一位置的服务器时，您的信息都从一个点传输到另一个点。</p>
+<p>2、交流：当您与同事、盟友、公众甚至反对者互动时，就会发生信息交换。通信可以采取以下形式：在事件发生时从扬声器宣布指令，或者在电话交谈、视频通话、面对面的会议、电子邮件、短信等途径交换机密信息。</p>
+<p>您的交流中包含许多有关您的意图、您的行动状态、您的计划和未来活动的信息。</p>
+<p>要对此类信息进行分类，除了上述 “静态信息” 中提到的属性外，您还可以考虑以下内容：</p>
+<p>信息如何传输？</p>
+<p>采取的是哪种物理或虚拟路线？</p>
+<p>谁可能在信息传输途中访问它，或者谁会对捕获它感兴趣？（考虑您在前文的练习中构建的行为者图谱）</p>
+<p>数字形式的信息<br>与数字形式的信息相关的一些独特属性值得考虑：</p>
+<p>1、复制：不断复制数字形式的信息。在文件传输、电子邮件交换、上传和下载期间，甚至当从一台设备移动到另一台设备时，都会创建信息的副本，这些副本的所有意图和目的都与原本相同。</p>
+<p>这与前数字时代稍有不同，前数字时代有可能（尽管有时困难）区分原始信息和随后的副本（例如，在纸上直接打字的会议记录）。</p>
+<p>2、信息的 “永久性”：如上所述，一旦将一条信息上传到互联网，上传、传输和下载的过程中就需要多次复制此信息。因此，您的信息可能会遍历您无法控制的互联网部分而保留在某处。</p>
+<p>当邮件服务器、路由器和其他中介复制信息以帮助传输过程或出于其他目的（取决于控制设备的人的意图）时，就会发生复制和中继。因此，重要的是要理解，信息传输中的一个（或多个）参与者将在很长时间内保留某条信息的副本，不论是有意的还是无意的。</p>
+<p>例如一条短信，它是从一个手机发送到另一部手机的，但是在发送过程时，它会通过多个蜂窝塔和属于服务提供商的其他基础设施。服务提供商可以访问这些消息，并且在大多数情况下，无论您是否从自己的手机中删除它们，它们都会保留很长一段时间。</p>
+<p>3、元数据：随着计算机和数字设备执行其操作，会创建一层 “元数据”。此信息随数据本身一起提供，有时无法将其从数据中删除。</p>
+<p>元数据的示例包括：</p>
+<p>您的IP地址（用于确定您要连接到互联网的位置）以及您访问的网站的IP地址。</p>
+<p>移动电话从一个点移动到另一点时的位置数据，即SIM卡和手机的唯一标识符（IMEI码）。通常无法更改手机的IMEI。</p>
+<p>电子邮件的发件人、收件人、时间戳和主题，以及它们是否包含附件。由于服务器需要知道向谁发送电子邮件及其附件，因此无法删除此信息。但是，其中一些可以更改或模糊化。</p>
+<p>图像文件的属性，即 有关照片拍摄位置、大小和用于产生图像的设备的信息（相机和镜头的品牌、用于编辑图像的软件等），某些信息可以使用图像处理软件删除。</p>
+<p> 文档的属性，即 有关作者的信息、文档的创建或修改日期等。可以通过更改文字或电子表格处理者的个人隐私设置、或使用元数据剥离软件（例如元数据匿名化工具包）来删除某些此类信息。</p>
+<p>元数据经常被忽略，因为它不是您自己创建的，甚至可能没有意识到的。但是，在考虑您的信息生态系统的不同元素时，应该牢记它的存在并采取适当的步骤来了解其范围和可能产生的后果。</p>
+<p>通过数字渠道了解动态的信息<br>当考虑通过数字渠道传播的信息时，上述属性起着重要作用，因为信息可以很容易地复制和存储。</p>
+<p>当您：</p>
+<p>使用您的设备进行交流；通过手机通话、发送电子邮件、使用IP语音通话、视频聊天、即时消息或发送短信</p>
+<p>传输数据；将视频上传到网络，访问计算机上的网页，将文档备份到其他地方的服务器，在社交媒体上发布更新 ……</p>
+<p>通过数字渠道传播的信息几乎总是在物理空间中移动，例如从您的手机开始的状态更新将进入社交媒体网站，该网站实际存储在特定位置的服务器上。甚至一路上可能会经过许多不同的国家。为了考虑可以确保信息安全的方式，就必需考虑信息的来源、目的地以及信息的路径。</p>
+<p><a target="_blank" rel="noopener" href="https://holistic-security.tacticaltech.org/media/chapters/pdfs/original/HS_2_Explore_Chapter_4.pdf">https://holistic-security.tacticaltech.org/media/chapters/pdfs/original/HS_2_Explore_Chapter_4.pdf</a><br>虽然您可能知道信息的来源 —— 例如 在笔记本电脑上键入电子邮件，但还需要注意信息的目的地 —— 例如，通过其邮件提供商的您的同事/朋友的收件箱，以及沿途的所有站点， 包括：</p>
+<p>互联网服务提供商</p>
+<p>运营互联网基础设施并传输您的数据的电信公司</p>
+<p>在数据和元数据通过互联网传输时进行主动捕获和监视的国家实体</p>
+<p>对这些站点和网络服务具有控制权的任何其他实体，是否可能对捕获数据感兴趣</p>
+<p>其他第三方（例如广告公司）可能会收集有关您在线活动的任何数据</p>
+<p>📌 花点时间学习或复习互联网和移动通信工作原理的基础知识，有助于阐明这一过程。这样做可以减少因被监视而导致的焦虑或毫无根据的恐惧。</p>
+<p>还应考虑包括用于保护数据的加密类型（如果有的话）。加密是为减少可以访问某些信息的人数的技术手段。它通常由服务提供商（例如 银行网站或某些通讯应用程序）提供；您也很有必要学会使用特定软件对您的信息或通讯进行加密，以确保不会被未知的人访问。</p>
+<p>您可以据此分析在您的行为者图谱中添加一些内容。您可能会发现自己需要调查这些行为者与您的盟友或对手之间是否存在任何关系。返回行为者图谱，令其包含以下内容：</p>
+<p>您的互联网或网站服务提供商</p>
+<p>您的电话服务提供商</p>
+<p>您的电子邮件和社交网络服务的提供商</p>
+<p>与上述内容有关系的任何相关实体（例如政府机构）</p>
+<p>在下一部分中，您将通过练习映射 “静态” 信息和 “动态” 信息，这将帮助您确定信息管理实践中的差距以及弥合这些差距的方法。</p>
+<p>映射您的信息生态系统<br>如上可见，创建并维护您或组织的信息图是一个有用的练习，该信息图将您的文档和与您的工作有关的信息归类。这将帮助您了解敏感信息的当前状态、以及谁可以访问它，这样才可能采取最有效的措施以保护它。</p>
+<p>该 “信息图” 可以采用可定期更新的文本文档或电子表格的形式。以下练习将逐步完成创建此类文档的步骤，并提供一个可能有用的示例模板。</p>
+<p>创建信息图时，请考虑以下问题：</p>
+<p>1、这是什么信息？</p>
+<p>这里的组织原则是将相似类型的信息组合在一起。例如，您可以确定所有财务凭证都属于同一类别，而并非所有电子邮件都属于同一类别。</p>
+<p>根据信息类型对 “内容” 进行分组，很大程度上取决于您和您的组织的工作方式。也包括您在此处使用的软件，因为该软件本身可以被视为一堆信息，并且某些软件可以被视为敏感软件。</p>
+<p>特别是对于 “动态” 信息来说，最好包括某些文档和通讯的元数据（例如图片和电子邮件附件），并考虑是否需要删除或修改它以保护您的隐私。</p>
+<p>2、它在哪？</p>
+<p>您的信息资产存放在哪些物理场所或实体中？这可能包括：办公室中的文件服务器、服务提供商处的Web服务器、电子邮件服务器、便携式计算机/电脑、外部硬盘驱动器、SD卡和移动电话。</p>
+<p>3、谁有权使用它？</p>
+<p>考虑当前的情况，而不是理想中的情况。例如，如果某人在办公室计算机上保存了报告文件夹，则有权访问该报告的人员可能包括：该人本人、负责维护服务器的任何IT管理人员、该人的知己等等。</p>
+<p>4、它有多敏感？</p>
+<p>有多种方法可以对文档的敏感性进行分类。为敏感信息建立明确的分类是必要的，别忘了带有关于如何保护它的明确说明。此处的目的是使您拥有一个始终如一地适合您的信息的量表，这将有助于识别最有可能受到威胁的数据以及应采用的保护方法。</p>
+<p>📌 以下是一个3级规模的示例：</p>
+<p>严格保密：只有特定的人才能访问此信息。对于此类信息有明确的责任链。</p>
+<p>机密：此类信息不是供公众使用的，但是没有特定的必要以阻止组织的员工访问这些信息。</p>
+<p>公开：此类信息不会对公众构成任何风险。但是，一般政策仍然涉及其完整性和安全性。</p>
+<p>值得注意的是，在项目的生命周期中，所涉及数据的敏感性可能会发生变化。例如，如果您正在调查酷刑以便稍后对其进行公开报告，则其中涉及的许多细节最初都是严格保密或机密的。</p>
+<p>在项目的后期，一旦收集了数据，必须保密的数据将与必须作为报告的一部分公开的数据分开。</p>
+<p>根据这些问题考虑您的信息，您可以创建一个文档，该文档代表您当前的信息图。再一次，如前所述，请务必记住这是实时文档，应定期更新。</p>
+<p>练习<br>本练习的目的是对您管理的最重要的信息资产进行清点，以便为以后的保管创建最有效策略。</p>
+<p>要开始练习（尤其是在小组中进行时），可以使用电子表格、大张纸和便笺或其他一些能让团队轻松进行头脑风暴并将其组织在一起的方法。集思广益并列出您管理的所有数据。</p>
+<p>📌 如果不确定从哪里开始，请考虑：</p>
+<p>与您的 <em>每项</em> 敏感行动有关的数据</p>
+<p><em>个人</em> 数据和文件，特别是存储在工作用计算机上的数据</p>
+<p><em>在线浏览行为</em>，尤其是敏感数据的在线浏览</p>
+<p>与敏感活动有关的任何电子邮件、短信和其他形式的通讯</p>
+<p>想象一个电子表格，其中有几列类别，如下所述；您的任务是在行中填充信息。从静态信息开始，对于每种类型的信息，请详细说明以下内容：</p>
+<p>这是什么信息？</p>
+<p>它驻留在哪里？</p>
+<p>谁有权使用它？</p>
+<p>它的敏感程度如何 —— 严格保密、机密、公开；</p>
+<p>保留它有多重要？</p>
+<p>谁有权使用它？</p>
+<p>应该如何保护它？</p>
+<p>销毁前应保存多长时间？</p>
+<p>您可以重复相同的过程，并使用其他条目扩展电子表格。例如数据传输（物理的、电子的），通过互联网或电信网络的通信。下面的示例表格可能会帮助您解决此问题。</p>
+<p><a target="_blank" rel="noopener" href="https://holistic-security.tacticaltech.org/media/chapters/pdfs/original/HS_2_Explore_Chapter_4.pdf">https://holistic-security.tacticaltech.org/media/chapters/pdfs/original/HS_2_Explore_Chapter_4.pdf</a></p>
+<p><a target="_blank" rel="noopener" href="https://holistic-security.tacticaltech.org/media/chapters/pdfs/original/HS_2_Explore_Chapter_4.pdf">https://holistic-security.tacticaltech.org/media/chapters/pdfs/original/HS_2_Explore_Chapter_4.pdf</a><br>此过程是迭代的。完成第一轮后，您可以检测模式和分组。例如，您可能决定，由于所有财务信息（无论类型如何）都具有相似的敏感度和寿命，因此您可以将它们分组并将其视为财务信息类别。</p>
+<p>相反，您可能会发现自己需要将一行扩展为几行。例如，包含 “电子邮件” 的行需要扩展为几行，以说明敏感的部分电子邮件及其安全保存。</p>
+<p>这应该是一个实时更新的文档，并且会根据您所处环境的变化和发展而变化。定期检查此文档很重要。</p>
+<p>此时，您已经拥有描述您/您的组织的信息生态系统的初始文档，该文档以及参与者的图谱在您开始了解自己的力量和弹性以及可能存在弱点的领域时，将非常宝贵。</p>
+<p>然后，您可以开始绘制从已确定的安全指标到特定威胁场景，再到设计策略、计划、工具和方式的路径，这些路径可以帮助您避免这些类型的场景或将其影响最小化。</p>
+<p>最后<br>到现在为止，您已经做到：</p>
+<p>列出了自己的盟友和对手，以及根据情况可能成为盟友或对手的中立群体</p>
+<p>列出了您、您的盟友和对手之间已经建立的一些关系</p>
+<p>建立了您自己的信息生态系统，该文档可帮助您了解信息敏感度的优先顺序，不论是静态信息还是动态信息。</p>
+<p>下一集的内容将把这些分析转移到工作过程中遇到的威胁指标上，这些指标会提醒您潜在的威胁以及如何将您对这些威胁的知识系统化以采取行动。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>眼魔王
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2020/11/17/%E5%A4%B8%E5%A4%A7%E5%8D%B1%E9%99%A9%E5%B9%B6%E6%97%A0%E5%8A%A9%E4%BA%8E%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%884%EF%BC%89-%20%E5%85%85%E5%88%86%E5%89%96%E6%9E%90%E6%82%A8%E7%9A%84%E4%BF%A1%E6%81%AF%E8%B5%84%E4%BA%A7/" title="夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产">http://example.com/2020/11/17/夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8/" rel="tag"># 整体安全</a>
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E8%B5%84%E4%BA%A7/" rel="tag"># 信息资产</a>
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/" rel="tag"># 信息安全</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/17/%E5%AE%89%E5%85%A8%E6%98%AF%E8%BF%BD%E6%B1%82%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E4%BB%BB%E5%8A%A1%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%888%EF%BC%89-%20%E5%87%86%E5%A4%87%E5%A5%BD%E8%BF%9B%E5%85%A5%E8%A1%8C%E5%8A%A8/" rel="prev" title="安全是追求，而不是任务：整体安全（8）- 准备好进入行动">
+      <i class="fa fa-chevron-left"></i> 安全是追求，而不是任务：整体安全（8）- 准备好进入行动
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/11/17/%E2%80%9C%E6%8A%93%E7%89%B9%E5%8A%A1%E2%80%9D%20%E4%B8%8D%E6%98%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%882%EF%BC%89-%20%E5%A8%81%E8%83%81%E5%93%8D%E5%BA%94/" rel="next" title="“抓特务” 不是解决方案：整体安全（2）- 威胁响应">
+      “抓特务” 不是解决方案：整体安全（2）- 威胁响应 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%B8%E5%A4%A7%E5%8D%B1%E9%99%A9%E5%B9%B6%E6%97%A0%E5%8A%A9%E4%BA%8E%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%9A%E6%95%B4%E4%BD%93%E5%AE%89%E5%85%A8%EF%BC%884%EF%BC%89-%E5%85%85%E5%88%86%E5%89%96%E6%9E%90%E6%82%A8%E7%9A%84%E4%BF%A1%E6%81%AF%E8%B5%84%E4%BA%A7"><span class="nav-number">1.</span> <span class="nav-text">夸大危险并无助于解决问题：整体安全（4）- 充分剖析您的信息资产</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%902020%E5%B9%B411%E6%9C%8824%E6%97%A5%E3%80%91%E6%95%8F%E6%84%9F%E4%BA%BA%E5%A3%AB%E4%BF%A1%E6%81%AF%E7%9A%84%E5%AE%89%E5%85%A8%E8%87%B3%E5%85%B3%E9%87%8D%E8%A6%81%EF%BC%8C%E4%BA%8B%E5%85%B3%E6%9C%AC%E4%BA%BA%E5%92%8C%E7%9B%B8%E5%85%B3%E4%B8%80%E7%BE%A4%E4%BA%BA%E7%9A%84%E7%94%9F%E5%91%BD%E5%AE%89%E5%8D%B1%EF%BC%9B%E5%9B%A0%E6%AD%A4%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8A%A4%E4%BF%A1%E6%81%AF%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%BC%95%E8%B5%B7%E7%84%A6%E8%99%91%E3%80%82%E6%9C%89%E6%95%88%E4%B8%94%E5%8F%8A%E6%97%B6%E6%9B%B4%E6%96%B0%E7%9A%84%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%E5%8F%AF%E4%BD%BF%E6%82%A8%E6%94%BE%E5%BF%83%E5%9C%B0%E4%B8%93%E6%B3%A8%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8F%8D%E6%8A%97%E7%9B%AE%E6%A0%87%E3%80%81%E5%B9%B6%E4%BB%A5%E5%81%A5%E5%BA%B7%E7%9A%84%E6%96%B9%E5%BC%8F%E5%BC%80%E5%B1%95%E5%B7%A5%E4%BD%9C%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">【2020年11月24日】敏感人士信息的安全至关重要，事关本人和相关一群人的生命安危；因此如何保护信息的问题可能会引起焦虑。有效且及时更新的信息安全策略可使您放心地专注于自己的反抗目标、并以健康的方式开展工作。##</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">327</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">103</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

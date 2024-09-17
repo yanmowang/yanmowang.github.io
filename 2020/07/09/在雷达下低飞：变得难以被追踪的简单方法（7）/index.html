@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="在雷达下低飞：变得难以被追踪的简单方法（7）【2020年7月9日存档】有点技术含量，但并非旁门左道##还记得本系列此前的内容吗？您可以在下面回顾： 《在不自由中创造自己的自由：变得难以被追踪的简单方法（1）》 《构建防御直觉是生存的基本功：变得难以被追踪的简单方法（2）》 《与S先生共度美好一天 — 反取证技巧：变得难以被追踪的简单方法（3）》 《保持零信任：变得难以被追踪的简单方法（4）》 《少">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在雷达下低飞：变得难以被追踪的简单方法（7）">
+<meta property="og:url" content="http://example.com/2020/07/09/%E5%9C%A8%E9%9B%B7%E8%BE%BE%E4%B8%8B%E4%BD%8E%E9%A3%9E%EF%BC%9A%E5%8F%98%E5%BE%97%E9%9A%BE%E4%BB%A5%E8%A2%AB%E8%BF%BD%E8%B8%AA%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%887%EF%BC%89/index.html">
+<meta property="og:site_name" content="眼魔王">
+<meta property="og:description" content="在雷达下低飞：变得难以被追踪的简单方法（7）【2020年7月9日存档】有点技术含量，但并非旁门左道##还记得本系列此前的内容吗？您可以在下面回顾： 《在不自由中创造自己的自由：变得难以被追踪的简单方法（1）》 《构建防御直觉是生存的基本功：变得难以被追踪的简单方法（2）》 《与S先生共度美好一天 — 反取证技巧：变得难以被追踪的简单方法（3）》 《保持零信任：变得难以被追踪的简单方法（4）》 《少">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-09T15:38:08.000Z">
+<meta property="article:modified_time" content="2024-09-17T11:56:06.981Z">
+<meta property="article:author" content="眼魔王">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="数字安全">
+<meta property="article:tag" content="在雷达下低飞">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2020/07/09/%E5%9C%A8%E9%9B%B7%E8%BE%BE%E4%B8%8B%E4%BD%8E%E9%A3%9E%EF%BC%9A%E5%8F%98%E5%BE%97%E9%9A%BE%E4%BB%A5%E8%A2%AB%E8%BF%BD%E8%B8%AA%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%887%EF%BC%89/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>在雷达下低飞：变得难以被追踪的简单方法（7） | 眼魔王</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">眼魔王</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/07/09/%E5%9C%A8%E9%9B%B7%E8%BE%BE%E4%B8%8B%E4%BD%8E%E9%A3%9E%EF%BC%9A%E5%8F%98%E5%BE%97%E9%9A%BE%E4%BB%A5%E8%A2%AB%E8%BF%BD%E8%B8%AA%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%887%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="眼魔王">
+      <meta itemprop="description" content="当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="眼魔王">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在雷达下低飞：变得难以被追踪的简单方法（7）
+        </h1>
+
+        <div class="post-meta">
+          
+          
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-09 23:38:08" itemprop="dateCreated datePublished" datetime="2020-07-09T23:38:08+08:00">2020-07-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-17 19:56:06" itemprop="dateModified" datetime="2024-09-17T19:56:06+08:00">2024-09-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%BE%E4%BB%A5%E8%A2%AB%E8%BF%BD%E8%B8%AA/" itemprop="url" rel="index"><span itemprop="name">难以被追踪</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/07/09/%E5%9C%A8%E9%9B%B7%E8%BE%BE%E4%B8%8B%E4%BD%8E%E9%A3%9E%EF%BC%9A%E5%8F%98%E5%BE%97%E9%9A%BE%E4%BB%A5%E8%A2%AB%E8%BF%BD%E8%B8%AA%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%887%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/09/%E5%9C%A8%E9%9B%B7%E8%BE%BE%E4%B8%8B%E4%BD%8E%E9%A3%9E%EF%BC%9A%E5%8F%98%E5%BE%97%E9%9A%BE%E4%BB%A5%E8%A2%AB%E8%BF%BD%E8%B8%AA%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%887%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="在雷达下低飞：变得难以被追踪的简单方法（7）"><a href="#在雷达下低飞：变得难以被追踪的简单方法（7）" class="headerlink" title="在雷达下低飞：变得难以被追踪的简单方法（7）"></a>在雷达下低飞：变得难以被追踪的简单方法（7）</h1><h2 id="【2020年7月9日存档】有点技术含量，但并非旁门左道"><a href="#【2020年7月9日存档】有点技术含量，但并非旁门左道" class="headerlink" title="【2020年7月9日存档】有点技术含量，但并非旁门左道##"></a>【2020年7月9日存档】有点技术含量，但并非旁门左道##</h2><p>还记得本系列此前的内容吗？您可以在下面回顾：</p>
+<p>《在不自由中创造自己的自由：变得难以被追踪的简单方法（1）》</p>
+<p>《构建防御直觉是生存的基本功：变得难以被追踪的简单方法（2）》</p>
+<p>《与S先生共度美好一天 — 反取证技巧：变得难以被追踪的简单方法（3）》</p>
+<p>《保持零信任：变得难以被追踪的简单方法（4）》</p>
+<p>《少即是多：变得难以被追踪的简单方法（5）》</p>
+<p>《大保健应该成为习惯：变得难以被追踪的简单方法（6）》</p>
+<p>这里是 “难以被追踪” 的第7集，本部分中介绍的技术可能要比普通人设想的程度更高一步，但绝非偏激，⚠️ 如果您是政治异议、人权捍卫者、有明确的对手/仇家、希望自己在当下这个世界生活得更加安全，那么这些方法您一定要实施。</p>
+<p>这个社会中有些人很傻，他们会对那些致力于让自己变得 “难以被追踪” 的人污名化，站在当权者的立场上说话；尤其是互联网，它鼓励每个人都成为社交蝴蝶，大胆宣传自己当天的饮食或穿着、甚至每时每刻的想法。那只是为了监视资本家赚钱而已，以你的人权为代价。</p>
+<p>不要上当。真的，好人不会那么在乎你的私生活，而你晒的任何东西只能让坏人欣喜若狂。</p>
+<p>变得难以被追踪并不是反社会或隐居，这是关于安全和人权的必要措施。</p>
+<p>有些人出于绝对必要而努力变得难以被追踪，比如记者、活动家、人权捍卫者、异议人士等等，对他们而言，自我保护已经成为一种生活方式。他们通常非常警惕，几乎在任何时候都不会提供太多个人信息。</p>
+<p>对于另一些人而言，掌握一些难以被追踪的技巧就如家里备用的防水胶、电池或阿司匹林，你不知道什么时候就要用到的东西。</p>
+<p>我们不是也不应该是社会价值观的俘虏。这就是在不自由社会中为自己创建一片自由的生活能力。</p>
+<p>使用隐写术进行巧妙的欺骗<br>我们已经多次介绍过隐写术。它有很长久的历史，如今只是在数字技术方面的体现而已。</p>
+<p>数字隐写术通常被错误地归类为加密形式，其实它俩截然不同。</p>
+<p>的确，许多数字隐写术应用在嵌入过程中都提供了对机密文件进行加密的附加功能，因此，即使你的对手发现了隐藏的东西，在没有相应密码或密码短语的情况下，他们也无法读取机密数据。</p>
+<p>隐写术比普通的加密更好在于，它从第一步就能欺骗你的对手，令对方难以注意到有东西藏在那里。</p>
+<p>比如免费的电子邮件服务通常不提供端到端加密或公钥基础结构（PKI），您的私人电子邮件和相关附件可能会在其通过网络传输到目标IP地址的过程中被读取。这些免费电子邮件服务最多可以提供加密的电子邮件收件箱和标准的传输层安全性（TLS）加密。</p>
+<p>您可以将浏览器扩展添加到 Chrome、Firefox 和其他浏览器中，提供使用PGP加密电子邮件的功能。加密很好，但它不是看起来那么保密。</p>
+<p>依旧可以截取加密的数据包，并通过检查包头来确定发送者和目的地IP地址。使用VPN可以解决这个问题，但并不是完美的，因为VPN提供商仍然知道您的真实IP地址，并且该信息可以由政府和执法部门获取。还有些不可靠的VPN服务提供商会将您的私人浏览数据出售给第三方。</p>
+<p>这种情况下隐写术就是最好的东西。监视者看到的是一张猫咪照片和一切不起眼的闲聊，他们很可能不会怀疑 “里面” 有什么东西。</p>
+<p>假设您要发送纯文本（未加密的）电子邮件，并带有隐秘文件附件，这时候您可以搞一些不起眼的文本，例如 “嘿哥们，要不要一起吃个饭呢，看看我新买的这辆车怎么样？”。</p>
+<p>而监视者看到的只是一堆无聊的闲侃和一张普通的照片。</p>
+<p>而真实的文件在照片中加密隐藏，只有使用正确的钥匙（密码/短语）才能打开该文件。</p>
+<p>数字隐写术应用程序可以将内容嵌入到几乎现有的任何类型的文件格式中（音频、文本，视频、图像、VoIP等）。</p>
+<p>How digital steganography works; studentweb.niu.edu<br>就算您不做任何政治敏感的工作，甚至对政治一无所知 …… 您有异地恋吗？您的伴侣正在出远门吗？也许你们之间会有一些希望私密的信息传输。只要双方都同意并具有法定年龄，这不是犯罪。但是，一旦拍摄了那些类型的照片或视频，就很有可能被以某种方式对您不利（例如 报仇色情或勒索），或者将其泄露出去。</p>
+<p>安全的思考方式就是尽可能想到所有可能的威胁，并尽可能减轻风险。如果您将这种类型的资料存储在连接互联网的家用计算机或智能手机上，就有可能被盗和被泄漏。</p>
+<p>对于您用来制作上述材料的任何摄像机或视频记录设备，都是如此。普通的数字取证工具就可以轻松定位和恢复已删除的文件。</p>
+<p>《清空废纸篓无法真正”删除”文件，如何彻底删除以抵制任何取证工具？》</p>
+<p>《数字取证正在泛滥：政府可以从你的手机中提取哪些数据？》</p>
+<p>您可能还需要隐藏财务信息或密码列表。您也可以使用这种方法，把他们放入只有您一个人知道的极为普通的媒介里面。</p>
+<p>互联网上有超过1200种不同的数字隐写应用程序可用。并非所有这些都是一样的，某些应用程序比其他的更成熟，也就是说代码编写得更好。</p>
+<p>一些应用程序仅适用于音频、视频、文本或图像文件，而其他应用程序更强大，可以执行更多类型的数字隐写。</p>
+<p>您已经熟悉 Mr.Robot 了？Elliot 使用 DeepSound 数字隐写应用程序将数据隐藏在音乐专辑中。为了执行音频或视频文件隐写，载体文件的大小需要大得多，以便能够嵌入隐藏的数据而不会引起音频/视频文件的明显 “失真”。这称为峰值信噪比（PSNR），越低越容易避免被检测到。</p>
+<p>我们会在将来详细介绍这一做法。不要错过相关其他技巧：</p>
+<p>《Mr.Robot 如何摧毁邪恶公司？- 黑客主义行动力（1）》</p>
+<p>《Elliot 如何骇客邪恶公司并保证无法被反向追踪：黑客主义行动力（2）》</p>
+<p>《如何全面间谍任何人的智能手机私密活动 — 黑客主义行动力（3）》</p>
+<p>这些数字隐写术应用程序中的许多都具有将强大的加密和压缩算法相结合的功能，以将私密文件隐藏在其他文件（称为载体文件）中。接收者在接收之前需要知道解密的钥匙是什么。</p>
+<p>例如，Deepsound 为隐藏的文件提供 AES 256位加密，这是强大的加密，至少在量子计算成为真正的威胁之前。</p>
+<p>创建隐藏在文件中的虚拟加密磁盘<br>您现在肯定已经知道在所有计算机和电子设备上实施全盘加密的重要性。例如您买了一个 iPhone，您已经知道苹果在手机上的全盘加密技术是一流的，但是，他们和政府间谍合作 …… 于是该公司的保护技术基本形同虚设。</p>
+<p>如果FBI有破解 iPhone 加密的方法，那么您就能知道其他政府机构都有访问这些设备的方法，包括外国政府以及网络罪犯威胁者。</p>
+<p>如果您拥有的是 Windows 7、8、8.1或10专业版，则可以选择 Microsoft Windows BitLocker 和 BitLocker-To-Go。</p>
+<p>BitLocker 并不是整个HDD加密的最佳选择，原因有很多；Microsoft 保留了随时可以破解您的 BitLocker 和加密文件系统（EFS）密钥的后门功能。</p>
+<p>Windows 系统上的 “老大哥” 访问权限使人们难以信任 BitLocker 的加密，并且警察或政府间谍很容易闯入使用 BitLocker 或EFS加密的设备。</p>
+<p>我们在本系列第一部分中介绍过 VeraCrypt，这是法国提供的免费加密应用程序，它允许用户在文件中创建虚拟加密磁盘并将其作为磁盘安装。</p>
+<p>VeraCrypt 增强了用于系统和分区加密的算法的安全性，使其免受暴力破解攻击。</p>
+<p>VeraCrypt 还解决了 TrueCrypt 中发现的许多漏洞和安全问题，在文件中创建虚拟加密磁盘并将其作为实际磁盘安装，加密整个分区或存储设备，如 USB 闪存驱动器或硬盘驱动器，加密安装 Windows 的分区或驱动器（预启动身份验证）。</p>
+<p>加密是自动的、实时的、和透明的，并行化和流水线操作允许读取和写入数据，就像驱动器未加密一样快。</p>
+<p>加密可以在现代处理器上进行硬件加速，如果对手强迫您泄露密码，则可以提供合理的拒绝：隐藏卷和隐藏的操作系统。</p>
+<p>VeraCrypt 是一个用于建立和维护动态加密卷（数据存储设备）的软件，即时加密意味着数据在保存之前就会自动加密，并在加载后立即解密，无需任何用户干预。</p>
+<p>整个文件系统被加密（例如，文件名、文件夹名、每个文件的内容、空闲空间、元数据等）。</p>
+<p>可以将文件复制到已安装的 VeraCrypt 卷中，也可以将其复制到任何普通磁盘上（例如，通过简单的拖放操作）；在从加密的 VeraCrypt 卷读取或复制文件时，文件会在运行中（在内存/RAM 中）自动解密。</p>
+<p>同样，正在写入或复制到 VeraCrypt 卷的文件会在 RAM 中自动加密（在它们写入磁盘之前）。</p>
+<p>请注意，这并不意味着要加密/解密的整个文件必须先存储在RAM中才能加密/解密。VeraCrypt 没有额外的内存要求。</p>
+<p>假设有一个 .avi 视频文件存储在 VeraCrypt 卷上（因此，视频文件是完全加密的），用户提供正确的密码（和/或密钥）并安装（打开）VeraCrypt 卷。</p>
+<p>双击视频文件的图标时，操作系统启动与文件类型相关联的应用程序 — 通常是媒体播放器。然后，媒体播放器开始将视频文件的一小部分初始部分从 VeraCrypt 加密卷加载到 RAM（存储器）以便播放它。</p>
+<p>在加载该部分时，VeraCrypt 会自动解密它（在 RAM 中）。然后，媒体播放器播放视频的解密部分（存储在 RAM 中）。</p>
+<p>在播放此部分时，媒体播放器开始将另一小部分视频文件从 VeraCrypt 加密卷加载到 RAM，然后重复该过程。此过程称为动态加密/解密，适用于所有文件类型。</p>
+<p>例如，在美国境外旅行或从国外返回美国时，这可能会很有用，因为您会被搜查电子设备；同样，在中国如果您认为自己有被警察搜查电子设备的风险，它也会有用。</p>
+<p>如果您由于某种原因而被拘留，并且政府机构威胁您要求密码解锁您的加密驱动器。您就可以假装不情愿地给他们密码，他们只能看到被放置在外面的相对无害的东西。</p>
+<p>删除元数据<br>这不是第一次提醒了。</p>
+<p>麻省理工学院开发的一个名叫 Immersion 的程序，仅需使用元数据就可以绘制出你邮箱中所有电子邮件的发件人和收件人之间的可视化关系图。</p>
+<p>这个工具可用于可视化地量化出谁对你最重要。程序甚至包含一个滑块式的时间标度，可以让你看到你认识的人对你的重要性随时间推移发生的起起伏伏。</p>
+<p>尽管你可能认为你了解自己的关系，但用图形化的方式表达出来也许会给你带来清醒的认识。</p>
+<p>你可能没意识到自己给不认识或了解不多的人发了如此多的电子邮件，却很少给你非常熟悉的人发邮件。</p>
+<p>使用 Immersion工具，你可以选择是否上传数据，而且在图形绘制出来后，你也可以删除这些信息。</p>
+<p>在将任何图像上传到网站或通过电子邮件发送给其他人之前，建议您首先通过元数据过滤应用程序，例如 AnalogExif、 ExifTool。</p>
+<p>《都是工具，从自我保护到有效利用 — — 亦正亦邪元数据 (下篇) 》</p>
+<p>您需要担心的不仅仅上政府间谍，还有各种恶意者，他们会通过元数据对您在现实中进行跟踪伤害。您不值得冒这种风险。</p>
+<p>监视资本家是隐私权的公敌<br>谷歌、Facebook 等监视资本家已经被国际特赦组织谴责为人权侵犯者，虽然有点晚，但依旧很重要。</p>
+<p>在这里下载国际特赦组织的这份报告：<a target="_blank" rel="noopener" href="https://t.me/iyouport/6553">https://t.me/iyouport/6553</a></p>
+<p>Nithin Coca 写了一篇漂亮的文章，讲述了他为什么完全放弃使用 Google，以及为什么您也应该这样做。</p>
+<p>如何您想要隐私人权和人身安全，谷歌不是您的朋友，Facebook、Twitte、Instagram 等等都不是您的朋友，他们赚到的钱都是通过出卖你得来的。每个人都应该知道这一点。</p>
+<p>《Google 产品的替代品 — 完整列表》</p>
+<p>全面摆脱监视资本家的工具列表《安全工具箱补充版：分类工具列表（2）》</p>
+<p>隐私工具列表《安全手册》</p>
+<p>不使用 Gmail 的另一个原因是，他们从供应商的广告中赚取了很大一部分利润，因此 Google 有明确的动机与第三方供应商共享您的电子邮件和 Google 搜索数据。这都是 big money 游戏，你我都是被他们吃剩下的骨头。</p>
+<p>根据其透明度报告，Google 愿意遵守 “每年成千上万的搜查令和传票”，就是为什么当权者通过这些公司抓捕了如此多的人。在下面看到：</p>
+<p>50年监禁！只因为说出了政府的阴谋《他们是如何抓捕说真话的人？⚠️灾难和教训》</p>
+<p>假设一个新的数字身份<br>如果您感到不知所措，并且需要为数字生活排毒，那么从现在开始控制自己的数字生活非常重要；尤其是，您需要开始清理曾经暴露在互联网上的一切 —— 那其中有可能为您带来危险的东西。</p>
+<p>这也许是一项费时的工程，但非常有必要。而且要知道，信息一旦上了互联网，就很难彻底删除，要有这个思想准备。</p>
+<p>但残留的越少安全性就越高，于是您依旧值得采取措施。👉我们在 “开源情报” 栏目中介绍的工具和方法大多可用于帮您检查自己的漏洞，您可以抢在包括政府间谍在内的恶意者之前采取行动弥补它们。</p>
+<p>在设备上采取的方法《大清洗：反侦察的第一步》</p>
+<p>在网络上采取的方法《自我人肉（1）》《自我人肉（2）》</p>
+<p>如果您因为上瘾而不能放弃社交媒体帐户活动，也没关系；我们推荐过制作袜子木偶的方法（见下面）。制作并不难，关键在于维护 —— 您始终需要保持这些伪装身份不能以任何方式与您的真实身份相关联。</p>
+<p>《如何快速创建一个假人？》</p>
+<p>《分身术完整指南：妥善管理您的在线身份并获得安全的方法》</p>
+<p>《角色扮演：行动者刚需》</p>
+<p>如果您对此没有信心，也可以通过不定期更改社交媒体个人资料来至少缓解可能的风险 —— 包括用户名、ID、头像、简介、内容偏好等等。</p>
+<p>一些黑客会这样做。他们在同一平台上以不同的角色维护多个不同的社交媒体帐户。</p>
+<p>某些社交网站可能会限制您更改个人资料的频率，甚至要求您删除旧帐户并以新帐户重新开始。这些寡头社交媒体网站试图使您的退出变得尽可能困难，以防止用户放弃其服务，他们只为了保护他们自己的利益。而不是您的。</p>
+<p>对于那些拥有大量社交媒体关注者的人可能不希望这样做，因为人们可能不容易识别您的新个人资料，如果他们不认识您，则可能会取消关注。于是您需要权衡，究竟是虚拟的所谓知名度更重要，还是您的真实安全更重要。</p>
+<p>如果粉丝经济是您的唯一收入来源，比如您经营网店或者做其他在线生意，那么建议您尽可能采取上述提到的分身方法，将吸引粉丝的角色和您的真实角色区分开。</p>
+<p>自杀机器（<a target="_blank" rel="noopener" href="http://suicidemachine.org/%EF%BC%89">http://suicidemachine.org/）</a> 是一个便于删除社交网络配置文件的工具。自杀机器已经被迫停止删除 Facebook 帐户，但有关如何执行此操作的说明如下：<a target="_blank" rel="noopener" href="https://www.facebook.com/help/224562897555674">https://www.facebook.com/help/224562897555674</a></p>
+<p>AccountKiller（<a target="_blank" rel="noopener" href="https://www.accountkiller.com)提供了有关如何删除大多数热门网站上的帐户或公开个人资料的说明./">https://www.accountkiller.com）提供了有关如何删除大多数热门网站上的帐户或公开个人资料的说明。</a></p>
+<p>JustDelete Me（<a target="_blank" rel="noopener" href="http://justdelete.me)是一个直接链接目录,用于从web服务中删除帐户./">http://justdelete.me）是一个直接链接目录，用于从Web服务中删除帐户。</a></p>
+<p>一些公司，例如 Lifelock 和 Experian，正在提供暗网扫描服务，作为身份盗窃监测工具。我的建议是您不需要在这种产品上浪费钱。这些扫描的作用不大，而且很可能只在极少数几个非法黑市中寻找。</p>
+<p>暗网上有各种类型的隐藏服务和站点，其中一些仅由了解他们的个人与他们选择邀请的受信任人共享。这种几乎无法 “扫描” 出来。</p>
+<p>如果您有投资这种东西的钱，还不如投资一些真实的自我保护技术，尤其是从日常操作习惯方面努力，您将看到真实的效果。</p>
+<p>要想防御敌人，就需要像敌人一样思考。尽量不要让别人有理由注意到您、甚至追踪到您。在雷达下低飞</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>眼魔王
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2020/07/09/%E5%9C%A8%E9%9B%B7%E8%BE%BE%E4%B8%8B%E4%BD%8E%E9%A3%9E%EF%BC%9A%E5%8F%98%E5%BE%97%E9%9A%BE%E4%BB%A5%E8%A2%AB%E8%BF%BD%E8%B8%AA%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%887%EF%BC%89/" title="在雷达下低飞：变得难以被追踪的简单方法（7）">http://example.com/2020/07/09/在雷达下低飞：变得难以被追踪的简单方法（7）/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+              <a href="/tags/%E6%95%B0%E5%AD%97%E5%AE%89%E5%85%A8/" rel="tag"># 数字安全</a>
+              <a href="/tags/%E5%9C%A8%E9%9B%B7%E8%BE%BE%E4%B8%8B%E4%BD%8E%E9%A3%9E/" rel="tag"># 在雷达下低飞</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/04/%E5%A4%A7%E4%BF%9D%E5%81%A5%E5%BA%94%E8%AF%A5%E6%88%90%E4%B8%BA%E4%B9%A0%E6%83%AF%EF%BC%9A%E5%8F%98%E5%BE%97%E9%9A%BE%E4%BB%A5%E8%A2%AB%E8%BF%BD%E8%B8%AA%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%886%EF%BC%89/" rel="prev" title="大保健应该成为习惯：变得难以被追踪的简单方法（6）">
+      <i class="fa fa-chevron-left"></i> 大保健应该成为习惯：变得难以被追踪的简单方法（6）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/24/8%E4%B8%AA%E6%AD%A5%E9%AA%A4%E5%AE%9E%E7%8E%B0%E5%9F%BA%E6%9C%AC%E5%8C%BF%E5%90%8D%E5%AE%9E%E8%B7%B5%EF%BC%9A%E5%8F%98%E5%BE%97%E9%9A%BE%E4%BB%A5%E8%A2%AB%E8%BF%BD%E8%B8%AA%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%889%EF%BC%89/" rel="next" title="8个步骤实现基本匿名实践：变得难以被追踪的简单方法（9）">
+      8个步骤实现基本匿名实践：变得难以被追踪的简单方法（9） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8%E9%9B%B7%E8%BE%BE%E4%B8%8B%E4%BD%8E%E9%A3%9E%EF%BC%9A%E5%8F%98%E5%BE%97%E9%9A%BE%E4%BB%A5%E8%A2%AB%E8%BF%BD%E8%B8%AA%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%887%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">在雷达下低飞：变得难以被追踪的简单方法（7）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%902020%E5%B9%B47%E6%9C%889%E6%97%A5%E5%AD%98%E6%A1%A3%E3%80%91%E6%9C%89%E7%82%B9%E6%8A%80%E6%9C%AF%E5%90%AB%E9%87%8F%EF%BC%8C%E4%BD%86%E5%B9%B6%E9%9D%9E%E6%97%81%E9%97%A8%E5%B7%A6%E9%81%93"><span class="nav-number">1.1.</span> <span class="nav-text">【2020年7月9日存档】有点技术含量，但并非旁门左道##</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">眼魔王</p>
+  <div class="site-description" itemprop="description">当你不再以每天的收获进行判断，而是以每天的播种进行判断时，一切都会变的不同。试试看？</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">327</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">103</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">眼魔王</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'TPTaLz1IQvmSA26xGW76NTM8-MdYXbMMI',
+      appKey     : '7Q63Wf2v5bN851j9mXycgYNz',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
